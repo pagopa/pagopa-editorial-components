@@ -2,7 +2,7 @@ import { Button, ButtonPropsVariantOverrides  } from '@mui/material';
 import { OverridableStringUnion } from '@mui/types';
 
 interface HelloWorldButtonProps {
-  variant: OverridableStringUnion<'text' | 'outlined' | 'contained', ButtonPropsVariantOverrides>;
+  variant: OverridableStringUnion<'text' | 'outlined' | 'contained', ButtonPropsVariantOverrides>
   text?: string
 }
 
