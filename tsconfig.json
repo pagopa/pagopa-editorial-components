@@ -10,7 +10,6 @@
       "es2019"
     ],
     "jsx": "react-jsx",
-    "declaration": true,
     "strict": true,
     "noImplicitAny": true,
     "sourceMap": false,
