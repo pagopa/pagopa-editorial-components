@@ -38,6 +38,7 @@
   },
   "dependencies": {},
   "scripts": {
+    "build": "tsc -p tsconfig.prod.json",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   }

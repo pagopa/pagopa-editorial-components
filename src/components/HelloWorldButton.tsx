@@ -1,7 +1,7 @@
 import { Button, type ButtonPropsVariantOverrides } from '@mui/material'
 import { type OverridableStringUnion } from '@mui/types'
 
-interface HelloWorldButtonProps {
+export interface HelloWorldButtonProps {
   variant: OverridableStringUnion<'text' | 'outlined' | 'contained', ButtonPropsVariantOverrides>
   text?: string
 }
