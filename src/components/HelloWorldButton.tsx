@@ -10,7 +10,7 @@ export interface HelloWorldButtonProps {
 }
 
 const HelloWorldButton = (props: HelloWorldButtonProps) => (
-  <Button variant={props.variant}>{props.text != null || 'Hello World'}</Button>
+  <Button variant={props.variant}>{props.text ?? 'Hello World'}</Button>
 );
 
 export default HelloWorldButton;
