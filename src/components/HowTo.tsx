@@ -22,7 +22,10 @@ const HowTo: React.FC<HowToProps> = ({ title, steps, theme }) => {
   const background = isDarkTheme ? howToBackgroundDark : howToBackgroundLight;
 
   return (
-    <Box sx={{ position: 'relative', py: 8 }} component="section">
+    <Box
+      sx={{ position: 'relative', py: { xs: 6, md: 8 }, px: { xs: 2, md: 0 } }}
+      component="section"
+    >
       {/** Background */}
       <Box
         component="img"
@@ -67,7 +70,7 @@ const HowToStep: React.FC<
 > = ({ index, Icon, title, description, theme }) => {
   const isDarkTheme = theme === 'dark';
   const stepNum = index + 1;
-  const isFirstOrLastStep = stepNum === 1 || stepNum === 4;
+  const isLastStep = stepNum === 4;
 
   return (
     <Stack spacing={1}>
@@ -89,7 +92,7 @@ const HowToStep: React.FC<
               color={!isDarkTheme ? 'primary' : undefined}
               fontSize="large"
             />
-            {!isFirstOrLastStep && (
+            {!isLastStep && (
               <ArrowForwardIcon
                 color={!isDarkTheme ? 'primary' : undefined}
                 sx={{ transform: { xs: 'rotate(90deg)', md: 'none' } }}
