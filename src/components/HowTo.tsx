@@ -10,9 +10,9 @@ interface Step {
   title: string;
   description: string;
 }
-
 export interface HowToProps {
   title: string;
+  /** Must be an array of 4 steps */
   steps: [Step, Step, Step, Step];
   theme: 'light' | 'dark';
 }
@@ -23,6 +23,7 @@ const HowTo: React.FC<HowToProps> = ({ title, steps, theme }) => {
 
   return (
     <Box sx={{ position: 'relative', py: 8 }} component="section">
+      {/** Background */}
       <Box
         component="img"
         // https://www.w3.org/WAI/tutorials/images/decorative/#example-1-image-used-as-part-of-page-design
@@ -39,6 +40,7 @@ const HowTo: React.FC<HowToProps> = ({ title, steps, theme }) => {
         src={background}
       />
       <Container>
+        {/** Section title */}
         <Typography
           color={isDarkTheme ? 'white' : 'text.primary'}
           sx={{ textAlign: 'center', mb: 8 }}
@@ -47,6 +49,7 @@ const HowTo: React.FC<HowToProps> = ({ title, steps, theme }) => {
           {title}
         </Typography>
 
+        {/** Steps */}
         <Grid container spacing={8}>
           {steps.map((step, i) => (
             <Grid md={3} xs={12} item key={i}>
@@ -63,16 +66,19 @@ const HowToStep: React.FC<
   Step & { index: number; theme: 'light' | 'dark' }
 > = ({ index, Icon, title, description, theme }) => {
   const isDarkTheme = theme === 'dark';
+  const stepNum = index + 1;
+  const isFirstOrLastStep = stepNum === 1 || stepNum === 4;
 
   return (
     <Stack spacing={1}>
-      {Boolean(Icon) && (
+      {/** Step with icon */}
+      {Icon && (
         <Stack spacing={1.2}>
           <Typography
             color={isDarkTheme ? 'white' : 'primary'}
             sx={{ opacity: 0.6 }}
             variant="overline"
-          >{`0${++index}`}</Typography>
+          >{`0${stepNum}`}</Typography>
           <Stack
             justifyContent="space-between"
             alignItems="center"
@@ -83,7 +89,7 @@ const HowToStep: React.FC<
               color={!isDarkTheme ? 'primary' : undefined}
               fontSize="large"
             />
-            {index > 0 && index < 4 && (
+            {!isFirstOrLastStep && (
               <ArrowForwardIcon
                 color={!isDarkTheme ? 'primary' : undefined}
                 sx={{ transform: { xs: 'rotate(90deg)', md: 'none' } }}
@@ -92,6 +98,7 @@ const HowToStep: React.FC<
           </Stack>
         </Stack>
       )}
+      {/** Step without icon */}
       {!Icon && (
         <Typography
           color={isDarkTheme ? 'white' : 'primary'}
@@ -99,6 +106,7 @@ const HowToStep: React.FC<
           component="p"
         >{`0${++index}`}</Typography>
       )}
+      {/** Step title */}
       <Typography
         color={isDarkTheme ? 'white' : 'text.primary'}
         variant="h5"
@@ -106,6 +114,7 @@ const HowToStep: React.FC<
       >
         {title}
       </Typography>
+      {/** Step description */}
       <Typography
         color={isDarkTheme ? 'white' : 'text.primary'}
         variant="body2"
