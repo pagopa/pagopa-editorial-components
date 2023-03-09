@@ -14,12 +14,13 @@ export interface FeatureItem {
 export interface FeatureProps {
   title: string;
   items: FeatureItem[];
+  theme: 'dark' | 'light';
 }
 
-const Feature = ({ title, items }: FeatureProps) => {
+const Feature = ({ title, items, theme }: FeatureProps) => {
   return (
     <Component>
-      <Box bgcolor="#FAFAFA">
+      <Box bgcolor={theme === 'light' ? '#FAFAFA' : '#0062C3'}>
         <Container
           maxWidth="xl"
           sx={{
@@ -31,7 +32,12 @@ const Feature = ({ title, items }: FeatureProps) => {
           }}
         >
           <Stack alignContent="center" textAlign="center" spacing={8}>
-            <Typography variant="h4">{title}</Typography>
+            <Typography
+              variant="h4"
+              color={theme === 'light' ? '#000000' : '#FAFAFA'}
+            >
+              {title}
+            </Typography>
             <Box
               sx={{
                 display: 'grid',
@@ -59,24 +65,33 @@ const Feature = ({ title, items }: FeatureProps) => {
                       <Box
                         mx="auto"
                         sx={{
-                          color: 'primary.dark',
                           svg: {
                             height: '64px',
                             width: '64px',
                           },
                         }}
+                        color={theme === 'light' ? 'primary.dark' : '#FAFAFA'}
                       >
                         {item.icon}
                       </Box>
                       <Stack spacing={1}>
-                        <Typography variant="h6">{item.title}</Typography>
+                        <Typography
+                          color={theme === 'light' ? '#000000' : '#FAFAFA'}
+                          variant="h6"
+                        >
+                          {item.title}
+                        </Typography>
                         <>
                           {typeof item.linkTitle === undefined ? (
-                            <Typography variant="body2">
+                            <Typography
+                              variant="body2"
+                              color={theme === 'light' ? '#000000' : '#FAFAFA'}
+                            >
                               {item.subtitle}
                             </Typography>
                           ) : (
                             <Subtitle
+                              theme={theme}
                               subtitle={item.subtitle}
                               textLink={item.linkTitle}
                               url={item.url}

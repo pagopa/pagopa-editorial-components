@@ -6,12 +6,18 @@ export interface SubtitleProps {
   subtitle: string;
   textLink?: string;
   url?: string;
+  theme: 'dark' | 'light';
 }
 
-const Subtitle = ({ subtitle, textLink, url }: SubtitleProps) => {
+const Subtitle = ({ subtitle, textLink, url, theme }: SubtitleProps) => {
   return (
     <Stack spacing={3} justifyContent="center" alignItems="center">
-      <Typography variant="body2">{subtitle}</Typography>
+      <Typography
+        color={theme === 'light' ? '#000000' : '#FAFAFA'}
+        variant="body2"
+      >
+        {subtitle}
+      </Typography>
       {textLink !== undefined && (
         <Stack
           spacing={1}
@@ -19,10 +25,16 @@ const Subtitle = ({ subtitle, textLink, url }: SubtitleProps) => {
           alignItems="center"
           direction={'row'}
         >
-          <Link color={'primary'} href={url} underline="none">
+          <Link
+            color={theme === 'light' ? 'primary' : '#FAFAFA'}
+            href={url}
+            underline="none"
+          >
             {textLink}
           </Link>
-          <ArrowForwardIcon color="primary"></ArrowForwardIcon>
+          <ArrowForwardIcon
+            color={theme === 'light' ? 'primary' : 'secondary'}
+          ></ArrowForwardIcon>
         </Stack>
       )}
     </Stack>
