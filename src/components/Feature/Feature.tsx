@@ -1,5 +1,4 @@
 /* eslint-disable valid-typeof */
-import Component from '../Component';
 import Subtitle from './Subtitle';
 import { Box, Container, Stack, Typography } from '@mui/material';
 
@@ -19,7 +18,7 @@ export interface FeatureProps {
 
 const Feature = ({ title, items, theme }: FeatureProps) => {
   return (
-    <Component>
+    <Container>
       <Box bgcolor={theme === 'light' ? 'background.paper' : 'primary.main'}>
         <Container
           maxWidth="xl"
@@ -119,7 +118,7 @@ const Feature = ({ title, items, theme }: FeatureProps) => {
           </Stack>
         </Container>
       </Box>
-    </Component>
+    </Container>
   );
 };
 
