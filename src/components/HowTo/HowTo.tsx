@@ -45,9 +45,7 @@ export const HowTo: React.FC<HowToProps> = ({
     stepsAlignment
   ];
 
-  console.time();
   const stepsRows = groupStepsByRows(steps, rowMaxSteps);
-  console.timeEnd();
 
   return (
     <Box
