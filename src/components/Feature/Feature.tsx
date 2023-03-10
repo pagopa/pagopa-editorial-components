@@ -45,7 +45,7 @@ const Feature = ({ title, items, theme }: FeatureProps) => {
                 gridTemplateColumns: 'repeat(12, 1fr)',
               }}
             >
-              <Box gridColumn="2 / span 10">
+              <Box gridColumn={{ xs: '2 / span 8', md: '2 / span 10' }}>
                 <Stack
                   direction={{ xs: 'column', md: 'row' }}
                   alignContent="center"
@@ -57,7 +57,7 @@ const Feature = ({ title, items, theme }: FeatureProps) => {
                       key={index}
                       alignContent="center"
                       justifyContent="flex-start"
-                      spacing={{ xs: 1, md: 4 }}
+                      spacing={{ xs: 1, md: 3 }}
                       sx={{
                         flex: 1,
                       }}
