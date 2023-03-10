@@ -1,5 +1,5 @@
 import { Box, Button, Stack, Typography, Container, Grid } from '@mui/material';
-import { type CommonProps } from 'types/components';
+import { type CommonProps, type Generic } from 'types/components';
 
 export interface HeroProps extends CommonProps, HeroTextProps {
   image?: string;
@@ -11,7 +11,7 @@ export interface HeroProps extends CommonProps, HeroTextProps {
 
 interface HeroTextProps extends CommonProps {
   title: string;
-  subtitle?: string;
+  subtitle?: string | Generic;
   ctaButtons?: Array<{ text: string; color: string; variant: string }>;
 }
 

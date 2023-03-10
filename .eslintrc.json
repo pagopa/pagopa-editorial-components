@@ -24,7 +24,7 @@
   },
   "overrides": [
     {
-      "files": [ "./src/stories/*" ],
+      "files": [ "./src/stories/**/*.stories.@(js|jsx|ts|tsx)" ],
       "rules": {
         "@typescript-eslint/consistent-type-assertions": "off"
       }
