@@ -20,7 +20,7 @@ export interface FeatureProps {
 const Feature = ({ title, items, theme }: FeatureProps) => {
   return (
     <Component>
-      <Box bgcolor={theme === 'light' ? '#FAFAFA' : '#0062C3'}>
+      <Box bgcolor={theme === 'light' ? 'background.paper' : 'primary.main'}>
         <Container
           maxWidth="xl"
           sx={{
@@ -34,7 +34,7 @@ const Feature = ({ title, items, theme }: FeatureProps) => {
           <Stack alignContent="center" textAlign="center" spacing={8}>
             <Typography
               variant="h4"
-              color={theme === 'light' ? '#000000' : '#FAFAFA'}
+              color={theme === 'light' ? 'text.primary' : 'background.paper'}
             >
               {title}
             </Typography>
@@ -70,13 +70,21 @@ const Feature = ({ title, items, theme }: FeatureProps) => {
                             width: '64px',
                           },
                         }}
-                        color={theme === 'light' ? 'primary.dark' : '#FAFAFA'}
+                        color={
+                          theme === 'light'
+                            ? 'primary.main'
+                            : 'background.paper'
+                        }
                       >
                         {item.icon}
                       </Box>
                       <Stack spacing={1}>
                         <Typography
-                          color={theme === 'light' ? '#000000' : '#FAFAFA'}
+                          color={
+                            theme === 'light'
+                              ? 'text.primary'
+                              : 'background.paper'
+                          }
                           variant="h6"
                         >
                           {item.title}
@@ -85,7 +93,11 @@ const Feature = ({ title, items, theme }: FeatureProps) => {
                           {typeof item.linkTitle === undefined ? (
                             <Typography
                               variant="body2"
-                              color={theme === 'light' ? '#000000' : '#FAFAFA'}
+                              color={
+                                theme === 'light'
+                                  ? 'text.primary'
+                                  : 'background.paper'
+                              }
                             >
                               {item.subtitle}
                             </Typography>

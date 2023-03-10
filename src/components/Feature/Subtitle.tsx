@@ -13,7 +13,7 @@ const Subtitle = ({ subtitle, textLink, url, theme }: SubtitleProps) => {
   return (
     <Stack spacing={3} justifyContent="center" alignItems="center">
       <Typography
-        color={theme === 'light' ? '#000000' : '#FAFAFA'}
+        color={theme === 'light' ? 'text.primary' : 'background.paper'}
         variant="body2"
       >
         {subtitle}
@@ -26,7 +26,7 @@ const Subtitle = ({ subtitle, textLink, url, theme }: SubtitleProps) => {
           direction={'row'}
         >
           <Link
-            color={theme === 'light' ? 'primary' : '#FAFAFA'}
+            color={theme === 'light' ? 'primary' : 'background.paper'}
             href={url}
             underline="none"
           >
