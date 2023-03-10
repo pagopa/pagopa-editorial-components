@@ -1,7 +1,6 @@
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-import HowTo from '../components/HowTo';
-import type { HowToProps } from '../components/HowTo';
+import { HowTo, type HowToProps } from '../components/HowTo';
 
 const Icon = <AccountBalanceIcon fontSize="large" />;
 
@@ -53,13 +52,22 @@ export default {
       defaultValue: 'Come funziona',
     },
     theme: {
-      control: 'radio',
+      control: 'inline-radio',
       options: ['light', 'dark'],
       defaultValue: 'light',
     },
     steps: {
       control: { type: 'number', min: 1, step: 1 },
       defaultValue: 4,
+    },
+    rowMaxSteps: {
+      control: { type: 'number', min: 1, step: 1 },
+      defaultValue: 4,
+    },
+    stepsAlignment: {
+      control: { type: 'inline-radio' },
+      defaultValue: 'center',
+      options: ['left', 'center', 'right'],
     },
   },
 } as ComponentMeta<typeof HowTo>;
