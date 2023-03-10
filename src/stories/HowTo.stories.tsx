@@ -3,6 +3,47 @@ import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import HowTo from '../components/HowTo';
 import type { HowToProps } from '../components/HowTo';
 
+const Icon = <AccountBalanceIcon fontSize="large" />;
+
+const getSteps = (withIcons: boolean, withLink: boolean, numStep: number) => {
+  const steps = [
+    {
+      ...(withIcons ? { Icon } : {}),
+      title: 'Sicuro',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. ',
+
+      ...(withLink ? { link: { label: 'See more', href: '#' } } : {}),
+    },
+    {
+      ...(withIcons ? { Icon } : {}),
+      title: 'Un risparmio di denaro per tutti: cittadini, imprese ed enti ',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. ',
+      ...(withLink ? { link: { label: 'See more', href: '#' } } : {}),
+    },
+    {
+      ...(withIcons ? { Icon } : {}),
+      title:
+        'I tempi di attesa tra l’invio e la ricezione delle notifiche spariscono',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. ',
+      ...(withLink ? { link: { label: 'See more', href: '#' } } : {}),
+    },
+    {
+      ...(withIcons ? { Icon } : {}),
+      title: 'La CO2 emessa per erogare il servizio diminuisce sensibilmente',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. ',
+      ...(withLink ? { link: { label: 'See more', href: '#' } } : {}),
+    },
+  ];
+
+  return new Array(numStep)
+    .fill(undefined as unknown as HowToProps['steps'])
+    .map((_, i) => steps[i % steps.length]);
+};
+
 export default {
   title: 'HowTo Component',
   component: HowTo,
@@ -17,71 +58,27 @@ export default {
       defaultValue: 'light',
     },
     steps: {
-      control: false,
+      control: { type: 'number', min: 1, step: 1 },
+      defaultValue: 4,
     },
   },
 } as ComponentMeta<typeof HowTo>;
 
-const Template: ComponentStory<typeof HowTo> = (args) => <HowTo {...args} />;
+const Template: ComponentStory<typeof HowTo> = (args) => {
+  return <HowTo {...args} />;
+};
 
-export const WithIcons = (args: HowToProps) => (
-  <Template
-    {...args}
-    steps={[
-      {
-        Icon: AccountBalanceIcon,
-        title: 'Sicuro',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. ',
-      },
-      {
-        Icon: AccountBalanceIcon,
-        title: 'Un risparmio di denaro per tutti: cittadini, imprese ed enti ',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. ',
-      },
-      {
-        Icon: AccountBalanceIcon,
-        title:
-          'I tempi di attesa tra l’invio e la ricezione delle notifiche spariscono',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. ',
-      },
-      {
-        Icon: AccountBalanceIcon,
-        title: 'La CO2 emessa per erogare il servizio diminuisce sensibilmente',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. ',
-      },
-    ]}
-  />
-);
+export const WithIcons = (args: HowToProps) => {
+  const steps = getSteps(true, false, args.steps as unknown as number);
+  return <Template {...args} steps={steps} />;
+};
 
-export const NoIcons = (args: HowToProps) => (
-  <Template
-    {...args}
-    steps={[
-      {
-        title: 'Sicuro',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. ',
-      },
-      {
-        title: 'Un risparmio di denaro per tutti: cittadini, imprese ed enti ',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. ',
-      },
-      {
-        title:
-          'I tempi di attesa tra l’invio e la ricezione delle notifiche spariscono',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. ',
-      },
-      {
-        title: 'La CO2 emessa per erogare il servizio diminuisce sensibilmente',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. ',
-      },
-    ]}
-  />
-);
+export const NoIcons = (args: HowToProps) => {
+  const steps = getSteps(false, false, args.steps as unknown as number);
+  return <Template {...args} steps={steps} />;
+};
+
+export const WithLinks = (args: HowToProps) => {
+  const steps = getSteps(false, true, args.steps as unknown as number);
+  return <Template {...args} steps={steps} />;
+};

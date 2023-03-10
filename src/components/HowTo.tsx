@@ -1,19 +1,23 @@
 import React from 'react';
-import type { SvgIconComponent } from '@mui/icons-material';
-import { Box, Container, Grid, Stack, Typography } from '@mui/material';
+import { Box, Container, Link, Stack, Typography } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import howToBackgroundDark from '../assets/images/how-to-background-dark.jpeg';
 import howToBackgroundLight from '../assets/images/how-to-background-light.jpeg';
 
 interface Step {
-  Icon?: SvgIconComponent;
+  Icon?: React.ReactNode;
   title: string;
-  description: string;
+  description: string | React.ReactNode;
+  link?: {
+    href: string;
+    label: string;
+    target?: React.HTMLAttributeAnchorTarget;
+  };
 }
+
 export interface HowToProps {
   title: string;
-  /** Must be an array of 4 steps */
-  steps: [Step, Step, Step, Step];
+  steps: Step[];
   theme: 'light' | 'dark';
 }
 
@@ -53,24 +57,33 @@ const HowTo: React.FC<HowToProps> = ({ title, steps, theme }) => {
         </Typography>
 
         {/** Steps */}
-        <Grid container spacing={8}>
+        <Stack
+          direction={{ md: 'row' }}
+          justifyContent="center"
+          flexWrap="wrap"
+          gap={{ xs: 4, md: 8 }}
+        >
           {steps.map((step, i) => (
-            <Grid md={3} xs={12} item key={i}>
-              <HowToStep index={i} theme={theme} {...step} />
-            </Grid>
+            <Box key={i} flexGrow={0.25} flexBasis={'20%'}>
+              <HowToStep
+                index={i}
+                theme={theme}
+                isLastStep={i === steps.length - 1}
+                {...step}
+              />
+            </Box>
           ))}
-        </Grid>
+        </Stack>
       </Container>
     </Box>
   );
 };
 
 const HowToStep: React.FC<
-  Step & { index: number; theme: 'light' | 'dark' }
-> = ({ index, Icon, title, description, theme }) => {
+  Step & { index: number; theme: 'light' | 'dark'; isLastStep: boolean }
+> = ({ index, Icon, title, link, description, theme, isLastStep }) => {
   const isDarkTheme = theme === 'dark';
   const stepNum = index + 1;
-  const isLastStep = stepNum === 4;
 
   return (
     <Stack spacing={1}>
@@ -88,10 +101,7 @@ const HowToStep: React.FC<
             direction="row"
             color={isDarkTheme ? 'white' : undefined}
           >
-            <Icon
-              color={!isDarkTheme ? 'primary' : undefined}
-              fontSize="large"
-            />
+            {Icon}
             {!isLastStep && (
               <ArrowForwardIcon
                 color={!isDarkTheme ? 'primary' : undefined}
@@ -118,12 +128,29 @@ const HowToStep: React.FC<
         {title}
       </Typography>
       {/** Step description */}
-      <Typography
-        color={isDarkTheme ? 'white' : 'text.primary'}
-        variant="body2"
-      >
-        {description}
-      </Typography>
+      {typeof description === 'string' ? (
+        <Typography
+          color={isDarkTheme ? 'white' : 'text.primary'}
+          variant="body2"
+        >
+          {description}
+        </Typography>
+      ) : (
+        <Box color={isDarkTheme ? 'white' : 'text.primary'}>{description}</Box>
+      )}
+
+      {/** Link */}
+      {link && (
+        <Link
+          href={link.href}
+          target={link.target}
+          color={isDarkTheme ? 'white' : 'primary'}
+          underline="none"
+          fontWeight={600}
+        >
+          {link.label}
+        </Link>
+      )}
     </Stack>
   );
 };
