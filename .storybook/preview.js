@@ -1,10 +1,8 @@
 import React from 'react';
-import { createTheme, ThemeProvider } from "@mui/material";
-import { theme } from "@pagopa/mui-italia";
 import CssBaseline from "@mui/material/CssBaseline";
 import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
-
-const mainTheme = createTheme({ ...theme });
+import { ThemeProvider } from "@mui/material";
+import theme from './theme';
 
 const customViewports = {
   BreakPoint1: {
@@ -25,7 +23,6 @@ const customViewports = {
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
-  // remove to restore padding to each story
   viewport: { viewports: {...MINIMAL_VIEWPORTS, ...customViewports }  },
   layout: "fullscreen",
   controls: {
@@ -38,7 +35,7 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={mainTheme}>
+    <ThemeProvider theme={theme}>
       <CssBaseline/>
       <Story />
     </ThemeProvider>

@@ -12,7 +12,7 @@ export default {
   component: Hero,
 } as ComponentMeta<typeof Hero>;
 
-const ctaButtons = [
+const ctaButtons: HeroProps['ctaButtons'] = [
   {
     text: 'Scopri di più',
     color: 'primary',

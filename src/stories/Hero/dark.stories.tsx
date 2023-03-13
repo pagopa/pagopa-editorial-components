@@ -12,7 +12,7 @@ export default {
   component: Hero,
 } as ComponentMeta<typeof Hero>;
 
-const ctaButtons = [
+const ctaButtons: HeroProps['ctaButtons'] = [
   {
     text: 'Scopri di più',
     color: 'negative',
@@ -45,6 +45,16 @@ HeroSmallWithBackground.args = {
   background,
   size: 'small',
   ...defaults,
+};
+
+export const HeroSmallSolidNoButtons = Template.bind({});
+HeroSmallSolidNoButtons.args = {
+  size: 'small',
+  title: 'FAQ',
+  subtitle:
+    'Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa',
+  theme: 'dark',
+  ctaButtons: [],
 };
 
 export const HeroBigWithBackgroundTextLeft = Template.bind({});

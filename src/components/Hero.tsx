@@ -1,5 +1,14 @@
-import { Box, Button, Stack, Typography, Container, Grid } from '@mui/material';
+import {
+  Box,
+  Button,
+  type ButtonProps,
+  Stack,
+  Typography,
+  Container,
+  Grid,
+} from '@mui/material';
 import { type CommonProps, type Generic } from 'types/components';
+import { isJSX } from '../utils';
 
 export interface HeroProps extends CommonProps, HeroTextProps {
   image?: string;
@@ -9,13 +18,15 @@ export interface HeroProps extends CommonProps, HeroTextProps {
   size?: 'small' | 'big';
 }
 
+interface CtaButton extends Partial<ButtonProps> {
+  text: string;
+}
+
 interface HeroTextProps extends CommonProps {
   title: string;
   subtitle?: string | Generic;
-  ctaButtons?: Array<{ text: string; color: string; variant: string }>;
+  ctaButtons?: Array<CtaButton | Generic>;
 }
-
-// const HERO_TEXT_PADDING = { xs: 4, sm: 4, md: 9 };
 
 const HeroTextContent = ({
   title,
@@ -40,21 +51,23 @@ const HeroTextContent = ({
           </Typography>
         )}
       </>
-      {ctaButtons?.length && (
+      {ctaButtons?.length ? (
         <Stack
           direction={{ xs: 'column', md: 'row' }}
           spacing={2}
           mt={4}
           mb={{ xs: 4 }}
         >
-          {ctaButtons?.map(({ text, color, variant }, i) => (
-            // @ts-expect-error
-            <Button key={`${text}-${i}`} color={color} variant={variant}>
-              {text}
-            </Button>
-          ))}
+          {ctaButtons.map((button, i) => {
+            if (isJSX(button)) return button;
+            return (
+              <Button key={`${button.text}-${i}`} {...button}>
+                {button.text}
+              </Button>
+            );
+          })}
         </Stack>
-      )}
+      ) : null}
     </Stack>
   );
 };
