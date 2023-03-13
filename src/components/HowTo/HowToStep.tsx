@@ -5,14 +5,14 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export const HowToStep: React.FC<
   Step & { index: number; theme: 'light' | 'dark'; isLastStep: boolean }
-> = ({ index, Icon, title, link, description, theme, isLastStep }) => {
+> = ({ index, icon, title, link, description, theme, isLastStep }) => {
   const isDarkTheme = theme === 'dark';
   const stepNum = index + 1;
 
   return (
     <Stack spacing={1}>
       {/** Step with icon */}
-      {Icon && (
+      {icon && (
         <Stack spacing={1.2}>
           <Typography
             color={isDarkTheme ? 'white' : 'primary'}
@@ -25,7 +25,7 @@ export const HowToStep: React.FC<
             direction="row"
             color={isDarkTheme ? 'white' : undefined}
           >
-            {Icon}
+            {icon}
             {!isLastStep && (
               <ArrowForwardIcon
                 color={!isDarkTheme ? 'primary' : undefined}
@@ -37,7 +37,7 @@ export const HowToStep: React.FC<
       )}
 
       {/** Step without icon */}
-      {!Icon && (
+      {!icon && (
         <Typography
           color={isDarkTheme ? 'white' : 'primary'}
           variant="h6"
