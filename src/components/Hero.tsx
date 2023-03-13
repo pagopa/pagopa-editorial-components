@@ -16,6 +16,7 @@ export interface HeroProps extends CommonProps, HeroTextProps {
   inverse?: boolean;
   background?: string;
   size?: 'small' | 'big';
+  useHoverlay?: boolean;
 }
 
 interface CtaButton extends Partial<ButtonProps> {
@@ -73,19 +74,26 @@ const HeroTextContent = ({
 };
 
 const Hero = (props: HeroProps) => {
-  const { size, inverse = false, background, theme = 'dark' } = props;
+  const {
+    size,
+    inverse = false,
+    background,
+    theme = 'dark',
+    useHoverlay = true,
+  } = props;
   const minHeight = size === 'big' ? '720px' : '480px';
 
-  const overlay =
-    theme === 'dark'
-      ? 'linear-gradient(0deg, rgba(0, 98, 195, 0.65), rgba(0, 98, 195, 0.65))'
-      : 'linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8))';
+  const overlay = useHoverlay
+    ? theme === 'dark'
+      ? 'linear-gradient(0deg, rgba(0, 98, 195, 0.65), rgba(0, 98, 195, 0.65)), '
+      : 'linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), '
+    : '';
 
   return (
     <Box
       bgcolor="primary.main"
       sx={{
-        backgroundImage: `${overlay}, url(${background ?? ''})`,
+        backgroundImage: `${overlay}url(${background ?? ''})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

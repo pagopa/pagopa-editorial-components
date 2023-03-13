@@ -6,6 +6,7 @@ import {
   backgroundInverse,
   image,
 } from './heroCommons';
+import heroDarkSolidBackground from '../assets/hero-solid-dark.jpg';
 
 export default {
   title: 'Hero/dark',
@@ -78,4 +79,12 @@ HeroSmallWithImage.args = {
   image,
   size: 'small',
   ...defaults,
+};
+
+export const HeroSolid = Template.bind({});
+HeroSolid.args = {
+  size: 'small',
+  ...defaults,
+  background: heroDarkSolidBackground,
+  useHoverlay: false,
 };
