@@ -1,7 +1,6 @@
 import React from 'react';
 import type { Step } from './HowTo';
 import { Stack, Typography, Link, Box } from '@mui/material';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export const HowToStep: React.FC<
   Step & { index: number; theme: 'light' | 'dark'; isLastStep: boolean }
@@ -27,10 +26,15 @@ export const HowToStep: React.FC<
           >
             {icon}
             {!isLastStep && (
-              <ArrowForwardIcon
+              <Box
                 color={!isDarkTheme ? 'primary' : undefined}
-                sx={{ transform: { xs: 'rotate(90deg)', md: 'none' } }}
-              />
+                sx={{
+                  opacity: 0.6,
+                  transform: { xs: 'rotate(90deg)', md: 'none' },
+                }}
+              >
+                <ArrowIcon />
+              </Box>
             )}
           </Stack>
         </Stack>
@@ -79,5 +83,24 @@ export const HowToStep: React.FC<
         </Link>
       )}
     </Stack>
+  );
+};
+
+const ArrowIcon: React.FC = () => {
+  return (
+    <svg
+      fill="none"
+      height="24"
+      viewBox="0 0 44 24"
+      width="44"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clipRule="evenodd"
+        d="m31.5429 1.04289c.3905-.39052 1.0237-.39052 1.4142 0l10.25 10.25001c.1953.1953.2929.4512.2929.7071s-.0976.5118-.2929.7071l-10.25 10.25c-.3905.3905-1.0237.3905-1.4142 0s-.3905-1.0237 0-1.4142l8.5429-8.5429h-38.5858c-.552284 0-1-.4477-1-1s.447716-1 1-1h38.5858l-8.5429-8.5429c-.3905-.39051-.3905-1.02369 0-1.41421z"
+        fill="#0062c3"
+        fillRule="evenodd"
+      />
+    </svg>
   );
 };
