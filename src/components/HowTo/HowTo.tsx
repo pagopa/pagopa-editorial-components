@@ -5,9 +5,9 @@ import howToBackgroundLight from '../../assets/images/how-to-background-light.jp
 import { HowToStep } from './HowToStep';
 
 export interface Step {
-  Icon?: React.ReactNode;
+  Icon?: JSX.Element;
   title: string;
-  description: string | React.ReactNode;
+  description: string | JSX.Element;
   link?: {
     href: string;
     label: string;
