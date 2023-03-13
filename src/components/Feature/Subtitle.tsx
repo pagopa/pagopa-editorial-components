@@ -29,6 +29,9 @@ const Subtitle = ({ subtitle, textLink, url, theme }: SubtitleProps) => {
             color={theme === 'light' ? 'primary' : 'background.paper'}
             href={url}
             underline="none"
+            sx={{
+              fontWeight: 'bold',
+            }}
           >
             {textLink}
           </Link>
