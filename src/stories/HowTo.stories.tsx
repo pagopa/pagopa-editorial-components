@@ -2,12 +2,12 @@ import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import { HowTo, type HowToProps } from '../components/HowTo';
 
-const Icon = <AccountBalanceIcon fontSize="large" />;
+const icon = <AccountBalanceIcon fontSize="large" />;
 
 const getSteps = (withIcons: boolean, withLink: boolean, numStep: number) => {
   const steps = [
     {
-      ...(withIcons ? { Icon } : {}),
+      ...(withIcons ? { icon } : {}),
       title: 'Sicuro',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. ',
@@ -15,14 +15,14 @@ const getSteps = (withIcons: boolean, withLink: boolean, numStep: number) => {
       ...(withLink ? { link: { label: 'See more', href: '#' } } : {}),
     },
     {
-      ...(withIcons ? { Icon } : {}),
+      ...(withIcons ? { icon } : {}),
       title: 'Un risparmio di denaro per tutti: cittadini, imprese ed enti ',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. ',
       ...(withLink ? { link: { label: 'See more', href: '#' } } : {}),
     },
     {
-      ...(withIcons ? { Icon } : {}),
+      ...(withIcons ? { icon } : {}),
       title:
         'I tempi di attesa tra l’invio e la ricezione delle notifiche spariscono',
       description:
@@ -30,7 +30,7 @@ const getSteps = (withIcons: boolean, withLink: boolean, numStep: number) => {
       ...(withLink ? { link: { label: 'See more', href: '#' } } : {}),
     },
     {
-      ...(withIcons ? { Icon } : {}),
+      ...(withIcons ? { icon } : {}),
       title: 'La CO2 emessa per erogare il servizio diminuisce sensibilmente',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. ',
