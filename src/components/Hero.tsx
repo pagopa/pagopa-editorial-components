@@ -92,14 +92,16 @@ const Hero = (props: HeroProps) => {
 
   return (
     <Box
+      component="section"
       bgcolor="primary.main"
       sx={{
+        px: { xs: 4 },
         backgroundImage: `${overlay}url(${background ?? ''})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" disableGutters>
         <Grid
           container
           direction={inverse ? 'row-reverse' : 'row'}
