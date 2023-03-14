@@ -35,6 +35,7 @@ const Subtitle = ({ subtitle, textLink, url, theme }: SubtitleProps) => {
           >
             {textLink}
           </Link>
+
           <ArrowForwardIcon
             color={theme === 'light' ? 'primary' : 'secondary'}
           ></ArrowForwardIcon>

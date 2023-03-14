@@ -17,7 +17,7 @@ export const parameters = {
     },
   },
 };
-
+console.log('mainTheme :>> ', mainTheme);
 export const decorators = [
   (Story) => (
     <ThemeProvider theme={mainTheme}>

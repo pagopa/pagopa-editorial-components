@@ -56,6 +56,7 @@ export default {
     title: 'Title',
     items: itemMockWithLink,
     theme: 'light',
+    showCarouselMobile: false,
   },
   component: Feature,
 } as ComponentMeta<typeof Feature>;
@@ -69,9 +70,61 @@ export const DefaultWithoutLink: ComponentStory<typeof Feature> = (args) => (
 );
 
 export const DefaultDark: ComponentStory<typeof Feature> = () => (
-  <Feature title="Title" theme="dark" items={itemMockWithLink} />
+  <Feature
+    showCarouselMobile={false}
+    title="Title"
+    theme="dark"
+    items={itemMockWithLink}
+  />
 );
 
 export const DefaultDarkWithoutLink: ComponentStory<typeof Feature> = () => (
-  <Feature title="Title" theme="dark" items={itemMockWithoutLink} />
+  <Feature
+    showCarouselMobile={false}
+    title="Title"
+    theme="dark"
+    items={itemMockWithoutLink}
+  />
+);
+
+export const CarouselDefaultWithLink: ComponentStory<typeof Feature> = () => (
+  <Feature
+    showCarouselMobile={true}
+    title="Title"
+    theme="light"
+    items={itemMockWithLink}
+  />
+);
+
+export const CarouselDefaultWithoutLink: ComponentStory<
+  typeof Feature
+> = () => (
+  <Feature
+    showCarouselMobile={true}
+    title="Title"
+    theme="light"
+    items={itemMockWithoutLink}
+  />
+);
+
+export const CarouselDefaultDarkWithLink: ComponentStory<
+  typeof Feature
+> = () => (
+  <Feature
+    showCarouselMobile={true}
+    title="Title"
+    theme="dark"
+    items={itemMockWithLink}
+  />
+);
+
+export const CarouselDefaultDarkWithoutLink: ComponentStory<
+  typeof Feature
+> = () => (
+  <Feature
+    showCarouselMobile={true}
+    title="Title"
+    theme="dark"
+    items={itemMockWithoutLink}
+  />
 );
