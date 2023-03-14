@@ -42,22 +42,23 @@ const HeroTextContent = ({
       sx={{ minHeight: 'inherit' }}
       mt={{ xs: 9, lg: 0 }}
     >
-      <Typography variant="h1" color={textColor} mb={2}>
-        {title}
-      </Typography>
-      <>
-        {subtitle && (
-          <Typography variant="body1" color={textColor}>
-            {subtitle}
+      <Box mb={{ xs: 6, md: 4 }}>
+        <>
+          <Typography variant="h1" color={textColor} mb={2}>
+            {title}
           </Typography>
-        )}
-      </>
+          {subtitle && (
+            <Typography variant="body1" color={textColor}>
+              {subtitle}
+            </Typography>
+          )}
+        </>
+      </Box>
       {ctaButtons?.length ? (
         <Stack
           direction={{ xs: 'column', md: 'row' }}
           spacing={2}
-          mt={4}
-          mb={{ xs: 4 }}
+          mb={{ xs: 8, lg: 0 }}
         >
           {ctaButtons.map((button, i) => {
             if (isJSX(button)) return button;
@@ -102,13 +103,13 @@ const Hero = (props: HeroProps) => {
         <Grid
           container
           direction={inverse ? 'row-reverse' : 'row'}
-          sx={{ minHeight: { sm: minHeight } }}
+          sx={{ minHeight: { lg: minHeight } }}
         >
           <Grid item lg={6} sx={{ minHeight: 'inherit' }}>
             <HeroTextContent {...props} />
           </Grid>
           {props.image && (
-            <Grid item lg={6}>
+            <Grid item lg={6} mb={{ xs: 4, lg: 0 }}>
               <img
                 alt={props.altText}
                 src={props.image}
