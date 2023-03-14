@@ -30,9 +30,9 @@ const customViewports = {
 };
 
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-  viewport: { viewports: { ...MINIMAL_VIEWPORTS, ...customViewports } },
-  layout: 'fullscreen',
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  viewport: { viewports: {...MINIMAL_VIEWPORTS, ...customViewports }  },
+  layout: "fullscreen",
   controls: {
     matchers: {
       color: /(background|color)$/i,
