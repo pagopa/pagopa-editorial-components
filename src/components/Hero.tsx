@@ -11,7 +11,7 @@ import { type CommonProps, type Generic } from 'types/components';
 import { isJSX } from '../utils';
 
 export interface HeroProps extends CommonProps, HeroTextProps {
-  image?: string;
+  image?: string | Generic;
   altText?: string;
   inverse?: boolean;
   background?: string;
@@ -81,6 +81,8 @@ const Hero = (props: HeroProps) => {
     background,
     theme = 'dark',
     useHoverlay = true,
+    image,
+    altText = '',
   } = props;
   const minHeight = size === 'big' ? '720px' : '480px';
 
@@ -110,20 +112,24 @@ const Hero = (props: HeroProps) => {
           <Grid item lg={6} sx={{ minHeight: 'inherit' }}>
             <HeroTextContent {...props} />
           </Grid>
-          {props.image && (
+          {image && (
             <Grid item lg={6} mb={{ xs: 4, lg: 0 }}>
-              <img
-                alt={props.altText}
-                src={props.image}
-                style={{
-                  objectFit: 'contain',
-                  objectPosition: 'center',
-                  width: '100%',
-                  height: '100%',
-                  maxHeight: minHeight,
-                  userSelect: 'none',
-                }}
-              />
+              {isJSX(image) ? (
+                image
+              ) : (
+                <img
+                  alt={altText}
+                  src={image}
+                  style={{
+                    objectFit: 'contain',
+                    objectPosition: 'center',
+                    width: '100%',
+                    height: '100%',
+                    maxHeight: minHeight,
+                    userSelect: 'none',
+                  }}
+                />
+              )}
             </Grid>
           )}
         </Grid>
