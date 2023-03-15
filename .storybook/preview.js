@@ -1,6 +1,6 @@
 import React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material';
-import { theme } from '@pagopa/mui-italia';
+import { theme } from './theme';
 import CssBaseline from '@mui/material/CssBaseline';
 import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
 

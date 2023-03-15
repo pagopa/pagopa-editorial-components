@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
+import { useTheme } from '@mui/material/styles';
 import { Container } from '@mui/system';
 import { type CSSProperties } from 'react';
 import { type CommonProps } from 'types/components';
@@ -28,8 +29,10 @@ export const Editorial = ({
   pattern = 'none',
   width = 'standard',
 }: EditorialProps) => {
+  const { palette } = useTheme();
+
   const backgroundColor =
-    theme === 'dark' ? 'primary.dark' : 'background.paper';
+    theme === 'dark' ? palette.primary.dark : palette.background.paper;
 
   const columns = {
     wide: 6,

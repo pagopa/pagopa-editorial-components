@@ -1,3 +1,4 @@
+import { useTheme } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { type CommonProps } from 'types/components';
@@ -14,9 +15,11 @@ export const Content = ({
   body,
   theme,
 }: EditorialContentProps) => {
+  const { palette } = useTheme();
   const eyeletColor =
-    theme === 'dark' ? 'primary.contrastText' : 'text.secondary';
-  const textColor = theme === 'dark' ? 'primary.contrastText' : 'text.primary';
+    theme === 'dark' ? palette.primary.contrastText : palette.text.secondary;
+  const textColor =
+    theme === 'dark' ? palette.primary.contrastText : palette.text.primary;
 
   return (
     <Stack maxWidth={{ md: '448px' }} gap="16px">
