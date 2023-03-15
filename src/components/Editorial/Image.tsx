@@ -1,10 +1,18 @@
 import Box from '@mui/material/Box';
 import { type SystemStyleObject } from '@mui/system/styleFunctionSx';
-import { type CSSProperties, type ImgHTMLAttributes } from 'react';
+import {
+  type ReactElement,
+  type CSSProperties,
+  type ImgHTMLAttributes,
+  isValidElement,
+  cloneElement,
+} from 'react';
 import { type CommonProps } from 'types/components';
 
 export interface EditorialImageProps extends CommonProps {
-  image: ImgHTMLAttributes<HTMLImageElement>;
+  image:
+    | ImgHTMLAttributes<HTMLImageElement>
+    | ReactElement<{ style: CSSProperties }>;
   pattern?: 'dots' | 'solid' | 'none';
 }
 
@@ -17,15 +25,16 @@ export const Image = ({ image, pattern = 'none' }: EditorialImageProps) => (
     sx={{
       ...styles.img,
       ...patterns[pattern],
+      ...('props' in image ? image?.props?.style : {}),
     }}
   >
-    <img
-      style={{
-        ...styles.img,
-        transform: pattern && pattern !== 'none' ? translateTopRight : '',
-      }}
-      {...image}
-    />
+    {isValidElement(image) ? (
+      cloneElement(image, {
+        style: { ...imgStyle(pattern) },
+      })
+    ) : (
+      <img style={imgStyle(pattern)} {...image} />
+    )}
   </Box>
 );
 
@@ -52,3 +61,8 @@ const patterns: Record<string, SystemStyleObject> = {
     transform: scaleAndTranslateBottomLeft,
   },
 };
+
+const imgStyle = (pattern: EditorialImageProps['pattern']) => ({
+  ...styles.img,
+  transform: pattern && pattern !== 'none' ? translateTopRight : '',
+});
