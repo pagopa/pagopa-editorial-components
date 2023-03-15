@@ -5,10 +5,10 @@ import portrait from '../assets/Editorial/portrait.png';
 
 const ctaButtons: EditorialProps['ctaButtons'] = [
   {
-    text: 'Scopri di più',
+    text: 'Accedi',
   },
   {
-    text: 'Accedi',
+    text: 'Scopri di più',
   },
 ];
 

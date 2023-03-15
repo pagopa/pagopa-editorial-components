@@ -14,19 +14,27 @@ export const Ctas = ({ ctaButtons, theme }: EditorialCtaProps) => {
   const buttonsTheme: ButtonProps[] = [
     {
       color: theme === 'dark' ? 'negative' : 'primary',
-      variant: 'outlined',
+      variant: 'contained',
     },
     {
       color: theme === 'dark' ? 'negative' : 'primary',
-      variant: 'contained',
+      variant: 'outlined',
     },
   ];
 
   return ctaButtons?.length ? (
-    <Stack direction={{ xs: 'column', md: 'row' }} spacing={2}>
+    <Stack
+      direction={{ md: 'row-reverse', xs: 'row' }}
+      justifyContent="left"
+      spacing={2}
+    >
       {ctaButtons.map((button: CtaButton, i) => {
         return (
-          <Button key={`${button.text}-${i}`} {...buttonsTheme[i]}>
+          <Button
+            sx={{ width: { md: 'auto', xs: '100%' } }}
+            key={`${button.text}-${i}`}
+            {...buttonsTheme[i]}
+          >
             {button.text}
           </Button>
         );
