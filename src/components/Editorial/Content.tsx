@@ -5,7 +5,7 @@ import { type CommonProps } from 'types/components';
 export interface EditorialContentProps extends CommonProps {
   title: string;
   eyelet?: string;
-  body: string;
+  body: string | JSX.Element;
 }
 
 export const Content = ({

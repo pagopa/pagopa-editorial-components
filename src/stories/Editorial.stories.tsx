@@ -60,3 +60,17 @@ Solid.args = {
   pattern: 'solid',
   reversed: true,
 };
+
+export const WithElementBody = Template.bind({});
+WithElementBody.args = {
+  pattern: 'solid',
+  reversed: true,
+  body: (
+    <p>
+      Con Piattaforma Notifiche, ricevi e gestisci nello stesso spazio tutti gli
+      atti di notifica che ti inviano <b>Enti e Pubbliche Amministrazioni</b>,
+      come multe o certificati elettorali. E, grazie all`integrazione con
+      pagoPA, puoi anche pagare eventuali costi. Così, risparmi tempo e denaro.
+    </p>
+  ),
+};
