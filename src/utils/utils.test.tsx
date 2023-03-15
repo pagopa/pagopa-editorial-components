@@ -26,5 +26,7 @@ describe('isJSX function utlity working properly', () => {
     expect(isJSX(NotJSX.emptyObject)).toBeFalsy();
     expect(isJSX(NotJSX.numbers)).toBeFalsy();
     expect(isJSX(NotJSX.zero)).toBeFalsy();
+    expect(isJSX(undefined)).toBeFalsy();
+    expect(isJSX(null)).toBeFalsy();
   });
 });
