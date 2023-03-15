@@ -47,9 +47,9 @@ WithoutLabel.args = {
   eyelet: '',
 };
 
-export const Polka = Template.bind({});
-Polka.args = {
-  pattern: 'polka',
+export const Dots = Template.bind({});
+Dots.args = {
+  pattern: 'dots',
   theme: 'dark',
   image: { src: portrait as string, alt: '' },
   width: 'standard',
@@ -59,9 +59,4 @@ export const Solid = Template.bind({});
 Solid.args = {
   pattern: 'solid',
   reversed: true,
-};
-
-export const Waves = Template.bind({});
-Waves.args = {
-  pattern: 'waves',
 };
