@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
-import portrait from '../../assets/Editorial/portrait.png';
+import portrait from '../assets/Editorial/portrait.png';
 import { Editorial } from '../../components/Editorial';
 import { defaults } from './Defaults';
 

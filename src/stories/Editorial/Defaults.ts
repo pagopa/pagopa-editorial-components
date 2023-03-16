@@ -1,4 +1,4 @@
-import regular from '../../assets/Editorial/regular.png';
+import regular from '../assets/Editorial/regular.png';
 
 export const defaults = {
   args: {
