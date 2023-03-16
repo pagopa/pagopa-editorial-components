@@ -10,9 +10,15 @@ export const defaults = {
     ctaButtons: [
       {
         text: 'Accedi',
+        onClick: () => {
+          alert('Accedi');
+        },
       },
       {
         text: 'Scopri di più',
+        onClick: () => {
+          alert('Scopri di più');
+        },
       },
     ],
   },

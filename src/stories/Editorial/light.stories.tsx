@@ -92,3 +92,16 @@ RotatedImageElementExample.args = {
     </Box>
   ),
 };
+
+export const CtasElementExample = Template.bind({});
+CtasElementExample.args = {
+  ctaButtons: [
+    <button key={1}>+</button>,
+    {
+      text: 'Scopri di più',
+      onClick: () => {
+        alert('Scopri di più');
+      },
+    },
+  ],
+};
