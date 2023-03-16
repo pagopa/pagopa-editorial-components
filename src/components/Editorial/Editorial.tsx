@@ -3,11 +3,10 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import { useTheme } from '@mui/material/styles';
 import { Container } from '@mui/system';
-import { type CSSProperties } from 'react';
 import { type CommonProps } from 'types/components';
 import { Content, type EditorialContentProps } from './Content';
-import { type EditorialCtaProps, Ctas } from './Ctas';
-import { type EditorialImageProps, Image } from './Image';
+import { Ctas, type EditorialCtaProps } from './Ctas';
+import { Image, type EditorialImageProps } from './Image';
 
 export interface EditorialProps
   extends CommonProps,
@@ -69,11 +68,12 @@ Editorial.Content = Content;
 Editorial.Ctas = Ctas;
 Editorial.Image = Image;
 
-const styles: Record<string, CSSProperties> = {
+const styles = {
   main: {
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column-reverse',
+    padding: { md: '64px 24px 64px 142px', xs: '32px 24px' },
   },
   half: {
     display: 'grid',
