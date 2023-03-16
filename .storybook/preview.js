@@ -39,7 +39,7 @@ export const parameters = {
 };
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={mainTheme}>
       <CssBaseline />
       <Story />
     </ThemeProvider>
