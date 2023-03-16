@@ -1,10 +1,10 @@
 import React from 'react';
 import type { Step } from './HowTo';
-import { Stack, Typography, Link, Box } from '@mui/material';
+import { Stack, Typography, Box } from '@mui/material';
 
 export const HowToStep: React.FC<
   Step & { index: number; theme: 'light' | 'dark'; isLastStep: boolean }
-> = ({ index, icon, title, link, description, theme, isLastStep }) => {
+> = ({ index, icon, title, description, theme, isLastStep }) => {
   const isDarkTheme = theme === 'dark';
   const stepNum = index + 1;
 
@@ -46,7 +46,7 @@ export const HowToStep: React.FC<
           color={isDarkTheme ? 'white' : 'primary'}
           variant="h6"
           component="p"
-        >{`0${++index}`}</Typography>
+        >{`0${stepNum}`}</Typography>
       )}
 
       {/** Step title */}
@@ -69,19 +69,6 @@ export const HowToStep: React.FC<
       ) : (
         <Box color={isDarkTheme ? 'white' : 'text.primary'}>{description}</Box>
       )}
-
-      {/** Link */}
-      {link && (
-        <Link
-          href={link.href}
-          target={link.target}
-          color={isDarkTheme ? 'white' : 'primary'}
-          underline="none"
-          fontWeight={600}
-        >
-          {link.label}
-        </Link>
-      )}
     </Stack>
   );
 };
@@ -89,6 +76,7 @@ export const HowToStep: React.FC<
 const ArrowIcon: React.FC = () => {
   return (
     <svg
+      aria-hidden="true"
       fill="none"
       height="24"
       viewBox="0 0 44 24"

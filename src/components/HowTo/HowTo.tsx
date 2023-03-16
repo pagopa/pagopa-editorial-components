@@ -1,18 +1,14 @@
 import React from 'react';
-import { Box, Container, Stack, Typography } from '@mui/material';
+import { Box, Container, Link, Stack, Typography } from '@mui/material';
 import howToBackgroundDark from '../../assets/images/how-to-background-dark.jpeg';
 import howToBackgroundLight from '../../assets/images/how-to-background-light.jpeg';
 import { HowToStep } from './HowToStep';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export interface Step {
   icon?: JSX.Element;
   title: string;
   description: string | JSX.Element;
-  link?: {
-    href: string;
-    label: string;
-    target?: React.HTMLAttributeAnchorTarget;
-  };
 }
 
 export interface HowToProps {
@@ -20,6 +16,11 @@ export interface HowToProps {
   steps: Step[];
   theme: 'light' | 'dark';
 
+  link?: {
+    href: string;
+    label: string;
+    target?: React.HTMLAttributeAnchorTarget;
+  };
   rowMaxSteps?: number;
   stepsAlignment?: 'right' | 'center' | 'left';
 }
@@ -35,6 +36,7 @@ export const HowTo: React.FC<HowToProps> = ({
   title,
   steps,
   theme,
+  link,
   rowMaxSteps = 4,
   stepsAlignment = 'center',
 }) => {
@@ -99,6 +101,25 @@ export const HowTo: React.FC<HowToProps> = ({
             ))}
           </Stack>
         ))}
+
+        {/** Link */}
+        {link && (
+          <Link
+            sx={{ display: 'flex', alignItems: 'center', mt: 6 }}
+            href={link.href}
+            target={link.target}
+            color={isDarkTheme ? 'white' : 'primary'}
+            underline="none"
+            fontWeight={600}
+          >
+            {link.label}
+            <ArrowForwardIcon
+              sx={{ ml: 1 }}
+              fontSize="small"
+              aria-hidden="true"
+            />
+          </Link>
+        )}
       </Container>
     </Box>
   );
