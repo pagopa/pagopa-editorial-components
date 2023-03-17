@@ -1,5 +1,5 @@
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
-import Feature from '../components/Feature/Feature';
+import Feature from '../../components/Feature/Feature';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 
 const itemMockWithLink = [
@@ -69,24 +69,6 @@ export const DefaultWithoutLink: ComponentStory<typeof Feature> = (args) => (
   <Feature {...args} items={itemMockWithoutLink} />
 );
 
-export const DefaultDark: ComponentStory<typeof Feature> = () => (
-  <Feature
-    showCarouselMobile={false}
-    title="Title"
-    theme="dark"
-    items={itemMockWithLink}
-  />
-);
-
-export const DefaultDarkWithoutLink: ComponentStory<typeof Feature> = () => (
-  <Feature
-    showCarouselMobile={false}
-    title="Title"
-    theme="dark"
-    items={itemMockWithoutLink}
-  />
-);
-
 export const CarouselDefaultWithLink: ComponentStory<typeof Feature> = () => (
   <Feature
     showCarouselMobile={true}
@@ -103,28 +85,6 @@ export const CarouselDefaultWithoutLink: ComponentStory<
     showCarouselMobile={true}
     title="Title"
     theme="light"
-    items={itemMockWithoutLink}
-  />
-);
-
-export const CarouselDefaultDarkWithLink: ComponentStory<
-  typeof Feature
-> = () => (
-  <Feature
-    showCarouselMobile={true}
-    title="Title"
-    theme="dark"
-    items={itemMockWithLink}
-  />
-);
-
-export const CarouselDefaultDarkWithoutLink: ComponentStory<
-  typeof Feature
-> = () => (
-  <Feature
-    showCarouselMobile={true}
-    title="Title"
-    theme="dark"
     items={itemMockWithoutLink}
   />
 );
