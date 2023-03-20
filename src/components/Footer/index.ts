@@ -1,28 +1,3 @@
-// We need to validate this. It might be possible that the fields differ from product to product
-
-/* export type LangCode = 'it' | 'en' | 'de' | 'fr' | 'sl';
-export type Languages = Partial<Record<LangCode, LangLabels>> & {
-  it: LangLabels;
-};
-export type LangLabels = Partial<Record<LangCode, string>> & { it: string };
-
-export interface LangSwitchProps {
-  currentLangCode?: LangCode;
-  languages: Languages;
-  onLanguageChanged: (newLang: LangCode) => void;
-} */
-
-/* type FooterProps = LangSwitchProps & {
-  loggedUser: boolean;
-  companyLink: CompanyLinkType;
-  postLoginLinks: FooterLinksType[];
-  preLoginLinks: PreLoginFooterLinksType;
-  legalInfo: JSX.Element | JSX.Element[];
-  onExit?: (exitAction: () => void) => void;
-  productsJsonUrl?: string;
-  onProductsJsonFetchError?: (reason: any) => void;
-  hideProductsColumn?: boolean;
-}; */
 import * as t from 'io-ts';
 
 export type LinkType = 'internal' | 'external';
