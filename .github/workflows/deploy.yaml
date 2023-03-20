@@ -7,7 +7,7 @@ on:
 jobs:
   deploy:
     environment:
-      name: github-pages
+      name: develop
       url: ${{ steps.build-publish.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
