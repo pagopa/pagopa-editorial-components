@@ -21,12 +21,18 @@ export interface HeaderProps extends CommonProps, UpperHeaderProps {
 interface MenuDropdownProp {
   label: string;
   children?: JSX.Element[];
+  active?: boolean;
 }
 
-const MenuDropdown = ({ label, children }: MenuDropdownProp) => {
+const MenuDropdown = ({ label, children, active }: MenuDropdownProp) => {
   const [menuOpen, setMenuOpen] = useState(false); // TODO use a reducer
+  const hasChildren = children?.length;
+  const style = {
+    ...styles.MenuDropdown,
+    ...(active && styles.active),
+  };
   return (
-    <Stack>
+    <Stack sx={style}>
       <Stack
         direction="row"
         alignItems="center"
@@ -38,11 +44,13 @@ const MenuDropdown = ({ label, children }: MenuDropdownProp) => {
         <Typography variant="sidenav" color="primary">
           {label}
         </Typography>
-        <ArrowDropDownIcon
-          color="primary"
-          fontSize="small"
-          sx={menuOpen ? styles.menuIconOpen : styles.menuIconClosed}
-        />
+        {hasChildren && (
+          <ArrowDropDownIcon
+            color="primary"
+            fontSize="small"
+            sx={menuOpen ? styles.menuIconOpen : styles.menuIconClosed}
+          />
+        )}
       </Stack>
       {menuOpen ? <Stack sx={styles.menu}>{children}</Stack> : null}
     </Stack>
@@ -64,17 +72,17 @@ const UpperHeader = ({ product, help }: UpperHeaderProps) => (
 );
 
 export const Header = ({ product, help, theme, menu }: HeaderProps) => {
-  const { palette } = useTheme();
+  const { palette, spacing } = useTheme();
   const backgroundColor =
     theme === 'dark' ? palette.primary.dark : palette.background.paper;
 
   return (
-    <Box bgcolor={backgroundColor} sx={styles.main} gap="19px">
+    <Box bgcolor={backgroundColor} paddingX={spacing(3)} gap={spacing(2)}>
       <UpperHeader {...{ product, help }} />
       <Divider />
-      <Stack direction="row" gap="32px" paddingY="16px">
+      <Stack direction="row" gap="32px">
         {menu.map((menu, index) => (
-          <MenuDropdown key={index} label={menu.label}>
+          <MenuDropdown key={index} label={menu.label} active={menu.active}>
             {menu.children}
           </MenuDropdown>
         ))}
@@ -84,12 +92,17 @@ export const Header = ({ product, help, theme, menu }: HeaderProps) => {
 };
 
 const styles: Record<string, SxProps> = {
-  main: {
-    paddingX: '24px',
-  },
   top: {
     paddingY: '18px',
     justifyContent: 'space-between',
+  },
+  active: {
+    borderBottomStyle: 'solid',
+    borderBottomWidth: '2px',
+    borderBottomColor: 'primary.main',
+  },
+  MenuDropdown: {
+    paddingY: '16px',
   },
   menu: {
     position: 'absolute',

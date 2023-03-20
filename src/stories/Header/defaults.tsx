@@ -16,11 +16,15 @@ export const defaults: { args: HeaderProps } = {
       },
       {
         label: 'Voce Menu 2',
+        active: true,
         children: [
           <li key={4}> first </li>,
           <li key={5}> second </li>,
           <li key={6}> third </li>,
         ],
+      },
+      {
+        label: 'Voce Menu 3',
       },
     ],
   },
