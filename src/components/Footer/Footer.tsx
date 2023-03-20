@@ -20,6 +20,8 @@ import { FundedByNextGenerationEU } from '@assets/FundedByNextGenerationEU'; */
 
 /* Enum */
 import { ProductArrayType } from './ProductType';
+import { FundedByNextGenerationEU } from '../../assets/FundedByNextGenerationEU';
+import { LogoPagoPACompany } from '../../assets/LogoPagoPACompany';
 
 type FooterProps = LangSwitchProps & {
   companyLink: CompanyLinkType;
@@ -101,7 +103,9 @@ export const Footer = ({
                         onExit
                       )}
                       sx={{ display: 'inline-flex' }}
-                    ></Link>
+                    >
+                      <LogoPagoPACompany />
+                    </Link>
                   )}
 
                   <Stack
@@ -300,9 +304,9 @@ export const Footer = ({
                       </Stack>
 
                       <LangSwitch {...langProps} />
-                      <FundedByNextGenerationEU size={180} />
                     </Stack>
                   </Stack>
+                  <FundedByNextGenerationEU size={180} />
                 </Stack>
               </Grid>
             </Grid>
