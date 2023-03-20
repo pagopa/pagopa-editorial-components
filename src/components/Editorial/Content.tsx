@@ -15,14 +15,15 @@ export const Content = ({
   body,
   theme,
 }: EditorialContentProps) => {
-  const { palette } = useTheme();
+  const { palette, breakpoints, spacing } = useTheme();
   const eyeletColor =
     theme === 'dark' ? palette.primary.contrastText : palette.text.secondary;
   const textColor =
     theme === 'dark' ? palette.primary.contrastText : palette.text.primary;
+  const maxTextWidth = breakpoints.values.md / 2;
 
   return (
-    <Stack maxWidth={{ md: '448px' }} gap="16px">
+    <Stack maxWidth={{ md: maxTextWidth }} gap={spacing(2)}>
       <Typography variant="overline" color={eyeletColor}>
         {eyelet}
       </Typography>
