@@ -7,40 +7,51 @@ import { type CommonProps } from 'types/components';
 import { type SxProps, useTheme } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import { useState } from 'react';
+import { type MouseEventHandler, useState } from 'react';
+import { type StackProps } from '@mui/system';
 
 interface UpperHeaderProps {
   product: string;
   help?: boolean;
+  onHelpClick: () => void;
 }
 
 export interface HeaderProps extends CommonProps, UpperHeaderProps {
   menu: MenuDropdownProp[];
 }
 
-interface MenuDropdownProp {
+interface MenuDropdownProp extends Partial<StackProps> {
   label: string;
   children?: JSX.Element[];
   active?: boolean;
 }
 
-const MenuDropdown = ({ label, children, active }: MenuDropdownProp) => {
+const MenuDropdown = ({
+  label,
+  children,
+  active,
+  onClick,
+  ...button
+}: MenuDropdownProp) => {
   const [menuOpen, setMenuOpen] = useState(false); // TODO use a reducer
   const hasChildren = children?.length;
   const style = {
     ...styles.MenuDropdown,
     ...(active && styles.active),
   };
+
+  const toggleMenu = () => {
+    hasChildren && setMenuOpen((open) => !open);
+  };
+
+  const handleMenuClick: MouseEventHandler<HTMLDivElement> = (e) => {
+    toggleMenu();
+    onClick?.(e);
+  };
+
   return (
     <Stack sx={style}>
-      <Stack
-        direction="row"
-        alignItems="center"
-        onClick={() => {
-          setMenuOpen((open) => !open);
-        }}
-        sx={{ cursor: 'pointer' }}
-      >
+      <Stack onClick={handleMenuClick} sx={styles.menuItem} {...button}>
         <Typography variant="sidenav" color="primary">
           {label}
         </Typography>
@@ -57,13 +68,19 @@ const MenuDropdown = ({ label, children, active }: MenuDropdownProp) => {
   );
 };
 
-const UpperHeader = ({ product, help }: UpperHeaderProps) => (
+const UpperHeader = ({ product, help, onHelpClick }: UpperHeaderProps) => (
   <Stack direction="row" sx={styles.top}>
     <Typography variant="h5">{product}</Typography>
     {help && (
       <Stack direction="row" alignItems="center" gap="16px">
-        <Typography variant="subtitle2">Serve aiuto?</Typography>
-        <Fab color="primary" sx={{ width: '44px', height: '44px' }}>
+        <Typography variant="subtitle2" color="primary">
+          Serve aiuto?
+        </Typography>
+        <Fab
+          color="primary"
+          sx={{ width: '44px', height: '44px' }}
+          onClick={onHelpClick}
+        >
           <ChatBubbleOutlineIcon sx={{ width: '16.67px', height: '16.67px' }} />
         </Fab>
       </Stack>
@@ -71,18 +88,24 @@ const UpperHeader = ({ product, help }: UpperHeaderProps) => (
   </Stack>
 );
 
-export const Header = ({ product, help, theme, menu }: HeaderProps) => {
+export const Header = ({
+  product,
+  help,
+  theme,
+  menu,
+  onHelpClick,
+}: HeaderProps) => {
   const { palette, spacing } = useTheme();
   const backgroundColor =
     theme === 'dark' ? palette.primary.dark : palette.background.paper;
 
   return (
     <Box bgcolor={backgroundColor} paddingX={spacing(3)} gap={spacing(2)}>
-      <UpperHeader {...{ product, help }} />
+      <UpperHeader {...{ product, help, onHelpClick }} />
       <Divider />
       <Stack direction="row" gap="32px">
         {menu.map((menu, index) => (
-          <MenuDropdown key={index} label={menu.label} active={menu.active}>
+          <MenuDropdown key={index} {...menu}>
             {menu.children}
           </MenuDropdown>
         ))}
@@ -112,6 +135,10 @@ const styles: Record<string, SxProps> = {
     background: 'white',
     width: '100px',
     marginTop: '40px',
+  },
+  menuItem: {
+    cursor: 'pointer',
+    flexDirection: 'row',
   },
   menuIconOpen: {
     transform: 'rotate(-180deg)',

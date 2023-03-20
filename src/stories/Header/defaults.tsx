@@ -5,6 +5,9 @@ export const defaults: { args: HeaderProps } = {
     theme: 'light',
     product: 'Nome del prodotto',
     help: true,
+    onHelpClick: () => {
+      alert('Assistenza');
+    },
     menu: [
       {
         label: 'Voce Menu 1',
@@ -25,6 +28,9 @@ export const defaults: { args: HeaderProps } = {
       },
       {
         label: 'Voce Menu 3',
+        onClick: () => {
+          alert('Voce Menu 3');
+        },
       },
     ],
   },
