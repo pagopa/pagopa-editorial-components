@@ -42,27 +42,35 @@ export const Accordion: React.FC<AccordionProps> = ({
               </Typography>
 
               {/** Subtitle */}
-              <Typography
-                textAlign={textAlignment}
-                color={textColor}
-                variant="h6"
-              >
-                {subtitle}
-              </Typography>
+              {subtitle && (
+                <>
+                  <Typography
+                    textAlign={textAlignment}
+                    color={textColor}
+                    variant="h6"
+                  >
+                    {subtitle}
+                  </Typography>
+                </>
+              )}
 
               {/** Description */}
-              {typeof description === 'string' ? (
-                <Typography
-                  textAlign={textAlignment}
-                  color={textColor}
-                  variant="body2"
-                >
-                  {description}
-                </Typography>
-              ) : (
-                <Box textAlign={textAlignment} color={textColor}>
-                  {description}
-                </Box>
+              {description && (
+                <>
+                  {typeof description === 'string' ? (
+                    <Typography
+                      textAlign={textAlignment}
+                      color={textColor}
+                      variant="body2"
+                    >
+                      {description}
+                    </Typography>
+                  ) : (
+                    <Box textAlign={textAlignment} color={textColor}>
+                      {description}
+                    </Box>
+                  )}
+                </>
               )}
             </Stack>
           </Grid>
