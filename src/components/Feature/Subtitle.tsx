@@ -24,9 +24,10 @@ const Subtitle = ({ subtitle, textLink, url, theme }: SubtitleProps) => {
           justifyContent="center"
           alignItems="center"
           direction={'row'}
+          color={theme === 'light' ? 'primary' : 'background.paper'}
         >
           <Link
-            color={theme === 'light' ? 'primary' : 'background.paper'}
+            color="inherit"
             href={url}
             underline="none"
             sx={{
@@ -36,9 +37,7 @@ const Subtitle = ({ subtitle, textLink, url, theme }: SubtitleProps) => {
             {textLink}
           </Link>
 
-          <ArrowForwardIcon
-            color={theme === 'light' ? 'primary' : 'secondary'}
-          ></ArrowForwardIcon>
+          <ArrowForwardIcon color="inherit"></ArrowForwardIcon>
         </Stack>
       )}
     </Stack>
