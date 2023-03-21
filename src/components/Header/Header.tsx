@@ -11,12 +11,14 @@ import { type MouseEventHandler, useState } from 'react';
 import { type StackProps } from '@mui/system';
 import { Ctas, type CtaProps } from '../Ctas';
 import Avatar, { type AvatarProps } from '@mui/material/Avatar';
+import Chip from '@mui/material/Chip';
 
 interface UpperHeaderProps {
   product: string;
   help?: boolean;
   onHelpClick: () => void;
   avatar?: AvatarProps;
+  beta?: boolean;
 }
 
 export interface HeaderProps extends CommonProps, UpperHeaderProps, CtaProps {
@@ -76,11 +78,20 @@ const UpperHeader = ({
   help,
   onHelpClick,
   avatar,
+  beta,
 }: UpperHeaderProps) => (
   <Stack direction="row" sx={styles.top}>
-    <Stack direction="row" gap="16px">
+    <Stack direction="row" gap="16px" alignItems="center">
       {avatar && <Avatar {...avatar} />}
       <Typography variant="h5">{product}</Typography>
+      {beta && (
+        <Chip
+          label="beta"
+          color="primary"
+          sx={{ height: 20, width: 45 }}
+          size="small"
+        />
+      )}
     </Stack>
     {help && (
       <Stack direction="row" alignItems="center" gap="16px">
@@ -107,6 +118,7 @@ export const Header = ({
   onHelpClick,
   ctaButtons,
   avatar,
+  beta,
 }: HeaderProps) => {
   const { palette, spacing } = useTheme();
   const backgroundColor =
@@ -114,7 +126,7 @@ export const Header = ({
 
   return (
     <Box bgcolor={backgroundColor} paddingX={spacing(3)} gap={spacing(2)}>
-      <UpperHeader {...{ product, help, onHelpClick, avatar }} />
+      <UpperHeader {...{ product, help, onHelpClick, avatar, beta }} />
       <Divider />
       <Stack
         direction="row"

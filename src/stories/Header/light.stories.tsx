@@ -25,3 +25,9 @@ WithAvatar.args = {
   ...defaults.args,
   avatar: defaults.avatar,
 };
+
+export const InBeta = Template.bind({});
+InBeta.args = {
+  ...defaults.args,
+  beta: true,
+};
