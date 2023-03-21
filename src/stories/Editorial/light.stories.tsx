@@ -7,7 +7,7 @@ import { defaults } from './Defaults';
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
   component: Editorial,
-  title: 'Editorial/Light',
+  title: 'Editorial/light',
   argTypes: {},
   args: defaults.args,
 } as ComponentMeta<typeof Editorial>;
