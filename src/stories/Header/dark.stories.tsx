@@ -5,9 +5,9 @@ import { defaults } from './defaults';
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
   component: Header,
-  title: 'Header/light',
+  title: 'Header/dark',
   argTypes: {},
-  args: defaults.args,
+  args: { ...defaults.args, theme: 'dark' },
 } as ComponentMeta<typeof Header>;
 
 const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
@@ -16,7 +16,7 @@ export const Standard = Template.bind({});
 
 export const WithButtons = Template.bind({});
 WithButtons.args = {
-  ctaButtons: defaults.ctaButtons.light,
+  ctaButtons: defaults.ctaButtons.dark,
 };
 
 export const WithAvatar = Template.bind({});

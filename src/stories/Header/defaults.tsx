@@ -3,7 +3,10 @@ import lavoraConNoi from '../assets/Header/LAVORA-CON-NOI.png';
 
 export const defaults: {
   args: HeaderProps;
-  ctaButtons: HeaderProps['ctaButtons'];
+  ctaButtons: {
+    dark: HeaderProps['ctaButtons'];
+    light: HeaderProps['ctaButtons'];
+  };
   avatar: HeaderProps['avatar'];
 } = {
   args: {
@@ -15,6 +18,7 @@ export const defaults: {
     },
     menu: [
       {
+        theme: 'light',
         label: 'Voce Menu 1',
         children: [
           <li key={1}> first </li>,
@@ -23,6 +27,7 @@ export const defaults: {
         ],
       },
       {
+        theme: 'light',
         label: 'Voce Menu 2',
         active: true,
         children: [
@@ -32,6 +37,7 @@ export const defaults: {
         ],
       },
       {
+        theme: 'light',
         label: 'Voce Menu 3',
         onClick: () => {
           alert('Voce Menu 3');
@@ -39,25 +45,47 @@ export const defaults: {
       },
     ],
   },
-  ctaButtons: [
-    {
-      text: 'Primary',
-      color: 'primary',
-      variant: 'contained',
-      size: 'small',
-      onClick: () => {
-        alert('Primary');
+  ctaButtons: {
+    light: [
+      {
+        text: 'Primary',
+        color: 'primary',
+        variant: 'contained',
+        size: 'small',
+        onClick: () => {
+          alert('Primary');
+        },
       },
-    },
-    {
-      text: 'Secondary',
-      color: 'primary',
-      variant: 'outlined',
-      size: 'small',
-      onClick: () => {
-        alert('Secondary');
+      {
+        text: 'Secondary',
+        color: 'primary',
+        variant: 'outlined',
+        size: 'small',
+        onClick: () => {
+          alert('Secondary');
+        },
       },
-    },
-  ],
+    ],
+    dark: [
+      {
+        text: 'Primary',
+        color: 'negative',
+        variant: 'contained',
+        size: 'small',
+        onClick: () => {
+          alert('Primary');
+        },
+      },
+      {
+        text: 'Secondary',
+        color: 'negative',
+        variant: 'outlined',
+        size: 'small',
+        onClick: () => {
+          alert('Secondary');
+        },
+      },
+    ],
+  },
   avatar: { src: lavoraConNoi, alt: 'product avatar' },
 };
