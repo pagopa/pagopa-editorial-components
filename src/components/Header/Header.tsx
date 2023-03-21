@@ -31,32 +31,50 @@ interface MenuDropdownProp extends Partial<StackProps> {
   active?: boolean;
 }
 
+const timeoutLength = 300;
+
 const MenuDropdown = ({
   label,
   children,
   active,
-  onClick,
   ...button
 }: MenuDropdownProp) => {
-  const [menuOpen, setMenuOpen] = useState(false); // TODO use a reducer
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const hasChildren = children?.length;
   const style = {
     ...styles.MenuDropdown,
     ...(active && styles.active),
   };
 
-  const toggleMenu = () => {
-    hasChildren && setMenuOpen((open) => !open);
+  const openMenu = () => {
+    setMenuOpen(true);
   };
 
-  const handleMenuClick: MouseEventHandler<HTMLDivElement> = (e) => {
-    toggleMenu();
-    onClick?.(e);
+  const leaveMenu = () => {
+    setTimeout(() => {
+      setMenuOpen(false);
+    }, timeoutLength);
+  };
+
+  const openDropdown = () => {
+    setDropdownOpen(true);
+  };
+
+  const leaveDropdown = () => {
+    setTimeout(() => {
+      setDropdownOpen(false);
+    }, timeoutLength);
   };
 
   return (
     <Stack sx={style}>
-      <Stack onClick={handleMenuClick} sx={styles.menuItem} {...button}>
+      <Stack
+        onMouseEnter={openMenu}
+        onMouseLeave={leaveMenu}
+        sx={styles.menuItem}
+        {...button}
+      >
         <Typography variant="sidenav" color="primary">
           {label}
         </Typography>
@@ -68,7 +86,15 @@ const MenuDropdown = ({
           />
         )}
       </Stack>
-      {menuOpen ? <Stack sx={styles.menu}>{children}</Stack> : null}
+      {menuOpen || dropdownOpen ? (
+        <Stack
+          onMouseEnter={openDropdown}
+          onMouseLeave={leaveDropdown}
+          sx={styles.menu}
+        >
+          {children}
+        </Stack>
+      ) : null}
     </Stack>
   );
 };
