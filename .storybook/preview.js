@@ -1,6 +1,6 @@
 import React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material';
-import { theme } from '@pagopa/mui-italia';
+import { theme } from './theme';
 import CssBaseline from '@mui/material/CssBaseline';
 import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
 
@@ -30,9 +30,9 @@ const customViewports = {
 };
 
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-  viewport: { viewports: { ...MINIMAL_VIEWPORTS, ...customViewports } },
-  layout: 'fullscreen',
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  viewport: { viewports: {...MINIMAL_VIEWPORTS, ...customViewports }  },
+  layout: "fullscreen",
   controls: {
     matchers: {
       color: /(background|color)$/i,
