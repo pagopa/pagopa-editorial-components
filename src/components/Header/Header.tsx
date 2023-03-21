@@ -1,15 +1,37 @@
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import { type CommonProps } from 'types/components';
-import { useTheme } from '@mui/material/styles';
+import { type SxProps, useTheme } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import { Ctas, type CtaProps } from '../Ctas';
 import { UpperHeader, type UpperHeaderProps } from './UpperHeader';
 import { MenuDropdown, type MenuDropdownProp } from './MenuDropdown';
 
-export interface HeaderProps extends CommonProps, UpperHeaderProps, CtaProps {
+interface BottomHeaderProps extends CtaProps {
   menu: MenuDropdownProp[];
 }
+
+export interface HeaderProps
+  extends CommonProps,
+    UpperHeaderProps,
+    BottomHeaderProps {}
+
+const BottomHeader = ({ menu, ctaButtons, theme }: BottomHeaderProps) => {
+  const { spacing } = useTheme();
+
+  return (
+    <Stack sx={styles.bottomHeader}>
+      <Stack gap={spacing(4)} direction="row">
+        {menu.map((menu, index) => (
+          <MenuDropdown key={index} {...menu} theme={theme}>
+            {menu.children}
+          </MenuDropdown>
+        ))}
+      </Stack>
+      {ctaButtons?.length && <Ctas theme={theme} ctaButtons={ctaButtons} />}
+    </Stack>
+  );
+};
 
 export const Header = ({
   product,
@@ -27,23 +49,18 @@ export const Header = ({
 
   return (
     <Box bgcolor={backgroundColor} paddingX={spacing(3)} gap={spacing(2)}>
-      <UpperHeader {...{ product, help, onHelpClick, avatar, beta }} />
+      <UpperHeader {...{ product, help, onHelpClick, avatar, beta, theme }} />
       <Divider />
-      <Stack
-        direction="row"
-        justifyContent="space-between"
-        alignItems="center"
-        width="100%"
-      >
-        <Stack gap="32px" direction="row">
-          {menu.map((menu, index) => (
-            <MenuDropdown key={index} {...menu}>
-              {menu.children}
-            </MenuDropdown>
-          ))}
-        </Stack>
-        {ctaButtons?.length && <Ctas theme="light" ctaButtons={ctaButtons} />}
-      </Stack>
+      <BottomHeader {...{ menu, ctaButtons, theme }} />
     </Box>
   );
+};
+
+const styles: Record<string, SxProps> = {
+  bottomHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+  },
 };

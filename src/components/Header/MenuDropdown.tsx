@@ -3,11 +3,13 @@ import {
   type StackProps,
   type SxProps,
   Typography,
+  useTheme,
 } from '@mui/material';
 import { useState } from 'react';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { type CommonProps } from 'types/components';
 
-export interface MenuDropdownProp extends Partial<StackProps> {
+export interface MenuDropdownProp extends Partial<StackProps>, CommonProps {
   label: string;
   children?: JSX.Element[];
   active?: boolean;
@@ -19,15 +21,19 @@ export const MenuDropdown = ({
   label,
   children,
   active,
+  theme,
   ...button
 }: MenuDropdownProp) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const hasChildren = children?.length;
-  const style = {
-    ...styles.MenuDropdown,
+  const activeStyle = {
     ...(active && styles.active),
   };
+  const { palette, spacing } = useTheme();
+
+  const textColor =
+    theme === 'dark' ? palette.primary.contrastText : palette.primary.dark;
 
   const openMenu = () => {
     setMenuOpen(true);
@@ -50,19 +56,22 @@ export const MenuDropdown = ({
   };
 
   return (
-    <Stack sx={style}>
-      <Stack
-        onMouseEnter={openMenu}
-        onMouseLeave={leaveMenu}
-        sx={styles.menuItem}
-        {...button}
-      >
-        <Typography variant="sidenav" color="primary">
+    <Stack
+      sx={activeStyle}
+      borderColor={
+        theme === 'dark' ? palette.primary.contrastText : palette.primary.dark
+      }
+      paddingY={spacing(2)}
+      onMouseEnter={openMenu}
+      onMouseLeave={leaveMenu}
+    >
+      <Stack sx={styles.menuItem} {...button} color={textColor}>
+        <Typography variant="sidenav" color="inherit">
           {label}
         </Typography>
         {hasChildren && (
           <ArrowDropDownIcon
-            color="primary"
+            color="inherit"
             fontSize="small"
             sx={menuOpen ? styles.menuIconOpen : styles.menuIconClosed}
           />
@@ -85,19 +94,14 @@ const styles: Record<string, SxProps> = {
   active: {
     borderBottomStyle: 'solid',
     borderBottomWidth: '2px',
-    borderBottomColor: 'primary.main',
-  },
-  MenuDropdown: {
-    paddingY: '16px',
   },
   menu: {
     position: 'absolute',
-    listStyleTpe: 'none',
-    margin: '5px 0',
-    padding: 0,
     background: 'white',
-    width: '100px',
+    width: '130px',
     marginTop: '40px',
+    marginLeft: '-5px',
+    paddingX: '20px',
   },
   menuItem: {
     cursor: 'pointer',
