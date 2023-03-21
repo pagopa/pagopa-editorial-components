@@ -1,8 +1,10 @@
 import { type HeaderProps } from 'components/Header/Header';
+import lavoraConNoi from '../assets/Header/LAVORA-CON-NOI.png';
 
 export const defaults: {
   args: HeaderProps;
   ctaButtons: HeaderProps['ctaButtons'];
+  avatar: HeaderProps['avatar'];
 } = {
   args: {
     theme: 'light',
@@ -57,4 +59,5 @@ export const defaults: {
       },
     },
   ],
+  avatar: { src: lavoraConNoi, alt: 'product avatar' },
 };

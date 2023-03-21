@@ -19,3 +19,9 @@ WithButtons.args = {
   ...defaults.args,
   ctaButtons: defaults.ctaButtons,
 };
+
+export const WithAvatar = Template.bind({});
+WithAvatar.args = {
+  ...defaults.args,
+  avatar: defaults.avatar,
+};

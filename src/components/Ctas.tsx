@@ -19,7 +19,7 @@ const isButtonProps = (button: CtaButton): button is CtaButtonProps => {
 };
 
 export const Ctas = ({ ctaButtons, theme, reverse }: CtaProps) => {
-  const buttonsTheme: ButtonProps[] = [
+  const buttonsThemeDefault: ButtonProps[] = [
     {
       color: theme === 'dark' ? 'negative' : 'primary',
       variant: 'contained',
@@ -42,7 +42,7 @@ export const Ctas = ({ ctaButtons, theme, reverse }: CtaProps) => {
           <Button
             sx={{ width: { md: 'auto', xs: '100%' }, display: 'flex' }}
             key={`${button.text}-${i}`}
-            {...buttonsTheme[i]}
+            {...buttonsThemeDefault[i]}
             {...button}
           >
             {button.text}

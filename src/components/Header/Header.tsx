@@ -10,11 +10,13 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { type MouseEventHandler, useState } from 'react';
 import { type StackProps } from '@mui/system';
 import { Ctas, type CtaProps } from '../Ctas';
+import Avatar, { type AvatarProps } from '@mui/material/Avatar';
 
 interface UpperHeaderProps {
   product: string;
   help?: boolean;
   onHelpClick: () => void;
+  avatar?: AvatarProps;
 }
 
 export interface HeaderProps extends CommonProps, UpperHeaderProps, CtaProps {
@@ -69,9 +71,17 @@ const MenuDropdown = ({
   );
 };
 
-const UpperHeader = ({ product, help, onHelpClick }: UpperHeaderProps) => (
+const UpperHeader = ({
+  product,
+  help,
+  onHelpClick,
+  avatar,
+}: UpperHeaderProps) => (
   <Stack direction="row" sx={styles.top}>
-    <Typography variant="h5">{product}</Typography>
+    <Stack direction="row" gap="16px">
+      {avatar && <Avatar {...avatar} />}
+      <Typography variant="h5">{product}</Typography>
+    </Stack>
     {help && (
       <Stack direction="row" alignItems="center" gap="16px">
         <Typography variant="subtitle2" color="primary">
@@ -96,6 +106,7 @@ export const Header = ({
   menu,
   onHelpClick,
   ctaButtons,
+  avatar,
 }: HeaderProps) => {
   const { palette, spacing } = useTheme();
   const backgroundColor =
@@ -103,7 +114,7 @@ export const Header = ({
 
   return (
     <Box bgcolor={backgroundColor} paddingX={spacing(3)} gap={spacing(2)}>
-      <UpperHeader {...{ product, help, onHelpClick }} />
+      <UpperHeader {...{ product, help, onHelpClick, avatar }} />
       <Divider />
       <Stack
         direction="row"
