@@ -13,3 +13,9 @@ export default {
 const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
 
 export const Standard = Template.bind({});
+
+export const WithButtons = Template.bind({});
+WithButtons.args = {
+  ...defaults.args,
+  ctaButtons: defaults.ctaButtons,
+};

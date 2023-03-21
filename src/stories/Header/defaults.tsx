@@ -1,6 +1,9 @@
 import { type HeaderProps } from 'components/Header/Header';
 
-export const defaults: { args: HeaderProps } = {
+export const defaults: {
+  args: HeaderProps;
+  ctaButtons: HeaderProps['ctaButtons'];
+} = {
   args: {
     theme: 'light',
     product: 'Nome del prodotto',
@@ -34,4 +37,24 @@ export const defaults: { args: HeaderProps } = {
       },
     ],
   },
+  ctaButtons: [
+    {
+      text: 'Primary',
+      color: 'primary',
+      variant: 'contained',
+      size: 'small',
+      onClick: () => {
+        alert('Primary');
+      },
+    },
+    {
+      text: 'Secondary',
+      color: 'primary',
+      variant: 'outlined',
+      size: 'small',
+      onClick: () => {
+        alert('Secondary');
+      },
+    },
+  ],
 };

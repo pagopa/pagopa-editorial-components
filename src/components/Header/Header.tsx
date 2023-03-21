@@ -9,6 +9,7 @@ import Divider from '@mui/material/Divider';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { type MouseEventHandler, useState } from 'react';
 import { type StackProps } from '@mui/system';
+import { Ctas, type CtaProps } from '../Ctas';
 
 interface UpperHeaderProps {
   product: string;
@@ -16,7 +17,7 @@ interface UpperHeaderProps {
   onHelpClick: () => void;
 }
 
-export interface HeaderProps extends CommonProps, UpperHeaderProps {
+export interface HeaderProps extends CommonProps, UpperHeaderProps, CtaProps {
   menu: MenuDropdownProp[];
 }
 
@@ -94,6 +95,7 @@ export const Header = ({
   theme,
   menu,
   onHelpClick,
+  ctaButtons,
 }: HeaderProps) => {
   const { palette, spacing } = useTheme();
   const backgroundColor =
@@ -103,12 +105,20 @@ export const Header = ({
     <Box bgcolor={backgroundColor} paddingX={spacing(3)} gap={spacing(2)}>
       <UpperHeader {...{ product, help, onHelpClick }} />
       <Divider />
-      <Stack direction="row" gap="32px">
-        {menu.map((menu, index) => (
-          <MenuDropdown key={index} {...menu}>
-            {menu.children}
-          </MenuDropdown>
-        ))}
+      <Stack
+        direction="row"
+        justifyContent="space-between"
+        alignItems="center"
+        width="100%"
+      >
+        <Stack gap="32px" direction="row">
+          {menu.map((menu, index) => (
+            <MenuDropdown key={index} {...menu}>
+              {menu.children}
+            </MenuDropdown>
+          ))}
+        </Stack>
+        {ctaButtons?.length && <Ctas theme="light" ctaButtons={ctaButtons} />}
       </Stack>
     </Box>
   );
