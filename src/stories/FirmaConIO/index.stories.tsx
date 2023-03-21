@@ -2,10 +2,13 @@ import { type ComponentStory } from '@storybook/react';
 import Hero from '../../components/Hero';
 import { HowTo } from '../../components/HowTo';
 import Feature from '../../components/Feature/Feature';
+import { Editorial } from '../../components/Editorial';
 
 import heroBackground from '../assets/hero_background.jpg';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import regular from '../assets/Editorial/regular.png';
+import portrait from '../assets/Editorial/portrait.png';
 
 const FirmaConIO = () => {
   const icon = <AccountBalanceIcon fontSize="large" />;
@@ -43,6 +46,38 @@ const FirmaConIO = () => {
         theme="dark"
         size="big"
         background={heroBackground}
+      />
+      <Editorial
+        width="wide"
+        image={{ src: regular, alt: 'a landscape photo' }}
+        ctaButtons={[
+          {
+            text: 'Leggi le FAQ',
+            variant: 'outlined',
+          },
+        ]}
+        eyelet="per i cittadini"
+        title="Una firma a valore legale, a disposizione di tutti"
+        theme="light"
+        body="La Firma con IO è una Firma Elettronica Qualificata “one shot” con il massimo valore legale, pari alla firma autografa, che consente agli enti di digitalizzare l’iter di raccolta firme. Ai cittadini basta avere IO per firmare documenti e contratti direttamente sul proprio smartphone."
+      />
+      <Editorial
+        width="wide"
+        image={{ src: portrait, alt: 'a portrait photo' }}
+        ctaButtons={[
+          {
+            text: 'SCOPRI COME FUNZIONA',
+          },
+          {
+            text: 'ADERISCI',
+          },
+        ]}
+        eyelet="per gli enti"
+        title="Tutti i processi di firma, senza spostamenti"
+        theme="light"
+        reversed
+        body="Grazie a Firma con IO lo scambio di documenti tra enti e cittadini è immediato. Non serve apporre la firma in presenza o scannerizzare copie cartacee da inviare in pdf: tutto avviene su IO e salvato in automatico in un archivio sempre accessibile.
+        Un esempio? Qualsiasi realtà del mondo accademico può gestire da remoto contratti relativi a dottorati, assegni di ricerca o borse di studio che devono essere sottoscritti da studenti o collaboratori, solitamente non dotati di una firma digitale certificata."
       />
       <Feature
         showCarouselMobile={false}
