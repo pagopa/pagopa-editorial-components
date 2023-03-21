@@ -140,7 +140,12 @@ const Feature = ({ title, items, theme, showCarouselMobile }: FeatureProps) => {
       bgcolor={theme === 'light' ? 'background.paper' : 'primary.main'}
       sx={{ flexGrow: 1 }}
     >
-      <Stack justifyContent="space-evenly" alignItems="center" spacing={3}>
+      <Stack
+        justifyContent="space-evenly"
+        alignItems="center"
+        spacing={3}
+        px={3}
+      >
         <AutoPlaySwipeableViews
           axis={themeComponent.direction === 'rtl' ? 'x-reverse' : 'x'}
           index={activeStep}
@@ -178,25 +183,24 @@ const Feature = ({ title, items, theme, showCarouselMobile }: FeatureProps) => {
                 >
                   {item.title}
                 </Typography>
-                <>
-                  {typeof item.linkTitle === undefined ? (
-                    <Typography
-                      variant="body2"
-                      color={
-                        theme === 'light' ? 'text.primary' : 'background.paper'
-                      }
-                    >
-                      {item.subtitle}
-                    </Typography>
-                  ) : (
-                    <Subtitle
-                      theme={theme}
-                      subtitle={item.subtitle}
-                      textLink={item.linkTitle}
-                      url={item.url}
-                    ></Subtitle>
-                  )}
-                </>
+
+                {typeof item.linkTitle === undefined ? (
+                  <Typography
+                    variant="body2"
+                    color={
+                      theme === 'light' ? 'text.primary' : 'background.paper'
+                    }
+                  >
+                    {item.subtitle}
+                  </Typography>
+                ) : (
+                  <Subtitle
+                    theme={theme}
+                    subtitle={item.subtitle}
+                    textLink={item.linkTitle}
+                    url={item.url}
+                  ></Subtitle>
+                )}
               </Stack>
             </Stack>
           ))}
