@@ -3,6 +3,7 @@ import Hero from '../../components/Hero';
 import { HowTo } from '../../components/HowTo';
 import Feature from '../../components/Feature/Feature';
 import { Editorial } from '../../components/Editorial';
+import PhotoVideo from '../../components/PhotoVideo';
 
 import heroBackground from '../assets/hero_background.jpg';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
@@ -115,6 +116,7 @@ const FirmaConIO = () => {
           },
         ]}
       />
+      <PhotoVideo src="https://assets.mixkit.co/videos/preview/mixkit-person-typing-on-a-computer-in-detail-4907-large.mp4" />
     </>
   );
 };
