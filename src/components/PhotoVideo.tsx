@@ -112,9 +112,8 @@ const PhotoVideo = (props: PhotoVideoProps) => {
                   )}
                   {scrIsVideo && (
                     <Link
-                      role="button"
+                      component="button"
                       onClick={play}
-                      href="#"
                       sx={{
                         textDecoration: 'none',
                         color: 'primary.contrastText',
