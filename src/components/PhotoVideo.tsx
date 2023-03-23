@@ -9,6 +9,7 @@ export interface PhotoVideoProps {
   altText?: string;
   title?: string;
   subtitle?: string;
+  playButtonLabel?: string;
   caption?: string;
   captionAlign?: 'left' | 'center';
   maxHeight?: string;
@@ -22,6 +23,7 @@ const PhotoVideo = (props: PhotoVideoProps) => {
     caption,
     captionAlign = 'center',
     altText,
+    playButtonLabel = 'Riproduci video',
     maxHeight = '600px',
   } = props;
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -110,6 +112,7 @@ const PhotoVideo = (props: PhotoVideoProps) => {
                   )}
                   {scrIsVideo && (
                     <Link
+                      role="button"
                       onClick={play}
                       href="#"
                       sx={{
@@ -119,7 +122,7 @@ const PhotoVideo = (props: PhotoVideoProps) => {
                     >
                       <Stack direction="row" alignItems="center">
                         <Typography variant="h6" color="inherit">
-                          Riproduci video
+                          {playButtonLabel}
                         </Typography>
                         <PlayArrow
                           color="inherit"
