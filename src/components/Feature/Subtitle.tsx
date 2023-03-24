@@ -15,6 +15,7 @@ const Subtitle = ({ subtitle, textLink, url, theme }: SubtitleProps) => {
       <Typography
         color={theme === 'light' ? 'text.primary' : 'background.paper'}
         variant="body2"
+        textAlign="center"
       >
         {subtitle}
       </Typography>

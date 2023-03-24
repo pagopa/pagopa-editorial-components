@@ -148,7 +148,7 @@ const Feature = ({
         justifyContent="space-evenly"
         alignItems="center"
         spacing={3}
-        px={3}
+        p={3}
       >
         <AutoPlaySwipeableViews
           axis={themeComponent.direction === 'rtl' ? 'x-reverse' : 'x'}
