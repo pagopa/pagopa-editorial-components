@@ -4,14 +4,20 @@ import { HowTo } from '../../components/HowTo';
 import Feature from '../../components/Feature/Feature';
 import { Editorial } from '../../components/Editorial';
 import PhotoVideo from '../../components/PhotoVideo';
+import { Accordion } from '../../components/Accordion';
 
 import heroBackground from '../assets/hero_background.jpg';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import regular from '../assets/Editorial/regular.png';
 import portrait from '../assets/Editorial/portrait.png';
+import heroDarkSolidBackground from '../assets/hero-solid-dark.jpg';
 
-const FirmaConIO = () => {
+export default {
+  title: 'Firma con IO',
+};
+
+const Home = () => {
   const icon = <AccountBalanceIcon fontSize="large" />;
   const itemMockWithoutLink = [
     {
@@ -55,6 +61,7 @@ const FirmaConIO = () => {
           {
             text: 'Leggi le FAQ',
             variant: 'outlined',
+            href: 'iframe.html?args=&id=firma-con-io--faq-page&viewMode=story',
           },
         ]}
         eyelet="per i cittadini"
@@ -120,12 +127,80 @@ const FirmaConIO = () => {
     </>
   );
 };
+const HomeTemplate: ComponentStory<typeof Home> = () => <Home />;
 
-export default {
-  title: 'Firma con IO',
-  component: FirmaConIO,
+export const HomePage = HomeTemplate.bind({});
+
+const FAQ = () => {
+  return (
+    <>
+      <Hero
+        title="FAQ"
+        subtitle="Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        theme="dark"
+        size="small"
+        background={heroDarkSolidBackground}
+        useHoverlay={false}
+      />
+      <Accordion
+        title="Generali"
+        theme="light"
+        layout="center"
+        accordionItems={[
+          {
+            header:
+              "Cosa significa che l'app è disponibile negli store in versione open beta?",
+            content:
+              'Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+          },
+          {
+            header: 'Perché, dopo un anno di test, l’app è ancora in beta?',
+            content:
+              'Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+          },
+          {
+            header:
+              'I cittadini possono contribuire allo sviluppo dell’app anche ora che IO è negli store online?',
+            content:
+              'Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+          },
+          {
+            header: 'Perchè devo per forza avere SPID o CIE per usare la app?',
+            content:
+              'Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+          },
+        ]}
+      />
+      <Accordion
+        title="Per gli enti"
+        theme="light"
+        layout="center"
+        accordionItems={[
+          {
+            header: 'Quali servizi sono già disponibili sull’app?',
+            content:
+              'Questo dipende da dove risiedi. Sono già diverse migliaia i servizi erogati dagli enti locali e nazionali tramite IO e molti se ne aggiungeranno in futuro; a questo link puoi consultare la lista, in continuo aggiornamento, di quelli già integrati e disponibili all’interno della sezione Servizi dell’app.',
+          },
+          {
+            header: 'Come posso usare i servizi in lista?',
+            content:
+              'Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+          },
+          {
+            header: 'Che tipo di comunicazioni posso ricevere?',
+            content:
+              'Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+          },
+          {
+            header: 'Perchè devo per forza avere SPID o CIE per usare la app?',
+            content:
+              'Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+          },
+        ]}
+      />
+    </>
+  );
 };
+const FAQTemplate: ComponentStory<typeof FAQ> = () => <FAQ />;
 
-const Template: ComponentStory<typeof FirmaConIO> = () => <FirmaConIO />;
-
-export const Home = Template.bind({});
+export const FAQPage = FAQTemplate.bind({});
