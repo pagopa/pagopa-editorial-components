@@ -63,6 +63,7 @@ export const DefaultDark: ComponentStory<typeof Feature> = () => (
     title="Title"
     theme="dark"
     items={itemMockWithLink}
+    background={'primary.main'}
   />
 );
 
@@ -72,6 +73,7 @@ export const DefaultDarkWithoutLink: ComponentStory<typeof Feature> = () => (
     title="Title"
     theme="dark"
     items={itemMockWithoutLink}
+    background={'primary.main'}
   />
 );
 
@@ -83,6 +85,7 @@ export const CarouselDefaultDarkWithLink: ComponentStory<
     title="Title"
     theme="dark"
     items={itemMockWithLink}
+    background={'primary.main'}
   />
 );
 
@@ -94,5 +97,6 @@ export const CarouselDefaultDarkWithoutLink: ComponentStory<
     title="Title"
     theme="dark"
     items={itemMockWithoutLink}
+    background={'primary.main'}
   />
 );

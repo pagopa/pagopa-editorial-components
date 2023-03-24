@@ -58,11 +58,15 @@ export default {
 } as ComponentMeta<typeof Feature>;
 
 export const Default: ComponentStory<typeof Feature> = (args) => (
-  <Feature {...args} items={itemMockWithLink} />
+  <Feature {...args} items={itemMockWithLink} background={'background.paper'} />
 );
 
 export const DefaultWithoutLink: ComponentStory<typeof Feature> = (args) => (
-  <Feature {...args} items={itemMockWithoutLink} />
+  <Feature
+    {...args}
+    items={itemMockWithoutLink}
+    background={'background.paper'}
+  />
 );
 
 export const CarouselDefaultWithLink: ComponentStory<typeof Feature> = () => (
@@ -71,6 +75,7 @@ export const CarouselDefaultWithLink: ComponentStory<typeof Feature> = () => (
     title="Title"
     theme="light"
     items={itemMockWithLink}
+    background={'background.paper'}
   />
 );
 
@@ -82,5 +87,6 @@ export const CarouselDefaultWithoutLink: ComponentStory<
     title="Title"
     theme="light"
     items={itemMockWithoutLink}
+    background={'background.paper'}
   />
 );

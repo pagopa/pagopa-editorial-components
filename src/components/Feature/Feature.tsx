@@ -25,11 +25,18 @@ export interface FeatureProps {
   items: FeatureItem[];
   theme: 'dark' | 'light';
   showCarouselMobile: boolean;
+  background: string;
 }
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const Feature = ({ title, items, theme, showCarouselMobile }: FeatureProps) => {
+const Feature = ({
+  title,
+  items,
+  theme,
+  showCarouselMobile,
+  background,
+}: FeatureProps) => {
   const [activeStep, setActiveStep] = useState(0);
   const themeComponent = useTheme();
 
@@ -136,10 +143,7 @@ const Feature = ({ title, items, theme, showCarouselMobile }: FeatureProps) => {
       </Container>
     </Box>
   ) : (
-    <Box
-      bgcolor={theme === 'light' ? 'background.paper' : 'primary.main'}
-      sx={{ flexGrow: 1 }}
-    >
+    <Box bgcolor={background} sx={{ flexGrow: 1, overflow: 'hidden' }}>
       <Stack
         justifyContent="space-evenly"
         alignItems="center"
