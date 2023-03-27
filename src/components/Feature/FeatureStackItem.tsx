@@ -42,7 +42,7 @@ export const FeatureStackItem: React.FC<FeatureStackItemProps> = ({
           {item.title}
         </Typography>
         <>
-          {item.linkTitle ? (
+          {!item.link ? (
             <Typography variant="body2" color={themeStyle}>
               {item.subtitle}
             </Typography>
@@ -50,8 +50,8 @@ export const FeatureStackItem: React.FC<FeatureStackItemProps> = ({
             <Subtitle
               theme={theme}
               subtitle={item.subtitle}
-              textLink={item.linkTitle}
-              url={item.url}
+              textLink={item.link.text}
+              url={item.link.url}
             ></Subtitle>
           )}
         </>

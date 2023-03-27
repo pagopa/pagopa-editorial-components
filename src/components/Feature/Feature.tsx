@@ -16,15 +16,17 @@ export interface FeatureItem {
   icon?: JSX.Element;
   title: string;
   subtitle: string;
-  linkTitle?: string;
-  url?: string;
+  link?: {
+    text: string;
+    url: string;
+  };
 }
 export interface FeatureProps {
   title: string;
   items: FeatureItem[];
   theme: 'dark' | 'light';
-  showCarouselMobile: boolean;
-  background: string;
+  showCarouselMobile?: boolean;
+  background?: string;
 }
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
@@ -47,7 +49,7 @@ const Feature: React.FC<FeatureProps> = ({
   const themeStyleBg = theme === 'light' ? 'background.paper' : 'primary.main';
 
   return (
-    <Box bgcolor={background || themeStyleBg}>
+    <Box bgcolor={background ?? themeStyleBg}>
       <Container
         maxWidth="xl"
         sx={{
@@ -83,10 +85,7 @@ const Feature: React.FC<FeatureProps> = ({
                   }
                   key={index}
                 >
-                  <FeatureStackItem
-                    theme={theme}
-                    item={item}
-                  ></FeatureStackItem>
+                  <FeatureStackItem theme={theme} item={item} />
                 </Box>
               ))}
               {showCarouselMobile && (
@@ -100,11 +99,7 @@ const Feature: React.FC<FeatureProps> = ({
                     enableMouseEvents
                   >
                     {items.map((item, index) => (
-                      <FeatureStackItem
-                        theme={theme}
-                        item={item}
-                        key={index}
-                      ></FeatureStackItem>
+                      <FeatureStackItem theme={theme} item={item} key={index} />
                     ))}
                   </AutoPlaySwipeableViews>
                   <MobileStepper
