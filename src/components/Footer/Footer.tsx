@@ -14,9 +14,6 @@ import { hrefNoOp, wrapHandleExitAction } from '../../utils/index';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
-/* import { MediumIcon } from '@icons/MediumIcon';
-import { LogoPagoPACompany } from '@assets/LogoPagoPACompany';
-import { FundedByNextGenerationEU } from '@assets/FundedByNextGenerationEU'; */
 
 /* Enum */
 import { ProductArrayType } from './ProductType';
