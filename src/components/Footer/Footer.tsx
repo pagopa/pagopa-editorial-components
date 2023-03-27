@@ -86,8 +86,16 @@ export const Footer = ({
         backgroundColor: 'background.paper',
       }}
     >
-      <Container maxWidth={false} sx={{ py: 8 }}>
-        <Grid container spacing={{ xs: 6, sm: 3 }}>
+      <Container
+        maxWidth={false}
+        sx={{ py: 8, display: 'flex', justifyContent: 'center' }}
+      >
+        <Grid
+          container
+          spacing={{ xs: 6, sm: 3 }}
+          xs={8}
+          justifyContent="center"
+        >
           <Grid item xs={12} sm={3}>
             <Stack spacing={2} alignItems={{ xs: 'center', sm: 'start' }}>
               {companyLink && (
@@ -109,6 +117,7 @@ export const Footer = ({
               <Stack
                 component="ul"
                 alignItems={{ xs: 'center', sm: 'start' }}
+                textAlign="center"
                 sx={{ padding: 0, listStyle: 'none' }}
               >
                 {aboutUs?.links.map(
@@ -142,6 +151,7 @@ export const Footer = ({
                 <Stack
                   component="ul"
                   alignItems={{ xs: 'center', sm: 'start' }}
+                  textAlign="center"
                   sx={{ padding: 0, listStyle: 'none' }}
                 >
                   {jsonProducts &&
@@ -181,6 +191,7 @@ export const Footer = ({
               <Stack
                 component="ul"
                 alignItems={{ xs: 'center', sm: 'start' }}
+                textAlign="center"
                 sx={{ padding: 0, listStyle: 'none' }}
               >
                 {resources?.links.map(
