@@ -21,9 +21,9 @@ export const defaults: {
         theme: 'light',
         label: 'Voce Menu 1',
         children: [
-          <li key={1}> first </li>,
-          <li key={2}> second </li>,
-          <li key={3}> third </li>,
+          <p key={1}>first</p>,
+          <p key={2}>second</p>,
+          <p key={3}>third</p>,
         ],
       },
       {
@@ -31,9 +31,9 @@ export const defaults: {
         label: 'Voce Menu 2',
         active: true,
         children: [
-          <li key={4}> first </li>,
-          <li key={5}> second </li>,
-          <li key={6}> third </li>,
+          <p key={4}>first</p>,
+          <p key={5}>second</p>,
+          <p key={6}>third</p>,
         ],
       },
       {

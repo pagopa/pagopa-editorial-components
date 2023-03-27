@@ -1,0 +1,25 @@
+:root {
+  --primary-main: #1e90ff;
+}
+
+.bubble {
+  transform: rotate(180deg);
+  position: absolute;
+  background-color: var(--primary-main);
+  width: 130px;
+  margin-top: 30px;
+  margin-left: -5px;
+  padding: 0 20px;
+}
+
+.bubble::before {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 0.9em solid transparent;
+  border-top-color: var(--primary-main);
+  bottom: 0;
+  transform: translate(3.2em, 1.2em) scaleX(1);
+}

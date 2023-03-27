@@ -17,11 +17,9 @@ export interface HeaderProps
     BottomHeaderProps {}
 
 const BottomHeader = ({ menu, ctaButtons, theme }: BottomHeaderProps) => {
-  const { spacing } = useTheme();
-
   return (
     <Stack sx={styles.bottomHeader}>
-      <Stack gap={spacing(4)} direction="row">
+      <Stack gap={{ md: 4, xs: 2 }} direction={{ md: 'row', xs: 'column' }}>
         {menu.map((menu, index) => (
           <MenuDropdown key={index} {...menu} theme={theme}>
             {menu.children}
@@ -58,9 +56,11 @@ export const Header = ({
 
 const styles: Record<string, SxProps> = {
   bottomHeader: {
-    flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
     width: '100%',
+    flexDirection: { xs: 'column', md: 'row' },
+    alignItems: { md: 'center', xs: 'flex-start' },
+    gap: { xs: 2 },
+    paddingBottom: { xs: 2 },
   },
 };

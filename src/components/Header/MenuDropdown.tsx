@@ -4,10 +4,13 @@ import {
   type SxProps,
   Typography,
   useTheme,
+  useMediaQuery,
 } from '@mui/material';
 import { useState } from 'react';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { type CommonProps } from 'types/components';
+
+import './MenuDropdown.css';
 
 export interface MenuDropdownProp extends Partial<StackProps>, CommonProps {
   label: string;
@@ -15,7 +18,7 @@ export interface MenuDropdownProp extends Partial<StackProps>, CommonProps {
   active?: boolean;
 }
 
-const timeoutLength = 300;
+const TIMEOUT_LENGTH = 100;
 
 export const MenuDropdown = ({
   label,
@@ -27,44 +30,64 @@ export const MenuDropdown = ({
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const hasChildren = children?.length;
-  const activeStyle = {
-    ...(active && styles.active),
-  };
-  const { palette, spacing } = useTheme();
+  const { palette, breakpoints } = useTheme();
+
+  const md = useMediaQuery(breakpoints.up('md'));
 
   const textColor =
     theme === 'dark' ? palette.primary.contrastText : palette.primary.dark;
 
-  const openMenu = () => {
+  const openFromMenu = () => {
     setMenuOpen(true);
   };
 
-  const leaveMenu = () => {
+  const closeFromMenu = () => {
     setTimeout(() => {
       setMenuOpen(false);
-    }, timeoutLength);
+    }, TIMEOUT_LENGTH);
   };
 
-  const openDropdown = () => {
+  const openFromDropdown = () => {
     setDropdownOpen(true);
   };
 
-  const leaveDropdown = () => {
+  const closeFromDropdown = () => {
     setTimeout(() => {
       setDropdownOpen(false);
-    }, timeoutLength);
+    }, TIMEOUT_LENGTH);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen((status) => !status);
+  };
+
+  const defaultProps = {
+    menu: {
+      md: {
+        onMouseEnter: openFromMenu,
+        onMouseLeave: closeFromMenu,
+        paddingY: 2,
+        borderColor:
+          theme === 'dark'
+            ? palette.primary.contrastText
+            : palette.primary.dark,
+        sx: { ...(active && styles.active) },
+      },
+      xs: {
+        onClick: toggleMenu,
+      },
+    },
+    dropdown: {
+      md: {
+        className: hasChildren ? 'bubble' : '',
+        onMouseEnter: openFromDropdown,
+        onMouseLeave: closeFromDropdown,
+      },
+    },
   };
 
   return (
-    <Stack
-      sx={activeStyle}
-      borderColor={
-        theme === 'dark' ? palette.primary.contrastText : palette.primary.dark
-      }
-      paddingY={spacing(2)}
-      onMouseEnter={openMenu}
-      onMouseLeave={leaveMenu}
-    >
+    <Stack {...(md ? defaultProps.menu.md : defaultProps.menu.xs)}>
       <Stack sx={styles.menuItem} {...button} color={textColor}>
         <Typography variant="sidenav" color="inherit">
           {label}
@@ -73,19 +96,15 @@ export const MenuDropdown = ({
           <ArrowDropDownIcon
             color="inherit"
             fontSize="small"
-            sx={menuOpen ? styles.menuIconOpen : styles.menuIconClosed}
+            sx={menuOpen && !md ? styles.menuIconOpen : styles.menuIconClosed}
           />
         )}
       </Stack>
-      {menuOpen || dropdownOpen ? (
-        <Stack
-          onMouseEnter={openDropdown}
-          onMouseLeave={leaveDropdown}
-          sx={styles.menu}
-        >
-          {children}
+      {(menuOpen || dropdownOpen) && (
+        <Stack {...(md && defaultProps.dropdown.md)}>
+          <Stack sx={{ transform: { md: 'rotate(180deg)' } }}>{children}</Stack>
         </Stack>
-      ) : null}
+      )}
     </Stack>
   );
 };
@@ -93,15 +112,7 @@ export const MenuDropdown = ({
 const styles: Record<string, SxProps> = {
   active: {
     borderBottomStyle: 'solid',
-    borderBottomWidth: '2px',
-  },
-  menu: {
-    position: 'absolute',
-    background: 'white',
-    width: '130px',
-    marginTop: '40px',
-    marginLeft: '-5px',
-    paddingX: '20px',
+    borderBottomWidth: { md: '2px', xs: 0 },
   },
   menuItem: {
     cursor: 'pointer',
