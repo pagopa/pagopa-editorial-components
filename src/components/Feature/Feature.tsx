@@ -1,6 +1,5 @@
 /* eslint-disable valid-typeof */
 import { useState } from 'react';
-import Subtitle from './Subtitle';
 import {
   Box,
   Container,
@@ -11,6 +10,7 @@ import {
 } from '@mui/material';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
+import { FeatureStackItem } from './FeatureStackItem';
 
 export interface FeatureItem {
   icon?: JSX.Element;
@@ -19,7 +19,6 @@ export interface FeatureItem {
   linkTitle?: string;
   url?: string;
 }
-
 export interface FeatureProps {
   title: string;
   items: FeatureItem[];
@@ -30,7 +29,7 @@ export interface FeatureProps {
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const Feature = ({
+const Feature: React.FC<FeatureProps> = ({
   title,
   items,
   theme,
@@ -44,8 +43,11 @@ const Feature = ({
     setActiveStep(step);
   };
 
-  return !showCarouselMobile ? (
-    <Box bgcolor={theme === 'light' ? 'background.paper' : 'primary.main'}>
+  const themeStyle = theme === 'light' ? 'text.primary' : 'background.paper';
+  const themeStyleBg = theme === 'light' ? 'background.paper' : 'primary.main';
+
+  return (
+    <Box bgcolor={background || themeStyleBg}>
       <Container
         maxWidth="xl"
         sx={{
@@ -57,10 +59,7 @@ const Feature = ({
         }}
       >
         <Stack alignContent="center" textAlign="center" spacing={8}>
-          <Typography
-            variant="h4"
-            color={theme === 'light' ? 'text.primary' : 'background.paper'}
-          >
+          <Typography variant="h4" color={themeStyle}>
             {title}
           </Typography>
           <Box
@@ -70,161 +69,70 @@ const Feature = ({
               gridTemplateColumns: 'repeat(12, 1fr)',
             }}
           >
-            <Box gridColumn={{ xs: '2 / span 10' }}>
-              <Stack
-                direction={{ xs: 'column', md: 'row' }}
-                alignContent="center"
-                justifyContent="center"
-                spacing={{ xs: 6, md: 4 }}
-              >
-                {items.map((item, index) => (
-                  <Stack
-                    key={index}
-                    alignContent="center"
-                    justifyContent="flex-start"
-                    spacing={{ xs: 1, md: 3 }}
-                    sx={{
-                      flex: 1,
-                    }}
+            <Stack
+              gridColumn={{ xs: '2 / span 10' }}
+              direction={{ xs: 'column', md: 'row' }}
+              alignContent="center"
+              justifyContent="center"
+              spacing={{ xs: 6, md: 4 }}
+            >
+              {items.map((item, index) => (
+                <Box
+                  display={
+                    showCarouselMobile ? { xs: 'none', md: 'block' } : {}
+                  }
+                  key={index}
+                >
+                  <FeatureStackItem
+                    theme={theme}
+                    item={item}
+                  ></FeatureStackItem>
+                </Box>
+              ))}
+              {showCarouselMobile && (
+                <Box display={{ md: 'none' }}>
+                  <AutoPlaySwipeableViews
+                    axis={
+                      themeComponent.direction === 'rtl' ? 'x-reverse' : 'x'
+                    }
+                    index={activeStep}
+                    onChangeIndex={handleStepChange}
+                    enableMouseEvents
                   >
-                    <Box
-                      mx="auto"
-                      sx={{
-                        svg: {
-                          height: '64px',
-                          width: '64px',
-                        },
-                      }}
-                      color={
-                        theme === 'light' ? 'primary.main' : 'background.paper'
-                      }
-                    >
-                      {item.icon}
-                    </Box>
-                    <Stack spacing={1}>
-                      <Typography
-                        color={
+                    {items.map((item, index) => (
+                      <FeatureStackItem
+                        theme={theme}
+                        item={item}
+                        key={index}
+                      ></FeatureStackItem>
+                    ))}
+                  </AutoPlaySwipeableViews>
+                  <MobileStepper
+                    sx={{
+                      my: 2,
+                      justifyContent: 'center',
+                      bgcolor:
+                        theme === 'light' ? 'background.paper' : 'primary.main',
+                      '& .MuiMobileStepper-dotActive': {
+                        backgroundColor:
                           theme === 'light'
-                            ? 'text.primary'
-                            : 'background.paper'
-                        }
-                        variant="h6"
-                      >
-                        {item.title}
-                      </Typography>
-                      <>
-                        {typeof item.linkTitle === undefined ? (
-                          <Typography
-                            variant="body2"
-                            color={
-                              theme === 'light'
-                                ? 'text.primary'
-                                : 'background.paper'
-                            }
-                          >
-                            {item.subtitle}
-                          </Typography>
-                        ) : (
-                          <Subtitle
-                            theme={theme}
-                            subtitle={item.subtitle}
-                            textLink={item.linkTitle}
-                            url={item.url}
-                          ></Subtitle>
-                        )}
-                      </>
-                    </Stack>
-                  </Stack>
-                ))}
-              </Stack>
-            </Box>
+                            ? 'primary.main'
+                            : 'background.paper',
+                      },
+                    }}
+                    variant="dots"
+                    steps={items.length}
+                    position="static"
+                    activeStep={activeStep}
+                    backButton={undefined}
+                    nextButton={undefined}
+                  />
+                </Box>
+              )}
+            </Stack>
           </Box>
         </Stack>
       </Container>
-    </Box>
-  ) : (
-    <Box bgcolor={background} sx={{ flexGrow: 1, overflow: 'hidden' }}>
-      <Stack
-        justifyContent="space-evenly"
-        alignItems="center"
-        spacing={3}
-        p={3}
-      >
-        <AutoPlaySwipeableViews
-          axis={themeComponent.direction === 'rtl' ? 'x-reverse' : 'x'}
-          index={activeStep}
-          onChangeIndex={handleStepChange}
-          enableMouseEvents
-        >
-          {items.map((item, index) => (
-            <Stack
-              key={index}
-              alignContent="center"
-              justifyContent="flex-start"
-              spacing={{ xs: 1, md: 3 }}
-              sx={{
-                flex: 1,
-              }}
-            >
-              <Box
-                mx="auto"
-                sx={{
-                  svg: {
-                    height: '64px',
-                    width: '64px',
-                  },
-                }}
-                color={theme === 'light' ? 'primary.main' : 'background.paper'}
-              >
-                {item.icon}
-              </Box>
-              <Stack justifyContent="center" alignItems="center" spacing={1}>
-                <Typography
-                  color={
-                    theme === 'light' ? 'text.primary' : 'background.paper'
-                  }
-                  variant="h6"
-                >
-                  {item.title}
-                </Typography>
-
-                {typeof item.linkTitle === undefined ? (
-                  <Typography
-                    variant="body2"
-                    color={
-                      theme === 'light' ? 'text.primary' : 'background.paper'
-                    }
-                  >
-                    {item.subtitle}
-                  </Typography>
-                ) : (
-                  <Subtitle
-                    theme={theme}
-                    subtitle={item.subtitle}
-                    textLink={item.linkTitle}
-                    url={item.url}
-                  ></Subtitle>
-                )}
-              </Stack>
-            </Stack>
-          ))}
-        </AutoPlaySwipeableViews>
-        <MobileStepper
-          sx={{
-            bgcolor: theme === 'light' ? 'background.paper' : 'primary.main',
-            '& .MuiMobileStepper-dotActive': {
-              backgroundColor:
-                theme === 'light' ? 'primary.main' : 'background.paper',
-            },
-          }}
-          variant="dots"
-          steps={items.length}
-          position="static"
-          activeStep={activeStep}
-          backButton={undefined}
-          nextButton={undefined}
-        />
-      </Stack>
     </Box>
   );
 };
