@@ -28,7 +28,7 @@ export const Editorial = ({
   pattern = 'none',
   width = 'standard',
 }: EditorialProps) => {
-  const { palette, spacing } = useTheme();
+  const { palette } = useTheme();
 
   const backgroundColor =
     theme === 'dark' ? palette.primary.dark : palette.background.paper;
@@ -50,7 +50,7 @@ export const Editorial = ({
           }}
         >
           <Grid item md={columns[width]} sx={styles.half}>
-            <Stack gap={spacing(4)}>
+            <Stack gap={4}>
               <Editorial.Content {...{ eyelet, body, title, theme }} />
               <Editorial.Ctas {...{ ctaButtons, theme }} />
             </Stack>

@@ -28,3 +28,10 @@ export const InBeta = Template.bind({});
 InBeta.args = {
   beta: true,
 };
+
+export const Full = Template.bind({});
+Full.args = {
+  beta: true,
+  avatar: defaults.avatar,
+  ctaButtons: defaults.ctaButtons.dark,
+};

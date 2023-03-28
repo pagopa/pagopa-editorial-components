@@ -1,66 +1,110 @@
-import Stack from '@mui/material/Stack';
+import { useMediaQuery } from '@mui/material';
 import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import { useTheme, type SxProps } from '@mui/material/styles';
+import { useEffect, useState } from 'react';
 import { type CommonProps } from 'types/components';
-import { type SxProps, useTheme } from '@mui/material/styles';
-import Divider from '@mui/material/Divider';
 import { Ctas, type CtaProps } from '../Ctas';
-import { UpperHeader, type UpperHeaderProps } from './UpperHeader';
-import { MenuDropdown, type MenuDropdownProp } from './MenuDropdown';
+import { HamburgerMenu } from './components/HamburgerMenu';
+import { type NavigationProps, Navigation } from './components/Navigation';
+import { type TitleProps, Content } from './components/Title';
 
-interface BottomHeaderProps extends CtaProps {
-  menu: MenuDropdownProp[];
-}
+interface BottomHeaderProps extends CtaProps, NavigationProps, TitleProps {}
 
-export interface HeaderProps
-  extends CommonProps,
-    UpperHeaderProps,
-    BottomHeaderProps {}
-
-const BottomHeader = ({ menu, ctaButtons, theme }: BottomHeaderProps) => {
-  return (
-    <Stack sx={styles.bottomHeader}>
-      <Stack gap={{ md: 4, xs: 2 }} direction={{ md: 'row', xs: 'column' }}>
-        {menu.map((menu, index) => (
-          <MenuDropdown key={index} {...menu} theme={theme}>
-            {menu.children}
-          </MenuDropdown>
-        ))}
-      </Stack>
-      {ctaButtons?.length && <Ctas theme={theme} ctaButtons={ctaButtons} />}
-    </Stack>
-  );
-};
+export interface HeaderProps extends CommonProps, BottomHeaderProps {}
 
 export const Header = ({
   product,
-  help,
   theme,
   menu,
-  onHelpClick,
   ctaButtons,
   avatar,
   beta,
 }: HeaderProps) => {
-  const { palette, spacing } = useTheme();
+  const [headerOpen, setHeaderOpen] = useState(false);
+
+  const openHeader = () => {
+    setHeaderOpen(true);
+  };
+
+  const closeHeader = () => {
+    setHeaderOpen(false);
+  };
+
+  const onResize = () => {
+    setHeaderOpen(upMd);
+  };
+
+  useEffect(() => {
+    onResize();
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('resize', onResize);
+
+    return () => {
+      window.removeEventListener('resize', onResize);
+    };
+  });
+
+  const { palette, breakpoints } = useTheme();
   const backgroundColor =
     theme === 'dark' ? palette.primary.dark : palette.background.paper;
 
+  const betweenSmAndMd = useMediaQuery(breakpoints.between('sm', 'md'));
+  const upMd = useMediaQuery(breakpoints.up('md'));
+  const xs = useMediaQuery(breakpoints.only('xs'));
+
+  const HeaderCtas = () => <Ctas {...{ theme, ctaButtons }} />;
+
+  const HeaderInfo = () => (
+    <Stack sx={styles.headerInfo}>
+      <Content {...{ product, avatar, beta, theme }} />
+      {!upMd && (
+        <Stack direction="row" alignItems="center" gap={4}>
+          {!xs && <HeaderCtas />}
+          <HamburgerMenu
+            onOpen={openHeader}
+            onClose={closeHeader}
+            open={headerOpen}
+          />
+        </Stack>
+      )}
+    </Stack>
+  );
+
+  const HeaderNavigation = () => (
+    <Stack sx={styles.headerMenu}>
+      <Navigation {...{ menu, theme }} />
+      {!betweenSmAndMd && <HeaderCtas />}
+    </Stack>
+  );
+
   return (
-    <Box bgcolor={backgroundColor} paddingX={spacing(3)} gap={spacing(2)}>
-      <UpperHeader {...{ product, help, onHelpClick, avatar, beta, theme }} />
-      <Divider />
-      <BottomHeader {...{ menu, ctaButtons, theme }} />
+    <Box bgcolor={backgroundColor} paddingX={{ xs: 1, sm: 3 }}>
+      <Stack
+        direction={{ md: 'row' }}
+        paddingY={{ xs: 1, sm: 2, md: 0 }}
+        gap={4}
+      >
+        <HeaderInfo />
+        {headerOpen && <HeaderNavigation />}
+      </Stack>
     </Box>
   );
 };
 
 const styles: Record<string, SxProps> = {
-  bottomHeader: {
+  headerMenu: {
     justifyContent: 'space-between',
     width: '100%',
     flexDirection: { xs: 'column', md: 'row' },
     alignItems: { md: 'center', xs: 'flex-start' },
     gap: { xs: 2 },
-    paddingBottom: { xs: 2 },
+  },
+  headerInfo: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
 };

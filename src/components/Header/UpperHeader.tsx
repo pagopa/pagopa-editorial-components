@@ -12,11 +12,6 @@ import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import { type CommonProps } from 'types/components';
 
 export interface UpperHeaderProps extends CommonProps {
-  product: string;
-  help?: boolean;
-  onHelpClick: () => void;
-  avatar?: AvatarProps;
-  beta?: boolean;
 }
 
 export const UpperHeader = ({
@@ -27,27 +22,9 @@ export const UpperHeader = ({
   beta,
   theme,
 }: UpperHeaderProps) => {
-  const { palette, spacing } = useTheme();
-  const textColor =
-    theme === 'dark' ? palette.primary.contrastText : palette.text.primary;
-  const label = 'beta';
 
   return (
     <Stack direction="row" sx={styles.top}>
-      <Stack direction="row" gap={spacing(2)} alignItems="center">
-        {avatar && <Avatar {...avatar} />}
-        <Typography color={textColor} variant="h5">
-          {product}
-        </Typography>
-        {beta && (
-          <Chip
-            label={label}
-            color="primary"
-            sx={{ height: 20, width: 45 }}
-            size="small"
-          />
-        )}
-      </Stack>
       {help && (
         <Stack direction="row" alignItems="center" gap={spacing(2)}>
           <Typography variant="subtitle2" color={textColor}>
