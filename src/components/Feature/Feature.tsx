@@ -9,7 +9,6 @@ import {
   useTheme,
 } from '@mui/material';
 import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
 import { FeatureStackItem } from './FeatureStackItem';
 
 export interface FeatureItem {
@@ -28,8 +27,6 @@ export interface FeatureProps {
   showCarouselMobile?: boolean;
   background?: string;
 }
-
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const Feature: React.FC<FeatureProps> = ({
   title,
@@ -90,7 +87,7 @@ const Feature: React.FC<FeatureProps> = ({
               ))}
               {showCarouselMobile && (
                 <Box display={{ md: 'none' }}>
-                  <AutoPlaySwipeableViews
+                  <SwipeableViews
                     axis={
                       themeComponent.direction === 'rtl' ? 'x-reverse' : 'x'
                     }
@@ -101,7 +98,7 @@ const Feature: React.FC<FeatureProps> = ({
                     {items.map((item, index) => (
                       <FeatureStackItem theme={theme} item={item} key={index} />
                     ))}
-                  </AutoPlaySwipeableViews>
+                  </SwipeableViews>
                   <MobileStepper
                     sx={{
                       my: 2,
