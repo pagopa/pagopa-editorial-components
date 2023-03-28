@@ -1,98 +1,45 @@
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 import Feature from '../../components/Feature/Feature';
-import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import { itemMockWithLink, itemMockWithoutLink } from './featureCommons';
 
-const itemMockWithLink = [
-  {
-    icon: <AccountBoxIcon />,
-    title: 'Sicuro',
-    subtitle:
-      'I tuoi dati e le informazioni contenute negli atti sono al sicuro',
-    linkTitle: 'Scopri di più',
-    url: '',
-  },
-  {
-    icon: <AccountBoxIcon />,
-    title: 'Conveniente',
-    subtitle: 'Un risparmio di denaro per tutti: cittadini imprese ed enti',
-    linkTitle: 'Scopri di più',
-    url: '',
-  },
-  {
-    icon: <AccountBoxIcon />,
-    title: 'Immediato',
-    subtitle:
-      "I tempi di attesa tra l'invio e la ricezione delle notifiche spariscono",
-    linkTitle: 'Scopri di più',
-    url: '',
-  },
-];
-const itemMockWithoutLink = [
-  {
-    icon: <AccountBoxIcon />,
-    title: 'Sicuro',
-    subtitle:
-      'I tuoi dati e le informazioni contenute negli atti sono al sicuro',
-  },
-  {
-    icon: <AccountBoxIcon />,
-    title: 'Conveniente',
-    subtitle: 'Un risparmio di denaro per tutti: cittadini imprese ed enti',
-  },
-  {
-    icon: <AccountBoxIcon />,
-    title: 'Immediato',
-    subtitle:
-      "I tempi di attesa tra l'invio e la ricezione delle notifiche spariscono",
-  },
-];
 export default {
   title: 'Feature/dark',
-  args: {
-    title: 'Title',
-    items: itemMockWithLink,
-    theme: 'dark',
-    showCarouselMobile: false,
-  },
   component: Feature,
+  args: {
+    theme: 'dark',
+    title: 'Lorem Ipsum',
+  },
 } as ComponentMeta<typeof Feature>;
 
-export const DefaultDark: ComponentStory<typeof Feature> = () => (
-  <Feature
-    showCarouselMobile={false}
-    title="Title"
-    theme="dark"
-    items={itemMockWithLink}
-  />
-);
+type DarkFeature = ComponentStory<typeof Feature>;
 
-export const DefaultDarkWithoutLink: ComponentStory<typeof Feature> = () => (
-  <Feature
-    showCarouselMobile={false}
-    title="Title"
-    theme="dark"
-    items={itemMockWithoutLink}
-  />
-);
+const Template: DarkFeature = (args) => <Feature {...args} />;
 
-export const CarouselDefaultDarkWithLink: ComponentStory<
-  typeof Feature
-> = () => (
-  <Feature
-    showCarouselMobile={true}
-    title="Title"
-    theme="dark"
-    items={itemMockWithLink}
-  />
-);
+export const Default = Template.bind({});
+Default.args = {
+  items: itemMockWithLink,
+};
 
-export const CarouselDefaultDarkWithoutLink: ComponentStory<
-  typeof Feature
-> = () => (
-  <Feature
-    showCarouselMobile={true}
-    title="Title"
-    theme="dark"
-    items={itemMockWithoutLink}
-  />
-);
+export const WithoutLink = Template.bind({});
+WithoutLink.args = {
+  items: itemMockWithoutLink,
+};
+
+export const DefaultWithCarousel = Template.bind({});
+DefaultWithCarousel.args = {
+  items: itemMockWithLink,
+  showCarouselMobile: true,
+};
+
+export const WithoutLinkWithCarousel = Template.bind({});
+WithoutLinkWithCarousel.args = {
+  items: itemMockWithoutLink,
+  showCarouselMobile: true,
+};
+
+export const WithCustomColorBackground = Template.bind({});
+WithCustomColorBackground.args = {
+  items: itemMockWithLink,
+  background: 'orange',
+  showCarouselMobile: true,
+};

@@ -6,10 +6,6 @@ import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
 
 const mainTheme = createTheme({
   ...theme,
-  palette: {
-    ...theme.palette,
-    secondary: { ...theme.palette.secondary, main: '#FAFAFA' },
-  },
 });
 
 const customViewports = {
