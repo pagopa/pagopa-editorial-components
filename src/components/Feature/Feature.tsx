@@ -94,6 +94,7 @@ const Feature: React.FC<FeatureProps> = ({
                     index={activeStep}
                     onChangeIndex={handleStepChange}
                     enableMouseEvents
+                    autoPlay={false}
                   >
                     {items.map((item, index) => (
                       <FeatureStackItem theme={theme} item={item} key={index} />
