@@ -5,13 +5,15 @@ import { itemMockWithLink, itemMockWithoutLink } from './featureCommons';
 export default {
   title: 'Feature/light',
   component: Feature,
+  args: {
+    theme: 'light',
+    title: 'Lorem Ipsum',
+  },
 } as ComponentMeta<typeof Feature>;
 
 type LightFeature = ComponentStory<typeof Feature>;
 
-const Template: LightFeature = (args) => (
-  <Feature {...args} title="title" theme="light" />
-);
+const Template: LightFeature = (args) => <Feature {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
