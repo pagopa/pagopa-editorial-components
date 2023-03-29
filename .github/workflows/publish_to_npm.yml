@@ -1,0 +1,23 @@
+name: Publish to NPM
+run-name: ${{ github.actor }} is publishing to NPM 🚀
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: yarn install
+      - run: yarn build
+      - run: cp package.json ./dist
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: dist/package.json
+          dry-run: true
+          check-version: false
