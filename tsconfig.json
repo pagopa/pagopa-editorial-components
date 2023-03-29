@@ -1,5 +1,4 @@
 {
-  "files": ["src/index.ts"],
   "compilerOptions": {
     "baseUrl": "./src",
     "outDir": "dist",
@@ -31,5 +30,16 @@
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true
   },
-  "include": ["src", ".storybook/theme.ts"]
+  "types": [
+    "mui-italia"
+],
+  "include": ["src/**/*"],
+  "exclude": [
+    "__mocks__",
+    "dist",
+    "node_modules",
+    "**/__tests__/*",
+    "Dangerfile.ts",
+    "src/**/__tests__/*"
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@pagopa/editorial-components",
+  "name": "@vito.falco/pagopa-editorial-components",
   "version": "0.0.1",
   "author": {
     "name": "PagoPA"
@@ -13,7 +13,6 @@
     "@mui/icons-material": "^5.11.9",
     "@mui/lab": "^5.0.0-alpha.120",
     "@mui/material": "^5.11.10",
-    "@pagopa/mui-italia": "^0.8.12",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
@@ -49,7 +48,8 @@
   },
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@pagopa/mui-italia": "^0.8.12"
   },
   "dependencies": {},
   "scripts": {
