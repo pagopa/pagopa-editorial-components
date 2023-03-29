@@ -15,9 +15,10 @@ jobs:
       - run: yarn install
       - run: yarn build
       - run: cp package.json ./dist
+      - run: cp README.md ./dist
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: dist/package.json
-          dry-run: true
-          check-version: false
+          access: public
+          check-version: true
