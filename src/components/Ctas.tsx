@@ -1,22 +1,18 @@
 import Button, { type ButtonProps } from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import { isValidElement } from 'react';
-import { type CommonProps } from 'types/components';
+import { type Generic, type CommonProps } from 'types/components';
+import { isJSX } from '../utils';
 
 interface CtaButtonProps extends Partial<ButtonProps> {
   text: string;
 }
 
-type CtaButton = CtaButtonProps | JSX.Element;
+type CtaButton = CtaButtonProps | Generic;
 
 export interface CtaProps extends CommonProps {
   ctaButtons?: CtaButton[];
   reverse?: boolean;
 }
-
-const isButtonProps = (button: CtaButton): button is CtaButtonProps => {
-  return !isValidElement(button);
-};
 
 export const Ctas = ({ ctaButtons, theme, reverse }: CtaProps) => {
   const buttonsThemeDefault: ButtonProps[] = [
@@ -38,7 +34,9 @@ export const Ctas = ({ ctaButtons, theme, reverse }: CtaProps) => {
       spacing={2}
     >
       {ctaButtons.map((button: CtaButton, i) => {
-        return isButtonProps(button) ? (
+        return isJSX(button) ? (
+          button
+        ) : (
           <Button
             sx={{ width: { md: 'auto', xs: '100%' }, display: 'flex' }}
             key={`${button.text}-${i}`}
@@ -47,8 +45,6 @@ export const Ctas = ({ ctaButtons, theme, reverse }: CtaProps) => {
           >
             {button.text}
           </Button>
-        ) : (
-          button
         );
       })}
     </Stack>

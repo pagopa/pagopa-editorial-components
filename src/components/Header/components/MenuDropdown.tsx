@@ -8,10 +8,11 @@ import {
   Link,
   type Theme,
 } from '@mui/material';
-import { isValidElement, useState } from 'react';
+import { useState } from 'react';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import { type CommonProps } from 'types/components';
+import { type Generic, type CommonProps } from 'types/components';
 import { DialogBubble } from '../../../components/DialogBubble';
+import { isJSX } from '../../../utils';
 
 const TIMEOUT_LENGTH = 100;
 
@@ -19,10 +20,7 @@ interface DropdownLink extends LinkProps {
   label: string;
 }
 
-type DropdownItem = JSX.Element | DropdownLink;
-
-const isLink = (item: DropdownItem): item is DropdownLink =>
-  'label' in item && !isValidElement(item);
+type DropdownItem = Generic | DropdownLink;
 
 export interface MenuDropdownProp
   extends Partial<Omit<StackProps, 'children'>>,
@@ -112,7 +110,9 @@ export const MenuDropdown = (props: MenuDropdownProp) => {
       {hasLinks && dropdownVisible && (
         <Dropdown>
           {items?.map((item: DropdownItem, index) =>
-            isLink(item) ? (
+            isJSX(item) ? (
+              item
+            ) : (
               <Link
                 variant="body1"
                 underline="none"
@@ -122,8 +122,6 @@ export const MenuDropdown = (props: MenuDropdownProp) => {
               >
                 {item.label}
               </Link>
-            ) : (
-              item
             )
           )}
         </Dropdown>
