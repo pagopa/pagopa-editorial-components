@@ -5,6 +5,12 @@
     "name": "PagoPA"
   },
   "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "repository": "https://github.com/pagopa/pagopa-editorial-components.git",
   "devDependencies": {
     "@babel/core": "^7.21.0",
@@ -59,5 +65,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest"
+  },
+  "engines": {
+    "node": ">=16.x"
   }
 }
