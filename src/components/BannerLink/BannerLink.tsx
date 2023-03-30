@@ -1,14 +1,13 @@
 import { alpha, Box, Container, Stack, useTheme } from '@mui/material';
 import { Ctas, type CtaProps } from '../../components/Ctas';
-import { type CommonProps } from 'types/components';
+import { type Generic, type CommonProps } from 'types/components';
 import { type BannerLinkContentProps, Content } from './Content';
-import LoginImg from '../../assets/svg/Login';
 
 export interface BannerLinkProps
   extends CommonProps,
     BannerLinkContentProps,
     CtaProps {
-  visibleIcon?: boolean;
+  decoration?: Generic;
 }
 
 export const BannerLink = ({
@@ -16,20 +15,18 @@ export const BannerLink = ({
   body,
   title,
   ctaButtons,
-  visibleIcon,
+  decoration,
 }: BannerLinkProps) => {
   const { palette } = useTheme();
 
   const backgroundColor =
     theme === 'dark' ? palette.primary.dark : alpha(palette.info.main, 0.08);
-  const iconColor =
-    theme === 'dark' ? palette.primary.contrastText : palette.primary.dark;
 
   return (
     <Box bgcolor={backgroundColor}>
       <Container>
         <Stack gap={4} sx={styles.main}>
-          {visibleIcon && <LoginImg fill={iconColor} />}
+          {decoration}
           <BannerLink.Content {...{ body, title, theme }} />
           {ctaButtons?.length && (
             <Ctas

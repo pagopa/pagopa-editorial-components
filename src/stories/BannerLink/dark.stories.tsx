@@ -1,12 +1,16 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
 import { BannerLink } from '../../components/BannerLink';
 import { defaults } from './defaults';
+import LoginImg from '../assets/svg/Login';
 
 export default {
   component: BannerLink,
   title: 'BannerLink/dark',
   argTypes: {},
-  args: { ...defaults.args, theme: 'dark' },
+  args: {
+    ...defaults.args,
+    theme: 'dark',
+  },
 } as ComponentMeta<typeof BannerLink>;
 
 const Template: ComponentStory<typeof BannerLink> = (args) => (
@@ -36,12 +40,12 @@ TwoButtons.args = {
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
-  visibleIcon: true,
+  decoration: <LoginImg fill="white" />,
 };
 
 export const TwoButtonsAndIcon = Template.bind({});
 TwoButtonsAndIcon.args = {
-  visibleIcon: true,
+  decoration: <LoginImg fill="white" />,
   ctaButtons: defaults.ctaButtons,
 };
 

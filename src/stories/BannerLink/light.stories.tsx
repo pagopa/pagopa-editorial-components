@@ -1,6 +1,7 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
 import { BannerLink } from '../../components/BannerLink';
 import { defaults } from './defaults';
+import LoginImg from '../assets/svg/Login';
 
 export default {
   component: BannerLink,
@@ -36,12 +37,12 @@ TwoButtons.args = {
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
-  visibleIcon: true,
+  decoration: <LoginImg fill="#17324d" />,
 };
 
 export const TwoButtonsAndIcon = Template.bind({});
 TwoButtonsAndIcon.args = {
-  visibleIcon: true,
+  decoration: <LoginImg fill="#17324d" />,
   ctaButtons: defaults.ctaButtons,
 };
 

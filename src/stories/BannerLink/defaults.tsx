@@ -9,7 +9,6 @@ export const defaults: {
     theme: 'light',
     title: 'Vuoi diventare un Partner tecnologico qualificato?',
     body: 'Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it',
-    visibleIcon: false,
   },
   body: (
     <p>
