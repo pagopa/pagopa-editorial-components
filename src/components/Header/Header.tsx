@@ -57,29 +57,6 @@ export const Header = ({
 
   const HeaderCtas = () => <Ctas {...{ theme, ctaButtons }} />;
 
-  const HeaderInfo = () => (
-    <Stack sx={styles.headerInfo}>
-      <Content {...{ product, avatar, beta, theme }} />
-      {!upMd && (
-        <Stack direction="row" alignItems="center" gap={4}>
-          {!xs && <HeaderCtas />}
-          <HamburgerMenu
-            onOpen={openHeader}
-            onClose={closeHeader}
-            open={headerOpen}
-          />
-        </Stack>
-      )}
-    </Stack>
-  );
-
-  const HeaderNavigation = () => (
-    <Stack sx={styles.headerMenu}>
-      <Navigation {...{ menu, theme }} />
-      {!betweenSmAndMd && <HeaderCtas />}
-    </Stack>
-  );
-
   return (
     <Box bgcolor={backgroundColor} paddingX={{ xs: 1, sm: 3 }}>
       <Stack
@@ -87,8 +64,26 @@ export const Header = ({
         paddingY={{ xs: 1, sm: 2, md: 0 }}
         gap={4}
       >
-        <HeaderInfo />
-        {headerOpen && <HeaderNavigation />}
+        <Stack sx={styles.headerInfo}>
+          <Content {...{ product, avatar, beta, theme }} />
+          {!upMd && (
+            <Stack direction="row" alignItems="center" gap={4}>
+              {!xs && <HeaderCtas />}
+              <HamburgerMenu
+                onOpen={openHeader}
+                onClose={closeHeader}
+                open={headerOpen}
+              />
+            </Stack>
+          )}
+        </Stack>
+
+        {headerOpen && (
+          <Stack sx={styles.headerMenu}>
+            <Navigation {...{ menu, theme }} />
+            {!betweenSmAndMd && <HeaderCtas />}
+          </Stack>
+        )}
       </Stack>
     </Box>
   );

@@ -1,8 +1,7 @@
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
-import { type CommonProps } from 'types/components';
 
-interface HamburgerMenuProps extends CommonProps {
+interface HamburgerMenuProps {
   open: boolean;
   onOpen: () => void;
   onClose: () => void;

@@ -9,9 +9,7 @@ export interface NavigationProps extends CommonProps {
 export const Navigation = ({ menu, theme }: NavigationProps) => (
   <Stack gap={{ md: 4, xs: 2 }} direction={{ md: 'row', xs: 'column' }}>
     {menu.map((menu, index) => (
-      <MenuDropdown key={index} {...menu} theme={theme}>
-        {menu.children}
-      </MenuDropdown>
+      <MenuDropdown key={index} {...menu} theme={theme} />
     ))}
   </Stack>
 );

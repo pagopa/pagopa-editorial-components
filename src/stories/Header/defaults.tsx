@@ -12,28 +12,23 @@ export const defaults: {
   args: {
     theme: 'light',
     product: 'Nome del prodotto',
-    help: true,
-    onHelpClick: () => {
-      alert('Assistenza');
-    },
     menu: [
       {
         theme: 'light',
         label: 'Voce Menu 1',
-        children: [
-          <p key={1}>first</p>,
-          <p key={2}>second</p>,
-          <p key={3}>third</p>,
+        items: [
+          { key: 1, href: '#', label: 'Voce menu secondo livello' },
+          { key: 2, href: '#', label: 'Voce menu secondo livello' },
+          { key: 3, href: '#', label: 'Voce menu secondo livello' },
         ],
       },
       {
         theme: 'light',
         label: 'Voce Menu 2',
         active: true,
-        children: [
-          <p key={4}>first</p>,
-          <p key={5}>second</p>,
-          <p key={6}>third</p>,
+        items: [
+          { key: 1, href: '#', label: 'Secondo livello' },
+          { key: 2, href: '#', label: 'Secondo livello' },
         ],
       },
       {
