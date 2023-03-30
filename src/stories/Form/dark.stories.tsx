@@ -18,7 +18,6 @@ export default {
 export const ExampleForm = () => (
   <Box
     component="section"
-    bgcolor="primary.main"
     sx={{
       backgroundImage: `url(${solidDarkBackground})`,
       backgroundSize: 'cover',

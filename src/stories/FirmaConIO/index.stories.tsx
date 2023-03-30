@@ -5,12 +5,14 @@ import Feature from '../../components/Feature/Feature';
 import { Editorial } from '../../components/Editorial';
 import PhotoVideo from '../../components/PhotoVideo';
 import { Accordion } from '../../components/Accordion';
-
+import { ExampleForm } from '../Form/dark.stories';
 import heroBackground from '../assets/hero_background.jpg';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import regular from '../assets/Editorial/regular.png';
 import portrait from '../assets/Editorial/portrait.png';
+import { Box, Grid, useTheme } from '@mui/material';
+import { Container } from '@mui/system';
 import heroDarkSolidBackground from '../assets/hero-solid-dark.jpg';
 
 export default {
@@ -19,6 +21,7 @@ export default {
 
 const Home = () => {
   const icon = <AccountBalanceIcon fontSize="large" />;
+  const { palette } = useTheme();
   const itemMockWithoutLink = [
     {
       icon: <AccountBoxIcon />,
@@ -124,6 +127,19 @@ const Home = () => {
         ]}
       />
       <PhotoVideo src="https://assets.mixkit.co/videos/preview/mixkit-person-typing-on-a-computer-in-detail-4907-large.mp4" />
+      <Box
+        sx={{
+          background: `linear-gradient(to right, ${palette.primary.main} 50%, ${palette.background.default} 50%)`,
+        }}
+      >
+        <Container>
+          <Grid container>
+            <Grid item xs={6}>
+              <ExampleForm />
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
     </>
   );
 };
