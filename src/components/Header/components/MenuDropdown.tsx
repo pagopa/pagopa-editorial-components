@@ -1,24 +1,22 @@
 import {
   Stack,
   type StackProps,
-  type SxProps,
   Typography,
   useTheme,
   useMediaQuery,
   type LinkProps,
   Link,
+  type Theme,
 } from '@mui/material';
-import { isValidElement, type Key, useState } from 'react';
+import { isValidElement, useState } from 'react';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { type CommonProps } from 'types/components';
-
-import './MenuDropdown.css';
+import { DialogBubble } from '../../../components/DialogBubble';
 
 const TIMEOUT_LENGTH = 100;
 
 interface DropdownLink extends LinkProps {
   label: string;
-  key: Key;
 }
 
 type DropdownItem = JSX.Element | DropdownLink;
@@ -34,85 +32,70 @@ export interface MenuDropdownProp
   items?: DropdownItem[];
 }
 
-export const MenuDropdown = ({
-  label,
-  active,
-  theme,
-  items,
-  ...button
-}: MenuDropdownProp) => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+export const MenuDropdown = (props: MenuDropdownProp) => {
+  // props
+  const { label, active, theme, items, ...button } = props;
 
-  const hasLinks = items?.length;
-  const { palette, breakpoints, spacing } = useTheme();
+  // state
+  const [menuHover, setMenuHover] = useState(false);
+  const [dropdownHover, setDropdownHover] = useState(false);
 
-  const md = useMediaQuery(breakpoints.up('md'));
-
-  const textColor =
-    theme === 'dark' ? palette.primary.contrastText : palette.primary.dark;
-
-  const openFromMenu = () => {
-    setMenuOpen(true);
+  const hoverOnMenu = () => {
+    setMenuHover(true);
   };
 
-  const closeFromMenu = () => {
+  const leavesMenu = () => {
     setTimeout(() => {
-      setMenuOpen(false);
+      setMenuHover(false);
     }, TIMEOUT_LENGTH);
   };
 
-  const openFromDropdown = () => {
-    setDropdownOpen(true);
+  const hoverOnDropdown = () => {
+    setDropdownHover(true);
   };
 
-  const closeFromDropdown = () => {
+  const leavesDropdown = () => {
     setTimeout(() => {
-      setDropdownOpen(false);
+      setDropdownHover(false);
     }, TIMEOUT_LENGTH);
   };
 
   const toggleMenu = () => {
-    setMenuOpen((status) => !status);
+    setMenuHover((status) => !status);
   };
 
-  const defaultProps = {
-    menu: {
-      md: {
-        onMouseEnter: openFromMenu,
-        onMouseLeave: closeFromMenu,
-        paddingY: 2,
-        borderColor:
-          theme === 'dark'
-            ? palette.primary.contrastText
-            : palette.primary.dark,
-        sx: { ...(active && styles.active) },
-      },
-      xs: {
+  // style
+  const hasLinks = items?.length;
+  const mui = useTheme();
+  const md = useMediaQuery(mui.breakpoints.up('md'));
+  const styles = useStyles(props, mui);
+
+  const dropdownVisible = menuHover || dropdownHover;
+
+  const menuEventsHandlers = md
+    ? {
+        onMouseEnter: hoverOnMenu,
+        onMouseLeave: leavesMenu,
+      }
+    : {
         onClick: toggleMenu,
-      },
-    },
-    dropdown: {
-      md: {
-        className: hasLinks ? 'bubble' : '',
-        onMouseEnter: openFromDropdown,
-        onMouseLeave: closeFromDropdown,
-      },
-    },
-    arrow: {
-      xs: {
-        sx: menuOpen ? styles.menuIconOpen : styles.menuIconClosed,
-      },
-    },
-  };
+      };
+
+  const Dropdown = ({ children }: { children: JSX.Element[] }) =>
+    md ? (
+      <DialogBubble
+        onMouseEnter={hoverOnDropdown}
+        onMouseLeave={leavesDropdown}
+      >
+        {children}
+      </DialogBubble>
+    ) : (
+      <Stack onClick={toggleMenu}>{children}</Stack>
+    );
 
   return (
-    <Stack {...(md ? defaultProps.menu.md : defaultProps.menu.xs)}>
-      <Stack
-        sx={{ ...styles.menuItem, ...(!hasLinks && { cursor: 'pointer' }) }}
-        color={textColor}
-        {...button}
-      >
+    <Stack sx={styles.menu} {...menuEventsHandlers}>
+      <Stack sx={styles.item} {...button}>
         <Typography variant="sidenav" color="inherit">
           {label}
         </Typography>
@@ -120,55 +103,63 @@ export const MenuDropdown = ({
           <ArrowDropDownIcon
             color="inherit"
             fontSize="small"
-            {...(!md && defaultProps.arrow.xs)}
+            sx={{
+              ...(!md && dropdownVisible && styles.arrowAnimate),
+            }}
           />
         )}
       </Stack>
-      {(menuOpen || dropdownOpen) && (
-        <Stack {...(md && defaultProps.dropdown.md)}>
-          <Stack sx={{ transform: { md: 'rotate(180deg)' } }}>
-            {hasLinks &&
-              items?.map((item: DropdownItem) => {
-                return isLink(item) ? (
-                  <Link
-                    variant="body1"
-                    underline="none"
-                    sx={{
-                      color: {
-                        md: palette.primary.contrastText,
-                        xs: textColor,
-                      },
-                      textIndent: { xs: spacing(2), md: 0 },
-                    }}
-                    {...item}
-                  >
-                    {item.label}
-                  </Link>
-                ) : (
-                  item
-                );
-              })}
-          </Stack>
-        </Stack>
+      {hasLinks && dropdownVisible && (
+        <Dropdown>
+          {items?.map((item: DropdownItem, index) =>
+            isLink(item) ? (
+              <Link
+                variant="body1"
+                underline="none"
+                key={item.key ?? index}
+                sx={styles.link}
+                {...item}
+              >
+                {item.label}
+              </Link>
+            ) : (
+              item
+            )
+          )}
+        </Dropdown>
       )}
     </Stack>
   );
 };
 
-const styles: Record<string, SxProps> = {
-  active: {
-    borderBottomStyle: 'solid',
-    borderBottomWidth: { md: '2px', xs: 0 },
-  },
-  menuItem: {
-    cursor: { xs: 'pointer', md: 'default' },
-    flexDirection: 'row',
-  },
-  menuIconOpen: {
-    transform: 'rotate(-180deg)',
-    transition: 'transform 0.2s',
-  },
-  menuIconClosed: {
-    transition: 'transform 0.2s',
-  },
+const useStyles = (props: MenuDropdownProp, mui: Theme) => {
+  const textColor =
+    props.theme === 'dark'
+      ? mui.palette.primary.contrastText
+      : mui.palette.primary.dark;
+
+  return {
+    menu: {
+      paddingY: { md: 2 },
+      borderColor: textColor,
+      borderBottomStyle: 'solid',
+      borderBottomWidth: { md: props.active ? 2 : 0, xs: 0 },
+    },
+    item: {
+      cursor: {
+        md: props.items?.length ? 'default' : 'pointer',
+        xs: 'pointer',
+      },
+      flexDirection: 'row',
+      color: textColor,
+    },
+    link: {
+      color: { xs: textColor, md: mui.palette.primary.contrastText },
+      textIndent: { xs: mui.spacing(2), md: 0 },
+    },
+    arrowAnimate: {
+      transition: 'transform 0.2s',
+      transform: { xs: 'rotate(-180deg)', md: '' },
+    },
+  };
 };
