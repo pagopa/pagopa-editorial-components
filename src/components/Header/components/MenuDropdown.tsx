@@ -79,16 +79,22 @@ export const MenuDropdown = (props: MenuDropdownProp) => {
         onClick: toggleMenu,
       };
 
-  const Dropdown = ({ children }: { children: JSX.Element[] }) =>
+  const Dropdown = ({
+    children,
+    ...stackProps
+  }: { children: JSX.Element[] } & StackProps) =>
     md ? (
       <DialogBubble
+        {...stackProps}
         onMouseEnter={hoverOnDropdown}
         onMouseLeave={leavesDropdown}
       >
         {children}
       </DialogBubble>
     ) : (
-      <Stack onClick={toggleMenu}>{children}</Stack>
+      <Stack {...stackProps} onClick={toggleMenu}>
+        {children}
+      </Stack>
     );
 
   return (
@@ -108,7 +114,7 @@ export const MenuDropdown = (props: MenuDropdownProp) => {
         )}
       </Stack>
       {hasLinks && dropdownVisible && (
-        <Dropdown>
+        <Dropdown gap={1}>
           {items?.map((item: DropdownItem, index) =>
             isJSX(item) ? (
               item

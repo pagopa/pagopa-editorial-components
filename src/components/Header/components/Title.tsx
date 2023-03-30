@@ -26,7 +26,7 @@ export const Content = ({ avatar, beta, product, theme }: TitleProps) => {
     <Stack direction="row" gap={1} alignItems="center">
       {avatar && <Avatar {...avatar} />}
       <Typography color={textColor} variant={xs ? 'subtitle1' : 'h5'} noWrap>
-        {product}
+        <b>{product}</b>
       </Typography>
       {beta && (
         <Chip

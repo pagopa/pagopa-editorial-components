@@ -61,7 +61,7 @@ export const Header = ({
     <Box bgcolor={backgroundColor} paddingX={{ xs: 1, sm: 3 }}>
       <Stack
         direction={{ md: 'row' }}
-        paddingY={{ xs: 1, sm: 2, md: 0 }}
+        paddingY={{ xs: 2, sm: 3, md: 1 }}
         gap={4}
       >
         <Stack sx={styles.headerInfo}>

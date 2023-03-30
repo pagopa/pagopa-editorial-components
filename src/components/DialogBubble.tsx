@@ -1,5 +1,10 @@
-import { Box, Stack, useTheme, type Theme } from '@mui/material';
-import { type StackProps } from '@mui/system';
+import {
+  Box,
+  Stack,
+  type StackProps,
+  useTheme,
+  type Theme,
+} from '@mui/material';
 import { type ReactNode } from 'react';
 
 interface DialogBubbleProps extends StackProps {
@@ -13,9 +18,11 @@ export const DialogBubble = ({
   const mui = useTheme();
   const styles = useStyles(mui);
   return (
-    <Stack sx={styles.bubbleContainer} {...stackProps}>
+    <Stack sx={styles.bubbleContainer}>
       <Box sx={styles.bubblePointer} />
-      <Stack sx={styles.bubble}>{children}</Stack>
+      <Stack sx={styles.bubble} {...stackProps}>
+        {children}
+      </Stack>
     </Stack>
   );
 };
