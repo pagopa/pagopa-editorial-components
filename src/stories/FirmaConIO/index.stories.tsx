@@ -2,6 +2,7 @@ import { type ComponentStory } from '@storybook/react';
 import Hero from '../../components/Hero';
 import { HowTo } from '../../components/HowTo';
 import Feature from '../../components/Feature/Feature';
+import { Header } from '../../components/Header';
 import { Editorial } from '../../components/Editorial';
 import PhotoVideo from '../../components/PhotoVideo';
 import { Accordion } from '../../components/Accordion';
@@ -11,9 +12,9 @@ import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import regular from '../assets/Editorial/regular.png';
 import portrait from '../assets/Editorial/portrait.png';
-import { Box, Grid, useTheme } from '@mui/material';
-import { Container } from '@mui/system';
 import heroDarkSolidBackground from '../assets/hero-solid-dark.jpg';
+import { BannerLink } from '../../components/BannerLink';
+import aderisci from '../assets/aderisci.svg';
 
 export default {
   title: 'Firma con IO',
@@ -21,7 +22,6 @@ export default {
 
 const Home = () => {
   const icon = <AccountBalanceIcon fontSize="large" />;
-  const { palette } = useTheme();
   const itemMockWithoutLink = [
     {
       icon: <AccountBoxIcon />,
@@ -50,6 +50,24 @@ const Home = () => {
   ];
   return (
     <>
+      <Header
+        theme="light"
+        product="FirmaConIO"
+        menu={[
+          {
+            theme: 'light',
+            label: 'Home',
+            active: true,
+          },
+          {
+            theme: 'light',
+            label: 'FAQ',
+            onClick: () =>
+              (window.location.href =
+                'iframe.html?args=&id=firma-con-io--faq-page&viewMode=story'),
+          },
+        ]}
+      />
       <Hero
         title="La soluzione per i firmare i documenti e i contratti della PA direttamente in app."
         subtitle="Firma con IO è la funzionalità integrata nell’app IO che consente di firmare digitalmente i documenti della Pubblica Amministrazione in modo facile, veloce e sicuro. Tutto, senza uscire dall’app."
@@ -127,19 +145,31 @@ const Home = () => {
         ]}
       />
       <PhotoVideo src="https://assets.mixkit.co/videos/preview/mixkit-person-typing-on-a-computer-in-detail-4907-large.mp4" />
-      <Box
-        sx={{
-          background: `linear-gradient(to right, ${palette.primary.main} 50%, ${palette.background.default} 50%)`,
-        }}
-      >
-        <Container>
-          <Grid container>
-            <Grid item xs={6}>
-              <ExampleForm />
-            </Grid>
-          </Grid>
-        </Container>
-      </Box>
+      <ExampleForm />
+      <BannerLink
+        decoration={aderisci}
+        theme="light"
+        body="Se hai già le informazioni necessarie, procedi con la richiesta di adesione per il tuo ente"
+        title="Vuoi Aderire a Firma con IO?"
+        ctaButtons={[
+          {
+            text: "VAI ALL'ADESIONE",
+          },
+        ]}
+      />
+      <BannerLink
+        theme="dark"
+        body=""
+        title="Dubbi o domande?"
+        ctaButtons={[
+          {
+            text: 'LEGGI LE FAQ',
+            onClick: () =>
+              (window.location.href =
+                'iframe.html?args=&id=firma-con-io--faq-page&viewMode=story'),
+          },
+        ]}
+      />
     </>
   );
 };
@@ -150,6 +180,24 @@ export const HomePage = HomeTemplate.bind({});
 const FAQ = () => {
   return (
     <>
+      <Header
+        theme="light"
+        product="FirmaConIO"
+        menu={[
+          {
+            theme: 'light',
+            label: 'Home',
+            onClick: () =>
+              (window.location.href =
+                'iframe.html?args=&id=firma-con-io--home-page&viewMode=story'),
+          },
+          {
+            theme: 'light',
+            label: 'FAQ',
+            active: true,
+          },
+        ]}
+      />
       <Hero
         title="FAQ"
         subtitle="Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."

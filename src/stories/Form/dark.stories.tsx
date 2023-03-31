@@ -24,7 +24,7 @@ export const ExampleForm = () => (
       backgroundPosition: 'center',
     }}
   >
-    <Container>
+    <Container maxWidth="sm">
       <Grid container justifyContent="center">
         <Grid item xs={10}>
           <form>
