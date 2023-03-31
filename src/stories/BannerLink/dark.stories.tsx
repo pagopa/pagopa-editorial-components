@@ -1,7 +1,7 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
 import { BannerLink } from '../../components/BannerLink';
 import { defaults } from './defaults';
-import LoginImg from '../assets/svg/Login';
+import LoginWhite from '../assets/login-white.svg';
 
 export default {
   component: BannerLink,
@@ -40,12 +40,12 @@ TwoButtons.args = {
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
-  decoration: <LoginImg fill="white" />,
+  decoration: LoginWhite,
 };
 
 export const TwoButtonsAndIcon = Template.bind({});
 TwoButtonsAndIcon.args = {
-  decoration: <LoginImg fill="white" />,
+  decoration: LoginWhite,
   ctaButtons: defaults.ctaButtons,
 };
 
@@ -53,4 +53,26 @@ export const BodyComponent = Template.bind({});
 BodyComponent.args = {
   body: defaults.body,
   ctaButtons: defaults.ctaButtons,
+};
+
+export const CustomDecorator = Template.bind({});
+CustomDecorator.args = {
+  body: defaults.body,
+  ctaButtons: defaults.ctaButtons,
+  decoration: (
+    <div
+      style={{
+        backgroundColor: 'white',
+        width: '100px',
+        height: '100px',
+        borderRadius: '50%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: '32px',
+      }}
+    >
+      PA
+    </div>
+  ),
 };

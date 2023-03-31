@@ -2,12 +2,13 @@ import { alpha, Box, Container, Stack, useTheme } from '@mui/material';
 import { Ctas, type CtaProps } from '../../components/Ctas';
 import { type Generic, type CommonProps } from 'types/components';
 import { type BannerLinkContentProps, Content } from './Content';
+import { isJSX } from '../../utils';
 
 export interface BannerLinkProps
   extends CommonProps,
     BannerLinkContentProps,
     CtaProps {
-  decoration?: Generic;
+  decoration?: string | Generic;
 }
 
 export const BannerLink = ({
@@ -15,7 +16,7 @@ export const BannerLink = ({
   body,
   title,
   ctaButtons,
-  decoration,
+  decoration = <></>,
 }: BannerLinkProps) => {
   const { palette } = useTheme();
 
@@ -26,7 +27,11 @@ export const BannerLink = ({
     <Box bgcolor={backgroundColor}>
       <Container>
         <Stack gap={4} sx={styles.main}>
-          {decoration}
+          {isJSX(decoration) ? (
+            decoration
+          ) : (
+            <img src={decoration} alt="Banner Icon" />
+          )}
           <BannerLink.Content {...{ body, title, theme }} />
           {ctaButtons?.length && (
             <Ctas
