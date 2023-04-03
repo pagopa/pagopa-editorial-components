@@ -1,6 +1,6 @@
 import Button, { type ButtonProps } from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import { type Generic, type CommonProps } from 'types/components';
+import { type Generic, type CommonProps } from '../types/components';
 import { isJSX } from '../utils';
 
 interface CtaButtonProps extends Partial<ButtonProps> {

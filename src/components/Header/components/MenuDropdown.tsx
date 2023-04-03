@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 import { useState } from 'react';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import { type Generic, type CommonProps } from 'types/components';
+import { type Generic, type CommonProps } from '../../../types/components';
 import { DialogBubble } from '../../../components/DialogBubble';
 import { isJSX } from '../../../utils';
 

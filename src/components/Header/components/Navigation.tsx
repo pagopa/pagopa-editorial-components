@@ -1,5 +1,5 @@
 import { Stack } from '@mui/material';
-import { type CommonProps } from 'types/components';
+import { type CommonProps } from '../../../types/components';
 import { MenuDropdown, type MenuDropdownProp } from './MenuDropdown';
 
 export interface NavigationProps extends CommonProps {
