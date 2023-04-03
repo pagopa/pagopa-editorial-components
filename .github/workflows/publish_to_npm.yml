@@ -3,6 +3,17 @@ run-name: ${{ github.actor }} is publishing to NPM 🚀
 
 on:
   workflow_dispatch:
+    inputs:
+      dryRun:
+        type: boolean
+        description: Dry run
+        required: false
+        default: false
+      checkVersion:
+        type: boolean
+        description: Check version and publish accordingly to package.json version mod
+        required: false
+        default: true
 
 jobs:
   publish:
@@ -21,4 +32,5 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
           package: dist/package.json
           access: public
-          check-version: true
+          check-version: ${{ github.event.inputs.checkVersion == 'true'}}
+          dry-run: ${{ github.event.inputs.dryRun == 'true'}}
