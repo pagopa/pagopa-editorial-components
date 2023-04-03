@@ -33,15 +33,7 @@ export const BannerLink = ({
             <img src={decoration} alt="Banner Icon" />
           )}
           <BannerLink.Content {...{ body, title, theme }} />
-          {ctaButtons?.length && (
-            <Ctas
-              theme={theme}
-              ctaButtons={ctaButtons}
-              sx={{
-                flexDirection: { xs: 'column', md: 'row' },
-              }}
-            />
-          )}
+          {ctaButtons?.length && <Ctas theme={theme} ctaButtons={ctaButtons} />}
         </Stack>
       </Container>
     </Box>
