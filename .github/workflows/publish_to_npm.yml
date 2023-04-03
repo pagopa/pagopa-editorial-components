@@ -31,6 +31,5 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: dist/package.json
-          access: public
           check-version: ${{ github.event.inputs.checkVersion == 'true'}}
           dry-run: ${{ github.event.inputs.dryRun == 'true'}}
