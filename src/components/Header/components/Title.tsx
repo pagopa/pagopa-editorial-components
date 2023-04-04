@@ -7,7 +7,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import { type CommonProps } from 'types/components';
+import { type CommonProps } from '../../../types/components';
 
 export interface TitleProps extends CommonProps {
   product: string;

@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import { useTheme, type SxProps } from '@mui/material/styles';
 import { useEffect, useState } from 'react';
-import { type CommonProps } from 'types/components';
+import { type CommonProps } from '../../types/components';
 import { Ctas, type CtaProps } from '../Ctas';
 import { HamburgerMenu } from './components/HamburgerMenu';
 import { type NavigationProps, Navigation } from './components/Navigation';
