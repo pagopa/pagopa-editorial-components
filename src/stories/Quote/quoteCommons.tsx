@@ -2,15 +2,28 @@
 import hero_background from '../assets/hero_background.jpg';
 import hero_background_inverse from '../assets/hero_background_inverse.jpg';
 
-const subtitle = (
-  <>
-    Quis aute iure reprehenderit in <b>voluptate</b> velit esse cillum dolore eu
-    fugiat nulla pariatur. <b>Excepteur</b> sint obcaecat cupiditat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </>
-);
+const quotes = [
+  {
+    subtitle: (
+      <>
+        Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident,
+        sunt in culp qui officia deserunt mollit anim id est laborum.
+      </>
+    ),
+  },
+  {
+    subtitle: (
+      <>
+        Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident,
+        sunt in culp qui officia deserunt mollit anim id est laborum.
+      </>
+    ),
+  },
+];
 export const quoteCommonProps = {
-  subtitle,
+  quotes,
 };
 
 export const background = hero_background;
