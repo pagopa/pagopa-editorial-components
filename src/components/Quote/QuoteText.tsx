@@ -10,15 +10,19 @@ const QuoteText = ({ textColor, subtitle }: QuoteTextProps) => {
   return (
     <>
       <FormatQuoteIcon
-        sx={{ alignSelf: 'flex-start' }}
+        sx={{ flex: '0 1 auto', alignSelf: 'flex-start' }}
         fontSize="large"
         color="inherit"
       ></FormatQuoteIcon>
-      <Typography sx={{ alignSelf: 'center' }} variant="h5" color={textColor}>
+      <Typography
+        sx={{ flex: '0 1 auto', alignSelf: 'center' }}
+        variant="h5"
+        color={textColor}
+      >
         {subtitle}
       </Typography>
       <FormatQuoteIcon
-        sx={{ alignSelf: 'flex-end' }}
+        sx={{ flex: '0 1 auto', alignSelf: 'flex-end' }}
         fontSize="large"
         color="inherit"
       ></FormatQuoteIcon>

@@ -30,9 +30,9 @@ const Quote = (props: QuoteProps) => {
   const themeComponent = useTheme();
 
   const { background, theme = 'dark', quotes } = props;
-  const minHeight = '480px';
+  const minHeight = '568px';
   const isDarkTheme = theme === 'dark';
-  const textColor = isDarkTheme ? 'white' : 'text.primary';
+  const textColor = isDarkTheme ? 'background.paper' : 'text.primary';
   const bgcolor = isDarkTheme ? 'primary.main' : '#FAFAFA';
 
   const overlay =
@@ -57,19 +57,15 @@ const Quote = (props: QuoteProps) => {
       }}
     >
       <Container maxWidth="lg" disableGutters>
-        <Grid container sx={{ minHeight: { lg: minHeight } }}>
+        <Grid color={textColor} container sx={{ minHeight: { lg: minHeight } }}>
           <Grid item lg={6} sx={{ minHeight: 'inherit' }}>
-            <Stack
-              sx={{ minHeight }}
-              alignContent="flex-start"
-              justifyContent="center"
-            >
+            <Stack sx={{ minHeight }} justifyContent="center">
               <SwipeableViews
                 axis={themeComponent.direction === 'rtl' ? 'x-reverse' : 'x'}
                 index={activeStep}
                 onChangeIndex={handleStepChange}
                 enableMouseEvents
-                autoPlay={true}
+                autoPlay={false}
               >
                 {quotes.map(({ subtitle }, index) => (
                   <QuoteText
@@ -81,6 +77,7 @@ const Quote = (props: QuoteProps) => {
               </SwipeableViews>
               <Stack direction={'row'}>
                 <IconButton
+                  color="inherit"
                   onClick={() => {
                     if (activeStep > 0) setActiveStep(activeStep - 1);
                   }}
@@ -88,6 +85,7 @@ const Quote = (props: QuoteProps) => {
                   <ArrowBackIcon></ArrowBackIcon>
                 </IconButton>
                 <IconButton
+                  color="inherit"
                   onClick={() => {
                     if (activeStep < quotes.length - 1)
                       setActiveStep(activeStep + 1);
@@ -98,7 +96,6 @@ const Quote = (props: QuoteProps) => {
               </Stack>
             </Stack>
           </Grid>
-          <Grid item lg={6}></Grid>
         </Grid>
       </Container>
     </Box>
