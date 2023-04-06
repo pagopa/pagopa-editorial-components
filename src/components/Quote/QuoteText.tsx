@@ -1,5 +1,5 @@
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
-import { Typography } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 import { type Generic } from 'types/components';
 
 interface QuoteTextProps {
@@ -8,9 +8,9 @@ interface QuoteTextProps {
 }
 const QuoteText = ({ textColor, subtitle }: QuoteTextProps) => {
   return (
-    <>
+    <Stack>
       <FormatQuoteIcon
-        sx={{ flex: '0 1 auto', alignSelf: 'flex-start' }}
+        sx={{ flex: '0 1 auto', alignSelf: 'flex-start', rotate: '180deg' }}
         fontSize="large"
         color="inherit"
       ></FormatQuoteIcon>
@@ -26,7 +26,7 @@ const QuoteText = ({ textColor, subtitle }: QuoteTextProps) => {
         fontSize="large"
         color="inherit"
       ></FormatQuoteIcon>
-    </>
+    </Stack>
   );
 };
 
