@@ -16,18 +16,13 @@ export const wrapHandleExitAction =
   ) =>
   (e: React.SyntheticEvent) => {
     e.preventDefault();
-    if (onExit) {
-      onExit(
-        onClick ??
-          (() => {
-            window.location.assign(href);
-          })
-      );
-    } else if (onClick) {
-      onClick();
-    } else {
-      window.location.assign(href);
-    }
+    const exitAction =
+      onClick ??
+      (() => {
+        window.location.assign(href);
+      });
+    if (onExit) onExit(exitAction);
+    else exitAction();
   };
 
 export const hrefNoOp = 'javascript:void(0)';

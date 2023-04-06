@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/prefer-optional-chain */
 import { useEffect, useState } from 'react';
 import { Grid, Stack, Box, Typography, Container, Link } from '@mui/material';
 import {
@@ -19,10 +18,11 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import { ProductArrayType } from './ProductType';
 import { FundedByNextGenerationEU } from '../../assets/FundedByNextGenerationEU';
 import { LogoPagoPACompany } from '../../assets/LogoPagoPACompany';
+import { type Generic } from 'types/components';
 
 type FooterProps = LangSwitchProps & {
   companyLink: CompanyLinkType;
-  legalInfo: JSX.Element | JSX.Element[];
+  legalInfo: Generic | Generic[];
   links: PreLoginFooterLinksType;
   onExit?: (exitAction: () => void) => void;
   /** This URL contains a json with the list of products to list inside the Footer. By default it's set with https://selfcare.pagopa.it/assets/products.json */
@@ -41,7 +41,7 @@ export const Footer = ({
   onProductsJsonFetchError,
   hideProductsColumn,
   ...langProps
-}: FooterProps): JSX.Element => {
+}: FooterProps): Generic => {
   const { aboutUs, resources, followUs } = links;
 
   const [jsonProducts, setJsonProducts] = useState<FooterLinksType[]>([]);
@@ -151,29 +151,24 @@ export const Footer = ({
                   textAlign="center"
                   sx={{ padding: 0, listStyle: 'none' }}
                 >
-                  {jsonProducts &&
-                    jsonProducts?.map(
-                      ({ href = hrefNoOp, label, ariaLabel, onClick }, i) => (
-                        <li key={i}>
-                          <Link
-                            aria-label={ariaLabel}
-                            component="a"
-                            href={href}
-                            onClick={wrapHandleExitAction(
-                              href,
-                              onClick,
-                              onExit
-                            )}
-                            underline="none"
-                            color="text.primary"
-                            sx={{ display: 'inline-block', py: 0.5 }}
-                            variant="subtitle2"
-                          >
-                            {label}
-                          </Link>
-                        </li>
-                      )
-                    )}
+                  {jsonProducts?.map(
+                    ({ href = hrefNoOp, label, ariaLabel, onClick }, i) => (
+                      <li key={i}>
+                        <Link
+                          aria-label={ariaLabel}
+                          component="a"
+                          href={href}
+                          onClick={wrapHandleExitAction(href, onClick, onExit)}
+                          underline="none"
+                          color="text.primary"
+                          sx={{ display: 'inline-block', py: 0.5 }}
+                          variant="subtitle2"
+                        >
+                          {label}
+                        </Link>
+                      </li>
+                    )
+                  )}
                 </Stack>
               </Stack>
             </Grid>

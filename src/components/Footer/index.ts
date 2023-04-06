@@ -51,16 +51,9 @@ export class EnumType<A> extends t.Type<A> {
   public constructor(e: object, name?: string) {
     super(
       name ?? 'enum',
-      (u): u is A => {
-        if (!Object.values(this.enumObject).find((v) => v === u)) {
-          return false;
-        }
-        // enum reverse mapping check
-        if (typeof (this.enumObject as any)[u as string] === 'number') {
-          return false;
-        }
-        return true;
-      },
+      (u): u is A =>
+        Object.values(this.enumObject).includes(u) &&
+        typeof (this.enumObject as any)[u as string] !== 'number',
       (u, c) => (this.is(u) ? t.success(u) : t.failure(u, c)),
       t.identity
     );
