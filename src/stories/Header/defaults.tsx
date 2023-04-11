@@ -34,9 +34,7 @@ export const defaults: {
       {
         theme: 'light',
         label: 'Voce Menu 3',
-        onClick: () => {
-          alert('Voce Menu 3');
-        },
+        href: '/#',
       },
     ],
   },
