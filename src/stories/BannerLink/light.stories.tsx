@@ -37,12 +37,12 @@ TwoButtons.args = {
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
-  decoration: Login,
+  decoration: { src: Login, alt: 'Login' },
 };
 
 export const TwoButtonsAndIcon = Template.bind({});
 TwoButtonsAndIcon.args = {
-  decoration: Login,
+  decoration: { src: Login, alt: 'Login' },
   ctaButtons: defaults.ctaButtons,
 };
 

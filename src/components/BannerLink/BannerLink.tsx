@@ -4,11 +4,16 @@ import { type Generic, type CommonProps } from 'types/components';
 import { type BannerLinkContentProps, Content } from './Content';
 import { isJSX } from '../../utils';
 
+type ImgProps = React.DetailedHTMLProps<
+  React.ImgHTMLAttributes<HTMLImageElement>,
+  HTMLImageElement
+>;
+
 export interface BannerLinkProps
   extends CommonProps,
     BannerLinkContentProps,
     CtaProps {
-  decoration?: string | Generic;
+  decoration?: ImgProps | Generic;
 }
 
 export const BannerLink = ({
@@ -27,11 +32,13 @@ export const BannerLink = ({
     <Box bgcolor={backgroundColor}>
       <Container>
         <Stack gap={4} sx={styles.main}>
-          {isJSX(decoration) ? (
-            decoration
-          ) : (
-            <img src={decoration} alt="Banner Icon" />
-          )}
+          {decoration ? (
+            isJSX(decoration) ? (
+              decoration
+            ) : (
+              <img {...decoration} />
+            )
+          ) : null}
           <BannerLink.Content {...{ body, title, theme }} />
           {ctaButtons?.length && <Ctas theme={theme} ctaButtons={ctaButtons} />}
         </Stack>
