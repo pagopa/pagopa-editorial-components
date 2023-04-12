@@ -32,12 +32,8 @@ export const Header = ({
   };
 
   const onResize = () => {
-    setHeaderOpen(upMd);
+    closeHeader();
   };
-
-  useEffect(() => {
-    onResize();
-  }, []);
 
   useEffect(() => {
     window.addEventListener('resize', onResize);
@@ -45,14 +41,14 @@ export const Header = ({
     return () => {
       window.removeEventListener('resize', onResize);
     };
-  });
+  }, []);
 
   const { palette, breakpoints } = useTheme();
   const backgroundColor =
     theme === 'dark' ? palette.primary.dark : palette.background.paper;
 
   const betweenSmAndMd = useMediaQuery(breakpoints.between('sm', 'md'));
-  const upMd = useMediaQuery(breakpoints.up('md'));
+  const upMd = useMediaQuery(breakpoints.up('md'), { defaultMatches: true });
   const xs = useMediaQuery(breakpoints.only('xs'));
 
   const HeaderCtas = () => <Ctas {...{ theme, ctaButtons }} />;
@@ -78,7 +74,7 @@ export const Header = ({
           )}
         </Stack>
 
-        {headerOpen && (
+        {(headerOpen || upMd) && (
           <Stack sx={styles.headerMenu}>
             <Navigation {...{ menu, theme }} />
             {!betweenSmAndMd && <HeaderCtas />}
