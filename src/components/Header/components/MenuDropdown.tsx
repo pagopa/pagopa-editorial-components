@@ -23,7 +23,7 @@ interface DropdownLink extends LinkProps {
 type DropdownItem = Generic | DropdownLink;
 
 export interface MenuDropdownProp
-  extends Partial<Omit<StackProps, 'children'>>,
+  extends Partial<Omit<LinkProps, 'children'>>,
     CommonProps {
   label: string;
   active?: boolean;
@@ -99,7 +99,7 @@ export const MenuDropdown = (props: MenuDropdownProp) => {
 
   return (
     <Stack sx={styles.menu} {...menuEventsHandlers}>
-      <Stack sx={styles.item} {...button}>
+      <Link sx={styles.item} {...button}>
         <Typography variant="sidenav" color="inherit">
           {label}
         </Typography>
@@ -112,7 +112,7 @@ export const MenuDropdown = (props: MenuDropdownProp) => {
             }}
           />
         )}
-      </Stack>
+      </Link>
       {hasLinks && dropdownVisible && (
         <Dropdown gap={1}>
           {items?.map((item: DropdownItem, index) =>
@@ -156,6 +156,7 @@ const useStyles = (props: MenuDropdownProp, mui: Theme) => {
       },
       flexDirection: 'row',
       color: textColor,
+      textDecoration: 'none',
     },
     link: {
       color: { xs: textColor, md: mui.palette.primary.contrastText },
