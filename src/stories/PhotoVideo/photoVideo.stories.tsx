@@ -35,6 +35,12 @@ Full.args = {
   captionAlign: 'left',
 };
 
+export const Autoplay = Template.bind({});
+Autoplay.args = {
+  src: 'https://assets.mixkit.co/videos/preview/mixkit-person-typing-on-a-computer-in-detail-4907-large.mp4',
+  autoPlay: true,
+};
+
 export const Image = Template.bind({});
 Image.args = {
   title: 'Nam eget dui. Etiam rhoncus Maecenas tempus',
@@ -44,4 +50,10 @@ Image.args = {
   caption:
     'Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   captionAlign: 'left',
+};
+
+export const YouTube = Template.bind({});
+YouTube.args = {
+  src: 'https://www.youtube.com/embed/YxpWC1Vq4to',
+  autoPlay: true,
 };
