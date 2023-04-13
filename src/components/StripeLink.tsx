@@ -1,4 +1,11 @@
-import { Box, Button, Stack, Typography } from '@mui/material';
+import {
+  Box,
+  Button,
+  Stack,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { type Generic } from 'types/components';
 
@@ -10,11 +17,12 @@ export interface StripeLinkProps {
 }
 
 const StripeLink = (props: StripeLinkProps) => {
+  const { breakpoints } = useTheme();
   const { icon, subtitle, theme, buttonText } = props;
   const themeStyle = theme === 'light' ? 'primary.main' : 'background.paper';
   const themeStyleBg = theme === 'light' ? 'primary.main' : 'text.primary';
   const bgButton = theme === 'light' ? 'background.paper' : 'primary.main';
-
+  const underMd = useMediaQuery(breakpoints.down('md'));
   return (
     <Box bgcolor={themeStyleBg} maxWidth={'1440px'} p={2}>
       <Stack
@@ -24,7 +32,7 @@ const StripeLink = (props: StripeLinkProps) => {
         alignItems={{ md: 'center', xs: 'flex-start' }}
         sx={{ ml: { md: 16 } }}
       >
-        {icon && icon}
+        {icon && !underMd && icon}
         <Typography variant="body2" color={'background.paper'}>
           {subtitle}
         </Typography>
