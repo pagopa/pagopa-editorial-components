@@ -11,7 +11,6 @@ export default {
 const defaults: Partial<QuoteProps> = {
   ...quoteCommonProps,
   theme: 'light',
-  size: 'big',
 };
 
 const Template: ComponentStory<typeof Quote> = (args) => <Quote {...args} />;

@@ -13,16 +13,13 @@ import SwipeableViews from 'react-swipeable-views';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-export interface QuoteProps extends CommonProps, QuoteTextProps {
+export interface QuoteProps extends CommonProps {
   image?: string | Generic;
-  altText?: string;
-  inverse?: boolean;
   background?: string;
-  size: string;
   quotes: QuoteTextProps[];
 }
-interface QuoteTextProps extends CommonProps {
-  subtitle?: string | Generic;
+interface QuoteTextProps {
+  text?: string | Generic;
 }
 
 const Quote = (props: QuoteProps) => {
@@ -67,7 +64,7 @@ const Quote = (props: QuoteProps) => {
                 enableMouseEvents
                 autoPlay={false}
               >
-                {quotes.map(({ subtitle }, index) => (
+                {quotes.map(({ text: subtitle }, index) => (
                   <QuoteText
                     textColor={textColor}
                     subtitle={subtitle}
@@ -91,7 +88,7 @@ const Quote = (props: QuoteProps) => {
                       setActiveStep(activeStep + 1);
                   }}
                 >
-                  <ArrowForwardIcon></ArrowForwardIcon>
+                  <ArrowForwardIcon />
                 </IconButton>
               </Stack>
             </Stack>

@@ -11,7 +11,6 @@ export default {
 const defaults: QuoteProps = {
   ...quoteCommonProps,
   theme: 'dark',
-  size: 'big',
 };
 
 const Template: ComponentStory<typeof Quote> = (args) => <Quote {...args} />;

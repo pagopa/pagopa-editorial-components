@@ -4,7 +4,7 @@ import hero_background_inverse from '../assets/hero_background_inverse.jpg';
 
 const quotes = [
   {
-    subtitle: (
+    text: (
       <>
         Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu
         fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident,
@@ -13,7 +13,7 @@ const quotes = [
     ),
   },
   {
-    subtitle: (
+    text: (
       <>
         Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu
         fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident,
