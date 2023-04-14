@@ -7,6 +7,7 @@ import {
   Container,
   Grid,
 } from '@mui/material';
+import React from 'react';
 import { type CommonProps, type Generic } from 'types/components';
 import { isJSX } from '../utils';
 
@@ -14,7 +15,7 @@ export interface HeroProps extends CommonProps, HeroTextProps {
   image?: string | Generic;
   altText?: string;
   inverse?: boolean;
-  background?: string;
+  background?: string | Generic;
   size?: 'small' | 'big';
   useHoverlay?: boolean;
 }
@@ -92,17 +93,31 @@ const Hero = (props: HeroProps) => {
       : 'linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), '
     : '';
 
+  const BackgroundImage = ({ children }: { children: React.ReactNode }) =>
+    isJSX(background) ? (
+      React.cloneElement(
+        background,
+        background.props,
+        background.props.children,
+        children
+      )
+    ) : (
+      <Box
+        component="section"
+        bgcolor="primary.main"
+        sx={{
+          px: { xs: 4 },
+          backgroundImage: `${overlay}url(${background ?? ''})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {children}
+      </Box>
+    );
+
   return (
-    <Box
-      component="section"
-      bgcolor="primary.main"
-      sx={{
-        px: { xs: 4 },
-        backgroundImage: `${overlay}url(${background ?? ''})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
+    <BackgroundImage>
       <Container maxWidth="lg" disableGutters>
         <Grid
           container
@@ -134,7 +149,7 @@ const Hero = (props: HeroProps) => {
           )}
         </Grid>
       </Container>
-    </Box>
+    </BackgroundImage>
   );
 };
 
