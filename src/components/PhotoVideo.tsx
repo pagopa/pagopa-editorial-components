@@ -84,6 +84,7 @@ const PhotoVideo = (props: PhotoVideoProps) => {
           opts={{
             height: '100%',
             width: '100%',
+            host: 'https://www.youtube-nocookie.com',
             playerVars: {
               autoplay: autoPlay ? 1 : 0,
               showinfo: 0,
