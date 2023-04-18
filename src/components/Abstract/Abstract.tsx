@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 
 import { Box, Container, Stack, Typography } from '@mui/material';
-import type { CommonProps, Theme } from 'types/components';
+import type { CommonProps, Generic, Theme } from 'types/components';
 
 export interface AbstractProps extends CommonProps {
   overline: string;
   title: string;
-  description: string | JSX.Element;
+  description: string | Generic;
   background?: string;
   layout?: 'left' | 'center' | 'right';
 }
