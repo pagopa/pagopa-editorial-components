@@ -75,7 +75,11 @@ export const Abstract: React.FC<AbstractProps> = ({
             <Typography color={textColor} variant="h4">
               {title}
             </Typography>
-            <Typography color={textColor} variant="body1">
+            <Typography
+              component={typeof description === 'string' ? 'p' : 'div'}
+              color={textColor}
+              variant="body1"
+            >
               {description}
             </Typography>
           </Stack>
