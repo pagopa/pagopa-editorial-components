@@ -78,3 +78,30 @@ HeroSolid.args = {
   background: heroLightSolidBackground,
   useHoverlay: false,
 };
+
+export const HeroBigWithBackgroundElement = Template.bind({});
+HeroBigWithBackgroundElement.args = {
+  background: (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
+      <img
+        src={heroLightSolidBackground}
+        alt="alt image"
+        style={{
+          position: 'absolute',
+          width: '100%',
+          height: 'auto',
+          zIndex: -1,
+        }}
+      />
+    </div>
+  ),
+  size: 'big',
+  ...defaults,
+};
