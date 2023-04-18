@@ -96,12 +96,19 @@ HeroBigWithBackgroundElement.args = {
       style={{
         display: 'flex',
         alignItems: 'center',
+        position: 'relative',
+        overflow: 'hidden',
       }}
     >
       <img
         src={heroDarkSolidBackground}
         alt="alt image"
-        style={{ position: 'absolute', width: '55%', height: 400, zIndex: -1 }}
+        style={{
+          position: 'absolute',
+          width: '100%',
+          height: 'auto',
+          zIndex: -1,
+        }}
       />
     </div>
   ),
