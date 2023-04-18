@@ -1,9 +1,10 @@
 import React from 'react';
-import { Box, Container, Link, Stack, Typography } from '@mui/material';
+import { Box, Grid, Link, Stack, Typography } from '@mui/material';
 import howToBackgroundDark from '../../assets/images/how-to-background-dark.jpeg';
 import howToBackgroundLight from '../../assets/images/how-to-background-light.jpeg';
 import { HowToStep } from './HowToStep';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import EContainer from '../EContainer';
 
 export interface Step {
   icon?: JSX.Element;
@@ -49,28 +50,27 @@ export const HowTo: React.FC<HowToProps> = ({
 
   const stepsRows = groupStepsByRows(steps, rowMaxSteps);
 
-  return (
+  const Background = (
     <Box
-      sx={{ position: 'relative', py: { xs: 6, md: 8 }, px: { xs: 2, md: 0 } }}
-      component="section"
-    >
-      {/** Background */}
-      <Box
-        component="img"
-        // https://www.w3.org/WAI/tutorials/images/decorative/#example-1-image-used-as-part-of-page-design
-        role="presentation"
-        loading="lazy"
-        sx={{
-          position: 'absolute',
-          inset: 0,
-          zIndex: -10,
-          height: '100%',
-          width: '100%',
-          objectFit: 'cover',
-        }}
-        src={background}
-      />
-      <Container>
+      component="img"
+      // https://www.w3.org/WAI/tutorials/images/decorative/#example-1-image-used-as-part-of-page-design
+      role="presentation"
+      loading="lazy"
+      sx={{
+        position: 'absolute',
+        inset: 0,
+        zIndex: -10,
+        height: '100%',
+        width: '100%',
+        objectFit: 'cover',
+      }}
+      src={background}
+    />
+  );
+
+  return (
+    <EContainer background={Background} py={{ xs: 6, md: 8 }}>
+      <Grid item>
         {/** Section title */}
         <Typography
           color={isDarkTheme ? 'white' : 'text.primary'}
@@ -79,7 +79,8 @@ export const HowTo: React.FC<HowToProps> = ({
         >
           {title}
         </Typography>
-
+      </Grid>
+      <Grid item>
         {/** Steps */}
         {stepsRows.map((stepRow, i) => (
           <Stack
@@ -120,7 +121,7 @@ export const HowTo: React.FC<HowToProps> = ({
             />
           </Link>
         )}
-      </Container>
-    </Box>
+      </Grid>
+    </EContainer>
   );
 };
