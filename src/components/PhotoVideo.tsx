@@ -1,12 +1,21 @@
 import { useRef, useState } from 'react';
-import { Box, Link, Container, Grid, Stack, Typography } from '@mui/material';
+import {
+  Box,
+  Link,
+  Container,
+  Grid,
+  Stack,
+  Typography,
+  Button,
+} from '@mui/material';
 import PlayArrow from '@mui/icons-material/PlayArrow';
-import { type Generic } from 'types/components';
+// import { type Generic } from 'types/components';
 import { isJSX } from '../utils';
 import YouTube, { type YouTubePlayer } from 'react-youtube';
+import { type CommonProps } from 'types/components';
 
-export interface PhotoVideoProps {
-  src: string | Generic;
+export interface PhotoVideoProps extends YProps {
+  src: string;
   altText?: string;
   title?: string;
   subtitle?: string;
@@ -14,7 +23,7 @@ export interface PhotoVideoProps {
   caption?: string;
   captionAlign?: 'left' | 'center';
   maxHeight?: string;
-  autoPlay?: boolean;
+  full?: boolean;
 }
 
 const youtubeParser = (url: string) => {
@@ -22,6 +31,110 @@ const youtubeParser = (url: string) => {
     /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
   const match = url.match(regExp);
   return match && match[7].length === 11 ? match[7] : false;
+};
+
+interface YProps extends Ytext {
+  full?: boolean;
+  reverse?: boolean;
+  youtubeID: string;
+  autoplay?: boolean;
+  playButtonLabel?: string;
+}
+
+interface Ytext extends CommonProps {
+  title?: string;
+  subtitle?: string;
+}
+
+const Text = ({ title, subtitle, theme = 'dark' }: Ytext) => {
+  const color = theme === 'dark' ? 'primary.contrastText' : 'text.primary';
+  return (
+    <>
+      {title && (
+        <Typography variant="h6" mb={4} color={color}>
+          {title}
+        </Typography>
+      )}
+      {subtitle && (
+        <Typography variant="body1" mb={3} color={color}>
+          {subtitle}
+        </Typography>
+      )}
+    </>
+  );
+};
+
+const YouTubeVideo = ({
+  title,
+  subtitle,
+  full,
+  reverse,
+  theme,
+  youtubeID,
+  autoplay = false,
+  playButtonLabel = 'Guarda il video',
+}: YProps) => {
+  const videoRef = useRef<YouTubePlayer>(null);
+
+  const play = async (e: React.MouseEvent) => {
+    try {
+      e.preventDefault();
+      videoRef.current.playVideo();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  return (
+    <Box
+      component="section"
+      bgcolor={theme === 'dark' ? 'primary.dark' : 'white'}
+      py={8}
+    >
+      <Container maxWidth="lg">
+        <Grid
+          container
+          spacing={16}
+          alignItems={'center'}
+          direction={reverse ? 'row-reverse' : 'row'}
+        >
+          <Grid item md={full ? 12 : 6}>
+            <YouTube
+              videoId={youtubeID}
+              id={`video-${youtubeID}`}
+              className="video__frame"
+              onReady={({ target }) => {
+                videoRef.current = target;
+              }}
+              opts={{
+                width: '100%',
+                host: 'https://www.youtube-nocookie.com',
+                playerVars: {
+                  autoplay: autoplay ? 1 : 0,
+                  showinfo: 0,
+                  mute: 1,
+                },
+              }}
+            />
+          </Grid>
+          {!full && (
+            <Grid item lg={6}>
+              <Text title={title} subtitle={subtitle} theme={theme} />
+              <Stack direction="row" alignItems="center">
+                <Typography
+                  role="button"
+                  color={theme !== 'dark' ? 'primary.dark' : 'white'}
+                  onClick={play}
+                >
+                  {playButtonLabel}
+                </Typography>
+              </Stack>
+            </Grid>
+          )}
+        </Grid>
+      </Container>
+    </Box>
+  );
 };
 
 const PhotoVideo = (props: PhotoVideoProps) => {
@@ -34,9 +147,12 @@ const PhotoVideo = (props: PhotoVideoProps) => {
     altText,
     playButtonLabel = 'Riproduci video',
     maxHeight = '600px',
-    autoPlay = false,
+    autoplay = false,
+    full = false,
+    reverse = false,
+    theme = 'dark',
   } = props;
-  const [playing, setPlaying] = useState(autoPlay);
+  const [playing, setPlaying] = useState(autoplay);
   const videoRef = useRef<HTMLVideoElement | YouTubePlayer>(null);
 
   const scrIsVideo =
@@ -67,40 +183,13 @@ const PhotoVideo = (props: PhotoVideoProps) => {
       objectFit: 'cover',
     };
     if (isJSX(src)) return src;
-    const youtubeID = youtubeParser(src);
-    if (youtubeID) {
-      return (
-        <YouTube
-          videoId={youtubeID}
-          id={`video-${youtubeID}`}
-          className="video__frame"
-          style={{ width: '100%', height: '100%' }}
-          onReady={({ target }) => {
-            videoRef.current = target;
-          }}
-          onEnd={() => {
-            setPlaying(false);
-          }}
-          opts={{
-            height: '100%',
-            width: '100%',
-            host: 'https://www.youtube-nocookie.com',
-            playerVars: {
-              autoplay: autoPlay ? 1 : 0,
-              showinfo: 0,
-              mute: 1,
-            },
-          }}
-        />
-      );
-    }
     if (scrIsVideo) {
       const type = src.split('.').pop() ?? 'mp4';
       return (
         <video
           ref={videoRef}
           style={commonCSSStyle}
-          autoPlay={autoPlay}
+          autoPlay={autoplay}
           onClick={tooglePlay}
           onEnded={() => {
             setPlaying(false);
@@ -114,7 +203,17 @@ const PhotoVideo = (props: PhotoVideoProps) => {
   };
 
   const onlyPlayButton = Boolean(!title && !subtitle);
-  return (
+  return isYoutubeSrc ? (
+    <YouTubeVideo
+      title={title}
+      subtitle={subtitle}
+      youtubeID={youtubeParser(src) || ''}
+      theme={theme}
+      autoplay={autoplay}
+      full={full}
+      reverse={reverse}
+    />
+  ) : (
     <>
       <Box
         component="section"
@@ -149,24 +248,7 @@ const PhotoVideo = (props: PhotoVideoProps) => {
                     justifyContent="center"
                     sx={{ height: 'inherit' }}
                   >
-                    {title && (
-                      <Typography
-                        variant="h6"
-                        mb={4}
-                        color="primary.contrastText"
-                      >
-                        {title}
-                      </Typography>
-                    )}
-                    {subtitle && (
-                      <Typography
-                        variant="body1"
-                        mb={3}
-                        color="primary.contrastText"
-                      >
-                        {subtitle}
-                      </Typography>
-                    )}
+                    <Text title={title} subtitle={subtitle} theme="dark" />
                     {scrIsVideo && (
                       <Link
                         component="button"
@@ -201,7 +283,7 @@ const PhotoVideo = (props: PhotoVideoProps) => {
             height: '100%',
           }}
         >
-          {renderBackground()}
+          {!isYoutubeSrc && renderBackground()}
         </Box>
       </Box>
       {caption && (

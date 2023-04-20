@@ -38,7 +38,7 @@ Full.args = {
 export const Autoplay = Template.bind({});
 Autoplay.args = {
   src: 'https://assets.mixkit.co/videos/preview/mixkit-person-typing-on-a-computer-in-detail-4907-large.mp4',
-  autoPlay: true,
+  autoplay: true,
 };
 
 export const Image = Template.bind({});
@@ -54,6 +54,10 @@ Image.args = {
 
 export const YouTube = Template.bind({});
 YouTube.args = {
+  title: 'Nam eget dui. Etiam rhoncus Maecenas tempus',
+  subtitle:
+    'Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.',
   src: 'https://www.youtube.com/embed/YxpWC1Vq4to',
-  autoPlay: true,
+  autoplay: true,
+  full: true,
 };
