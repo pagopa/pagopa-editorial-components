@@ -91,6 +91,8 @@ const Hero = (props: HeroProps) => {
       ? 'linear-gradient(0deg, rgba(0, 98, 195, 0.65), rgba(0, 98, 195, 0.65)), '
       : 'linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), '
     : '';
+  const backgroundColor = theme === 'dark' ? 'primary.dark' : 'primary.paper';
+
   const BackgroundImage = isJSX(background) ? (
     background
   ) : (
@@ -114,10 +116,9 @@ const Hero = (props: HeroProps) => {
 
   return (
     <EContainer
-      background={BackgroundImage}
+      background={!background ? backgroundColor : BackgroundImage}
       direction={inverse ? 'row-reverse' : 'row'}
     >
-      <img />
       <Grid item lg={6} sx={{ minHeight: { lg: minHeight } }}>
         <HeroTextContent {...props} />
       </Grid>
