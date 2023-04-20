@@ -1,13 +1,5 @@
 import { useRef, useState } from 'react';
-import {
-  Box,
-  Link,
-  Container,
-  Grid,
-  Stack,
-  Typography,
-  Button,
-} from '@mui/material';
+import { Box, Link, Container, Grid, Stack, Typography } from '@mui/material';
 import PlayArrow from '@mui/icons-material/PlayArrow';
 // import { type Generic } from 'types/components';
 import { isJSX } from '../utils';
@@ -51,12 +43,12 @@ const Text = ({ title, subtitle, theme = 'dark' }: Ytext) => {
   return (
     <>
       {title && (
-        <Typography variant="h6" mb={4} color={color}>
+        <Typography variant="h5" mb={4} color={color}>
           {title}
         </Typography>
       )}
       {subtitle && (
-        <Typography variant="body1" mb={3} color={color}>
+        <Typography paragraph sx={{ fontSize: '16px' }} mb={3} color={color}>
           {subtitle}
         </Typography>
       )}
@@ -89,16 +81,16 @@ const YouTubeVideo = ({
     <Box
       component="section"
       bgcolor={theme === 'dark' ? 'primary.dark' : 'white'}
-      py={8}
+      py={7}
     >
       <Container maxWidth="lg">
         <Grid
           container
-          spacing={16}
+          spacing={{ xs: 3, md: 16 }}
           alignItems={'center'}
           direction={reverse ? 'row-reverse' : 'row'}
         >
-          <Grid item md={full ? 12 : 6}>
+          <Grid item xs={12} md={full ? 12 : 6}>
             <YouTube
               videoId={youtubeID}
               id={`video-${youtubeID}`}
@@ -106,8 +98,14 @@ const YouTubeVideo = ({
               onReady={({ target }) => {
                 videoRef.current = target;
               }}
+              style={{
+                aspectRatio: 1.777,
+                borderRadius: '25px',
+                overflow: 'hidden',
+              }}
               opts={{
                 width: '100%',
+                height: '100%',
                 host: 'https://www.youtube-nocookie.com',
                 playerVars: {
                   autoplay: autoplay ? 1 : 0,
@@ -118,16 +116,24 @@ const YouTubeVideo = ({
             />
           </Grid>
           {!full && (
-            <Grid item lg={6}>
+            <Grid item md={6}>
               <Text title={title} subtitle={subtitle} theme={theme} />
               <Stack direction="row" alignItems="center">
-                <Typography
-                  role="button"
-                  color={theme !== 'dark' ? 'primary.dark' : 'white'}
+                <Link
+                  component="button"
                   onClick={play}
+                  sx={{
+                    fontWeight: 700,
+                    fontSize: '16px',
+                    textDecoration: 'none',
+                    color:
+                      theme === 'dark'
+                        ? 'primary.contrastText'
+                        : 'primary.dark',
+                  }}
                 >
                   {playButtonLabel}
-                </Typography>
+                </Link>
               </Stack>
             </Grid>
           )}
