@@ -1,7 +1,7 @@
 // Components
 import { styled } from '@mui/material';
 
-import { theme } from '@pagopa/mui-italia';
+import { theme } from '@pagopa/mui-italia/dist/theme';
 
 const StyledSvg = styled('svg')({
   display: 'inline-block',
