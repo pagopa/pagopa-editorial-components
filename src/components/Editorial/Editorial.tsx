@@ -1,12 +1,11 @@
-import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import { useTheme } from '@mui/material/styles';
-import { Container } from '@mui/system';
 import { type CommonProps } from 'types/components';
 import { Content, type EditorialContentProps } from './Content';
 import { Ctas, type EditorialCtaProps } from './Ctas';
 import { Image, type EditorialImageProps } from './Image';
+import EContainer from '../EContainer';
 
 export interface EditorialProps
   extends CommonProps,
@@ -40,43 +39,27 @@ export const Editorial = ({
   };
 
   return (
-    <Box bgcolor={backgroundColor}>
-      <Container>
-        <Grid
-          container
-          sx={styles.main}
-          direction={{
-            md: reversed ? 'row-reverse' : 'row',
-          }}
-        >
-          <Grid item md={columns[width]} sx={styles.half}>
-            <Stack gap={4}>
-              <Editorial.Content {...{ eyelet, body, title, theme }} />
-              <Editorial.Ctas {...{ ctaButtons, theme }} />
-            </Stack>
-          </Grid>
-          <Grid item md={columns[width]} sx={styles.half}>
-            <Editorial.Image {...{ pattern, image, theme }} />
-          </Grid>
-        </Grid>
-      </Container>
-    </Box>
+    <EContainer
+      background={backgroundColor}
+      py={8}
+      direction={{
+        md: reversed ? 'row-reverse' : 'row',
+        xs: 'column-reverse',
+      }}
+    >
+      <Grid item md={columns[width]}>
+        <Stack gap={4}>
+          <Editorial.Content {...{ eyelet, body, title, theme }} />
+          <Editorial.Ctas {...{ ctaButtons, theme }} />
+        </Stack>
+      </Grid>
+      <Grid item md={columns[width]}>
+        <Editorial.Image {...{ pattern, image, theme }} />
+      </Grid>
+    </EContainer>
   );
 };
 
 Editorial.Content = Content;
 Editorial.Ctas = Ctas;
 Editorial.Image = Image;
-
-const styles = {
-  main: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'column-reverse',
-    padding: { md: '64px 24px 64px 142px', xs: '32px 24px' },
-  },
-  half: {
-    display: 'grid',
-    justifyContent: 'center',
-  },
-};

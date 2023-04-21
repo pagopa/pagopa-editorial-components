@@ -1,15 +1,9 @@
 /* eslint-disable valid-typeof */
 import { useState } from 'react';
-import {
-  Box,
-  Container,
-  MobileStepper,
-  Stack,
-  Typography,
-  useTheme,
-} from '@mui/material';
+import { Grid, MobileStepper, Typography, useTheme } from '@mui/material';
 import SwipeableViews from 'react-swipeable-views';
 import { FeatureStackItem } from './FeatureStackItem';
+import EContainer from '../EContainer';
 
 export interface FeatureItem {
   icon?: JSX.Element;
@@ -43,90 +37,70 @@ const Feature: React.FC<FeatureProps> = ({
   };
 
   const themeStyle = theme === 'light' ? 'text.primary' : 'background.paper';
-  const themeStyleBg = theme === 'light' ? 'background.paper' : 'primary.main';
+  const themeStyleBg = theme === 'light' ? 'background.paper' : 'primary.dark';
 
   return (
-    <Box bgcolor={background ?? themeStyleBg}>
-      <Container
-        maxWidth="xl"
-        sx={{
-          py: {
-            xs: 4,
-            sm: 4,
-            md: 8,
-          },
-        }}
-      >
-        <Stack alignContent="center" textAlign="center" spacing={8}>
-          <Typography variant="h4" color={themeStyle}>
-            {title}
-          </Typography>
-          <Box
-            sx={{
-              display: 'grid',
-              gap: 3,
-              gridTemplateColumns: 'repeat(12, 1fr)',
-            }}
-          >
-            <Stack
-              gridColumn={{ xs: '2 / span 10' }}
-              direction={{ xs: 'column', md: 'row' }}
-              alignContent="center"
-              justifyContent="center"
-              spacing={{ xs: 6, md: 4 }}
+    <EContainer
+      background={background ?? themeStyleBg}
+      py={{
+        xs: 4,
+        sm: 4,
+        md: 8,
+      }}
+    >
+      <Grid item xs={12}>
+        <Typography variant="h4" color={themeStyle} textAlign="center">
+          {title}
+        </Typography>
+      </Grid>
+      <Grid item mt={8}>
+        <Grid container spacing={{ xs: 6, md: 4 }} justifyContent="center">
+          {items.map((item, index) => (
+            <Grid
+              md={3}
+              item
+              display={showCarouselMobile ? { xs: 'none', md: 'block' } : {}}
+              key={index}
             >
-              {items.map((item, index) => (
-                <Box
-                  display={
-                    showCarouselMobile ? { xs: 'none', md: 'block' } : {}
-                  }
-                  key={index}
-                >
-                  <FeatureStackItem theme={theme} item={item} />
-                </Box>
-              ))}
-              {showCarouselMobile && (
-                <Box display={{ md: 'none' }}>
-                  <SwipeableViews
-                    axis={
-                      themeComponent.direction === 'rtl' ? 'x-reverse' : 'x'
-                    }
-                    index={activeStep}
-                    onChangeIndex={handleStepChange}
-                    enableMouseEvents
-                    autoPlay={false}
-                  >
-                    {items.map((item, index) => (
-                      <FeatureStackItem theme={theme} item={item} key={index} />
-                    ))}
-                  </SwipeableViews>
-                  <MobileStepper
-                    sx={{
-                      my: 2,
-                      justifyContent: 'center',
-                      bgcolor:
-                        theme === 'light' ? 'background.paper' : 'primary.main',
-                      '& .MuiMobileStepper-dotActive': {
-                        backgroundColor:
-                          theme === 'light'
-                            ? 'primary.main'
-                            : 'background.paper',
-                      },
-                    }}
-                    variant="dots"
-                    steps={items.length}
-                    position="static"
-                    activeStep={activeStep}
-                    backButton={undefined}
-                    nextButton={undefined}
-                  />
-                </Box>
-              )}
-            </Stack>
-          </Box>
-        </Stack>
-      </Container>
-    </Box>
+              <FeatureStackItem theme={theme} item={item} />
+            </Grid>
+          ))}
+          {showCarouselMobile && (
+            <Grid item display={{ md: 'none' }}>
+              <SwipeableViews
+                axis={themeComponent.direction === 'rtl' ? 'x-reverse' : 'x'}
+                index={activeStep}
+                onChangeIndex={handleStepChange}
+                enableMouseEvents
+                autoPlay={false}
+              >
+                {items.map((item, index) => (
+                  <FeatureStackItem theme={theme} item={item} key={index} />
+                ))}
+              </SwipeableViews>
+              <MobileStepper
+                sx={{
+                  my: 2,
+                  justifyContent: 'center',
+                  bgcolor:
+                    theme === 'light' ? 'background.paper' : 'primary.main',
+                  '& .MuiMobileStepper-dotActive': {
+                    backgroundColor:
+                      theme === 'light' ? 'primary.main' : 'background.paper',
+                  },
+                }}
+                variant="dots"
+                steps={items.length}
+                position="static"
+                activeStep={activeStep}
+                backButton={undefined}
+                nextButton={undefined}
+              />
+            </Grid>
+          )}
+        </Grid>
+      </Grid>
+    </EContainer>
   );
 };
 

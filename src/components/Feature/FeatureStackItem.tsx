@@ -37,7 +37,7 @@ export const FeatureStackItem: React.FC<FeatureStackItemProps> = ({
       >
         {item.icon}
       </Box>
-      <Stack spacing={1}>
+      <Stack spacing={1} textAlign="center">
         <Typography color={themeStyle} variant="h6">
           {item.title}
         </Typography>
@@ -52,7 +52,7 @@ export const FeatureStackItem: React.FC<FeatureStackItemProps> = ({
               subtitle={item.subtitle}
               textLink={item.link.text}
               url={item.link.url}
-            ></Subtitle>
+            />
           )}
         </>
       </Stack>

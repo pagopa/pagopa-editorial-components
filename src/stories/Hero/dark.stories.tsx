@@ -94,23 +94,18 @@ HeroBigWithBackgroundElement.args = {
   background: (
     <div
       style={{
-        display: 'flex',
-        alignItems: 'center',
-        position: 'relative',
-        overflow: 'hidden',
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
+        zIndex: -1,
+        left: 0,
+        top: 0,
+        objectFit: 'cover',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundImage: `url(${heroDarkSolidBackground})`,
       }}
-    >
-      <img
-        src={heroDarkSolidBackground}
-        alt="alt image"
-        style={{
-          position: 'absolute',
-          width: '100%',
-          height: 'auto',
-          zIndex: -1,
-        }}
-      />
-    </div>
+    />
   ),
   size: 'big',
   ...defaults,
