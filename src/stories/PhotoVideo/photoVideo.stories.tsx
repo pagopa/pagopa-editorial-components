@@ -35,6 +35,12 @@ Full.args = {
   captionAlign: 'left',
 };
 
+export const Autoplay = Template.bind({});
+Autoplay.args = {
+  src: 'https://assets.mixkit.co/videos/preview/mixkit-person-typing-on-a-computer-in-detail-4907-large.mp4',
+  autoplay: true,
+};
+
 export const Image = Template.bind({});
 Image.args = {
   title: 'Nam eget dui. Etiam rhoncus Maecenas tempus',
@@ -44,4 +50,31 @@ Image.args = {
   caption:
     'Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   captionAlign: 'left',
+};
+
+export const YouTube = Template.bind({});
+YouTube.args = {
+  title: 'Aenean commodo ligula eget dolor',
+  subtitle:
+    'Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.',
+  src: 'https://www.youtube.com/embed/YxpWC1Vq4to',
+  autoplay: true,
+  full: false,
+};
+
+export const YouTubeFull = Template.bind({});
+YouTubeFull.args = {
+  src: 'https://www.youtube.com/embed/YxpWC1Vq4to',
+  autoplay: true,
+  full: true,
+};
+
+export const YouTubeLightReverse = Template.bind({});
+YouTubeLightReverse.args = {
+  title: 'Aenean commodo ligula eget dolor',
+  subtitle:
+    'Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.',
+  src: 'https://www.youtube.com/embed/YxpWC1Vq4to',
+  reverse: true,
+  theme: 'light',
 };

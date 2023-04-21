@@ -1,6 +1,6 @@
 import Box, { type BoxProps } from '@mui/material/Box';
-import Grid, { type GridDirection } from '@mui/material/Grid';
-import { Container, type ResponsiveStyleValue } from '@mui/system';
+import Grid, { type GridProps } from '@mui/material/Grid';
+import { Container } from '@mui/system';
 import { type Generic } from '../types/components';
 import { isJSX } from '../utils';
 import React from 'react';
@@ -8,12 +8,21 @@ import React from 'react';
 interface Props {
   children: React.ReactNode;
   background?: string | Generic;
-  direction?: ResponsiveStyleValue<GridDirection>;
+  direction?: GridProps['direction'];
   py?: BoxProps['py'];
+  spacing?: GridProps['spacing'];
+  alignItems?: GridProps['alignItems'];
 }
 
 const EContainer = (props: Props) => {
-  const { children, background, direction = 'row', py = {} } = props;
+  const {
+    children,
+    background,
+    direction = 'row',
+    py = {},
+    spacing,
+    alignItems,
+  } = props;
   const backgroundIsJSX = isJSX(background);
 
   return (
@@ -25,7 +34,12 @@ const EContainer = (props: Props) => {
     >
       {backgroundIsJSX && background}
       <Container maxWidth="lg" disableGutters>
-        <Grid container direction={direction}>
+        <Grid
+          container
+          direction={direction}
+          spacing={spacing}
+          alignItems={alignItems}
+        >
           {children}
         </Grid>
       </Container>
