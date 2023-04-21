@@ -114,7 +114,7 @@ export const Footer = ({
               <Stack
                 component="ul"
                 alignItems={{ xs: 'center', sm: 'start' }}
-                textAlign="center"
+                textAlign={{ xs: 'center', sm: 'left' }}
                 sx={{ padding: 0, listStyle: 'none' }}
               >
                 {aboutUs?.links.map(
@@ -148,7 +148,7 @@ export const Footer = ({
                 <Stack
                   component="ul"
                   alignItems={{ xs: 'center', sm: 'start' }}
-                  textAlign="center"
+                  textAlign={{ xs: 'center', sm: 'left' }}
                   sx={{ padding: 0, listStyle: 'none' }}
                 >
                   {jsonProducts?.map(
@@ -183,7 +183,7 @@ export const Footer = ({
               <Stack
                 component="ul"
                 alignItems={{ xs: 'center', sm: 'start' }}
-                textAlign="center"
+                textAlign={{ xs: 'center', sm: 'left' }}
                 sx={{ padding: 0, listStyle: 'none' }}
               >
                 {resources?.links.map(
@@ -209,80 +209,68 @@ export const Footer = ({
           </Grid>
 
           <Grid item xs={12} sm={3}>
-            <Stack
-              spacing={3}
-              justifyContent="space-between"
-              sx={{ height: '100%' }}
-              alignItems={{ xs: 'center', sm: 'start' }}
-            >
-              <Stack spacing={2} alignItems={{ xs: 'center', sm: 'start' }}>
-                {followUs?.title && (
-                  <Typography variant="overline">{followUs.title}</Typography>
-                )}
+            <Stack spacing={2} alignItems={{ xs: 'center', sm: 'start' }}>
+              {followUs?.title && (
+                <Typography variant="overline">{followUs.title}</Typography>
+              )}
 
-                <Stack alignItems={{ xs: 'center', sm: 'start' }}>
-                  <Stack
-                    spacing={{ xs: 3, sm: 1.5, lg: 3 }}
-                    direction="row"
-                    component="ul"
-                    alignItems={{ xs: 'center', sm: 'start' }}
-                    sx={{ padding: 0, mt: 0.5, listStyle: 'none' }}
-                  >
-                    {followUs?.socialLinks.map(
-                      ({ icon, href = hrefNoOp, ariaLabel, onClick }, i) => (
-                        <li key={i}>
-                          <Link
-                            aria-label={ariaLabel}
-                            component="button"
-                            href={href}
-                            onClick={wrapHandleExitAction(
-                              href,
-                              onClick,
-                              onExit
-                            )}
-                            underline="none"
-                            color="text.primary"
-                            sx={{ display: 'inline-flex' }}
-                            variant="caption"
-                          >
-                            {icon && iconMap[icon]}
-                          </Link>
-                        </li>
-                      )
-                    )}
-                  </Stack>
-
-                  <Stack
-                    component="ul"
-                    alignItems={{ xs: 'center', sm: 'start' }}
-                    sx={{ padding: 0, margin: 0, listStyle: 'none' }}
-                  >
-                    {followUs?.links.map(
-                      ({ href = hrefNoOp, label, ariaLabel, onClick }, i) => (
-                        <li key={i}>
-                          <Link
-                            aria-label={ariaLabel}
-                            component="button"
-                            href={href}
-                            onClick={wrapHandleExitAction(
-                              href,
-                              onClick,
-                              onExit
-                            )}
-                            underline="none"
-                            color="text.primary"
-                            sx={{ display: 'inline-block', py: 0.5 }}
-                            variant="subtitle2"
-                          >
-                            {label}
-                          </Link>
-                        </li>
-                      )
-                    )}
-                  </Stack>
-
-                  <LangSwitch {...langProps} />
+              <Stack
+                alignItems={{ xs: 'center', sm: 'start' }}
+                marginBottom={{ sm: 10 }}
+              >
+                <Stack
+                  spacing={{ xs: 3, sm: 1.5, lg: 3 }}
+                  direction="row"
+                  component="ul"
+                  alignItems={{ xs: 'center', sm: 'start' }}
+                  sx={{ padding: 0, mt: 0.5, listStyle: 'none' }}
+                >
+                  {followUs?.socialLinks.map(
+                    ({ icon, href = hrefNoOp, ariaLabel, onClick }, i) => (
+                      <li key={i}>
+                        <Link
+                          aria-label={ariaLabel}
+                          component="button"
+                          href={href}
+                          onClick={wrapHandleExitAction(href, onClick, onExit)}
+                          underline="none"
+                          color="text.primary"
+                          sx={{ display: 'inline-flex' }}
+                          variant="caption"
+                        >
+                          {icon && iconMap[icon]}
+                        </Link>
+                      </li>
+                    )
+                  )}
                 </Stack>
+
+                <Stack
+                  component="ul"
+                  alignItems={{ xs: 'center', sm: 'start' }}
+                  sx={{ padding: 0, margin: 0, listStyle: 'none' }}
+                >
+                  {followUs?.links.map(
+                    ({ href = hrefNoOp, label, ariaLabel, onClick }, i) => (
+                      <li key={i}>
+                        <Link
+                          aria-label={ariaLabel}
+                          component="button"
+                          href={href}
+                          onClick={wrapHandleExitAction(href, onClick, onExit)}
+                          underline="none"
+                          color="text.primary"
+                          sx={{ display: 'inline-block', py: 0.5 }}
+                          variant="subtitle2"
+                        >
+                          {label}
+                        </Link>
+                      </li>
+                    )
+                  )}
+                </Stack>
+
+                <LangSwitch {...langProps} />
               </Stack>
               <FundedByNextGenerationEU size={180} />
             </Stack>
@@ -301,7 +289,7 @@ export const Footer = ({
             color="text.primary"
             component="p"
             variant="caption"
-            sx={{ textAlign: 'center' }}
+            textAlign="center"
           >
             {legalInfo}
           </Typography>
