@@ -6,22 +6,24 @@ import { isJSX } from '../utils';
 import React from 'react';
 
 interface Props {
-  children: React.ReactNode;
+  alignItems?: GridProps['alignItems'];
   background?: string | Generic;
+  children: React.ReactNode;
   direction?: GridProps['direction'];
   py?: BoxProps['py'];
   spacing?: GridProps['spacing'];
-  alignItems?: GridProps['alignItems'];
+  sx?: GridProps['sx'];
 }
 
 const EContainer = (props: Props) => {
   const {
-    children,
+    alignItems,
     background,
+    children,
     direction = 'row',
     py = {},
     spacing,
-    alignItems,
+    sx,
   } = props;
   const backgroundIsJSX = isJSX(background);
 
@@ -39,6 +41,7 @@ const EContainer = (props: Props) => {
           direction={direction}
           spacing={spacing}
           alignItems={alignItems}
+          sx={sx}
         >
           {children}
         </Grid>
