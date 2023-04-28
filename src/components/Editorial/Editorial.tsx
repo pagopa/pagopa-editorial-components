@@ -40,13 +40,14 @@ export const Editorial = ({
 
   return (
     <EContainer
+      alignItems="center"
       background={backgroundColor}
-      py={8}
       direction={{
         md: reversed ? 'row-reverse' : 'row',
-        sm: 'column-reverse',
+        xs: 'column-reverse',
       }}
-      sx={styles.main}
+      py={8}
+      spacing={2}
     >
       <Grid item md={columns[width]} sx={styles.half}>
         <Stack gap={4}>
@@ -66,12 +67,6 @@ Editorial.Ctas = Ctas;
 Editorial.Image = Image;
 
 const styles = {
-  main: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'column-reverse',
-    padding: { md: '64px 24px 64px 142px', sm: '32px 24px' },
-  },
   half: {
     display: 'grid',
     justifyContent: 'center',
