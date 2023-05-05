@@ -33,14 +33,15 @@ const groupStepsByRows = (steps: Step[], rowMaxSteps: number): Step[][] => {
     .map((_, i) => steps.slice(i * rowMaxSteps, i * rowMaxSteps + rowMaxSteps));
 };
 
-export const HowTo: React.FC<HowToProps> = ({
-  title,
-  steps,
-  theme,
-  link,
-  rowMaxSteps = 4,
-  stepsAlignment = 'center',
-}) => {
+export const HowTo = (props: HowToProps) => {
+  const {
+    title,
+    steps,
+    theme,
+    link,
+    rowMaxSteps = 4,
+    stepsAlignment = 'center',
+  } = props;
   const isDarkTheme = theme === 'dark';
   const background = isDarkTheme ? howToBackgroundDark : howToBackgroundLight;
 

@@ -8,7 +8,7 @@ import Hero from './components/Hero';
 import { HowTo } from './components/HowTo';
 import PhotoVideo from './components/PhotoVideo';
 
-export default {
+export {
   Accordion,
   BannerLink,
   Editorial,

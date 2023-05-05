@@ -12,14 +12,8 @@ interface BottomHeaderProps extends CtaProps, NavigationProps, TitleProps {}
 
 export interface HeaderProps extends CommonProps, BottomHeaderProps {}
 
-export const Header = ({
-  product,
-  theme,
-  menu,
-  ctaButtons,
-  avatar,
-  beta,
-}: HeaderProps) => {
+export const Header = (props: HeaderProps) => {
+  const { product, theme, menu, ctaButtons, avatar, beta } = props;
   const [headerOpen, setHeaderOpen] = useState(false);
 
   const openHeader = () => {

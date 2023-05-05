@@ -22,13 +22,8 @@ export interface FeatureProps {
   background?: string;
 }
 
-const Feature: React.FC<FeatureProps> = ({
-  title,
-  items,
-  theme,
-  showCarouselMobile,
-  background,
-}: FeatureProps) => {
+const Feature = (props: FeatureProps) => {
+  const { title, items, theme, showCarouselMobile, background } = props;
   const [activeStep, setActiveStep] = useState(0);
   const themeComponent = useTheme();
 
