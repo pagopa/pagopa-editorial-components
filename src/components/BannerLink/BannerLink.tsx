@@ -1,7 +1,10 @@
 import { alpha, Box, Container, Stack, useTheme } from '@mui/material';
 import { Ctas, type CtaProps } from '../../components/Ctas';
 import { type Generic, type CommonProps } from 'types/components';
-import { type BannerLinkContentProps, Content } from './Content';
+import {
+  type BannerLinkContentProps,
+  Content as BannerLinkContent,
+} from './Content';
 import { isJSX } from '../../utils';
 
 type ImgProps = React.DetailedHTMLProps<
@@ -16,13 +19,8 @@ export interface BannerLinkProps
   decoration?: ImgProps | Generic;
 }
 
-export const BannerLink = ({
-  theme,
-  body,
-  title,
-  ctaButtons,
-  decoration = <></>,
-}: BannerLinkProps) => {
+export const BannerLink = (props: BannerLinkProps) => {
+  const { theme, body, title, ctaButtons, decoration = <></> } = props;
   const { palette } = useTheme();
 
   const backgroundColor =
@@ -39,15 +37,13 @@ export const BannerLink = ({
               <img {...decoration} />
             )
           ) : null}
-          <BannerLink.Content {...{ body, title, theme }} />
+          <BannerLinkContent {...{ body, title, theme }} />
           {ctaButtons?.length && <Ctas theme={theme} ctaButtons={ctaButtons} />}
         </Stack>
       </Container>
     </Box>
   );
 };
-
-BannerLink.Content = Content;
 
 const styles = {
   main: {

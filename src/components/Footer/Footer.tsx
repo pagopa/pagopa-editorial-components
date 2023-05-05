@@ -32,16 +32,17 @@ type FooterProps = LangSwitchProps & {
   hideProductsColumn?: boolean;
 };
 
-export const Footer = ({
-  companyLink,
-  legalInfo,
-  links,
-  onExit,
-  productsJsonUrl = 'https://selfcare.pagopa.it/assets/products.json',
-  onProductsJsonFetchError,
-  hideProductsColumn,
-  ...langProps
-}: FooterProps): Generic => {
+export const Footer = (props: FooterProps) => {
+  const {
+    companyLink,
+    legalInfo,
+    links,
+    onExit,
+    productsJsonUrl = 'https://selfcare.pagopa.it/assets/products.json',
+    onProductsJsonFetchError,
+    hideProductsColumn,
+    ...langProps
+  } = props;
   const { aboutUs, resources, followUs } = links;
 
   const [jsonProducts, setJsonProducts] = useState<FooterLinksType[]>([]);

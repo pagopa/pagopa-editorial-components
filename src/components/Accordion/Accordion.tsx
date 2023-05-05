@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Container, Grid, Stack, Typography } from '@mui/material';
 import { AccordionItem, type AccordionItemProps } from './AccordionItem';
 export interface AccordionProps {
@@ -11,14 +10,15 @@ export interface AccordionProps {
   layout?: 'left' | 'center' | 'right';
 }
 
-export const Accordion: React.FC<AccordionProps> = ({
-  title,
-  subtitle,
-  description,
-  accordionItems,
-  theme,
-  layout = 'left',
-}) => {
+export const Accordion = (props: AccordionProps) => {
+  const {
+    title,
+    subtitle,
+    description,
+    accordionItems,
+    theme,
+    layout = 'left',
+  } = props;
   const isDarkTheme = theme === 'dark';
   const bgcolor = isDarkTheme ? 'primary.main' : '#FAFAFA';
   const textColor = isDarkTheme ? 'white' : 'text.primary';

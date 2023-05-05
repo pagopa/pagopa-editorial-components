@@ -2,9 +2,12 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import { useTheme } from '@mui/material/styles';
 import { type CommonProps } from 'types/components';
-import { Content, type EditorialContentProps } from './Content';
-import { Ctas, type EditorialCtaProps } from './Ctas';
-import { Image, type EditorialImageProps } from './Image';
+import {
+  Content as EditorialContent,
+  type EditorialContentProps,
+} from './Content';
+import { Ctas as EditorialCtas, type EditorialCtaProps } from './Ctas';
+import { Image as EditorialImage, type EditorialImageProps } from './Image';
 import EContainer from '../EContainer';
 
 export interface EditorialProps
@@ -16,17 +19,18 @@ export interface EditorialProps
   width: 'wide' | 'standard' | 'center';
 }
 
-export const Editorial = ({
-  image,
-  eyelet,
-  title,
-  body,
-  theme,
-  ctaButtons,
-  reversed,
-  pattern = 'none',
-  width = 'standard',
-}: EditorialProps) => {
+export const Editorial = (props: EditorialProps) => {
+  const {
+    image,
+    eyelet,
+    title,
+    body,
+    theme,
+    ctaButtons,
+    reversed,
+    pattern = 'none',
+    width = 'standard',
+  } = props;
   const { palette } = useTheme();
 
   const backgroundColor =
@@ -51,20 +55,16 @@ export const Editorial = ({
     >
       <Grid item md={columns[width]} sx={styles.half}>
         <Stack gap={4}>
-          <Editorial.Content {...{ eyelet, body, title, theme }} />
-          <Editorial.Ctas {...{ ctaButtons, theme }} />
+          <EditorialContent {...{ eyelet, body, title, theme }} />
+          <EditorialCtas {...{ ctaButtons, theme }} />
         </Stack>
       </Grid>
       <Grid item md={columns[width]} sx={styles.half}>
-        <Editorial.Image {...{ pattern, image, theme }} />
+        <EditorialImage {...{ pattern, image, theme }} />
       </Grid>
     </EContainer>
   );
 };
-
-Editorial.Content = Content;
-Editorial.Ctas = Ctas;
-Editorial.Image = Image;
 
 const styles = {
   half: {
