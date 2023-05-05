@@ -4,7 +4,6 @@ import {
   Typography,
   Chip,
   type AvatarProps,
-  useMediaQuery,
   useTheme,
 } from '@mui/material';
 import { type CommonProps } from '../../../types/components';
@@ -16,16 +15,20 @@ export interface TitleProps extends CommonProps {
 }
 
 export const Content = ({ avatar, beta, product, theme }: TitleProps) => {
-  const { palette, breakpoints } = useTheme();
+  const { palette, spacing } = useTheme();
   const textColor =
     theme === 'dark' ? palette.primary.contrastText : palette.text.primary;
   const label = 'beta';
-  const xs = useMediaQuery(breakpoints.only('xs'));
 
   return (
     <Stack direction="row" gap={1} alignItems="center">
       {avatar && <Avatar {...avatar} />}
-      <Typography color={textColor} variant={xs ? 'subtitle1' : 'h5'} noWrap>
+      <Typography
+        color={textColor}
+        fontSize={{ xs: spacing(3), sm: spacing(3.5) }}
+        noWrap
+        variant="h5"
+      >
         <b>{product}</b>
       </Typography>
       {beta && (

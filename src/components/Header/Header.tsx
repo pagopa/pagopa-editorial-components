@@ -1,4 +1,3 @@
-import { useMediaQuery } from '@mui/material';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import { useTheme, type SxProps } from '@mui/material/styles';
@@ -43,13 +42,9 @@ export const Header = ({
     };
   }, []);
 
-  const { palette, breakpoints } = useTheme();
+  const { palette } = useTheme();
   const backgroundColor =
     theme === 'dark' ? palette.primary.dark : palette.background.paper;
-
-  const betweenSmAndMd = useMediaQuery(breakpoints.between('sm', 'md'));
-  const upMd = useMediaQuery(breakpoints.up('md'), { defaultMatches: true });
-  const xs = useMediaQuery(breakpoints.only('xs'));
 
   const HeaderCtas = () => <Ctas {...{ theme, ctaButtons }} />;
 
@@ -62,24 +57,34 @@ export const Header = ({
       >
         <Stack sx={styles.headerInfo}>
           <Content {...{ product, avatar, beta, theme }} />
-          {!upMd && (
-            <Stack direction="row" alignItems="center" gap={4}>
-              {!xs && <HeaderCtas />}
-              <HamburgerMenu
-                onOpen={openHeader}
-                onClose={closeHeader}
-                open={headerOpen}
-              />
-            </Stack>
-          )}
+          <Stack
+            sx={{ display: { md: 'none' } }}
+            direction="row"
+            alignItems="center"
+            gap={4}
+          >
+            <Box sx={{ display: { xs: 'none', sm: 'block', md: 'none' } }}>
+              <HeaderCtas />
+            </Box>
+            <HamburgerMenu
+              onOpen={openHeader}
+              onClose={closeHeader}
+              open={headerOpen}
+            />
+          </Stack>
         </Stack>
 
-        {(headerOpen || upMd) && (
-          <Stack sx={styles.headerMenu}>
-            <Navigation {...{ menu, theme }} />
-            {!betweenSmAndMd && <HeaderCtas />}
-          </Stack>
-        )}
+        <Stack
+          sx={{
+            display: { xs: headerOpen ? 'flex' : 'none', md: 'flex' },
+            ...styles.headerMenu,
+          }}
+        >
+          <Navigation {...{ menu, theme }} />
+          <Box sx={{ display: { sm: 'none', md: 'block' } }}>
+            <HeaderCtas />
+          </Box>
+        </Stack>
       </Stack>
     </Box>
   );
