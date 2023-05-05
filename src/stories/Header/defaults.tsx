@@ -11,7 +11,10 @@ export const defaults: {
 } = {
   args: {
     theme: 'light',
-    product: 'Nome del prodotto',
+    product: {
+      name: 'Nome del prodotto',
+      href: '/',
+    },
     menu: [
       {
         theme: 'light',

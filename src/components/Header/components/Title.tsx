@@ -5,16 +5,25 @@ import {
   Chip,
   type AvatarProps,
   useTheme,
+  Link,
 } from '@mui/material';
 import { type CommonProps } from '../../../types/components';
 
 export interface TitleProps extends CommonProps {
-  product: string;
+  product: {
+    name: string;
+    href?: string;
+  };
   avatar?: AvatarProps;
   beta?: boolean;
 }
 
-export const Content = ({ avatar, beta, product, theme }: TitleProps) => {
+export const Content = ({
+  avatar,
+  beta,
+  product: { name: productName, href: productHref },
+  theme,
+}: TitleProps) => {
   const { palette, spacing } = useTheme();
   const textColor =
     theme === 'dark' ? palette.primary.contrastText : palette.text.primary;
@@ -29,7 +38,13 @@ export const Content = ({ avatar, beta, product, theme }: TitleProps) => {
         noWrap
         variant="h5"
       >
-        <b>{product}</b>
+        {productHref ? (
+          <Link href={productHref} underline="none" color="text.primary">
+            <b>{productName}</b>
+          </Link>
+        ) : (
+          <b>{productName}</b>
+        )}
       </Typography>
       {beta && (
         <Chip
