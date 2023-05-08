@@ -27,7 +27,7 @@ export const BannerLink = (props: BannerLinkProps) => {
     theme === 'dark' ? palette.primary.dark : alpha(palette.info.main, 0.08);
 
   return (
-    <Box bgcolor={backgroundColor}>
+    <Box bgcolor={backgroundColor} component="section">
       <Container>
         <Stack gap={4} sx={styles.main}>
           {decoration ? (

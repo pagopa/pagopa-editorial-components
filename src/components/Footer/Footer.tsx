@@ -83,22 +83,19 @@ export const Footer = (props: FooterProps) => {
         borderColor: 'divider',
         backgroundColor: 'background.paper',
       }}
+      component="footer"
     >
       <Container
         maxWidth={false}
         sx={{ py: 8, display: 'flex', justifyContent: 'center' }}
       >
-        <Grid
-          container
-          spacing={{ xs: 6, sm: 3 }}
-          xs={8}
-          justifyContent="center"
-        >
+        <Grid container spacing={{ xs: 6, sm: 3 }} justifyContent="center">
           <Grid item xs={12} sm={3}>
             <Stack spacing={2} alignItems={{ xs: 'center', sm: 'start' }}>
               {companyLink && (
                 <Link
                   component="button"
+                  role="link"
                   aria-label={companyLink.ariaLabel}
                   href={companyLink.href ?? hrefNoOp}
                   onClick={wrapHandleExitAction(
@@ -218,8 +215,10 @@ export const Footer = (props: FooterProps) => {
               <Stack
                 alignItems={{ xs: 'center', sm: 'start' }}
                 marginBottom={{ sm: 10 }}
+                component="nav"
               >
                 <Stack
+                  aria-label="i nostri social"
                   spacing={{ xs: 3, sm: 1.5, lg: 3 }}
                   direction="row"
                   component="ul"
@@ -270,9 +269,8 @@ export const Footer = (props: FooterProps) => {
                     )
                   )}
                 </Stack>
-
-                <LangSwitch {...langProps} />
               </Stack>
+              <LangSwitch {...langProps} />
               <FundedByNextGenerationEU size={180} />
             </Stack>
           </Grid>

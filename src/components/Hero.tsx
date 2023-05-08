@@ -41,6 +41,7 @@ const HeroTextContent = ({
       justifyContent={{ md: 'center' }}
       sx={{ minHeight: 'inherit' }}
       mt={{ xs: 9, lg: 0 }}
+      component="section"
     >
       <Box mb={{ xs: 6, md: 4 }}>
         <>
@@ -123,7 +124,7 @@ const Hero = (props: HeroProps) => {
         <HeroTextContent {...props} />
       </Grid>
       {image ? (
-        <Grid item lg={6} mb={{ xs: 4, lg: 0 }}>
+        <Grid item lg={6} mb={{ xs: 4, lg: 0 }} component="figure">
           {isJSX(image) ? (
             image
           ) : (

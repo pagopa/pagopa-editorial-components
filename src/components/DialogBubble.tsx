@@ -18,7 +18,7 @@ export const DialogBubble = ({
   const mui = useTheme();
   const styles = useStyles(mui);
   return (
-    <Stack sx={styles.bubbleContainer}>
+    <Stack sx={styles.bubbleContainer} aria-haspopup="true">
       <Box sx={styles.bubblePointer} />
       <Stack sx={styles.bubble} {...stackProps}>
         {children}

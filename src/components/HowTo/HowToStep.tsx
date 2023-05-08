@@ -9,7 +9,7 @@ export const HowToStep: React.FC<
   const stepNum = index + 1;
 
   return (
-    <Stack spacing={1}>
+    <Stack spacing={1} component="article">
       {/** Step with icon */}
       {icon && (
         <Stack spacing={1.2}>
