@@ -58,54 +58,52 @@ export function LangSwitch({
     };
 
   return (
-    <React.Fragment>
-      <Box>
-        <ButtonNaked
-          sx={{
-            color: 'text.primary',
-            justifyContent: 'space-between',
-            p: 0,
-            height: 'auto',
-            display: 'flex',
-          }}
-          aria-label="lingua"
-          aria-haspopup="true"
-          aria-expanded={open ? 'true' : undefined}
-          onClick={handleClick}
-        >
-          {currentLangCode && (
-            <Box component="span" sx={{ textAlign: 'left' }}>
-              <Typography color="inherit" component="span" variant="subtitle2">
-                {currentLangLabels[currentLangCode]}
-              </Typography>
-            </Box>
-          )}
-
-          {open ? (
-            <KeyboardArrowUpRoundedIcon fontSize="small" />
-          ) : (
-            <KeyboardArrowDownRoundedIcon fontSize="small" />
-          )}
-        </ButtonNaked>
-        {Boolean(Object.keys(languages).length > 0) && (
-          <Menu
-            anchorEl={anchorEl}
-            open={open}
-            onClose={handleClose}
-            MenuListProps={{ 'aria-labelledby': 'lang-menu-button' }}
-          >
-            {Object.keys(languages).map((langCode, i) => (
-              <MenuItem
-                aria-label={currentLangLabels[langCode as LangCode]}
-                key={i}
-                onClick={wrapUpdateActiveLang(langCode as LangCode)}
-              >
-                {currentLangLabels[langCode as LangCode]}
-              </MenuItem>
-            ))}
-          </Menu>
+    <Box aria-label="cambia la lingua">
+      <ButtonNaked
+        sx={{
+          color: 'text.primary',
+          justifyContent: 'space-between',
+          p: 0,
+          height: 'auto',
+          display: 'flex',
+        }}
+        aria-label="lingua"
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+      >
+        {currentLangCode && (
+          <Box component="span" sx={{ textAlign: 'left' }}>
+            <Typography color="inherit" component="span" variant="subtitle2">
+              {currentLangLabels[currentLangCode]}
+            </Typography>
+          </Box>
         )}
-      </Box>
-    </React.Fragment>
+
+        {open ? (
+          <KeyboardArrowUpRoundedIcon fontSize="small" />
+        ) : (
+          <KeyboardArrowDownRoundedIcon fontSize="small" />
+        )}
+      </ButtonNaked>
+      {Boolean(Object.keys(languages).length > 0) && (
+        <Menu
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          MenuListProps={{ 'aria-labelledby': 'lang-menu-button' }}
+        >
+          {Object.keys(languages).map((langCode, i) => (
+            <MenuItem
+              aria-label={currentLangLabels[langCode as LangCode]}
+              key={i}
+              onClick={wrapUpdateActiveLang(langCode as LangCode)}
+            >
+              {currentLangLabels[langCode as LangCode]}
+            </MenuItem>
+          ))}
+        </Menu>
+      )}
+    </Box>
   );
 }

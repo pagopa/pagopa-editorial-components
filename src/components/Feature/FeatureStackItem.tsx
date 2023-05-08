@@ -16,6 +16,7 @@ export const FeatureStackItem: React.FC<FeatureStackItemProps> = ({
 
   return (
     <Stack
+      component="article"
       alignContent="center"
       justifyContent="flex-start"
       spacing={{ xs: 1, md: 3 }}

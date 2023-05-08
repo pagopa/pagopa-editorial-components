@@ -43,7 +43,12 @@ export const Header = (props: HeaderProps) => {
   const HeaderCtas = () => <Ctas {...{ theme, ctaButtons }} />;
 
   return (
-    <Box bgcolor={backgroundColor} paddingX={{ xs: 1, sm: 3 }}>
+    <Box
+      bgcolor={backgroundColor}
+      paddingX={{ xs: 1, sm: 3 }}
+      component="header"
+      role="banner"
+    >
       <Stack
         direction={{ md: 'row' }}
         paddingY={{ xs: 2, sm: 3, md: 1 }}
