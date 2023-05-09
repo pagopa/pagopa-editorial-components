@@ -71,7 +71,7 @@ export const HowTo = (props: HowToProps) => {
 
   return (
     <EContainer background={Background} py={{ xs: 6, md: 8 }}>
-      <Grid item>
+      <Grid item xs={12}>
         {/** Section title */}
         <Typography
           color={isDarkTheme ? 'white' : 'text.primary'}
