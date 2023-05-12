@@ -31,6 +31,7 @@ const PhotoVideo = (props: PhotoVideoProps) => {
     playButtonLabel = 'Riproduci video',
     maxHeight = '600px',
     autoplay = false,
+    loop = false,
     full = false,
     reverse = false,
     theme = 'dark',
@@ -92,6 +93,7 @@ const PhotoVideo = (props: PhotoVideoProps) => {
       theme={theme}
       autoplay={autoplay}
       full={full}
+      loop={loop}
       reverse={reverse}
     />
   ) : (

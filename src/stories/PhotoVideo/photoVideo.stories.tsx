@@ -57,16 +57,18 @@ YouTube.args = {
   title: 'Aenean commodo ligula eget dolor',
   subtitle:
     'Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.',
-  src: 'https://www.youtube.com/embed/YxpWC1Vq4to',
+  src: 'https://www.youtube.com/watch?v=a__7m1BcL-g',
   autoplay: true,
   full: false,
+  loop: true,
 };
 
 export const YouTubeFull = Template.bind({});
 YouTubeFull.args = {
-  src: 'https://www.youtube.com/embed/YxpWC1Vq4to',
+  src: 'https://www.youtube.com/watch?v=a__7m1BcL-g',
   autoplay: true,
   full: true,
+  loop: true,
 };
 
 export const YouTubeLightReverse = Template.bind({});
@@ -74,7 +76,8 @@ YouTubeLightReverse.args = {
   title: 'Aenean commodo ligula eget dolor',
   subtitle:
     'Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.',
-  src: 'https://www.youtube.com/embed/YxpWC1Vq4to',
+  src: 'https://www.youtube.com/watch?v=a__7m1BcL-g',
   reverse: true,
   theme: 'light',
+  loop: true,
 };

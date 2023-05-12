@@ -6,10 +6,11 @@ import Text from './Text';
 import EContainer from '../EContainer';
 
 export interface PhotoVideoYouTubeProps extends PhotoVideoTextProps {
-  full?: boolean;
-  reverse?: boolean;
+  full: boolean;
+  reverse: boolean;
   youtubeID: string;
-  autoplay?: boolean;
+  autoplay: boolean;
+  loop: boolean;
   playButtonLabel?: string;
 }
 
@@ -19,8 +20,9 @@ const YouTubeVideo = ({
   full,
   reverse,
   theme,
+  loop,
   youtubeID,
-  autoplay = false,
+  autoplay,
   playButtonLabel = 'Guarda il video',
 }: PhotoVideoYouTubeProps) => {
   const videoRef = useRef<YouTubePlayer>(null);
@@ -49,6 +51,9 @@ const YouTubeVideo = ({
           className="video__frame"
           onReady={({ target }) => {
             videoRef.current = target;
+          }}
+          onEnd={async () => {
+            loop && videoRef.current.playVideo();
           }}
           style={{
             aspectRatio: 1.777,

@@ -30,6 +30,7 @@ type FooterProps = LangSwitchProps & {
   onProductsJsonFetchError?: (reason: any) => void;
   /** If true, it will not render the products column. As default, the column will be visible */
   hideProductsColumn?: boolean;
+  showFundedByNextGenerationEULogo?: boolean;
 };
 
 export const Footer = (props: FooterProps) => {
@@ -41,6 +42,7 @@ export const Footer = (props: FooterProps) => {
     productsJsonUrl = 'https://selfcare.pagopa.it/assets/products.json',
     onProductsJsonFetchError,
     hideProductsColumn,
+    showFundedByNextGenerationEULogo = false,
     ...langProps
   } = props;
   const { aboutUs, resources, followUs } = links;
@@ -271,7 +273,9 @@ export const Footer = (props: FooterProps) => {
                 </Stack>
               </Stack>
               <LangSwitch {...langProps} />
-              <FundedByNextGenerationEU size={180} />
+              {showFundedByNextGenerationEULogo && (
+                <FundedByNextGenerationEU size={180} />
+              )}
             </Stack>
           </Grid>
         </Grid>
