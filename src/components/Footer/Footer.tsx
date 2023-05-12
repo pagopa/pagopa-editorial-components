@@ -271,7 +271,7 @@ export const Footer = (props: FooterProps) => {
                 </Stack>
               </Stack>
               <LangSwitch {...langProps} />
-              <FundedByNextGenerationEU size={180} />
+              {/* <FundedByNextGenerationEU size={180} /> */}
             </Stack>
           </Grid>
         </Grid>
