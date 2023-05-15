@@ -2,6 +2,7 @@ import { useTheme } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { type CommonProps } from 'types/components';
+import { isJSX } from '../../utils';
 
 export interface EditorialContentProps extends CommonProps {
   title: string;
@@ -30,9 +31,13 @@ export const Content = ({
       <Typography color={textColor} variant="h4">
         {title}
       </Typography>
-      <Typography color={textColor} variant="body2">
-        {body}
-      </Typography>
+      {isJSX(body) ? (
+        body
+      ) : (
+        <Typography color={textColor} variant="body2">
+          {body}
+        </Typography>
+      )}
     </Stack>
   );
 };

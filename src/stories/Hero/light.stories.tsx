@@ -7,6 +7,7 @@ import {
   image,
 } from './heroCommons';
 import heroLightSolidBackground from '../assets/hero-solid-light.jpg';
+import Typography from '@mui/material/Typography/Typography';
 
 export default {
   title: 'Hero/light',
@@ -39,6 +40,20 @@ HeroBigWithBackground.args = {
   background,
   size: 'big',
   ...defaults,
+};
+
+export const HeroHtmlBody = Template.bind({});
+HeroHtmlBody.args = {
+  ...defaults,
+  background,
+  subtitle: (
+    <Typography variant="body1">
+      Quis aute iure reprehenderit in <b>voluptate</b> velit esse cillum dolore
+      eu fugiat nulla pariatur. <b>Excepteur</b> sint obcaecat cupiditat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </Typography>
+  ),
+  size: 'big',
 };
 
 export const HeroSmallWithBackground = Template.bind({});
