@@ -4,13 +4,9 @@ import hero_background_inverse from '../assets/hero_background_inverse.jpg';
 import hero_image from '../assets/hero_image.png';
 
 const title = 'Lorem ipsum dolor sit amet, consectetur';
-const subtitle = (
-  <>
-    Quis aute iure reprehenderit in <b>voluptate</b> velit esse cillum dolore eu
-    fugiat nulla pariatur. <b>Excepteur</b> sint obcaecat cupiditat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </>
-);
+const subtitle = `Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`;
 
 export const heroCommonProps = {
   title,

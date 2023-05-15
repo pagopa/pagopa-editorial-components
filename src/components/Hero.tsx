@@ -48,7 +48,9 @@ const HeroTextContent = ({
           <Typography variant="h1" color={textColor} mb={2}>
             {title}
           </Typography>
-          {subtitle && (
+          {isJSX(subtitle) ? (
+            subtitle
+          ) : (
             <Typography variant="body1" color={textColor}>
               {subtitle}
             </Typography>

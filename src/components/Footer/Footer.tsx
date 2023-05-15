@@ -7,7 +7,7 @@ import {
 } from './index';
 import { LangSwitch, type LangSwitchProps } from './LangSwitch';
 import { isRight, toError } from 'fp-ts/lib/Either';
-import { hrefNoOp, wrapHandleExitAction } from '../../utils/index';
+import { hrefNoOp, isJSX, wrapHandleExitAction } from '../../utils/index';
 
 /* Icons */
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -288,14 +288,17 @@ export const Footer = (props: FooterProps) => {
         }}
       >
         <Container sx={{ px: 2, py: 2 }}>
-          <Typography
-            color="text.primary"
-            component="p"
-            variant="caption"
-            textAlign="center"
-          >
-            {legalInfo}
-          </Typography>
+          {isJSX(legalInfo) ? (
+            legalInfo
+          ) : (
+            <Typography
+              color="text.primary"
+              variant="caption"
+              textAlign="center"
+            >
+              {legalInfo}
+            </Typography>
+          )}
         </Container>
       </Box>
     </Box>
