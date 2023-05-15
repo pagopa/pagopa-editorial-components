@@ -1,6 +1,7 @@
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 import PhotoVideo from '../../components/PhotoVideo';
 import image from '../assets/hero_background.jpg';
+import video from '../assets/720.mp4';
 
 export default {
   title: 'PhotoVideo',
@@ -9,6 +10,13 @@ export default {
 
 const Template: ComponentStory<typeof PhotoVideo> = (args) => (
   <PhotoVideo {...args} />
+);
+
+const ScrollingTemplate: ComponentStory<typeof PhotoVideo> = (args) => (
+  <>
+    <div style={{ height: '150vh' }}></div>
+    <PhotoVideo {...args} />
+  </>
 );
 
 export const Regular = Template.bind({});
@@ -80,4 +88,16 @@ YouTubeLightReverse.args = {
   reverse: true,
   theme: 'light',
   loop: true,
+};
+
+export const selHostingWithYoutubeLayout = ScrollingTemplate.bind({});
+selHostingWithYoutubeLayout.args = {
+  title: 'Aenean commodo ligula eget dolor',
+  subtitle:
+    'Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.',
+  src: video,
+  full: true,
+  autoplay: true,
+  loop: true,
+  useYoutubeLayout: true,
 };
