@@ -3,11 +3,11 @@ import Stack from '@mui/material/Stack';
 import { type Generic, type CommonProps } from '../types/components';
 import { isJSX } from '../utils';
 
-interface CtaButtonProps extends Partial<ButtonProps> {
+export interface CtaButtonProps extends Partial<ButtonProps> {
   text: string;
 }
 
-type CtaButton = CtaButtonProps | Generic;
+export type CtaButton = CtaButtonProps | Generic;
 
 export interface CtaProps extends CommonProps {
   ctaButtons?: CtaButton[];
