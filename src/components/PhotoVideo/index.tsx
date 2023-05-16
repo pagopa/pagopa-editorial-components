@@ -35,6 +35,7 @@ const PhotoVideo = (props: PhotoVideoProps) => {
     full = false,
     reverse = false,
     theme = 'dark',
+    useYoutubeLayout = false,
   } = props;
   const [playing, setPlaying] = useState(autoplay);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -85,8 +86,10 @@ const PhotoVideo = (props: PhotoVideoProps) => {
   };
 
   const onlyPlayButton = Boolean(!title && !subtitle);
-  return isYoutubeSrc ? (
+  return isYoutubeSrc || useYoutubeLayout ? (
     <YouTubeVideo
+      src={src}
+      useYoutubeLayout={useYoutubeLayout}
       title={title}
       subtitle={subtitle}
       youtubeID={youtubeParser(src) || ''}
