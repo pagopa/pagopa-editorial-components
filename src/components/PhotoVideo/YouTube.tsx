@@ -62,6 +62,7 @@ const YouTubeVideo = ({
       <Grid item xs={12} md={full ? 12 : 6}>
         {useYoutubeLayout ? (
           <video
+            playsInline
             ref={videoRef}
             controls
             muted
