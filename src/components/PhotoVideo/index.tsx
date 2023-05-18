@@ -70,6 +70,7 @@ const PhotoVideo = (props: PhotoVideoProps) => {
       const type = src.split('.').pop() ?? 'mp4';
       return (
         <video
+          playsInline
           ref={videoRef}
           style={commonCSSStyle}
           autoPlay={autoplay}

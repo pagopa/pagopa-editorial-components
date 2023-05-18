@@ -12,13 +12,6 @@ const Template: ComponentStory<typeof PhotoVideo> = (args) => (
   <PhotoVideo {...args} />
 );
 
-const ScrollingTemplate: ComponentStory<typeof PhotoVideo> = (args) => (
-  <>
-    <div style={{ height: '150vh' }}></div>
-    <PhotoVideo {...args} />
-  </>
-);
-
 export const Regular = Template.bind({});
 Regular.args = {
   title: 'Nam eget dui. Etiam rhoncus Maecenas tempus',
@@ -90,7 +83,7 @@ YouTubeLightReverse.args = {
   loop: true,
 };
 
-export const selHostingWithYoutubeLayout = ScrollingTemplate.bind({});
+export const selHostingWithYoutubeLayout = Template.bind({});
 selHostingWithYoutubeLayout.args = {
   title: 'Aenean commodo ligula eget dolor',
   subtitle:
