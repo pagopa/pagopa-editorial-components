@@ -62,6 +62,10 @@ const YouTubeVideo = ({
       <Grid item xs={12} md={full ? 12 : 6}>
         {useYoutubeLayout ? (
           <video
+            onContextMenu={(e) => {
+              e.preventDefault();
+            }}
+            controlsList="nodownload"
             playsInline
             ref={videoRef}
             controls
