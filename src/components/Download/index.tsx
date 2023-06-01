@@ -18,7 +18,7 @@ export interface IDownolad extends CommonProps {
 
 const Download = (props: IDownolad) => {
   const { title, subtitle, items, theme, type } = props;
-  const backgroundColor = theme === 'dark' ? 'primary.dark' : 'primary.paper';
+  const backgroundColor = theme === 'dark' ? 'primary.dark' : 'white';
   const textColor = theme === 'dark' ? 'primary.contrastText' : 'text.primary';
   const isTypeButton = type === 'button';
   return (
