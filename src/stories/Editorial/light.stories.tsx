@@ -4,7 +4,6 @@ import portrait from '../assets/Editorial/portrait.png';
 import { Editorial } from '../../components/Editorial';
 import { defaults } from './defaults';
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
   component: Editorial,
   title: 'Editorial/light',
