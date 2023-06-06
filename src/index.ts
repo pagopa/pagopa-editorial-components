@@ -1,6 +1,7 @@
 import Feature from './components/Feature/Feature';
 import Hero from './components/Hero';
 import PhotoVideo from './components/PhotoVideo';
+import Listing from './components/Listing';
 import { Accordion } from './components/Accordion/Accordion';
 import { BannerLink } from './components/BannerLink';
 import { Editorial } from './components/Editorial';
@@ -20,4 +21,5 @@ export {
   HowTo,
   PhotoVideo,
   PreHeader,
+  Listing,
 };
