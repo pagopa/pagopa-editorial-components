@@ -1,12 +1,12 @@
 import { type SxProps } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { type CommonProps } from '../../types/components';
+import { type Generic, type CommonProps } from '../../types/components';
 
 export interface StatsContentProps extends CommonProps {
   eyelet?: string;
   title?: string;
-  body?: string;
+  body?: string | Generic;
   sx?: SxProps;
 }
 
