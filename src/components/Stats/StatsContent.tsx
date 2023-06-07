@@ -1,12 +1,13 @@
+import { type SxProps } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { type StackProps } from '@mui/system';
 import { type CommonProps } from '../../types/components';
 
-export interface StatsContentProps extends CommonProps, StackProps {
+export interface StatsContentProps extends CommonProps {
   eyelet?: string;
   title?: string;
   body?: string;
+  sx?: SxProps;
 }
 
 export const StatsContent = ({
@@ -14,13 +15,13 @@ export const StatsContent = ({
   title,
   body,
   theme,
-  ...rest
+  sx,
 }: StatsContentProps) => {
   const textColor = theme === 'dark' ? 'background.paper' : 'text.primary';
   const eyeletColor = theme === 'dark' ? 'background.paper' : 'text.secondary';
 
   return (
-    <Stack gap={2} {...rest}>
+    <Stack gap={2} sx={sx}>
       {eyelet && (
         <Typography color={eyeletColor} variant="overline">
           {eyelet}

@@ -7,6 +7,8 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
+import './Stats.css';
+
 export interface StatsProps extends CommonProps, StatsContentProps {
   kpiValues: Array<KpiProps & { id: string | number }>;
   direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse';
@@ -22,7 +24,6 @@ export const Stats = ({
   kpiCaption,
   direction = 'column',
 }: StatsProps) => {
-  const isVertical = direction.split('-').includes('column');
   const backgroundColor =
     theme === 'dark' ? 'primary.dark' : 'background.paper';
   const textColor = theme === 'dark' ? 'background.paper' : 'text.primary';
@@ -60,7 +61,7 @@ export const Stats = ({
     };
   }, []);
 
-  const onSliderDotClick = (kpi: KpiProps & { id: string | number }) => {
+  const scrollIntoView = (kpi: KpiProps & { id: string | number }) => {
     const selected = document.querySelector(`#kpi-${kpi.id}`);
     // scroll only in horizontal
     selected?.scrollIntoView({
@@ -68,48 +69,20 @@ export const Stats = ({
       block: 'nearest',
       inline: 'center',
     });
-
-    setActive(`kpi-${kpi.id}`);
   };
+
+  const styles = useStyles({ direction });
 
   return (
     <EContainer background={backgroundColor}>
-      <Stack
-        direction={{
-          sm: direction,
-          xs: direction.replace('row', 'column') as 'column' | 'column-reverse',
-        }}
-        alignItems="center"
-        justifyContent={{
-          sm: isVertical ? 'center' : 'space-between',
-          xs: 'center',
-        }}
-        textAlign={{ sm: isVertical ? 'center' : 'left', xs: 'center' }}
-        gap={{ md: isVertical ? 4 : 17, xs: 4 }}
-        padding={4}
-        width="100%"
-      >
+      <Stack sx={styles.main}>
         <StatsContent
           {...{ theme, eyelet, title, body }}
-          width={{ sm: isVertical ? '100%' : '40%', xs: '100%' }}
+          sx={styles.statsContent}
         />
-        <Stack
-          width={{
-            sm: isVertical ? '100%' : '60%',
-            xs: '100%',
-          }}
-          sx={{
-            overflowX: { xs: 'scroll', sm: 'visible' },
-            WebkitOverflowScrolling: 'touch',
-          }}
-        >
+        <Stack className="no-scrollbar" sx={styles.kpiContainer}>
           {kpiCaption && (
-            <Box
-              height={40}
-              display="flex"
-              justifyContent="center"
-              width="100%"
-            >
+            <Box sx={styles.kpiTitleContainer}>
               <Typography
                 color={textColor}
                 variant="sidenav"
@@ -119,47 +92,33 @@ export const Stats = ({
               </Typography>
             </Box>
           )}
-          <Stack
-            direction={{ sm: 'row', xs: isVertical ? 'column' : 'row' }}
-            gap={2}
-            paddingBottom={{ xs: isVertical ? 0 : 3 }}
-            paddingX={{ xs: isVertical ? 0 : 2 }}
-            ref={slider}
-            width={{ xs: isVertical ? '100%' : '200%', sm: '100%' }}
-          >
+          <Stack ref={slider} sx={styles.kpiSlideContainer}>
             {kpiValues.map((kpi, index) => (
               <React.Fragment key={kpi?.id ?? index}>
                 <Kpi
                   {...kpi}
-                  id={`kpi-${kpi.id}`}
-                  className={`kpi-slide ${kpi?.className ? kpi.className : ''}`}
                   theme={theme}
+                  id={`kpi-${kpi.id}`}
+                  className={`kpi-slide`}
                 />
               </React.Fragment>
             ))}
           </Stack>
-          <Stack
-            justifyContent="center"
-            flexDirection="row"
-            display={{ sm: 'hidden', xs: isVertical ? 'hidden' : 'flex' }}
-            visibility={{ sm: 'hidden', xs: isVertical ? 'hidden' : 'visible' }}
-          >
-            <Stack sx={{ position: 'absolute', flexDirection: 'row', gap: 1 }}>
+          {/* Only on xs resolutions with row direction */}
+          <Stack sx={styles.kpiStepper}>
+            <Stack position="absolute" direction="row" gap={1}>
               {kpiValues.map((kpi, index) => (
                 <Box
                   key={`slider-${kpi.id}`}
                   onClick={() => {
-                    onSliderDotClick(kpi);
+                    scrollIntoView(kpi);
                   }}
                   sx={{
-                    textDecoration: 'none',
-                    height: 10,
-                    width: 10,
+                    ...styles.kpiStepCircle,
                     backgroundColor:
                       active === `kpi-${kpi.id}` || (!active && index === 0)
                         ? 'primary.main'
                         : '#CCD4DC',
-                    borderRadius: 100,
                   }}
                 />
               ))}
@@ -169,4 +128,66 @@ export const Stats = ({
       </Stack>
     </EContainer>
   );
+};
+
+const useStyles = ({ direction = 'column' }: Partial<StatsProps>) => {
+  const isVertical = direction?.split('-').includes('column');
+
+  const sx = {
+    main: {
+      flexDirection: {
+        sm: direction,
+        xs: direction.replace('row', 'column') as 'column' | 'column-reverse',
+      },
+      alignItems: 'center',
+      justifyContent: {
+        sm: isVertical ? 'center' : 'space-between',
+        xs: 'center',
+      },
+      textAlign: { sm: isVertical ? 'center' : 'left', xs: 'center' },
+      gap: { md: isVertical ? 4 : 17, xs: 4 },
+      padding: 4,
+      width: '100%',
+    },
+    statsContent: {
+      width: { sm: isVertical ? '100%' : '40%', xs: '100%' },
+    },
+    kpiContainer: {
+      width: {
+        sm: isVertical ? '100%' : '60%',
+        xs: '100%',
+      },
+      overflowX: { xs: 'scroll', sm: 'visible' },
+    },
+    kpiTitleContainer: {
+      height: 40,
+      display: 'flex',
+      justifyContent: 'center',
+      width: '100%',
+    },
+    kpiSlideContainer: {
+      display: 'flex',
+      flexDirection: { sm: 'row', xs: isVertical ? 'column' : 'row' },
+      justifyContent: 'center',
+      gap: 2,
+      paddingBottom: { xs: isVertical ? 0 : 3 },
+      padding: { xs: 2, sm: 0 },
+      width: { xs: isVertical ? '100%' : '200%', sm: '100%' },
+    },
+    kpiStepper: {
+      alignSelf: 'center',
+      justifyContent: 'center',
+      display: { sm: 'hidden', xs: isVertical ? 'hidden' : 'flex' },
+      visibility: { sm: 'hidden', xs: isVertical ? 'hidden' : 'visible' },
+      paddingBottom: 1,
+    },
+    kpiStepCircle: {
+      textDecoration: 'none',
+      height: 10,
+      width: 10,
+      borderRadius: 100,
+    },
+  };
+
+  return sx;
 };

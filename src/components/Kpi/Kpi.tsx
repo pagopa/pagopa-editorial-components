@@ -1,16 +1,14 @@
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
-import {
-  Card,
-  type CardContentProps,
-  Typography,
-  useTheme,
-} from '@mui/material';
+import { Card, type SxProps, Typography, useTheme } from '@mui/material';
 import { type Theme } from '../../types/components';
 
-export interface KpiProps extends CardContentProps {
-  value: number;
+export interface KpiProps {
   caption?: string;
+  className?: string;
+  id?: string;
+  sx?: SxProps;
   theme?: Theme;
+  value: number;
 }
 
 export const Kpi = ({
