@@ -7,8 +7,8 @@ import {
   Grid,
 } from '@mui/material';
 import { type CommonProps, type Generic } from 'types/components';
-import { isJSX } from '../utils';
-import EContainer from './EContainer';
+import { isJSX } from '../../utils';
+import EContainer from './../EContainer';
 
 export interface HeroProps extends CommonProps, HeroTextProps {
   image?: string | Generic;
