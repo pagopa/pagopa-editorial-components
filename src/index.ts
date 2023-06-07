@@ -10,6 +10,7 @@ import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header';
 import { HowTo } from './components/HowTo';
 import { PreHeader } from './components/PreHeader';
+import Download from './components/Download';
 
 export {
   Accordion,
@@ -22,6 +23,7 @@ export {
   HowTo,
   PhotoVideo,
   PreHeader,
+  Download,
   Listing,
   Text,
 };

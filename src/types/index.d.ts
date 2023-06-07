@@ -20,6 +20,11 @@ declare module '*.png' {
 
 declare module '*.svg';
 
+declare module '*.pdf' {
+  const value: string;
+  export = value;
+}
+
 declare module '@pagopa/mui-italia' {
   import theme from '@pagopa/mui-italia/dist/theme/index';
   export default theme;
