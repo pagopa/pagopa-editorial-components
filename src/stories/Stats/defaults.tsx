@@ -2,9 +2,19 @@ export const defaults = {
   args: {
     theme: 'light',
     kpiValues: [
-      { value: 30000, caption: 'strawberry fields', id: '1' },
-      { value: 10, caption: 'yellow submarines', id: '2' },
-      { value: 100, caption: 'honey pies', id: '3' },
+      {
+        value: 30000,
+        caption: 'strawberry fields',
+        id: '1',
+        iconName: 'AllInclusive',
+      },
+      {
+        value: 10,
+        caption: 'yellow submarines',
+        id: '2',
+        iconName: 'Houseboat',
+      },
+      { value: 100, caption: 'honey pies', id: '3', iconName: 'PieChart' },
     ],
     eyelet: 'PER I CITTADINI',
     title: 'Non perderti più nessuna notifica',
