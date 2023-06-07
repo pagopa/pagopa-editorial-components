@@ -27,3 +27,5 @@ CustomIcon.args = {
     </div>
   ),
 };
+
+export const NoIcon = Template.bind({});

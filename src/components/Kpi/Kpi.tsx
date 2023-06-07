@@ -1,7 +1,8 @@
-import { Card, type SxProps, Typography, useTheme } from '@mui/material';
+import { Card, type SxProps, Typography, useTheme, Box } from '@mui/material';
 import { EIcon, type EIconProps } from '../EIcon';
 import { type Generic, type Theme } from '../../types/components';
 import { isJSX } from '../../utils/index';
+import { StarOutline } from '@mui/icons-material';
 
 export interface KpiProps {
   caption?: string;
@@ -33,12 +34,16 @@ export const Kpi = ({
   return (
     <Card
       sx={{
+        backgroundColor,
+        borderRadius: spacing(2),
+        display: 'flex',
         flex: 1,
         flexDirection: 'column',
-        gap: spacing(1.2),
-        padding: spacing(2),
-        borderRadius: spacing(2),
-        backgroundColor,
+        gap: spacing(1),
+        justifyContent: 'flex-end',
+        paddingBottom: spacing(2),
+        paddingY: spacing(1),
+        paddingX: spacing(2),
         textAlign: 'left',
         ...sx,
       }}

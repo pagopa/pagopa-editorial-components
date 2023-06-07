@@ -45,6 +45,6 @@ ColumnOfFive.args = {
     { value: 10, caption: 'yellow submarines', id: '2', iconName: 'Houseboat' },
     { value: 100, caption: 'honey pies', id: '3', iconName: 'PieChart' },
     { value: 532, caption: 'diamonds', id: '4', iconName: 'Diamond' },
-    { value: 0, caption: 'lonely people', id: '5', iconName: 'People' },
+    { value: 0, caption: 'lonely people', id: '5' },
   ],
 };

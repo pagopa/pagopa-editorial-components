@@ -173,13 +173,14 @@ const useStyles = ({ direction = 'column' }: Partial<StatsProps>) => {
       paddingBottom: { xs: isVertical ? 0 : 3 },
       padding: { xs: 2, sm: 0 },
       width: { xs: isVertical ? '100%' : '200%', sm: '100%' },
+      height: '100%',
     },
     kpiStepper: {
       alignSelf: 'center',
       justifyContent: 'center',
       display: { sm: 'hidden', xs: isVertical ? 'hidden' : 'flex' },
       visibility: { sm: 'hidden', xs: isVertical ? 'hidden' : 'visible' },
-      paddingBottom: 1,
+      paddingTop: 2,
     },
     kpiStepCircle: {
       textDecoration: 'none',
