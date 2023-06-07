@@ -1,6 +1,7 @@
-import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import { Card, type SxProps, Typography, useTheme } from '@mui/material';
-import { type Theme } from '../../types/components';
+import { EIcon, type EIconProps } from '../EIcon';
+import { type Generic, type Theme } from '../../types/components';
+import { isJSX } from '../../utils/index';
 
 export interface KpiProps {
   caption?: string;
@@ -9,6 +10,9 @@ export interface KpiProps {
   sx?: SxProps;
   theme?: Theme;
   value: number;
+  iconName?: EIconProps['name'];
+  iconColor?: string;
+  icon?: Generic;
 }
 
 export const Kpi = ({
@@ -16,6 +20,9 @@ export const Kpi = ({
   caption,
   theme = 'light',
   sx,
+  icon,
+  iconName,
+  iconColor,
   ...rest
 }: KpiProps) => {
   const { spacing } = useTheme();
@@ -38,9 +45,12 @@ export const Kpi = ({
       elevation={16}
       {...rest}
     >
-      <Typography color="text.disabled">
-        <StarOutlineIcon fontSize="medium" color={'inherit'} />
-      </Typography>
+      {isJSX(icon) && icon}
+      {iconName && (
+        <Typography color={iconColor ?? 'text.disabled'}>
+          <EIcon name={iconName} color="inherit" />
+        </Typography>
+      )}
       <Typography color={textColor} variant="h4">
         {value}
       </Typography>
