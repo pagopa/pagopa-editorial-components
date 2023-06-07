@@ -33,7 +33,6 @@ LightButtons.args = {
     },
     {
       label: 'Download 3 Lorem Ipsum',
-      fileName: 'sample_3.pdf',
       href: pdf,
     },
   ],

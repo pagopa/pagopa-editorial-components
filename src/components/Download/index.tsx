@@ -3,22 +3,36 @@ import EContainer from '../EContainer';
 import { Button, Typography, Divider, Stack } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
 
-interface DownloadItem {
+interface IDownloadItem {
   label: string;
   fileName?: string;
   href: string;
 }
 
-export interface IDownolad extends CommonProps {
+export interface IDownload extends CommonProps {
   title: string;
   subtitle?: string;
   type?: 'button' | 'link';
-  items: DownloadItem[];
+  items: IDownloadItem[];
+  itemsAlignment?: 'center' | 'left' | 'right';
 }
 
-const Download = (props: IDownolad) => {
-  const { title, subtitle, items, theme, type } = props;
-  const backgroundColor = theme === 'dark' ? 'primary.dark' : 'white';
+const alignMap = new Map();
+alignMap.set('left', 'flex-start');
+alignMap.set('center', 'center');
+alignMap.set('right', 'flex-end');
+
+const Download = (props: IDownload) => {
+  const {
+    title,
+    subtitle,
+    items,
+    theme,
+    type,
+    itemsAlignment = 'left',
+  } = props;
+  const backgroundColor =
+    theme === 'dark' ? 'primary.dark' : 'background.paper';
   const textColor = theme === 'dark' ? 'primary.contrastText' : 'text.primary';
   const isTypeButton = type === 'button';
   return (
@@ -32,7 +46,7 @@ const Download = (props: IDownolad) => {
         </Typography>
       )}
       <Divider />
-      <Stack alignItems={'flex-start'}>
+      <Stack alignItems={alignMap.get(itemsAlignment)}>
         {items.map((item, index) => (
           <Button
             key={`${item.label}-${index}`}
@@ -40,7 +54,7 @@ const Download = (props: IDownolad) => {
             variant={isTypeButton ? 'outlined' : 'text'}
             startIcon={<DownloadIcon />}
             color={theme === 'dark' ? 'negative' : 'primary'}
-            download={item.fileName ?? item.label}
+            download={item.fileName ?? ''}
             sx={{
               marginTop: isTypeButton ? '32px' : '8px',
               paddingLeft: isTypeButton ? 'inherith' : '6px',
