@@ -79,10 +79,14 @@ Standard.args = {
       },
     },
     {
-      img: {
-        src: newsroomcover,
-        alt: 'A picture showing some books',
-      },
+      img: (
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor.
+        </div>
+      ),
       title:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. ',
       date: {

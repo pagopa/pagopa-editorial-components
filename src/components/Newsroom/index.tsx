@@ -1,12 +1,16 @@
 import EContainer from '../EContainer';
-import { Typography, Grid, Link, Stack } from '@mui/material';
+import { Typography, Grid, Link, Stack, Box, Hidden } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import { type Generic } from '../../types/components';
+import { isJSX } from '../../utils';
 
 interface INewsroomItem {
-  img: {
-    src: string;
-    alt: string;
-  };
+  img:
+    | {
+        src: string;
+        alt: string;
+      }
+    | Generic;
   title: string;
   date: {
     date: Date;
@@ -26,7 +30,7 @@ export interface INewsroom {
 
 const Item = (props: INewsroomItem) => {
   const {
-    img: { src, alt },
+    img,
     date: {
       date,
       locale = 'it-IT',
@@ -41,7 +45,9 @@ const Item = (props: INewsroomItem) => {
   } = props;
   return (
     <Grid item md={4} mb={8}>
-      <img src={src} alt={alt} width="100%" />
+      <Box sx={{ aspectRatio: '3/2', overflow: 'hidden' }}>
+        {isJSX(img) ? img : <img src={img.src} alt={img.alt} width="100%" />}
+      </Box>
       <Typography color="text.secondary" fontSize={16} fontWeight={400} my={2}>
         {new Intl.DateTimeFormat(locale, options).format(date)}
       </Typography>
