@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Listing from './components/Listing';
 import PhotoVideo from './components/PhotoVideo';
 import Text from './components/Text';
+import Newsroom from './components/Newsroom';
 import { Accordion } from './components/Accordion/Accordion';
 import { BannerLink } from './components/BannerLink';
 import { Editorial } from './components/Editorial';
@@ -30,4 +31,5 @@ export {
   PreHeader,
   Stats,
   Text,
+  Newsroom,
 };
