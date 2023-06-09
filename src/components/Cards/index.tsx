@@ -12,14 +12,16 @@ import EContainer from '../EContainer';
 import { EIcon, type EIconProps } from '../EIcon';
 
 import { isJSX } from '../../utils';
+import { Masonry } from '@mui/lab';
 
 const layoutMap = new Map();
 
-layoutMap.set('3-items', 4);
-layoutMap.set('4-items', 3);
-layoutMap.set('full-text', 6);
+layoutMap.set('3-items', 3);
+layoutMap.set('4-items', 4);
+layoutMap.set('full-text', 2);
 
 interface IItem {
+  textAlign: 'center' | 'left';
   icon?: Generic | EIconProps['name'];
   label?: string;
   title: string;
@@ -32,19 +34,29 @@ interface IItem {
 }
 
 const Item = (props: IItem) => {
-  const { title, text, icon, link } = props;
+  const { title, text, icon, link, textAlign, label } = props;
   return (
     <Card elevation={16}>
       <CardContent>
         {isJSX(icon) ? icon : <EIcon name={icon} />}
-        <Typography variant="h6">{title}</Typography>
-        <Typography variant="body1">{text} </Typography>
+        {label && (
+          <Typography textAlign={textAlign} mb={1}>
+            {label}
+          </Typography>
+        )}
+        <Typography variant="h6" textAlign={textAlign} mb={1}>
+          {title}
+        </Typography>
+        <Typography variant="body1" textAlign={textAlign} mb={1}>
+          {text}
+        </Typography>
         {link && (
           <Stack
             mt={2}
             direction="row"
             alignItems="center"
             color="primary.main"
+            justifyContent={textAlign}
           >
             <Link
               color="primary.main"
@@ -76,15 +88,33 @@ export interface CardsProps extends CommonProps {
 }
 
 const Cards = (props: CardsProps) => {
-  const { items, layout } = props;
+  const { items, layout, theme, text } = props;
+  const background = theme === 'dark' ? 'primary.dark' : 'background.paper';
   return (
-    <EContainer background="background.paper" py={8}>
-      <Grid container spacing={2}>
-        {items.map((item, i) => (
-          <Grid item key={`${item.title}-${i}`} md={layoutMap.get(layout)}>
-            <Item {...item} />
+    <EContainer background={background} py={8}>
+      <Grid container spacing="145px">
+        {layout === 'full-text' && (
+          <Grid item md={4}>
+            <Typography variant="h2" mb={5}>
+              {text.title}
+            </Typography>
+            <Typography variant="h6" mb={5}>
+              {text.subtitle}
+            </Typography>
+            <Typography variant="body1">{text.body}</Typography>
           </Grid>
-        ))}
+        )}
+        <Grid item md={layout !== 'full-text' ? 12 : 8}>
+          <Masonry columns={layoutMap.get(layout)} spacing={4}>
+            {items.map((item, i) => (
+              <Item
+                key={`${item.title}-${i}`}
+                {...item}
+                textAlign={layout !== 'full-text' ? 'center' : 'left'}
+              />
+            ))}
+          </Masonry>
+        </Grid>
       </Grid>
     </EContainer>
   );
