@@ -17,7 +17,7 @@ ThreeColumnLayout.args = {
   layout: '3-items',
   items: [
     {
-      icon: 'AccessAlarm',
+      icon: 'Air',
       title: 'Title',
       text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
       link: {
@@ -37,7 +37,7 @@ ThreeColumnLayout.args = {
       },
     },
     {
-      icon: 'AccessAlarm',
+      icon: 'AddReaction',
       title: 'Title',
       text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
       link: {
@@ -86,7 +86,17 @@ WithText.args = {
   text: {
     title: 'lorem ipsum',
     subtitle: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
-    body: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.`,
+    body: (
+      <p style={{ fontSize: '16px', fontWeight: '400' }}>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+        ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+        dis <strong>parturient</strong> montes, nascetur ridiculus mus.
+        <br />
+        <br /> Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+        sem. Nulla consequat <strong>massa</strong> quis enim. Donec pede justo,
+        fringilla vel, aliquet nec, vulputate eget, arcu.
+      </p>
+    ),
   },
   layout: 'full-text',
   items: [
@@ -101,7 +111,7 @@ WithText.args = {
       },
     },
     {
-      icon: 'AccessAlarm',
+      icon: 'Accessibility',
       title: 'Title',
       text: 'Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. ',
       link: {
@@ -111,7 +121,7 @@ WithText.args = {
       },
     },
     {
-      icon: 'AccessAlarm',
+      icon: 'Air',
       title: 'Title',
       text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
       link: {
@@ -121,7 +131,7 @@ WithText.args = {
       },
     },
     {
-      icon: 'AccessAlarm',
+      icon: 'AddReaction',
       title: 'Title',
       text: 'Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. ',
       link: {
