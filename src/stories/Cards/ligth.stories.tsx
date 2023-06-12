@@ -58,18 +58,22 @@ FourColumnLayout.args = {
   layout: '4-items',
   items: [
     {
+      label: 'label',
       title: 'Title',
       text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
     },
     {
+      label: 'label',
       title: 'Title',
       text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
     },
     {
+      label: 'label',
       title: 'Title',
       text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
     },
     {
+      label: 'label',
       title: 'Title',
       text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
     },
