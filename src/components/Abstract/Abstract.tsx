@@ -1,32 +1,17 @@
 /* eslint-disable react/prop-types */
 
-import { Box, Container, Stack, Typography } from '@mui/material';
-import type { CommonProps, Generic, Theme } from 'types/components';
+import { Box, Stack, Typography, useTheme } from '@mui/material';
+import EContainer from '../EContainer';
+import type { CommonProps, Generic } from 'types/components';
+import { isJSX } from '../../utils';
 
 export interface AbstractProps extends CommonProps {
   overline: string;
   title: string;
   description: string | Generic;
-  background?: string;
+  background?: string | Generic;
   layout?: 'left' | 'center' | 'right';
 }
-
-const getBackgroundSx = (theme: Theme, background?: string) => {
-  if (!background) {
-    return {};
-  }
-
-  const overlay =
-    theme === 'dark'
-      ? 'linear-gradient(76.77deg, rgba(0, 115, 230, 0.7) 40.28%, rgba(0, 115, 230, 0) 100%), '
-      : 'linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), ';
-
-  return {
-    backgroundImage: `${overlay}url(${background ?? ''})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  };
-};
 
 export const Abstract: React.FC<AbstractProps> = ({
   overline,
@@ -36,55 +21,81 @@ export const Abstract: React.FC<AbstractProps> = ({
   background,
   layout = 'left',
 }) => {
-  const textColor = theme === 'dark' ? 'white' : 'text.primary';
+  const textColor = theme === 'dark' ? 'background.paper' : 'text.primary';
 
-  const backgroundSx = getBackgroundSx(theme, background);
+  const overlay =
+    theme === 'dark'
+      ? 'linear-gradient(76.77deg, rgba(0, 115, 230, 0.7) 40.28%, rgba(0, 115, 230, 0) 100%), '
+      : 'linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), ';
 
-  return (
+  const backgroundColor =
+    theme === 'dark' ? 'primary.dark' : 'background.paper';
+  const eyeletColor = theme === 'dark' ? 'background.paper' : 'text.secondary';
+
+  const BackgroundImage = isJSX(background) ? (
+    background
+  ) : (
     <Box
-      component="section"
-      bgcolor={theme === 'dark' ? 'primary.main' : 'white'}
+      // https://www.w3.org/WAI/tutorials/images/decorative/#example-1-image-used-as-part-of-page-design
+      role="presentation"
       sx={{
         px: { xs: 4 },
-        ...backgroundSx,
+        position: 'absolute',
+        inset: 0,
+        zIndex: -10,
+        height: '100%',
+        width: '100%',
+        objectFit: 'cover',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundImage: `${overlay}url(${background ?? ''})`,
       }}
+    />
+  );
+
+  const { spacing } = useTheme();
+
+  const flexLayoutMap = {
+    center: 'center',
+    right: 'flex-end',
+    left: 'flex-start',
+  };
+
+  return (
+    <EContainer
+      background={!background ? backgroundColor : BackgroundImage}
+      sx={{ height: { lg: spacing(66) } }}
     >
-      <Container
-        sx={{ textAlign: layout, color: textColor }}
-        maxWidth="lg"
-        disableGutters
+      <Stack
+        py={spacing(10)}
+        px={{ sm: spacing(2) }}
+        width="100%"
+        justifyContent="center"
+        alignItems={flexLayoutMap[layout]}
       >
-        <Stack
-          alignItems={
-            layout === 'left'
-              ? 'flex-start'
-              : layout === 'center'
-              ? 'center'
-              : 'end'
-          }
-          justifyContent="center"
-          sx={{ minHeight: 530 }}
+        <Typography
+          display="flex"
+          flexDirection="column"
+          maxWidth={spacing(70)}
+          textAlign={layout}
+          color={textColor}
+          gap={spacing(2)}
         >
-          <Stack sx={{ maxWidth: 520 }} spacing={2}>
-            <Typography
-              sx={{ color: theme === 'light' ? 'text.secondary' : textColor }}
-              variant={'overline'}
-            >
-              {overline}
-            </Typography>
-            <Typography color={textColor} variant="h4">
-              {title}
-            </Typography>
-            <Typography
-              component={typeof description === 'string' ? 'p' : 'div'}
-              color={textColor}
-              variant="body1"
-            >
-              {description}
-            </Typography>
-          </Stack>
-        </Stack>
-      </Container>
-    </Box>
+          <Typography color={eyeletColor} variant={'overline'}>
+            {overline}
+          </Typography>
+          <Typography color={textColor} variant="h4">
+            {title}
+          </Typography>
+          <Typography
+            component={typeof description === 'string' ? 'p' : 'div'}
+            color={textColor}
+            variant="body1"
+          >
+            {description}
+          </Typography>
+        </Typography>
+      </Stack>
+    </EContainer>
   );
 };
