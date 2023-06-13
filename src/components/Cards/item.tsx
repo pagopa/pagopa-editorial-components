@@ -29,76 +29,89 @@ export interface IItem {
     text: string;
     title: string;
   };
-  layout: '3-items' | '4-items' | 'full-text';
+  masonry?: boolean;
 }
 
-const Item = (props: IItem) => {
-  const { title, text, icon, link, textAlign, label, layout } = props;
+const Item = ({
+  title,
+  text,
+  icon,
+  link,
+  textAlign,
+  label,
+  masonry,
+}: IItem) => {
   return (
-    <Grid item md={layoutItemMap.get(layout)}>
-      <Card elevation={16}>
-        <CardContent>
-          <Stack
-            px={4}
-            sx={{ minHeight: '275px' }}
-            justifyContent="center"
-            alignItems={textAlign}
-          >
-            <Box mb={2} color="primary.dark">
-              {isJSX(icon) ? (
-                icon
-              ) : (
-                <EIcon name={icon} sx={{ fontSize: 40, color: 'inerith' }} />
-              )}
-            </Box>
-            {label && (
-              <Typography
-                mb={1}
-                textTransform="uppercase"
-                fontSize="12px"
-                fontWeight="600"
-                color="text.secondary"
-              >
-                {label}
-              </Typography>
+    <Card
+      elevation={16}
+      sx={{
+        display: 'flex',
+        minHeight: '100px',
+        width: '348px',
+        flex: { md: masonry ? '0 0 auto' : '1 1 0' },
+      }}
+    >
+      <CardContent>
+        <Stack
+          px={4}
+          sx={{ minHeight: '275px' }}
+          justifyContent="center"
+          alignItems={textAlign}
+        >
+          <Box mb={2} color="primary.dark">
+            {isJSX(icon) ? (
+              icon
+            ) : (
+              <EIcon name={icon} sx={{ fontSize: 40, color: 'inherit' }} />
             )}
-            <Typography variant="h6" mb={1}>
-              {title}
-            </Typography>
+          </Box>
+          {label && (
             <Typography
-              variant="body1"
               mb={1}
-              textAlign={{ textAlign }}
-              fontSize="16px"
+              textTransform="uppercase"
+              fontSize="12px"
+              fontWeight="600"
+              color="text.secondary"
             >
-              {text}
+              {label}
             </Typography>
-            {link && (
-              <Stack
-                mt={2}
-                direction="row"
-                alignItems="center"
+          )}
+          <Typography variant="h6" mb={1}>
+            {title}
+          </Typography>
+          <Typography
+            variant="body1"
+            mb={1}
+            textAlign={{ textAlign }}
+            fontSize="16px"
+          >
+            {text}
+          </Typography>
+          {link && (
+            <Stack
+              mt={2}
+              direction="row"
+              alignItems="center"
+              color="primary.main"
+              justifyContent={textAlign}
+            >
+              <Link
                 color="primary.main"
-                justifyContent={textAlign}
+                underline="none"
+                textTransform="capitalize"
+                href={link.href}
+                title={link.title}
+                fontSize={14}
+                fontWeight={400}
               >
-                <Link
-                  color="primary.main"
-                  underline="none"
-                  textTransform="capitalize"
-                  href={link.href}
-                  title={link.title}
-                  fontSize={14}
-                  fontWeight={400}
-                >
-                  {link.text}
-                </Link>
-                <ArrowRightAltIcon sx={{ color: 'inerith', fontSize: 18 }} />
-              </Stack>
-            )}
-          </Stack>
-        </CardContent>
-      </Card>
-    </Grid>
+                {link.text}
+              </Link>
+              <ArrowRightAltIcon sx={{ color: 'inerith', fontSize: 18 }} />
+            </Stack>
+          )}
+        </Stack>
+      </CardContent>
+    </Card>
   );
 };
 
