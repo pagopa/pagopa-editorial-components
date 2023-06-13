@@ -24,5 +24,11 @@ QuoteBigWithBackground.args = {
 export const QuoteSolid = Template.bind({});
 QuoteSolid.args = {
   ...defaults,
-  background: heroLightSolidBackground,
+  background: (
+    <img
+      style={{ zIndex: -10, position: 'absolute', left: 0, width: '100%' }}
+      src={heroLightSolidBackground}
+      alt="test"
+    />
+  ),
 };
