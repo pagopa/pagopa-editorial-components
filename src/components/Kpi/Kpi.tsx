@@ -1,8 +1,7 @@
-import { Card, type SxProps, Typography, useTheme, Box } from '@mui/material';
+import { Card, type SxProps, Typography, useTheme } from '@mui/material';
 import { EIcon, type EIconProps } from '../EIcon';
 import { type Generic, type Theme } from '../../types/components';
 import { isJSX } from '../../utils/index';
-import { StarOutline } from '@mui/icons-material';
 
 export interface KpiProps {
   caption?: string;
