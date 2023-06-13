@@ -1,19 +1,12 @@
-import { Grid, Typography } from '@mui/material';
+import { Grid, Stack, Typography } from '@mui/material';
 import { type Generic, type CommonProps } from '../../types/components';
 import EContainer from '../EContainer';
 import Item, { type IItem } from './item';
 import { isJSX } from '../../utils';
 import { type ReactNode } from 'react';
 
-const layoutMap = new Map();
-
-layoutMap.set('3-items', 3);
-layoutMap.set('4-items', 4);
-layoutMap.set('full-text', 2);
-
 export interface CardsProps extends CommonProps {
   items: IItem[];
-  layout: '3-items' | '4-items' | 'full-text';
   text: {
     title: string;
     subtitle?: string;
@@ -21,47 +14,85 @@ export interface CardsProps extends CommonProps {
   };
 }
 
-const ItemsContainer = ({ children }: { children: ReactNode[] }) => (
-  <Grid container spacing={2} justifyContent="center">
-    {children}
-  </Grid>
-);
+const ItemsContainer = ({
+  masonry,
+  children,
+}: {
+  masonry: boolean;
+  children: ReactNode[];
+}) => {
+  return masonry ? (
+    <Stack
+      sx={{
+        display: 'flex',
+        flexFlow: 'column wrap',
+        maxHeight: { sm: '1000px' },
+        maxWidth: '50%',
+        gap: '20px',
+      }}
+    >
+      {children}
+    </Stack>
+  ) : (
+    <Grid container justifyContent="center" gap={2.5}>
+      {children}
+    </Grid>
+  );
+};
 
-const Cards = (props: CardsProps) => {
-  const { items, layout, theme, text } = props;
+const Cards = ({ items, theme, text }: CardsProps) => {
   const background = theme === 'dark' ? 'primary.dark' : 'background.paper';
   const textColor = theme === 'dark' ? 'primary.contrastText' : 'text.primary';
+
+  const isMasonry = !!text?.body && !!text?.subtitle;
+
   return (
-    <EContainer background={background} py={8} spacing={{ md: '145px' }}>
-      {layout === 'full-text' && (
-        <Grid item md={4} color={textColor}>
-          <Typography variant="h2" mb={5} color={'inherit'}>
-            {text.title}
-          </Typography>
+    <EContainer
+      background={background}
+      py={8}
+      sx={{
+        display: 'flex',
+        flexDirection: { md: 'row' },
+        width: '100%',
+        gap: { md: isMasonry ? '145px' : 0 },
+      }}
+    >
+      <Typography
+        color={textColor}
+        sx={{
+          width: { md: isMasonry ? '30%' : '100%', xs: '100%' },
+          textAlign: isMasonry ? 'left' : 'center',
+        }}
+      >
+        <Typography variant="h2" mb={5} color={'inherit'}>
+          {text.title}
+        </Typography>
+
+        {isMasonry && (
           <Typography variant="h6" mb={5} color={'inherit'}>
             {text.subtitle}
           </Typography>
-          {isJSX(text.body) ? (
+        )}
+        {isMasonry ? (
+          isJSX(text.body) ? (
             text.body
           ) : (
             <Typography variant="body1" color={'inherit'}>
               {text.body}
             </Typography>
-          )}
-        </Grid>
-      )}
-      <Grid item md={layout !== 'full-text' ? 12 : 8}>
-        <ItemsContainer>
-          {items.map((item, i) => (
-            <Item
-              key={`${item.title}-${i}`}
-              {...item}
-              layout={layout}
-              textAlign={layout !== 'full-text' ? 'center' : 'left'}
-            />
-          ))}
-        </ItemsContainer>
-      </Grid>
+          )
+        ) : null}
+      </Typography>
+      <ItemsContainer masonry={isMasonry}>
+        {items.map((item, i) => (
+          <Item
+            key={`${item.title}-${i}`}
+            {...item}
+            textAlign={isMasonry ? 'left' : 'center'}
+            masonry={isMasonry}
+          />
+        ))}
+      </ItemsContainer>
     </EContainer>
   );
 };
