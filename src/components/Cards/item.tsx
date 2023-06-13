@@ -16,7 +16,7 @@ const layoutItemMap = new Map();
 
 layoutItemMap.set('3-items', 4);
 layoutItemMap.set('4-items', 3);
-layoutItemMap.set('full-text', undefined);
+layoutItemMap.set('full-text', 6);
 
 export interface IItem {
   textAlign?: 'center' | 'left';

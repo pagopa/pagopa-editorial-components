@@ -22,25 +22,11 @@ export interface CardsProps extends CommonProps {
   };
 }
 
-const ItemsContainer = ({
-  layout,
-  children,
-}: {
-  layout: CardsProps['layout'];
-  children: ReactNode[];
-}) => {
-  const isMasonry = layout === 'full-text';
-
-  return isMasonry ? (
-    <Masonry columns={{ md: 2 }} spacing={4}>
-      {children}
-    </Masonry>
-  ) : (
-    <Grid container spacing={2} justifyContent="center">
-      {children}
-    </Grid>
-  );
-};
+const ItemsContainer = ({ children }: { children: ReactNode[] }) => (
+  <Grid container spacing={2} justifyContent="center">
+    {children}
+  </Grid>
+);
 
 const Cards = (props: CardsProps) => {
   const { items, layout, theme, text } = props;
@@ -66,7 +52,7 @@ const Cards = (props: CardsProps) => {
         </Grid>
       )}
       <Grid item md={layout !== 'full-text' ? 12 : 8}>
-        <ItemsContainer layout={layout}>
+        <ItemsContainer>
           {items.map((item, i) => (
             <Item
               key={`${item.title}-${i}`}
