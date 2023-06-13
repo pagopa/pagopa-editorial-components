@@ -47,11 +47,7 @@ const Cards = (props: CardsProps) => {
   const background = theme === 'dark' ? 'primary.dark' : 'background.paper';
   const textColor = theme === 'dark' ? 'primary.contrastText' : 'text.primary';
   return (
-    <EContainer
-      background={background}
-      py={8}
-      spacing={{ xs: 2, md: 9, xl: 18 }}
-    >
+    <EContainer background={background} py={8} spacing={{ md: '145px' }}>
       {layout === 'full-text' && (
         <Grid item md={4} color={textColor}>
           <Typography variant="h2" mb={5} color={'inherit'}>
