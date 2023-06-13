@@ -1,5 +1,4 @@
 import { Grid, Typography } from '@mui/material';
-import { Masonry } from '@mui/lab';
 import { type Generic, type CommonProps } from '../../types/components';
 import EContainer from '../EContainer';
 import Item, { type IItem } from './item';
