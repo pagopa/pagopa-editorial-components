@@ -8,7 +8,6 @@ export interface KpiProps {
   sx?: SxProps;
   theme?: Theme;
   value: number;
-  iconColor?: string;
   kpiIcon?: EIconProps;
 }
 
