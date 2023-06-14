@@ -1,19 +1,9 @@
-/* eslint-disable valid-typeof */
 import { useState } from 'react';
 import { Grid, MobileStepper, Typography, useTheme } from '@mui/material';
 import SwipeableViews from 'react-swipeable-views';
-import { FeatureStackItem } from './FeatureStackItem';
+import { type FeatureItem, FeatureStackItem } from './FeatureStackItem';
 import EContainer from '../EContainer';
 
-export interface FeatureItem {
-  icon?: JSX.Element;
-  title: string;
-  subtitle: string;
-  link?: {
-    text: string;
-    url: string;
-  };
-}
 export interface FeatureProps {
   title: string;
   items: FeatureItem[];
