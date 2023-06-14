@@ -10,15 +10,6 @@ export default {
       control: 'text',
       defaultValue: 'Come funziona',
     },
-    theme: {
-      control: 'inline-radio',
-      options: ['light', 'dark'],
-      defaultValue: 'dark',
-    },
-    steps: {
-      control: { type: 'number', min: 1, step: 1 },
-      defaultValue: 4,
-    },
     rowMaxSteps: {
       control: { type: 'number', min: 1, step: 1 },
       defaultValue: 4,
@@ -32,20 +23,20 @@ export default {
 } as ComponentMeta<typeof HowTo>;
 
 const Template: ComponentStory<typeof HowTo> = (args) => {
-  return <HowTo {...args} />;
+  return <HowTo {...args} theme="dark" />;
 };
 
 export const WithIcons = (args: HowToProps) => {
-  const steps = getSteps(true, args.steps as unknown as number);
+  const steps = getSteps(true);
   return <Template {...args} steps={steps} />;
 };
 
 export const NoIcons = (args: HowToProps) => {
-  const steps = getSteps(false, args.steps as unknown as number);
+  const steps = getSteps(false);
   return <Template {...args} steps={steps} />;
 };
 
 export const WithBottomLink = (args: HowToProps) => {
-  const steps = getSteps(false, args.steps as unknown as number);
+  const steps = getSteps(false);
   return <Template {...args} steps={steps} link={howToLink} />;
 };

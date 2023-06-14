@@ -2,15 +2,9 @@ import React from 'react';
 import { Box, Grid, Link, Stack, Typography } from '@mui/material';
 import howToBackgroundDark from '../../assets/images/how-to-background-dark.jpeg';
 import howToBackgroundLight from '../../assets/images/how-to-background-light.jpeg';
-import { HowToStep } from './HowToStep';
+import { HowToStep, type Step } from './HowToStep';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import EContainer from '../EContainer';
-
-export interface Step {
-  icon?: JSX.Element;
-  title: string;
-  description: string | JSX.Element;
-}
 
 export interface HowToProps {
   title: string;
@@ -116,7 +110,7 @@ export const HowTo = (props: HowToProps) => {
           >
             {link.label}
             <ArrowForwardIcon
-              sx={{ ml: 1 }}
+              sx={{ ml: 1, mt: 0.5 }}
               fontSize="small"
               aria-hidden="true"
             />

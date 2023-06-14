@@ -19,8 +19,8 @@ export const EIcon = (props: EIconProps) => {
   };
 
   return (
-    <Typography color={props.color}>
-      <IconWrapper color="inherit" {...props} />
+    <Typography color={props?.color ?? 'inherit'}>
+      <IconWrapper {...props} />
     </Typography>
   );
 };
