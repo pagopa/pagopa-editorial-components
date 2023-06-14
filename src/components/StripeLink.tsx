@@ -1,29 +1,21 @@
-import {
-  Grid,
-  Button,
-  Stack,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material';
+import { Grid, Button, Stack, Typography } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { type Generic } from 'types/components';
 import EContainer from './EContainer';
+import { EIcon, type EIconProps } from './EIcon';
 
 export interface StripeLinkProps {
   theme: 'dark' | 'light';
   subtitle: Generic | string;
-  icon?: Generic;
+  icon?: EIconProps;
   buttonText?: string;
 }
 
 const StripeLink = (props: StripeLinkProps) => {
-  const { breakpoints } = useTheme();
   const { icon, subtitle, theme, buttonText } = props;
   const themeStyle = theme === 'light' ? 'primary.main' : 'background.paper';
   const themeStyleBg = theme === 'light' ? 'primary.main' : 'text.primary';
   const bgButton = theme === 'light' ? 'background.paper' : 'primary.main';
-  const underMd = useMediaQuery(breakpoints.down('md'));
   return (
     <EContainer background={themeStyleBg} py={2}>
       <Grid item>
@@ -33,7 +25,13 @@ const StripeLink = (props: StripeLinkProps) => {
           spacing={3}
           alignItems={{ md: 'center', xs: 'flex-start' }}
         >
-          {icon && !underMd && icon}
+          <EIcon
+            {...icon}
+            sx={{
+              display: { md: 'flex', xs: 'none' },
+              visibility: { md: 'visible', xs: 'hidden' },
+            }}
+          />
           <Typography variant="body2" color={'background.paper'}>
             {subtitle}
           </Typography>
