@@ -1,18 +1,15 @@
 import { Card, type SxProps, Typography, useTheme } from '@mui/material';
 import { EIcon, type EIconProps } from '../EIcon';
-import { type Generic, type Theme } from '../../types/components';
-import { isJSX } from '../../utils/index';
+import { type Theme } from '../../types/components';
 
 export interface KpiProps {
   caption?: string;
   className?: string;
-  id?: string;
   sx?: SxProps;
   theme?: Theme;
   value: number;
-  iconName?: EIconProps['name'];
   iconColor?: string;
-  icon?: Generic;
+  kpiIcon?: EIconProps;
 }
 
 export const Kpi = ({
@@ -20,9 +17,7 @@ export const Kpi = ({
   caption,
   theme = 'light',
   sx,
-  icon,
-  iconName,
-  iconColor,
+  kpiIcon,
   ...rest
 }: KpiProps) => {
   const { spacing } = useTheme();
@@ -49,12 +44,7 @@ export const Kpi = ({
       elevation={16}
       {...rest}
     >
-      {isJSX(icon) && icon}
-      {iconName && (
-        <Typography color={iconColor ?? 'text.disabled'}>
-          <EIcon name={iconName} color="inherit" />
-        </Typography>
-      )}
+      <EIcon icon={kpiIcon?.icon} color={kpiIcon?.color ?? 'disabled'} />
       <Typography color={textColor} variant="h4">
         {value}
       </Typography>

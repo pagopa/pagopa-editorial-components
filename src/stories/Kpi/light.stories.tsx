@@ -15,17 +15,20 @@ const Template: ComponentStory<typeof Kpi> = (args) => <Kpi {...args} />;
 
 export const Standard = Template.bind({});
 Standard.args = {
-  iconName: 'StarOutline',
+  kpiIcon: { icon: 'StarOutline' },
 };
 
 export const CustomIcon = Template.bind({});
 CustomIcon.args = {
-  icon: (
-    <div>
-      <Abc />
-      <StarOutlineIcon />
-    </div>
-  ),
+  kpiIcon: {
+    icon: (
+      <div>
+        <Abc />
+        <StarOutlineIcon color="error" />
+      </div>
+    ),
+    color: 'primary',
+  },
 };
 
 export const NoIcon = Template.bind({});

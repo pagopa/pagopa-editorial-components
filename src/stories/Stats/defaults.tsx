@@ -1,4 +1,6 @@
-export const defaults = {
+import { type StatsProps } from 'components/Stats';
+
+export const defaults: { args: StatsProps } = {
   args: {
     theme: 'light',
     kpiValues: [
@@ -6,15 +8,20 @@ export const defaults = {
         value: 30000,
         caption: 'strawberry fields',
         id: '1',
-        iconName: 'AllInclusive',
+        kpiIcon: { icon: 'AllInclusive' },
       },
       {
         value: 10,
         caption: 'yellow submarines',
         id: '2',
-        iconName: 'Houseboat',
+        kpiIcon: { icon: 'Houseboat' },
       },
-      { value: 100, caption: 'honey pies', id: '3', iconName: 'PieChart' },
+      {
+        value: 100,
+        caption: 'honey pies',
+        id: '3',
+        kpiIcon: { icon: 'PieChart' },
+      },
     ],
     eyelet: 'PER I CITTADINI',
     title: 'Non perderti più nessuna notifica',
