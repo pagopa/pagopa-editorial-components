@@ -1,6 +1,5 @@
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 import StripeLink from '../../components/StripeLink';
-import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 
 export default {
   title: 'StripeLink/dark',
@@ -9,7 +8,10 @@ export default {
     theme: 'dark',
     subtitle:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim massa nec velit ultrices porta vel suscipit nunc. ',
-    icon: <VolunteerActivismIcon htmlColor="white"></VolunteerActivismIcon>,
+    icon: {
+      icon: 'VolunteerActivism',
+      color: 'white',
+    },
     buttonText: 'Donate',
   },
 } as ComponentMeta<typeof StripeLink>;

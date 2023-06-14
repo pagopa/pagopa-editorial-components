@@ -1,26 +1,12 @@
-import {
-  Card,
-  CardContent,
-  Typography,
-  Stack,
-  Link,
-  Box,
-  Grid,
-} from '@mui/material';
+import { Card, CardContent, Typography, Stack, Link, Box } from '@mui/material';
 import { type Generic } from '../../types/components';
 import { EIcon, type EIconProps } from '../EIcon';
 import { isJSX } from '../../utils';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
-const layoutItemMap = new Map();
-
-layoutItemMap.set('3-items', 4);
-layoutItemMap.set('4-items', 3);
-layoutItemMap.set('full-text', undefined);
-
 export interface IItem {
   textAlign?: 'center' | 'left';
-  icon?: Generic | EIconProps['name'];
+  cardIcon?: EIconProps;
   label?: string;
   title: string;
   text: string;
@@ -35,7 +21,7 @@ export interface IItem {
 const Item = ({
   title,
   text,
-  icon,
+  cardIcon,
   link,
   textAlign,
   label,
@@ -59,11 +45,7 @@ const Item = ({
           alignItems={textAlign}
         >
           <Box mb={2} color="primary.dark">
-            {isJSX(icon) ? (
-              icon
-            ) : (
-              <EIcon name={icon} sx={{ fontSize: 40, color: 'inherit' }} />
-            )}
+            <EIcon icon={cardIcon?.icon} fontSize="large" />
           </Box>
           {label && (
             <Typography

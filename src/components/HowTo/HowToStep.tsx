@@ -1,17 +1,34 @@
 import React from 'react';
-import type { Step } from './HowTo';
 import { Stack, Typography, Box } from '@mui/material';
+import { EIcon, type EIconProps } from '../EIcon';
 
-export const HowToStep: React.FC<
-  Step & { index: number; theme: 'light' | 'dark'; isLastStep: boolean }
-> = ({ index, icon, title, description, theme, isLastStep }) => {
+export interface Step {
+  stepIcon?: EIconProps;
+  title: string;
+  description: string | JSX.Element;
+}
+
+export interface HowToStepProps extends Step {
+  index: number;
+  theme: 'light' | 'dark';
+  isLastStep: boolean;
+}
+
+export const HowToStep = ({
+  index,
+  stepIcon,
+  title,
+  description,
+  theme,
+  isLastStep,
+}: HowToStepProps) => {
   const isDarkTheme = theme === 'dark';
   const stepNum = index + 1;
 
   return (
     <Stack spacing={1} component="article">
       {/** Step with icon */}
-      {icon && (
+      {stepIcon && (
         <Stack spacing={1.2}>
           <Typography
             color={isDarkTheme ? 'white' : 'primary'}
@@ -24,16 +41,15 @@ export const HowToStep: React.FC<
             direction="row"
             color={isDarkTheme ? 'white' : undefined}
           >
-            {icon}
+            <EIcon icon={stepIcon.icon} {...stepIcon} />
             {!isLastStep && (
               <Box
-                color={!isDarkTheme ? 'primary' : undefined}
                 sx={{
                   opacity: 0.6,
                   transform: { xs: 'rotate(90deg)', md: 'none' },
                 }}
               >
-                <ArrowIcon />
+                <ArrowIcon color={isDarkTheme ? 'white' : '#0062c3'} />
               </Box>
             )}
           </Stack>
@@ -41,7 +57,7 @@ export const HowToStep: React.FC<
       )}
 
       {/** Step without icon */}
-      {!icon && (
+      {!stepIcon && (
         <Typography
           color={isDarkTheme ? 'white' : 'primary'}
           variant="h6"
@@ -73,7 +89,7 @@ export const HowToStep: React.FC<
   );
 };
 
-const ArrowIcon: React.FC = () => {
+const ArrowIcon = ({ color = 'none' }: { color?: string }) => {
   return (
     <svg
       aria-hidden="true"
@@ -86,7 +102,7 @@ const ArrowIcon: React.FC = () => {
       <path
         clipRule="evenodd"
         d="m31.5429 1.04289c.3905-.39052 1.0237-.39052 1.4142 0l10.25 10.25001c.1953.1953.2929.4512.2929.7071s-.0976.5118-.2929.7071l-10.25 10.25c-.3905.3905-1.0237.3905-1.4142 0s-.3905-1.0237 0-1.4142l8.5429-8.5429h-38.5858c-.552284 0-1-.4477-1-1s.447716-1 1-1h38.5858l-8.5429-8.5429c-.3905-.39051-.3905-1.02369 0-1.41421z"
-        fill="#0062c3"
+        fill={color}
         fillRule="evenodd"
       />
     </svg>

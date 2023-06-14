@@ -1,17 +1,23 @@
-/* eslint-disable react/prop-types */
 import { Box, Stack, Typography } from '@mui/material';
+import { EIcon, type EIconProps } from '../EIcon';
 import Subtitle from './Subtitle';
-import type { FeatureItem } from './Feature';
+
+export interface FeatureItem {
+  stackIcon?: EIconProps;
+  title: string;
+  subtitle: string;
+  link?: {
+    text: string;
+    url: string;
+  };
+}
 
 interface FeatureStackItemProps {
   item: FeatureItem;
   theme: 'dark' | 'light';
 }
 
-export const FeatureStackItem: React.FC<FeatureStackItemProps> = ({
-  item,
-  theme,
-}) => {
+export const FeatureStackItem = ({ item, theme }: FeatureStackItemProps) => {
   const themeStyle = theme === 'light' ? 'text.primary' : 'background.paper';
 
   return (
@@ -36,7 +42,7 @@ export const FeatureStackItem: React.FC<FeatureStackItemProps> = ({
         }}
         color={themeStyle}
       >
-        {item.icon}
+        <EIcon {...item?.stackIcon} />
       </Box>
       <Stack spacing={1} textAlign="center">
         <Typography color={themeStyle} variant="h6">
