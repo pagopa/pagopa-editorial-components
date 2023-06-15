@@ -1,37 +1,22 @@
-import { useEffect, useState } from 'react';
-import { Grid, Stack, Box, Typography, Container, Link } from '@mui/material';
-import {
-  type CompanyLinkType,
-  type PreLoginFooterLinksType,
-  type FooterLinksType,
-} from './index';
-import { LangSwitch, type LangSwitchProps } from './LangSwitch';
-import { isRight, toError } from 'fp-ts/lib/Either';
-import { hrefNoOp, isJSX, wrapHandleExitAction } from '../../utils/index';
-
-/* Icons */
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import { Box, Container, Grid, Link, Stack, Typography } from '@mui/material';
 
-/* Enum */
-import { ProductArrayType } from './ProductType';
 import { FundedByNextGenerationEU } from '../../assets/FundedByNextGenerationEU';
 import { LogoPagoPACompany } from '../../assets/LogoPagoPACompany';
-import { type Generic } from 'types/components';
+import { type Generic } from '../../types/components';
+import { hrefNoOp, isJSX, wrapHandleExitAction } from '../../utils/index';
+import { type CompanyLinkType, type PreLoginFooterLinksType } from './index';
+import { LangSwitch, type LangSwitchProps } from './LangSwitch';
 
-type FooterProps = LangSwitchProps & {
+export interface FooterProps extends LangSwitchProps {
   companyLink: CompanyLinkType;
   legalInfo: Generic | Generic[];
   links: PreLoginFooterLinksType;
   onExit?: (exitAction: () => void) => void;
-  /** This URL contains a json with the list of products to list inside the Footer. By default it's set with https://selfcare.pagopa.it/assets/products.json */
-  productsJsonUrl?: string;
-  onProductsJsonFetchError?: (reason: any) => void;
-  /** If true, it will not render the products column. As default, the column will be visible */
-  hideProductsColumn?: boolean;
   showFundedByNextGenerationEULogo?: boolean;
-};
+}
 
 export const Footer = (props: FooterProps) => {
   const {
@@ -39,36 +24,10 @@ export const Footer = (props: FooterProps) => {
     legalInfo,
     links,
     onExit,
-    productsJsonUrl = 'https://selfcare.pagopa.it/assets/products.json',
-    onProductsJsonFetchError,
-    hideProductsColumn,
     showFundedByNextGenerationEULogo = false,
     ...langProps
   } = props;
-  const { aboutUs, resources, followUs } = links;
-
-  const [jsonProducts, setJsonProducts] = useState<FooterLinksType[]>([]);
-
-  useEffect(() => {
-    if (!hideProductsColumn) {
-      fetch(productsJsonUrl)
-        .then(async (r) => await r.json())
-        .then((json) => {
-          const decodeProducts = ProductArrayType.decode(json);
-          if (isRight(decodeProducts)) {
-            setJsonProducts(decodeProducts.right.slice());
-          } else {
-            throw toError(JSON.stringify(decodeProducts.left));
-          }
-        })
-        .catch(
-          onProductsJsonFetchError ??
-            ((reason) => {
-              console.error(reason);
-            })
-        );
-    }
-  }, []);
+  const { aboutUs, resources, followUs, services } = links;
 
   type iconMapObject = Record<string, JSX.Element>;
 
@@ -138,41 +97,40 @@ export const Footer = (props: FooterProps) => {
               </Stack>
             </Stack>
           </Grid>
-          {!hideProductsColumn && (
-            <Grid item xs={12} sm={3}>
-              <Stack spacing={2} alignItems={{ xs: 'center', sm: 'start' }}>
-                {jsonProducts && (
-                  <Typography variant="overline">Prodotti e Servizi</Typography>
-                )}
 
-                <Stack
-                  component="ul"
-                  alignItems={{ xs: 'center', sm: 'start' }}
-                  textAlign={{ xs: 'center', sm: 'left' }}
-                  sx={{ padding: 0, listStyle: 'none' }}
-                >
-                  {jsonProducts?.map(
-                    ({ href = hrefNoOp, label, ariaLabel, onClick }, i) => (
-                      <li key={i}>
-                        <Link
-                          aria-label={ariaLabel}
-                          component="a"
-                          href={href}
-                          onClick={wrapHandleExitAction(href, onClick, onExit)}
-                          underline="none"
-                          color="text.primary"
-                          sx={{ display: 'inline-block', py: 0.5 }}
-                          variant="subtitle2"
-                        >
-                          {label}
-                        </Link>
-                      </li>
-                    )
-                  )}
-                </Stack>
+          <Grid item xs={12} sm={3}>
+            <Stack spacing={2} alignItems={{ xs: 'center', sm: 'start' }}>
+              {services?.title && (
+                <Typography variant="overline">{services.title}</Typography>
+              )}
+
+              <Stack
+                component="ul"
+                alignItems={{ xs: 'center', sm: 'start' }}
+                textAlign={{ xs: 'center', sm: 'left' }}
+                sx={{ padding: 0, listStyle: 'none' }}
+              >
+                {services?.links.map(
+                  ({ href = hrefNoOp, label, ariaLabel, onClick }, i) => (
+                    <li key={i}>
+                      <Link
+                        aria-label={ariaLabel}
+                        component="a"
+                        href={href}
+                        onClick={wrapHandleExitAction(href, onClick, onExit)}
+                        underline="none"
+                        color="text.primary"
+                        sx={{ display: 'inline-block', py: 0.5 }}
+                        variant="subtitle2"
+                      >
+                        {label}
+                      </Link>
+                    </li>
+                  )
+                )}
               </Stack>
-            </Grid>
-          )}
+            </Stack>
+          </Grid>
 
           <Grid item xs={12} sm={3}>
             <Stack spacing={2} alignItems={{ xs: 'center', sm: 'start' }}>

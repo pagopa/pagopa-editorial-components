@@ -12,8 +12,3 @@ export const ProductType = t.interface({
   ariaLabel: t.string,
   linkType: createEnumType<LinkType>(LinkType, 'LinkTypeIoTs'),
 });
-
-export const ProductArrayType = t.readonlyArray(
-  ProductType,
-  'array of ProductType'
-);

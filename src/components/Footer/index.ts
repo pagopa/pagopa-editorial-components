@@ -28,6 +28,7 @@ export interface PreLoginFooterSocialLink {
 }
 
 export interface PreLoginFooterLinksType {
+  services: PreLoginFooterSingleSectionType;
   aboutUs: PreLoginFooterSingleSectionType;
   resources: PreLoginFooterSingleSectionType;
   followUs: {
