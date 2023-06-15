@@ -1,10 +1,11 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import YouTube, { type YouTubePlayer } from 'react-youtube';
 import { type PhotoVideoTextProps } from './Text';
-import { Link, Grid, Stack } from '@mui/material';
+import { Link, Grid, Stack, Typography } from '@mui/material';
 import Text from './Text';
 import EContainer from '../EContainer';
-import { useIsVisible } from '../../utils';
+import { isJSX, useIsVisible } from '../../utils';
+import { type Generic } from '../../types/components';
 
 export interface PhotoVideoYouTubeProps extends PhotoVideoTextProps {
   full: boolean;
@@ -15,6 +16,7 @@ export interface PhotoVideoYouTubeProps extends PhotoVideoTextProps {
   playButtonLabel?: string;
   useYoutubeLayout?: boolean;
   src?: string;
+  fallback: Generic | string;
 }
 
 const YouTubeVideo = ({
@@ -28,10 +30,13 @@ const YouTubeVideo = ({
   autoplay,
   useYoutubeLayout,
   src = '',
+
   playButtonLabel = 'Guarda il video',
+  fallback,
 }: PhotoVideoYouTubeProps) => {
   const videoRef = useRef<YouTubePlayer | HTMLVideoElement>(null);
   const isVisible = useIsVisible(videoRef);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     if (!isVisible) return;
@@ -50,7 +55,78 @@ const YouTubeVideo = ({
       console.warn(error);
     }
   };
+
   const type = src.split('.').pop() ?? 'mp4';
+
+  const render = () => {
+    if (error) {
+      return isJSX(fallback) ? (
+        fallback
+      ) : (
+        <Typography variant="h6" color="background.paper" textAlign="center">
+          {fallback}
+        </Typography>
+      );
+    }
+    if (useYoutubeLayout) {
+      return (
+        <video
+          onContextMenu={(e) => {
+            e.preventDefault();
+          }}
+          controlsList="nodownload"
+          playsInline
+          ref={videoRef}
+          controls
+          muted
+          loop={loop}
+          style={{
+            aspectRatio: 1.777,
+            borderRadius: '25px',
+            overflow: 'hidden',
+            width: '100%',
+          }}
+        >
+          <source
+            src={src}
+            type={`video/${type}`}
+            onError={() => {
+              setError(true);
+            }}
+          />
+        </video>
+      );
+    }
+    return (
+      <YouTube
+        videoId={youtubeID}
+        id={`video-${youtubeID}`}
+        className="video__frame"
+        onReady={({ target }) => {
+          videoRef.current = target;
+        }}
+        onEnd={async () => {
+          loop && videoRef.current.playVideo();
+        }}
+        style={{
+          aspectRatio: 1.777,
+          borderRadius: '25px',
+          overflow: 'hidden',
+        }}
+        opts={{
+          width: '100%',
+          height: '100%',
+          host: 'https://www.youtube-nocookie.com',
+          playerVars: {
+            autoplay: autoplay ? 1 : 0,
+            showinfo: 0,
+            mute: 1,
+          },
+        }}
+      />
+    );
+  };
+
   return (
     <EContainer
       spacing={{ xs: 3, md: 16 }}
@@ -60,54 +136,7 @@ const YouTubeVideo = ({
       background={theme === 'dark' ? 'primary.dark' : 'white'}
     >
       <Grid item xs={12} md={full ? 12 : 6}>
-        {useYoutubeLayout ? (
-          <video
-            onContextMenu={(e) => {
-              e.preventDefault();
-            }}
-            controlsList="nodownload"
-            playsInline
-            ref={videoRef}
-            controls
-            muted
-            loop={loop}
-            style={{
-              aspectRatio: 1.777,
-              borderRadius: '25px',
-              overflow: 'hidden',
-              width: '100%',
-            }}
-          >
-            <source src={src} type={`video/${type}`} />
-          </video>
-        ) : (
-          <YouTube
-            videoId={youtubeID}
-            id={`video-${youtubeID}`}
-            className="video__frame"
-            onReady={({ target }) => {
-              videoRef.current = target;
-            }}
-            onEnd={async () => {
-              loop && videoRef.current.playVideo();
-            }}
-            style={{
-              aspectRatio: 1.777,
-              borderRadius: '25px',
-              overflow: 'hidden',
-            }}
-            opts={{
-              width: '100%',
-              height: '100%',
-              host: 'https://www.youtube-nocookie.com',
-              playerVars: {
-                autoplay: autoplay ? 1 : 0,
-                showinfo: 0,
-                mute: 1,
-              },
-            }}
-          />
-        )}
+        {render()}
       </Grid>
       {!full && (
         <Grid item md={6}>

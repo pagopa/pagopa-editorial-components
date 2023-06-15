@@ -2,6 +2,8 @@ import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 import PhotoVideo from '../../components/PhotoVideo';
 import image from '../assets/hero_background.jpg';
 import video from '../assets/720.mp4';
+import { EIcon } from '../../components/EIcon';
+import { Stack, Typography } from '@mui/material';
 
 export default {
   title: 'PhotoVideo',
@@ -93,4 +95,36 @@ selHostingWithYoutubeLayout.args = {
   autoplay: true,
   loop: true,
   useYoutubeLayout: true,
+};
+
+export const selHostingWithYoutubeLayoutFallback = Template.bind({});
+selHostingWithYoutubeLayoutFallback.args = {
+  title: 'Aenean commodo ligula eget dolor',
+  subtitle:
+    'Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.',
+  src: '',
+  full: true,
+  autoplay: true,
+  loop: true,
+  useYoutubeLayout: true,
+};
+
+export const selHostingWithYoutubeLayoutFallbackJsx = Template.bind({});
+selHostingWithYoutubeLayoutFallbackJsx.args = {
+  title: 'Aenean commodo ligula eget dolor',
+  subtitle:
+    'Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.',
+  src: '',
+  full: true,
+  autoplay: true,
+  loop: true,
+  useYoutubeLayout: true,
+  fallback: (
+    <Stack textAlign="center">
+      <EIcon icon="ErrorOutline" color="background.paper" />
+      <Typography variant="h6" color="background.paper">
+        Spiacenti il video non è disponibile in questo momento
+      </Typography>
+    </Stack>
+  ),
 };
