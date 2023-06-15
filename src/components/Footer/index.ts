@@ -1,3 +1,4 @@
+import { type EIconProps } from '../EIcon';
 import * as t from 'io-ts';
 
 export type LinkType = 'internal' | 'external';
@@ -17,23 +18,13 @@ export interface PreLoginFooterSingleSectionType {
   links: FooterLinksType[];
 }
 
-export interface PreLoginFooterSocialLink {
-  icon: string;
-  /** the url to witch the user will be redirect */
-  href?: string;
-  title: string;
-  ariaLabel: string;
-  /** if defined it will override the href behavior */
-  onClick?: () => void;
-}
-
 export interface PreLoginFooterLinksType {
   services: PreLoginFooterSingleSectionType;
   aboutUs: PreLoginFooterSingleSectionType;
   resources: PreLoginFooterSingleSectionType;
   followUs: {
     title: string;
-    socialLinks: PreLoginFooterSocialLink[];
+    socialLinks: EIconProps[];
     links: FooterLinksType[];
   };
 }

@@ -4,23 +4,11 @@ import {
   type PreLoginFooterLinksType,
 } from '../../components/Footer';
 
-const LANGUAGES = {
-  it: {
-    it: 'Italiano',
-    en: 'Inglese',
-    fr: 'Francese',
-  },
-  en: {
-    it: 'Italian',
-    en: 'English',
-    fr: 'French',
-  },
-  fr: {
-    it: 'Italien',
-    en: 'Anglais',
-    fr: 'Français',
-  },
-};
+const languages = [
+  { value: 'Italiano', id: 'it' },
+  { value: 'Inglese', id: 'en' },
+  { value: 'Francese', id: 'fr' },
+];
 
 const links: PreLoginFooterLinksType = {
   services: {
@@ -157,28 +145,19 @@ const links: PreLoginFooterLinksType = {
     title: 'Seguici su',
     socialLinks: [
       {
-        icon: 'linkedin',
-        title: 'LinkedIn',
+        icon: 'LinkedIn',
         href: 'https://www.linkedin.com/company/pagopa/',
-        ariaLabel: 'Link: vai al sito LinkedIn di PagoPA S.p.A.',
+        'aria-label': 'Link: vai al sito LinkedIn di PagoPA S.p.A.',
       },
       {
-        title: 'Twitter',
-        icon: 'twitter',
+        icon: 'Twitter',
         href: 'https://twitter.com/pagopa',
-        ariaLabel: 'Link: vai al sito Twitter di PagoPA S.p.A.',
+        'aria-label': 'Link: vai al sito Twitter di PagoPA S.p.A.',
       },
       {
-        icon: 'instagram',
-        title: 'Instagram',
+        icon: 'Instagram',
         href: 'https://www.instagram.com/pagopa/',
-        ariaLabel: 'Link: vai al sito Instagram di PagoPA S.p.A.',
-      },
-      {
-        icon: 'medium',
-        title: 'Medium',
-        href: 'https://medium.com/pagopa',
-        ariaLabel: 'Link: vai al sito Medium di PagoPA S.p.A.',
+        'aria-label': 'Link: vai al sito Instagram di PagoPA S.p.A.',
       },
     ],
     links: [
@@ -213,14 +192,10 @@ export const defaults: { args: FooterProps } = {
     links,
     companyLink: pagoPALink,
     legalInfo: companyLegalInfo,
-    languages: LANGUAGES,
-    currentLangCode: 'it',
+    languages,
+    activeLanguage: { value: 'Italiano', id: 'it' },
     onLanguageChanged: (newLang) => {
       console.log(newLang);
-    },
-    onExit: (exitAction) => {
-      console.log('Executing exit Action');
-      exitAction();
     },
   },
 };

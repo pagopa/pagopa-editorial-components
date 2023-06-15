@@ -11,6 +11,7 @@ interface Props {
   children: React.ReactNode;
   direction?: GridProps['direction'];
   py?: BoxProps['py'];
+  px?: BoxProps['py'];
   spacing?: GridProps['spacing'];
   sx?: GridProps['sx'];
 }
@@ -22,6 +23,7 @@ const EContainer = (props: Props) => {
     children,
     direction = 'row',
     py = {},
+    px,
     spacing,
     sx,
   } = props;
@@ -32,6 +34,7 @@ const EContainer = (props: Props) => {
       component="section"
       sx={{ px: { xs: 4 }, position: 'relative', overflow: 'hidden' }}
       py={py}
+      px={px}
       bgcolor={!backgroundIsJSX ? background : undefined}
     >
       {backgroundIsJSX && background}
