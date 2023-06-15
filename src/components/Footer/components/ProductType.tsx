@@ -1,5 +1,5 @@
 import * as t from 'io-ts';
-import { createEnumType } from './index';
+import { createEnumType } from '../types';
 
 enum LinkType {
   internal = 'internal',

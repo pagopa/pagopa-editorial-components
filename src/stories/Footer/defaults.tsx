@@ -2,7 +2,7 @@ import { type FooterProps } from 'components/Footer/Footer';
 import {
   type CompanyLinkType,
   type PreLoginFooterLinksType,
-} from '../../components/Footer';
+} from '../../components/Footer/types';
 
 const languages = [
   { value: 'Italiano', id: 'it' },
