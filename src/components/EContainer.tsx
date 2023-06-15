@@ -11,7 +11,7 @@ interface Props {
   children: React.ReactNode;
   direction?: GridProps['direction'];
   py?: BoxProps['py'];
-  px?: BoxProps['py'];
+  px?: BoxProps['px'];
   spacing?: GridProps['spacing'];
   sx?: GridProps['sx'];
 }
