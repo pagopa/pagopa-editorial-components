@@ -36,6 +36,7 @@ const PhotoVideo = (props: PhotoVideoProps) => {
     reverse = false,
     theme = 'dark',
     useYoutubeLayout = false,
+    fallback = 'Ops! Qualcosa è andato storto... Riprova in un secondo momento.',
   } = props;
   const [playing, setPlaying] = useState(autoplay);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -99,6 +100,7 @@ const PhotoVideo = (props: PhotoVideoProps) => {
       full={full}
       loop={loop}
       reverse={reverse}
+      fallback={fallback}
     />
   ) : (
     <>
