@@ -1,7 +1,5 @@
 import { Card, CardContent, Typography, Stack, Link, Box } from '@mui/material';
-import { type Generic } from '../../types/components';
 import { EIcon, type EIconProps } from '../EIcon';
-import { isJSX } from '../../utils';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 export interface IItem {

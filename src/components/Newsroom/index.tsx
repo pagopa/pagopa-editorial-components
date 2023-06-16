@@ -1,5 +1,5 @@
 import EContainer from '../EContainer';
-import { Typography, Grid, Link, Stack, Box, Hidden } from '@mui/material';
+import { Typography, Grid, Link, Stack, Box } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { type Generic } from '../../types/components';
 import { isJSX } from '../../utils';

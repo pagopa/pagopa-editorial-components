@@ -9,6 +9,7 @@ export interface KpiProps {
   theme?: Theme;
   value: number;
   kpiIcon?: EIconProps;
+  id: string;
 }
 
 export const Kpi = ({
