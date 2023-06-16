@@ -7,7 +7,6 @@ import { defaults } from './defaults';
 export default {
   component: Kpi,
   title: 'Kpi/light',
-  argTypes: {},
   args: defaults.args,
 } as ComponentMeta<typeof Kpi>;
 

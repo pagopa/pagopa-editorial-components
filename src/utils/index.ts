@@ -30,21 +30,4 @@ export function useIsVisible(ref: React.RefObject<Element>) {
   return isIntersecting;
 }
 
-export const wrapHandleExitAction =
-  (
-    href: string,
-    onClick?: () => void,
-    onExit?: (exitAction: () => void) => void
-  ) =>
-  (e: React.SyntheticEvent) => {
-    e.preventDefault();
-    const exitAction =
-      onClick ??
-      (() => {
-        window.location.assign(href);
-      });
-    if (onExit) onExit(exitAction);
-    else exitAction();
-  };
-
 export const hrefNoOp = 'javascript:void(0)';

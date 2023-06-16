@@ -1,68 +1,51 @@
-/* import { useState } from "react"; */
-import { type ComponentStory, type ComponentMeta } from '@storybook/react';
+import { type FooterProps } from 'components/Footer/Footer';
 import {
   type CompanyLinkType,
-  type PreLoginFooterLinksType as FooterLinksType,
-} from 'components/Footer';
-import { Footer } from '../../components/Footer/Footer';
-export default {
-  title: 'Components/Footer',
-  component: Footer,
-  decorators: [
-    (Story) => (
-      <div style={{ padding: 0, backgroundColor: '#F5F5F5' }}>
-        <Story />
-      </div>
-    ),
-  ],
-  parameters: {
-    controls: { hideNoControlsWarning: true },
-  },
-  argTypes: {
-    hideProductColums: {
-      description:
-        'If true, it will not render the products column. As default, the column will be visible',
-    },
-    productsJsonUrl: {
-      description:
-        "This URL contains a json with the list of products to list inside the Footer. By default it's set with https://selfcare.pagopa.it/assets/products.json",
-    },
-  },
-} as ComponentMeta<typeof Footer>;
+  type PreLoginFooterLinksType,
+} from '../../components/Footer/types';
 
-/* 
-Languages Section
-*/
-const LANGUAGES = {
-  it: {
-    it: 'Italiano',
-    en: 'Inglese',
-    fr: 'Francese',
-  },
-  en: {
-    it: 'Italian',
-    en: 'English',
-    fr: 'French',
-  },
-  fr: {
-    it: 'Italien',
-    en: 'Anglais',
-    fr: 'Français',
-  },
-};
+const languages = [
+  { value: 'Italiano', id: 'it' },
+  { value: 'Inglese', id: 'en' },
+  { value: 'Francese', id: 'fr' },
+];
 
-/* type LangCode = "it" | "en"; */
-
-/*
-Links Section
-*/
-const pagoPALink: CompanyLinkType = {
-  href: 'https://www.pagopa.it/',
-  ariaLabel: 'Link: vai al sito di PagoPA S.p.A.',
-};
-
-const links: FooterLinksType = {
-  // First column
+const links: PreLoginFooterLinksType = {
+  services: {
+    title: 'PRODOTTI E SERVIZI',
+    links: [
+      {
+        label: 'App IO',
+        href: 'https://www.pagopa.it/it/prodotti-e-servizi/app-io',
+        ariaLabel: 'Vai al link: App IO',
+        linkType: 'internal',
+      },
+      {
+        label: 'Piattaforma pagoPA',
+        href: 'https://www.pagopa.it/it/prodotti-e-servizi/piattaforma-pagopa',
+        ariaLabel: 'Vai al link: Piattaforma pagoPA',
+        linkType: 'internal',
+      },
+      {
+        label: 'Centro stella',
+        href: 'https://www.pagopa.it/it/prodotti-e-servizi/centro-stella-pagamenti-elettronici',
+        ariaLabel: 'Vai al link: Centro stella',
+        linkType: 'internal',
+      },
+      {
+        label: 'Check IBAN',
+        href: 'https://www.pagopa.it/it/prodotti-e-servizi/check-iban',
+        ariaLabel: 'Vai al link: Check IBAN',
+        linkType: 'internal',
+      },
+      {
+        label: 'Piattaforma Notifiche Digitali',
+        href: 'https://www.pagopa.it/it/prodotti-e-servizi/piattaforma-notifiche-digitali',
+        ariaLabel: 'Vai al link: Piattaforma Notifiche Digitali',
+        linkType: 'internal',
+      },
+    ],
+  },
   aboutUs: {
     title: undefined,
     links: [
@@ -162,28 +145,19 @@ const links: FooterLinksType = {
     title: 'Seguici su',
     socialLinks: [
       {
-        icon: 'linkedin',
-        title: 'LinkedIn',
+        icon: 'LinkedIn',
         href: 'https://www.linkedin.com/company/pagopa/',
-        ariaLabel: 'Link: vai al sito LinkedIn di PagoPA S.p.A.',
+        'aria-label': 'Link: vai al sito LinkedIn di PagoPA S.p.A.',
       },
       {
-        title: 'Twitter',
-        icon: 'twitter',
+        icon: 'Twitter',
         href: 'https://twitter.com/pagopa',
-        ariaLabel: 'Link: vai al sito Twitter di PagoPA S.p.A.',
+        'aria-label': 'Link: vai al sito Twitter di PagoPA S.p.A.',
       },
       {
-        icon: 'instagram',
-        title: 'Instagram',
+        icon: 'Instagram',
         href: 'https://www.instagram.com/pagopa/',
-        ariaLabel: 'Link: vai al sito Instagram di PagoPA S.p.A.',
-      },
-      {
-        icon: 'medium',
-        title: 'Medium',
-        href: 'https://medium.com/pagopa',
-        ariaLabel: 'Link: vai al sito Medium di PagoPA S.p.A.',
+        'aria-label': 'Link: vai al sito Instagram di PagoPA S.p.A.',
       },
     ],
     links: [
@@ -196,6 +170,12 @@ const links: FooterLinksType = {
     ],
   },
 };
+
+const pagoPALink: CompanyLinkType = {
+  href: 'https://www.pagopa.it/',
+  ariaLabel: 'Link: vai al sito di PagoPA S.p.A.',
+};
+
 const companyLegalInfo = (
   <>
     <strong>PagoPA S.p.A.</strong> — società per azioni con socio unico -
@@ -207,25 +187,15 @@ const companyLegalInfo = (
   </>
 );
 
-export const FooterComponent: ComponentStory<typeof Footer> = () => (
-  /* const { lang, setLang } = useState<LangCode>("it"); */
-
-  <Footer
-    companyLink={pagoPALink}
-    legalInfo={companyLegalInfo}
-    links={links}
-    currentLangCode={'it'}
-    onLanguageChanged={
-      (/* newLang */) => {
-        console.log('Changed Language');
-      }
-    }
-    languages={LANGUAGES}
-    onExit={(exitAction) => {
-      console.log('Executing exit Action');
-      exitAction();
-    }}
-    productsJsonUrl="https://dev.selfcare.pagopa.it/assets/products.json"
-    hideProductsColumn={false}
-  />
-);
+export const defaults: { args: FooterProps } = {
+  args: {
+    links,
+    companyLink: pagoPALink,
+    legalInfo: companyLegalInfo,
+    languages,
+    activeLanguage: { value: 'Italiano', id: 'it' },
+    onLanguageChanged: (newLang) => {
+      console.log(newLang);
+    },
+  },
+};

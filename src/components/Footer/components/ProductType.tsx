@@ -1,5 +1,5 @@
 import * as t from 'io-ts';
-import { createEnumType } from './index';
+import { createEnumType } from '../types';
 
 enum LinkType {
   internal = 'internal',
@@ -12,8 +12,3 @@ export const ProductType = t.interface({
   ariaLabel: t.string,
   linkType: createEnumType<LinkType>(LinkType, 'LinkTypeIoTs'),
 });
-
-export const ProductArrayType = t.readonlyArray(
-  ProductType,
-  'array of ProductType'
-);

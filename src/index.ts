@@ -9,7 +9,7 @@ import { Abstract } from './components/Abstract';
 import { Accordion } from './components/Accordion/Accordion';
 import { BannerLink } from './components/BannerLink';
 import { Editorial } from './components/Editorial';
-import { Footer } from './components/Footer/Footer';
+import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { HowTo } from './components/HowTo';
 import { Kpi } from './components/Kpi';
