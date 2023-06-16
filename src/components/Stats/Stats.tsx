@@ -7,8 +7,6 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-import './Stats.css';
-
 export interface StatsProps extends CommonProps, StatsContentProps {
   kpiValues: Array<KpiProps & { id: string | number }>;
   direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse';
@@ -74,59 +72,73 @@ export const Stats = ({
   const styles = useStyles({ direction });
 
   return (
-    <EContainer background={backgroundColor}>
-      <Stack sx={styles.main}>
-        <StatsContent
-          {...{ theme, eyelet, title, body }}
-          sx={styles.statsContent}
-        />
-        <Stack className="no-scrollbar" sx={styles.kpiContainer}>
-          {kpiCaption && (
-            <Box sx={styles.kpiTitleContainer}>
-              <Typography
-                color={textColor}
-                variant="sidenav"
-                position="absolute"
-              >
-                {kpiCaption}
-              </Typography>
-            </Box>
-          )}
-          <Stack ref={slider} sx={styles.kpiSlideContainer}>
-            {kpiValues.map((kpi, index) => (
-              <React.Fragment key={kpi?.id ?? index}>
-                <Kpi
-                  {...kpi}
-                  theme={theme}
-                  id={`kpi-${kpi.id}`}
-                  className={`kpi-slide`}
-                />
-              </React.Fragment>
-            ))}
-          </Stack>
-          {/* Only on xs resolutions with row direction */}
-          <Stack sx={styles.kpiStepper}>
-            <Stack position="absolute" direction="row" gap={1}>
+    <>
+      <style>
+        {`
+          .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+
+          .no-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+        `}
+      </style>
+      <EContainer background={backgroundColor}>
+        <Stack sx={styles.main}>
+          <StatsContent
+            {...{ theme, eyelet, title, body }}
+            sx={styles.statsContent}
+          />
+          <Stack className="no-scrollbar" sx={styles.kpiContainer}>
+            {kpiCaption && (
+              <Box sx={styles.kpiTitleContainer}>
+                <Typography
+                  color={textColor}
+                  variant="sidenav"
+                  position="absolute"
+                >
+                  {kpiCaption}
+                </Typography>
+              </Box>
+            )}
+            <Stack ref={slider} sx={styles.kpiSlideContainer}>
               {kpiValues.map((kpi, index) => (
-                <Box
-                  key={`slider-${kpi.id}`}
-                  onClick={() => {
-                    scrollIntoView(kpi);
-                  }}
-                  sx={{
-                    ...styles.kpiStepCircle,
-                    backgroundColor:
-                      active === `kpi-${kpi.id}` || (!active && index === 0)
-                        ? 'primary.main'
-                        : '#CCD4DC',
-                  }}
-                />
+                <React.Fragment key={kpi?.id ?? index}>
+                  <Kpi
+                    {...kpi}
+                    theme={theme}
+                    id={`kpi-${kpi.id}`}
+                    className={`kpi-slide`}
+                  />
+                </React.Fragment>
               ))}
+            </Stack>
+            {/* Only on xs resolutions with row direction */}
+            <Stack sx={styles.kpiStepper}>
+              <Stack position="absolute" direction="row" gap={1}>
+                {kpiValues.map((kpi, index) => (
+                  <Box
+                    key={`slider-${kpi.id}`}
+                    onClick={() => {
+                      scrollIntoView(kpi);
+                    }}
+                    sx={{
+                      ...styles.kpiStepCircle,
+                      backgroundColor:
+                        active === `kpi-${kpi.id}` || (!active && index === 0)
+                          ? 'primary.main'
+                          : '#CCD4DC',
+                    }}
+                  />
+                ))}
+              </Stack>
             </Stack>
           </Stack>
         </Stack>
-      </Stack>
-    </EContainer>
+      </EContainer>
+    </>
   );
 };
 
