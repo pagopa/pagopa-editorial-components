@@ -22,7 +22,7 @@ export const Footer = ({
 }: FooterProps) => (
   <Box
     borderColor="divider"
-    borderTop={1}
+    borderTop="1px"
     component="footer"
     px={{ sm: 8, xs: 2 }}
     sx={{ backgroundColor: 'background.paper' }}
