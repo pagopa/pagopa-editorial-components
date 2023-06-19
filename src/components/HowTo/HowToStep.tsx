@@ -1,4 +1,3 @@
-import React from 'react';
 import { Stack, Typography, Box } from '@mui/material';
 import { EIcon, type EIconProps } from '../EIcon';
 
