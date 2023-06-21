@@ -60,8 +60,7 @@
   "dependencies": {
     "@pagopa/mui-italia": "^0.8.12",
     "react-swipeable-views": "^0.14.0",
-    "react-swipeable-views-utils": "^0.14.0",
-    "react-youtube": "^10.1.0"
+    "react-swipeable-views-utils": "^0.14.0"
   },
   "scripts": {
     "prebuild": "rimraf dist",
