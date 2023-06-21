@@ -1909,10 +1909,10 @@
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
 
-"@pagopa/mui-italia@^0.8.12":
-  version "0.8.12"
-  resolved "https://registry.yarnpkg.com/@pagopa/mui-italia/-/mui-italia-0.8.12.tgz#e53e7ce965fe44d509b63c34ec45deeb7dbb8cf3"
-  integrity sha512-Qz0fMf5T3GHp/5g0VLyMR3kUtYnXpjtM3H9Hy5Co776Bi9BSiNLEPgP1svupIyW+RX8xpQD5fohyAmCNhP4qRw==
+"@pagopa/mui-italia@^0.9.7":
+  version "0.9.7"
+  resolved "https://registry.yarnpkg.com/@pagopa/mui-italia/-/mui-italia-0.9.7.tgz#ca9248dea90ae7b2411f04f2727722561089493d"
+  integrity sha512-dUl7zDO1qnRnOz1gfVrpLS4dyjZcTvwcW6ZriieGkUU5Weo2F5CwjfmUafgLuJCcJiSSt9/3Yl97hMn7yU4v7w==
   dependencies:
     "@fontsource/dm-mono" "^4.5.10"
     "@fontsource/titillium-web" "^4.5.9"

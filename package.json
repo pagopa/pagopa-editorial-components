@@ -58,7 +58,7 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@pagopa/mui-italia": "^0.8.12",
+    "@pagopa/mui-italia": "^0.9.7",
     "react-swipeable-views": "^0.14.0",
     "react-swipeable-views-utils": "^0.14.0"
   },
