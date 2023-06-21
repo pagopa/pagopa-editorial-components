@@ -30,7 +30,7 @@
     "@storybook/react": "^6.5.16",
     "@storybook/testing-library": "^0.0.13",
     "@types/jest": "^29.4.0",
-    "@types/react": "^18.0.28",
+    "@types/react": "^18.2.13",
     "@types/react-swipeable-views": "^0.13.1",
     "@types/react-swipeable-views-utils": "^0.13.4",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
