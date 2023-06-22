@@ -1,3 +1,5 @@
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+
 # pagoPA Editorial Components
 A react component library to be used to compose pagoPa product pages based on [MUI italia](https://github.com/pagopa/mui-italia)
 

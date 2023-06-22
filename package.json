@@ -21,6 +21,10 @@
     "@mui/icons-material": "^5.11.9",
     "@mui/lab": "^5.0.0-alpha.120",
     "@mui/material": "^5.11.10",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.0.3",
+    "@semantic-release/npm": "^10.0.4",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
@@ -49,6 +53,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "^4.1.2",
+    "semantic-release": "^21.0.5",
     "ts-jest": "^29.0.5",
     "ts-node": "^10.9.1",
     "typescript": "*"
