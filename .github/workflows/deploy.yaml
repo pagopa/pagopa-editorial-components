@@ -1,19 +1,31 @@
-name: Build and Publish storybook to GitHub Pages
+name: GitHub Pages
 
 on:
   workflow_dispatch:
   push:
     branches:
-      - 'main'
+      - main
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.build-publish.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - id: build-publish
-        uses: bitovi/github-actions-react-to-ghp@v1.2.0
+      - uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          path: storybook-static
-          build_command: npm run build-storybook
+          node-version: '16'
+
+      - run: yarn install
+      - run: yarn build-storybook
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./storybook-static
