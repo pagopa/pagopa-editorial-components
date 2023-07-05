@@ -1,11 +1,13 @@
-name: Release
+name: Pre-release
 
 on:
   push:
     branches:
-    - "main"
+      - release
+      - 'releases/**'
+      - test/release
 jobs:
-  release:
+  pre-release:
     permissions:
       contents: write
       issues: write
@@ -18,9 +20,6 @@ jobs:
           node-version: 18
       - run: yarn
       - run: yarn build
-      - uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          package: package.json
-          check-version: ${{ github.event.inputs.checkVersion == 'true'}}
-          dry-run: ${{ github.event.inputs.dryRun == 'true'}}
+      - run: npx semantic-release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
