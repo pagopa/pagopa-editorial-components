@@ -81,10 +81,9 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "jest",
-    "copy:assets": "cpx 'src/assets/**' 'dist/assets'",
-    "postinstall": "husky install"
+    "copy:assets": "cpx 'src/assets/**' 'dist/assets'"
   },
   "engines": {
-    "node": ">=16.x"
+    "node": ">=16.10.0"
   }
 }
