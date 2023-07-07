@@ -11,6 +11,12 @@ const config = {
       }
     ],
     [
+      '@semantic-release/npm',
+      {
+        "npmPublish": false,
+      }
+    ],
+    [
       "@semantic-release/git",
       {
         "assets": ["CHANGELOG.md", 'package.json'],
