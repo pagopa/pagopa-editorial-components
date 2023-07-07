@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [2.1.2](https://github.com/pagopa/pagopa-editorial-components/compare/v2.1.1...v2.1.2) (2023-07-07)
+
+
+### Bug Fixes
+
+* **EDCO-59:** updating ndoe version in package and action filed, removing postinstall script ([b0bf62d](https://github.com/pagopa/pagopa-editorial-components/commit/b0bf62d3ff1ab9f754b3da45daad8c7abac89aa8))
+
 ## [2.1.1](https://github.com/pagopa/pagopa-editorial-components/compare/v2.1.0...v2.1.1) (2023-07-05)
 
 
