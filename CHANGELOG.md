@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [2.1.3](https://github.com/pagopa/pagopa-editorial-components/compare/v2.1.2...v2.1.3) (2023-07-07)
+
+
+### Bug Fixes
+
+* added a semantic-release plugin to update the package.json file version ([267de22](https://github.com/pagopa/pagopa-editorial-components/commit/267de229bacc04fb43dc7268276b91c66f0a4a5d))
+
 ## [2.1.2](https://github.com/pagopa/pagopa-editorial-components/compare/v2.1.1...v2.1.2) (2023-07-07)
 
 
