@@ -1,5 +1,7 @@
 name: Storybook Tests
-on: deployment_status
+on:
+  - workflow_dispatch
+  - deployment_status
 jobs:
   test:
     timeout-minutes: 60
