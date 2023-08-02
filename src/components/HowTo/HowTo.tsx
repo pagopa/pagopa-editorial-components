@@ -67,13 +67,15 @@ export const HowTo = (props: HowToProps) => {
     <EContainer background={Background} py={{ xs: 6, md: 8 }}>
       <Grid item xs={12}>
         {/** Section title */}
-        <Typography
-          color={isDarkTheme ? 'white' : 'text.primary'}
-          sx={{ textAlign: 'center', mb: 8 }}
-          variant="h4"
-        >
-          {title}
-        </Typography>
+        {title && (
+          <Typography
+            color={isDarkTheme ? 'white' : 'text.primary'}
+            sx={{ textAlign: 'center', mb: 8 }}
+            variant="h4"
+          >
+            {title}
+          </Typography>
+        )}
       </Grid>
       <Grid item>
         {/** Steps */}

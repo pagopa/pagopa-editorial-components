@@ -80,8 +80,10 @@ const Quote = (props: QuoteProps) => {
               onClick={() => {
                 if (activeStep > 0) setActiveStep(activeStep - 1);
               }}
+              aria-label="indietro"
+              role="button"
             >
-              <ArrowBackIcon></ArrowBackIcon>
+              <ArrowBackIcon />
             </IconButton>
             <IconButton
               color="inherit"
@@ -89,6 +91,8 @@ const Quote = (props: QuoteProps) => {
                 if (activeStep < quotes.length - 1)
                   setActiveStep(activeStep + 1);
               }}
+              aria-label="avanti"
+              role="button"
             >
               <ArrowForwardIcon />
             </IconButton>

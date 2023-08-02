@@ -44,6 +44,7 @@ const StripeLink = (props: StripeLinkProps) => {
               ':hover': { backgroundColor: bgButton },
             }}
             endIcon={<ArrowForwardIcon color="inherit"></ArrowForwardIcon>}
+            aria-label={buttonText || 'avanti'}
           >
             {buttonText}
           </Button>

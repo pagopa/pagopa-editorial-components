@@ -33,13 +33,15 @@ export const Accordion = (props: AccordionProps) => {
           <Grid item xs={12} md={isCenterLayout ? 12 : 4}>
             <Stack px={{ xs: 1, md: 0 }} spacing={{ xs: 2, md: 5 }}>
               {/** Title */}
-              <Typography
-                textAlign={textAlignment}
-                color={textColor}
-                variant="h4"
-              >
-                {title}
-              </Typography>
+              {title && (
+                <Typography
+                  textAlign={textAlignment}
+                  color={textColor}
+                  variant="h4"
+                >
+                  {title}
+                </Typography>
+              )}
 
               {/** Subtitle */}
               {subtitle && (
