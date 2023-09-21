@@ -24,6 +24,8 @@ export const imageComponent = (
       }}
     >
       <img
+        aria-roledescription="Background Image"
+        alt="sunset"
         src={abstractImage}
         style={{
           zIndex: -2,
@@ -48,6 +50,8 @@ export const imageComponentDark = (
       }}
     >
       <img
+        aria-roledescription="Background Image"
+        alt="sunset"
         src={abstractImage}
         style={{
           zIndex: -2,

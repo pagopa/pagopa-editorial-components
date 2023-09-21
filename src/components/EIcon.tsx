@@ -2,9 +2,11 @@ import * as MuiIcons from '@mui/icons-material';
 import { Typography, type SvgIconProps } from '@mui/material';
 import { isJSX } from '../utils';
 import { type Generic } from '../types/components';
-import React from 'react';
+import React, { type AriaAttributes } from 'react';
 
-export interface EIconProps extends Omit<SvgIconProps, 'color'> {
+export interface EIconProps
+  extends Omit<SvgIconProps, 'color'>,
+    AriaAttributes {
   icon?: keyof typeof MuiIcons | Generic;
   color?: string;
 }

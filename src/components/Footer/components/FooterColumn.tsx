@@ -43,10 +43,19 @@ export const FooterColumn = ({
         sx={{ padding: 0, mt: 0.5, listStyle: 'none' }}
       >
         {icons?.map(
-          ({ icon, href = hrefNoOp, onClick, ...rest }, i) =>
+          (
+            {
+              icon,
+              href = hrefNoOp,
+              onClick,
+              'aria-label': ariaLabel,
+              ...rest
+            },
+            i
+          ) =>
             icon && (
               <li key={i}>
-                <Link href={href}>
+                <Link href={href} aria-label={ariaLabel}>
                   <EIcon icon={icon} color="text.primary" {...rest} />
                 </Link>
               </li>
