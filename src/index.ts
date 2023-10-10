@@ -15,6 +15,9 @@ import { HowTo } from './components/HowTo';
 import { Kpi } from './components/Kpi';
 import { PreHeader } from './components/PreHeader';
 import { Stats } from './components/Stats';
+import Cards from 'components/Cards';
+import StripeLink from 'components/StripeLink';
+import Quote from 'components/Quote/Quote';
 
 export {
   Abstract,
@@ -34,4 +37,7 @@ export {
   PreHeader,
   Stats,
   Text,
+  Cards,
+  StripeLink,
+  Quote,
 };
