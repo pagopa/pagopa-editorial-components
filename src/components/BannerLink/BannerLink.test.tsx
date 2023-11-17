@@ -178,4 +178,175 @@ it('renders correctly with custom decorator', () => {
   expect(tree).toMatchSnapshot();
 });
 
-/* TODO: Dark tests */
+/* TODO: Dark tests fail. Need to figure out why */
+it('renders correctly standard dark', () => {
+  const tree = renderer
+    .create(
+      <BannerLink
+        body="Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it"
+        theme="dark"
+        title="Vuoi diventare un Partner tecnologico qualificato?"
+      />
+    )
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders correctly one button dark', () => {
+  const tree = renderer
+    .create(
+      <BannerLink
+        body="Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it"
+        ctaButtons={[
+          {
+            text: 'LEGGI LE FAQ',
+            onClick: () => {},
+            color: 'primary',
+          },
+        ]}
+        theme="dark"
+        title="Vuoi diventare un Partner tecnologico qualificato?"
+      />
+    )
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders correctly two buttons dark', () => {
+  const tree = renderer
+    .create(
+      <BannerLink
+        body="Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it"
+        ctaButtons={[
+          {
+            onClick: () => {},
+            text: 'LEGGI LE FAQ',
+          },
+          {
+            onClick: () => {},
+            text: 'LEGGI LE FAQ',
+          },
+        ]}
+        theme="dark"
+        title="Vuoi diventare un Partner tecnologico qualificato?"
+      />
+    )
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders correctly with icon dark', () => {
+  const tree = renderer
+    .create(
+      <BannerLink
+        body="Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it"
+        decoration={{
+          alt: 'Login',
+          src: 'static/media/login-white.9e86b706.svg',
+        }}
+        theme="dark"
+        title="Vuoi diventare un Partner tecnologico qualificato?"
+      />
+    )
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders correctly with icon and two buttons dark', () => {
+  const tree = renderer
+    .create(
+      <BannerLink
+        body="Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it"
+        ctaButtons={[
+          {
+            onClick: () => {},
+            text: 'LEGGI LE FAQ',
+          },
+          {
+            onClick: () => {},
+            text: 'LEGGI LE FAQ',
+          },
+        ]}
+        decoration={{
+          alt: 'Login',
+          src: 'static/media/login-white.9e86b706.svg',
+        }}
+        theme="dark"
+        title="Vuoi diventare un Partner tecnologico qualificato?"
+      />
+    )
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders correctly with body dark ', () => {
+  const tree = renderer
+    .create(
+      <BannerLink
+        body="Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it"
+        ctaButtons={[
+          {
+            onClick: () => {},
+            text: 'LEGGI LE FAQ',
+          },
+          {
+            onClick: () => {},
+            text: 'LEGGI LE FAQ',
+          },
+        ]}
+        decoration={{
+          alt: 'Login',
+          src: 'static/media/login-white.9e86b706.svg',
+        }}
+        theme="dark"
+        title="Vuoi diventare un Partner tecnologico qualificato?"
+      />
+    )
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders correctly with custom decorator dark', () => {
+  const tree = renderer
+    .create(
+      <BannerLink
+        body={
+          <p>
+            Leggi le domande frequenti sull’adesione a <b>pagoPA</b> da parte
+            degli Enti Creditori oppure scrivi a:{' '}
+            <a href="mailto:account@pagopa.it">account@pagopa.it</a>
+          </p>
+        }
+        ctaButtons={[
+          {
+            onClick: () => {},
+            text: 'LEGGI LE FAQ',
+          },
+          {
+            onClick: () => {},
+            text: 'LEGGI LE FAQ',
+          },
+        ]}
+        decoration={
+          <div
+            style={{
+              alignItems: 'center',
+              backgroundColor: 'white',
+              borderRadius: '50%',
+              display: 'flex',
+              fontSize: '32px',
+              height: '100px',
+              justifyContent: 'center',
+              width: '100px',
+            }}
+          >
+            PA
+          </div>
+        }
+        theme="dark"
+        title="Vuoi diventare un Partner tecnologico qualificato?"
+      />
+    )
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
