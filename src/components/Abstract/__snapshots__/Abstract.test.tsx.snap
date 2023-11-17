@@ -116,6 +116,122 @@ exports[`renders correctly with a background image 1`] = `
 ]
 `;
 
+exports[`renders correctly with a background image light 1`] = `
+[
+  <style
+    dangerouslySetInnerHTML={
+      {
+        "__html": ".css-1c1kjjx{position:relative;overflow:hidden;}@media (min-width:0px){.css-1c1kjjx{padding-left:32px;padding-right:32px;}}",
+      }
+    }
+    data-emotion="css 1c1kjjx"
+  />,
+  <section
+    className="MuiBox-root css-1c1kjjx"
+  >
+    <style
+      dangerouslySetInnerHTML={
+        {
+          "__html": ".css-1uhcy84{position:absolute;inset:0;z-index:-10;height:100%;width:100%;object-fit:cover;-webkit-background-size:cover;background-size:cover;-webkit-background-position:center;background-position:center;background-image:linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),url(https://healthix.org/wp-content/uploads/2016/06/testimage.jpeg);}@media (min-width:0px){.css-1uhcy84{padding-left:32px;padding-right:32px;}}",
+        }
+      }
+      data-emotion="css 1uhcy84"
+    />
+    <div
+      className="MuiBox-root css-1uhcy84"
+      role="presentation"
+    />
+    <style
+      dangerouslySetInnerHTML={
+        {
+          "__html": ".css-1p4tas-MuiContainer-root{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;}@media (min-width:1200px){.css-1p4tas-MuiContainer-root{max-width:1200px;}}",
+        }
+      }
+      data-emotion="css 1p4tas-MuiContainer-root"
+    />
+    <div
+      className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+    >
+      <style
+        dangerouslySetInnerHTML={
+          {
+            "__html": ".css-pkd51s-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}@media (min-width:1200px){.css-pkd51s-MuiGrid-root{height:528px;}}",
+          }
+        }
+        data-emotion="css pkd51s-MuiGrid-root"
+      />
+      <div
+        className="MuiGrid-root MuiGrid-container css-pkd51s-MuiGrid-root"
+      >
+        <style
+          dangerouslySetInnerHTML={
+            {
+              "__html": ".css-qxvcdg-MuiStack-root{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding-top:80px;padding-bottom:80px;width:100%;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;}@media (min-width:600px){.css-qxvcdg-MuiStack-root{padding-left:16px;padding-right:16px;}}",
+            }
+          }
+          data-emotion="css qxvcdg-MuiStack-root"
+        />
+        <div
+          className="MuiStack-root css-qxvcdg-MuiStack-root"
+        >
+          <style
+            dangerouslySetInnerHTML={
+              {
+                "__html": ".css-8gjfvp-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;max-width:560px;text-align:left;color:rgba(0, 0, 0, 0.87);gap:16px;}",
+              }
+            }
+            data-emotion="css 8gjfvp-MuiTypography-root"
+          />
+          <p
+            className="MuiTypography-root MuiTypography-body1 css-8gjfvp-MuiTypography-root"
+          >
+            <style
+              dangerouslySetInnerHTML={
+                {
+                  "__html": ".css-1hbyad5-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:2.66;letter-spacing:0.08333em;text-transform:uppercase;color:rgba(0, 0, 0, 0.6);}",
+                }
+              }
+              data-emotion="css 1hbyad5-MuiTypography-root"
+            />
+            <span
+              className="MuiTypography-root MuiTypography-overline css-1hbyad5-MuiTypography-root"
+            >
+              overlineTest
+            </span>
+            <style
+              dangerouslySetInnerHTML={
+                {
+                  "__html": ".css-wz9of0-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:2.125rem;line-height:1.235;letter-spacing:0.00735em;color:rgba(0, 0, 0, 0.87);}",
+                }
+              }
+              data-emotion="css wz9of0-MuiTypography-root"
+            />
+            <h4
+              className="MuiTypography-root MuiTypography-h4 css-wz9of0-MuiTypography-root"
+            >
+              titleTest
+            </h4>
+            <style
+              dangerouslySetInnerHTML={
+                {
+                  "__html": ".css-1gqyz35-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;color:rgba(0, 0, 0, 0.87);}",
+                }
+              }
+              data-emotion="css 1gqyz35-MuiTypography-root"
+            />
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-1gqyz35-MuiTypography-root"
+            >
+              descriptionTest
+            </p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>,
+]
+`;
+
 exports[`renders correctly with a custom body and background 1`] = `
 [
   <style
@@ -234,6 +350,124 @@ exports[`renders correctly with a custom body and background 1`] = `
 ]
 `;
 
+exports[`renders correctly with a custom body and background light 1`] = `
+[
+  <style
+    dangerouslySetInnerHTML={
+      {
+        "__html": ".css-1c1kjjx{position:relative;overflow:hidden;}@media (min-width:0px){.css-1c1kjjx{padding-left:32px;padding-right:32px;}}",
+      }
+    }
+    data-emotion="css 1c1kjjx"
+  />,
+  <section
+    className="MuiBox-root css-1c1kjjx"
+  >
+    <style
+      dangerouslySetInnerHTML={
+        {
+          "__html": ".css-1uhcy84{position:absolute;inset:0;z-index:-10;height:100%;width:100%;object-fit:cover;-webkit-background-size:cover;background-size:cover;-webkit-background-position:center;background-position:center;background-image:linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),url(https://healthix.org/wp-content/uploads/2016/06/testimage.jpeg);}@media (min-width:0px){.css-1uhcy84{padding-left:32px;padding-right:32px;}}",
+        }
+      }
+      data-emotion="css 1uhcy84"
+    />
+    <div
+      className="MuiBox-root css-1uhcy84"
+      role="presentation"
+    />
+    <style
+      dangerouslySetInnerHTML={
+        {
+          "__html": ".css-1p4tas-MuiContainer-root{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;}@media (min-width:1200px){.css-1p4tas-MuiContainer-root{max-width:1200px;}}",
+        }
+      }
+      data-emotion="css 1p4tas-MuiContainer-root"
+    />
+    <div
+      className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+    >
+      <style
+        dangerouslySetInnerHTML={
+          {
+            "__html": ".css-pkd51s-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}@media (min-width:1200px){.css-pkd51s-MuiGrid-root{height:528px;}}",
+          }
+        }
+        data-emotion="css pkd51s-MuiGrid-root"
+      />
+      <div
+        className="MuiGrid-root MuiGrid-container css-pkd51s-MuiGrid-root"
+      >
+        <style
+          dangerouslySetInnerHTML={
+            {
+              "__html": ".css-qxvcdg-MuiStack-root{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding-top:80px;padding-bottom:80px;width:100%;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;}@media (min-width:600px){.css-qxvcdg-MuiStack-root{padding-left:16px;padding-right:16px;}}",
+            }
+          }
+          data-emotion="css qxvcdg-MuiStack-root"
+        />
+        <div
+          className="MuiStack-root css-qxvcdg-MuiStack-root"
+        >
+          <style
+            dangerouslySetInnerHTML={
+              {
+                "__html": ".css-8gjfvp-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;max-width:560px;text-align:left;color:rgba(0, 0, 0, 0.87);gap:16px;}",
+              }
+            }
+            data-emotion="css 8gjfvp-MuiTypography-root"
+          />
+          <p
+            className="MuiTypography-root MuiTypography-body1 css-8gjfvp-MuiTypography-root"
+          >
+            <style
+              dangerouslySetInnerHTML={
+                {
+                  "__html": ".css-1hbyad5-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:2.66;letter-spacing:0.08333em;text-transform:uppercase;color:rgba(0, 0, 0, 0.6);}",
+                }
+              }
+              data-emotion="css 1hbyad5-MuiTypography-root"
+            />
+            <span
+              className="MuiTypography-root MuiTypography-overline css-1hbyad5-MuiTypography-root"
+            >
+              overlineTest
+            </span>
+            <style
+              dangerouslySetInnerHTML={
+                {
+                  "__html": ".css-wz9of0-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:2.125rem;line-height:1.235;letter-spacing:0.00735em;color:rgba(0, 0, 0, 0.87);}",
+                }
+              }
+              data-emotion="css wz9of0-MuiTypography-root"
+            />
+            <h4
+              className="MuiTypography-root MuiTypography-h4 css-wz9of0-MuiTypography-root"
+            >
+              titleTest
+            </h4>
+            <style
+              dangerouslySetInnerHTML={
+                {
+                  "__html": ".css-1gqyz35-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;color:rgba(0, 0, 0, 0.87);}",
+                }
+              }
+              data-emotion="css 1gqyz35-MuiTypography-root"
+            />
+            <div
+              className="MuiTypography-root MuiTypography-body1 css-1gqyz35-MuiTypography-root"
+            >
+              <p>
+                test
+              </p>
+            </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>,
+]
+`;
+
 exports[`renders correctly without a background  1`] = `
 [
   <style
@@ -327,6 +561,110 @@ exports[`renders correctly without a background  1`] = `
             />
             <p
               className="MuiTypography-root MuiTypography-body1 css-4peds9-MuiTypography-root"
+            >
+              Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>,
+]
+`;
+
+exports[`renders correctly without a background light  1`] = `
+[
+  <style
+    dangerouslySetInnerHTML={
+      {
+        "__html": ".css-14tikk5{background-color:#fff;position:relative;overflow:hidden;}@media (min-width:0px){.css-14tikk5{padding-left:32px;padding-right:32px;}}",
+      }
+    }
+    data-emotion="css 14tikk5"
+  />,
+  <section
+    className="MuiBox-root css-14tikk5"
+  >
+    <style
+      dangerouslySetInnerHTML={
+        {
+          "__html": ".css-1p4tas-MuiContainer-root{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;}@media (min-width:1200px){.css-1p4tas-MuiContainer-root{max-width:1200px;}}",
+        }
+      }
+      data-emotion="css 1p4tas-MuiContainer-root"
+    />
+    <div
+      className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+    >
+      <style
+        dangerouslySetInnerHTML={
+          {
+            "__html": ".css-pkd51s-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}@media (min-width:1200px){.css-pkd51s-MuiGrid-root{height:528px;}}",
+          }
+        }
+        data-emotion="css pkd51s-MuiGrid-root"
+      />
+      <div
+        className="MuiGrid-root MuiGrid-container css-pkd51s-MuiGrid-root"
+      >
+        <style
+          dangerouslySetInnerHTML={
+            {
+              "__html": ".css-qxvcdg-MuiStack-root{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding-top:80px;padding-bottom:80px;width:100%;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;}@media (min-width:600px){.css-qxvcdg-MuiStack-root{padding-left:16px;padding-right:16px;}}",
+            }
+          }
+          data-emotion="css qxvcdg-MuiStack-root"
+        />
+        <div
+          className="MuiStack-root css-qxvcdg-MuiStack-root"
+        >
+          <style
+            dangerouslySetInnerHTML={
+              {
+                "__html": ".css-8gjfvp-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;max-width:560px;text-align:left;color:rgba(0, 0, 0, 0.87);gap:16px;}",
+              }
+            }
+            data-emotion="css 8gjfvp-MuiTypography-root"
+          />
+          <p
+            className="MuiTypography-root MuiTypography-body1 css-8gjfvp-MuiTypography-root"
+          >
+            <style
+              dangerouslySetInnerHTML={
+                {
+                  "__html": ".css-1hbyad5-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.75rem;line-height:2.66;letter-spacing:0.08333em;text-transform:uppercase;color:rgba(0, 0, 0, 0.6);}",
+                }
+              }
+              data-emotion="css 1hbyad5-MuiTypography-root"
+            />
+            <span
+              className="MuiTypography-root MuiTypography-overline css-1hbyad5-MuiTypography-root"
+            >
+              Per i cittadini
+            </span>
+            <style
+              dangerouslySetInnerHTML={
+                {
+                  "__html": ".css-wz9of0-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:2.125rem;line-height:1.235;letter-spacing:0.00735em;color:rgba(0, 0, 0, 0.87);}",
+                }
+              }
+              data-emotion="css wz9of0-MuiTypography-root"
+            />
+            <h4
+              className="MuiTypography-root MuiTypography-h4 css-wz9of0-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur
+            </h4>
+            <style
+              dangerouslySetInnerHTML={
+                {
+                  "__html": ".css-1gqyz35-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;color:rgba(0, 0, 0, 0.87);}",
+                }
+              }
+              data-emotion="css 1gqyz35-MuiTypography-root"
+            />
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-1gqyz35-MuiTypography-root"
             >
               Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
