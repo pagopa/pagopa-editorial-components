@@ -177,3 +177,5 @@ it('renders correctly with custom decorator', () => {
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+/* TODO: Dark tests */

@@ -5,7 +5,7 @@ import '@testing-library/jest-dom';
  */
 
 import renderer from 'react-test-renderer';
-
+/* TODO: Dark tests */
 it('renders correctly with light buttons', () => {
   const tree = renderer
     .create(
