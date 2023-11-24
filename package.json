@@ -74,6 +74,7 @@
   },
   "dependencies": {
     "@pagopa/mui-italia": "^0.8.12",
+    "@testing-library/jest-dom": "^6.1.4",
     "react-swipeable-views": "^0.14.0",
     "react-swipeable-views-utils": "^0.14.0"
   },
