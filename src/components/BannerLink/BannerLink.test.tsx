@@ -178,7 +178,6 @@ it('renders correctly with custom decorator', () => {
   expect(tree).toMatchSnapshot();
 });
 
-/* TODO: Dark tests fail. Need to figure out why 
 it('renders correctly standard dark', () => {
   const tree = renderer
     .create(
@@ -212,29 +211,6 @@ it('renders correctly one button dark', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders correctly two buttons dark', () => {
-  const tree = renderer
-    .create(
-      <BannerLink
-        body="Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it"
-        ctaButtons={[
-          {
-            onClick: () => {},
-            text: 'LEGGI LE FAQ',
-          },
-          {
-            onClick: () => {},
-            text: 'LEGGI LE FAQ',
-          },
-        ]}
-        theme="dark"
-        title="Vuoi diventare un Partner tecnologico qualificato?"
-      />
-    )
-    .toJSON();
-  expect(tree).toMatchSnapshot();
-});
-
 it('renders correctly with icon dark', () => {
   const tree = renderer
     .create(
@@ -251,6 +227,32 @@ it('renders correctly with icon dark', () => {
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+/* TODO: These Dark tests fail. Need to figure out why 
+
+it('renders correctly two buttons dark', () => {
+  const tree = renderer
+    .create(
+      <BannerLink
+        body="Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it"
+        ctaButtons={[
+          {
+            onClick: () => { },
+            text: 'LEGGI LE FAQ',
+          },
+          {
+            onClick: () => { },
+            text: 'LEGGI LE FAQ',
+          },
+        ]}
+        theme="dark"
+        title="Vuoi diventare un Partner tecnologico qualificato?"
+      />
+    )
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
 
 it('renders correctly with icon and two buttons dark', () => {
   const tree = renderer

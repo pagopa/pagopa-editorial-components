@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly with a background image 1`] = `
+exports[`renders correctly with a background image dark 1`] = `
 <section
   className="MuiBox-root css-1c1kjjx"
 >
@@ -84,7 +84,7 @@ exports[`renders correctly with a background image light 1`] = `
 </section>
 `;
 
-exports[`renders correctly with a custom body and background 1`] = `
+exports[`renders correctly with a custom body and background dark 1`] = `
 <section
   className="MuiBox-root css-1c1kjjx"
 >
@@ -172,7 +172,7 @@ exports[`renders correctly with a custom body and background light 1`] = `
 </section>
 `;
 
-exports[`renders correctly without a background  1`] = `
+exports[`renders correctly without a background dark  1`] = `
 <section
   className="MuiBox-root css-1rcu9g9"
 >

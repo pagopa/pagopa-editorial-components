@@ -6,7 +6,7 @@ import '@testing-library/jest-dom';
 
 import renderer from 'react-test-renderer';
 
-it('renders correctly with all props', () => {
+it('renders correctly with all props light', () => {
   const tree = renderer
     .create(
       <Accordion
@@ -21,7 +21,7 @@ it('renders correctly with all props', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders correctly with all props and accordion header jsx', () => {
+it('renders correctly with all props and accordion header jsx light', () => {
   const tree = renderer
     .create(
       <Accordion
@@ -36,7 +36,7 @@ it('renders correctly with all props and accordion header jsx', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders correctly with all props and two accordion items', () => {
+it('renders correctly with all props and two accordion items light', () => {
   const tree = renderer
     .create(
       <Accordion
