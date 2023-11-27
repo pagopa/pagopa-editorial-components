@@ -5,7 +5,7 @@ import { type Generic } from '../types/components';
 import React from 'react';
 
 export interface EIconProps extends Omit<SvgIconProps, 'color'> {
-  icon?: keyof typeof MuiIcons | string | Generic;
+  icon?: keyof typeof MuiIcons | Generic;
   color?: string;
 }
 
@@ -14,11 +14,7 @@ export const EIcon = (props: EIconProps) => {
     if (isJSX(icon))
       return React.cloneElement(icon, { ...rest, ...icon.props });
 
-    const Icon =
-      icon &&
-      (MuiIcons[
-        icon as keyof typeof MuiIcons
-      ] as React.ComponentType<SvgIconProps>);
+    const Icon = icon && MuiIcons[icon];
     return Icon ? <Icon {...rest} color="inherit" /> : null;
   };
 
