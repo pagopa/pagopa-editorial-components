@@ -1,147 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly no icon  1`] = `
-[
-  <style
-    dangerouslySetInnerHTML={
-      {
-        "__html": ".css-19biibs-MuiCard-root{overflow:hidden;background-color:#fff;border-radius:16px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;gap:8px;-webkit-box-pack:end;-ms-flex-pack:end;-webkit-justify-content:flex-end;justify-content:flex-end;padding-bottom:8px;padding-top:8px;padding-left:16px;padding-right:16px;text-align:left;}",
-      }
-    }
-    data-emotion="css 19biibs-MuiCard-root"
-  />,
-  <style
-    dangerouslySetInnerHTML={
-      {
-        "__html": ".css-1sp12f3-MuiPaper-root-MuiCard-root{background-color:#fff;color:rgba(0, 0, 0, 0.87);-webkit-transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;border-radius:4px;box-shadow:0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12);overflow:hidden;background-color:#fff;border-radius:16px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;gap:8px;-webkit-box-pack:end;-ms-flex-pack:end;-webkit-justify-content:flex-end;justify-content:flex-end;padding-bottom:8px;padding-top:8px;padding-left:16px;padding-right:16px;text-align:left;}",
-      }
-    }
-    data-emotion="css 1sp12f3-MuiPaper-root-MuiCard-root"
-  />,
-  <div
-    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation16 MuiCard-root css-1sp12f3-MuiPaper-root-MuiCard-root"
-    id=""
+<div
+  className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation16 MuiCard-root css-1sp12f3-MuiPaper-root-MuiCard-root"
+  id=""
+>
+  <p
+    className="MuiTypography-root MuiTypography-body1 css-14gdbdq-MuiTypography-root"
+  />
+  <h4
+    className="MuiTypography-root MuiTypography-h4 css-1tg5hpw-MuiTypography-root"
   >
-    <style
-      dangerouslySetInnerHTML={
-        {
-          "__html": ".css-14gdbdq-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;color:disabled;}",
-        }
-      }
-      data-emotion="css 14gdbdq-MuiTypography-root"
-    />
-    <p
-      className="MuiTypography-root MuiTypography-body1 css-14gdbdq-MuiTypography-root"
-    />
-    <style
-      dangerouslySetInnerHTML={
-        {
-          "__html": ".css-1tg5hpw-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:2.125rem;line-height:1.235;letter-spacing:0.00735em;color:#1565c0;}",
-        }
-      }
-      data-emotion="css 1tg5hpw-MuiTypography-root"
-    />
-    <h4
-      className="MuiTypography-root MuiTypography-h4 css-1tg5hpw-MuiTypography-root"
-    >
-      6.087
-    </h4>
-    <style
-      dangerouslySetInnerHTML={
-        {
-          "__html": ".css-19re0ev-MuiTypography-root{margin:0;color:#1565c0;}",
-        }
-      }
-      data-emotion="css 19re0ev-MuiTypography-root"
-    />
-    <span
-      className="MuiTypography-root MuiTypography-caption-semibold css-19re0ev-MuiTypography-root"
-    >
-      Lorem ipsum dolor sit amet
-    </span>
-  </div>,
-]
+    6.087
+  </h4>
+  <span
+    className="MuiTypography-root MuiTypography-caption-semibold css-19re0ev-MuiTypography-root"
+  >
+    Lorem ipsum dolor sit amet
+  </span>
+</div>
 `;
 
 exports[`renders correctly standard  1`] = `
-[
-  <style
-    dangerouslySetInnerHTML={
-      {
-        "__html": ".css-19biibs-MuiCard-root{overflow:hidden;background-color:#fff;border-radius:16px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;gap:8px;-webkit-box-pack:end;-ms-flex-pack:end;-webkit-justify-content:flex-end;justify-content:flex-end;padding-bottom:8px;padding-top:8px;padding-left:16px;padding-right:16px;text-align:left;}",
-      }
-    }
-    data-emotion="css 19biibs-MuiCard-root"
-  />,
-  <style
-    dangerouslySetInnerHTML={
-      {
-        "__html": ".css-1sp12f3-MuiPaper-root-MuiCard-root{background-color:#fff;color:rgba(0, 0, 0, 0.87);-webkit-transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;border-radius:4px;box-shadow:0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12);overflow:hidden;background-color:#fff;border-radius:16px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;gap:8px;-webkit-box-pack:end;-ms-flex-pack:end;-webkit-justify-content:flex-end;justify-content:flex-end;padding-bottom:8px;padding-top:8px;padding-left:16px;padding-right:16px;text-align:left;}",
-      }
-    }
-    data-emotion="css 1sp12f3-MuiPaper-root-MuiCard-root"
-  />,
-  <div
-    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation16 MuiCard-root css-1sp12f3-MuiPaper-root-MuiCard-root"
-    id=""
+<div
+  className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation16 MuiCard-root css-1sp12f3-MuiPaper-root-MuiCard-root"
+  id=""
+>
+  <p
+    className="MuiTypography-root MuiTypography-body1 css-14gdbdq-MuiTypography-root"
   >
-    <style
-      dangerouslySetInnerHTML={
-        {
-          "__html": ".css-14gdbdq-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;color:disabled;}",
-        }
-      }
-      data-emotion="css 14gdbdq-MuiTypography-root"
-    />
-    <p
-      className="MuiTypography-root MuiTypography-body1 css-14gdbdq-MuiTypography-root"
+    <svg
+      aria-hidden={true}
+      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+      data-testid="StarOutlineIcon"
+      focusable="false"
+      viewBox="0 0 24 24"
     >
-      <style
-        dangerouslySetInnerHTML={
-          {
-            "__html": ".css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}",
-          }
-        }
-        data-emotion="css i4bv87-MuiSvgIcon-root"
+      <path
+        d="m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
       />
-      <svg
-        aria-hidden={true}
-        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-        data-testid="StarOutlineIcon"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
-        />
-      </svg>
-    </p>
-    <style
-      dangerouslySetInnerHTML={
-        {
-          "__html": ".css-1tg5hpw-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:2.125rem;line-height:1.235;letter-spacing:0.00735em;color:#1565c0;}",
-        }
-      }
-      data-emotion="css 1tg5hpw-MuiTypography-root"
-    />
-    <h4
-      className="MuiTypography-root MuiTypography-h4 css-1tg5hpw-MuiTypography-root"
-    >
-      6.087
-    </h4>
-    <style
-      dangerouslySetInnerHTML={
-        {
-          "__html": ".css-19re0ev-MuiTypography-root{margin:0;color:#1565c0;}",
-        }
-      }
-      data-emotion="css 19re0ev-MuiTypography-root"
-    />
-    <span
-      className="MuiTypography-root MuiTypography-caption-semibold css-19re0ev-MuiTypography-root"
-    >
-      Lorem ipsum dolor sit amet
-    </span>
-  </div>,
-]
+    </svg>
+  </p>
+  <h4
+    className="MuiTypography-root MuiTypography-h4 css-1tg5hpw-MuiTypography-root"
+  >
+    6.087
+  </h4>
+  <span
+    className="MuiTypography-root MuiTypography-caption-semibold css-19re0ev-MuiTypography-root"
+  >
+    Lorem ipsum dolor sit amet
+  </span>
+</div>
 `;

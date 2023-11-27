@@ -1,185 +1,87 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly standard  1`] = `
-[
-  <style
-    dangerouslySetInnerHTML={
-      {
-        "__html": ".css-1cct0at{padding-top:32px;padding-bottom:32px;background-color:#fff;position:relative;overflow:hidden;}@media (min-width:0px){.css-1cct0at{padding-left:32px;padding-right:32px;}}",
-      }
-    }
-    data-emotion="css 1cct0at"
-  />,
-  <section
-    className="MuiBox-root css-1cct0at"
+<section
+  className="MuiBox-root css-1cct0at"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
   >
-    <style
-      dangerouslySetInnerHTML={
-        {
-          "__html": ".css-1p4tas-MuiContainer-root{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;}@media (min-width:1200px){.css-1p4tas-MuiContainer-root{max-width:1200px;}}",
-        }
-      }
-      data-emotion="css 1p4tas-MuiContainer-root"
-    />
     <div
-      className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+      className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1vpwcmr-MuiGrid-root"
     >
-      <style
-        dangerouslySetInnerHTML={
-          {
-            "__html": ".css-1vpwcmr-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}.css-1vpwcmr-MuiGrid-root>.MuiGrid-item{max-width:none;}",
-          }
-        }
-        data-emotion="css 1vpwcmr-MuiGrid-root"
-      />
-      <div
-        className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1vpwcmr-MuiGrid-root"
+      <h5
+        className="MuiTypography-root MuiTypography-h5 css-ch2k2f-MuiTypography-root"
       >
-        <style
-          dangerouslySetInnerHTML={
-            {
-              "__html": ".css-ch2k2f-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1.5rem;line-height:1.334;letter-spacing:0em;margin-bottom:16px;}",
-            }
-          }
-          data-emotion="css ch2k2f-MuiTypography-root"
-        />
-        <h5
-          className="MuiTypography-root MuiTypography-h5 css-ch2k2f-MuiTypography-root"
+        Lorem ipsum
+      </h5>
+      <p
+        className="MuiTypography-root MuiTypography-body1 css-bsld86-MuiTypography-root"
+      >
+        Ultimo aggiornamento 23 novembre 2023
+      </p>
+      <p
+        className="MuiTypography-root MuiTypography-body1 css-12akxqs-MuiTypography-root"
+      >
+        Nome
+      </p>
+      <div
+        className="MuiBox-root css-1qm1lh"
+      >
+        <a
+          className="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-underlineAlways css-v8rapa-MuiTypography-root-MuiLink-root"
+          href="https://google.it"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          target="_blank"
+          title="vai al sito"
         >
-          Lorem ipsum
-        </h5>
-        <style
-          dangerouslySetInnerHTML={
-            {
-              "__html": ".css-bsld86-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;color:rgba(0, 0, 0, 0.6);font-size:12px;font-weight:600;margin-bottom:40px;}",
-            }
-          }
-          data-emotion="css bsld86-MuiTypography-root"
+          Lorem ipsum dolor sit amet, consectetuer asipscing elit
+        </a>
+        <hr
+          className="MuiDivider-root MuiDivider-fullWidth css-uok36i-MuiDivider-root"
         />
+      </div>
+      <div
+        className="MuiBox-root css-1qm1lh"
+      >
         <p
-          className="MuiTypography-root MuiTypography-body1 css-bsld86-MuiTypography-root"
+          className="MuiTypography-root MuiTypography-body2 css-kah6a3-MuiTypography-root"
+          title=""
         >
-          Ultimo aggiornamento 23 novembre 2023
+          Lorem ipsum dolor sit amet, consectetuer asipscing elit
         </p>
-        <style
-          dangerouslySetInnerHTML={
-            {
-              "__html": ".css-12akxqs-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;color:rgba(0, 0, 0, 0.6);font-size:14px;font-weight:700;margin-bottom:16px;text-transform:uppercase;}",
-            }
-          }
-          data-emotion="css 12akxqs-MuiTypography-root"
+        <hr
+          className="MuiDivider-root MuiDivider-fullWidth css-uok36i-MuiDivider-root"
         />
+      </div>
+      <div
+        className="MuiBox-root css-1qm1lh"
+      >
         <p
-          className="MuiTypography-root MuiTypography-body1 css-12akxqs-MuiTypography-root"
+          className="MuiTypography-root MuiTypography-body2 css-kah6a3-MuiTypography-root"
+          title=""
         >
-          Nome
+          Lorem ipsum dolor sit amet, consectetuer asipscing elit
         </p>
-        <style
-          dangerouslySetInnerHTML={
-            {
-              "__html": ".css-1qm1lh{margin-bottom:16px;}",
-            }
-          }
-          data-emotion="css 1qm1lh"
+        <hr
+          className="MuiDivider-root MuiDivider-fullWidth css-uok36i-MuiDivider-root"
         />
-        <div
-          className="MuiBox-root css-1qm1lh"
+      </div>
+      <div
+        className="MuiBox-root css-12595yo"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body2 css-kah6a3-MuiTypography-root"
+          title=""
         >
-          <style
-            dangerouslySetInnerHTML={
-              {
-                "__html": ".css-12u91cq-MuiLink-root{-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(25, 118, 210, 0.4);}.css-12u91cq-MuiLink-root:hover{text-decoration-color:inherit;}",
-              }
-            }
-            data-emotion="css 12u91cq-MuiLink-root"
-          />
-          <style
-            dangerouslySetInnerHTML={
-              {
-                "__html": ".css-v8rapa-MuiTypography-root-MuiLink-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.875rem;line-height:1.43;letter-spacing:0.01071em;color:#1976d2;margin-bottom:16px;font-weight:600;-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(25, 118, 210, 0.4);}.css-v8rapa-MuiTypography-root-MuiLink-root:hover{text-decoration-color:inherit;}",
-              }
-            }
-            data-emotion="css v8rapa-MuiTypography-root-MuiLink-root"
-          />
-          <a
-            className="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-underlineAlways css-v8rapa-MuiTypography-root-MuiLink-root"
-            href="https://google.it"
-            onBlur={[Function]}
-            onFocus={[Function]}
-            target="_blank"
-            title="vai al sito"
-          >
-            Lorem ipsum dolor sit amet, consectetuer asipscing elit
-          </a>
-          <style
-            dangerouslySetInnerHTML={
-              {
-                "__html": ".css-uok36i-MuiDivider-root{margin:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;border-width:0;border-style:solid;border-color:rgba(0, 0, 0, 0.12);border-bottom-width:thin;margin-top:16px;}",
-              }
-            }
-            data-emotion="css uok36i-MuiDivider-root"
-          />
-          <hr
-            className="MuiDivider-root MuiDivider-fullWidth css-uok36i-MuiDivider-root"
-          />
-        </div>
-        <div
-          className="MuiBox-root css-1qm1lh"
-        >
-          <style
-            dangerouslySetInnerHTML={
-              {
-                "__html": ".css-kah6a3-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.875rem;line-height:1.43;letter-spacing:0.01071em;font-weight:600;margin-bottom:16px;}",
-              }
-            }
-            data-emotion="css kah6a3-MuiTypography-root"
-          />
-          <p
-            className="MuiTypography-root MuiTypography-body2 css-kah6a3-MuiTypography-root"
-            title=""
-          >
-            Lorem ipsum dolor sit amet, consectetuer asipscing elit
-          </p>
-          <hr
-            className="MuiDivider-root MuiDivider-fullWidth css-uok36i-MuiDivider-root"
-          />
-        </div>
-        <div
-          className="MuiBox-root css-1qm1lh"
-        >
-          <p
-            className="MuiTypography-root MuiTypography-body2 css-kah6a3-MuiTypography-root"
-            title=""
-          >
-            Lorem ipsum dolor sit amet, consectetuer asipscing elit
-          </p>
-          <hr
-            className="MuiDivider-root MuiDivider-fullWidth css-uok36i-MuiDivider-root"
-          />
-        </div>
-        <style
-          dangerouslySetInnerHTML={
-            {
-              "__html": ".css-12595yo{margin-bottom:0px;}",
-            }
-          }
-          data-emotion="css 12595yo"
+          Lorem ipsum dolor sit amet, consectetuer asipscing elit
+        </p>
+        <hr
+          className="MuiDivider-root MuiDivider-fullWidth css-uok36i-MuiDivider-root"
         />
-        <div
-          className="MuiBox-root css-12595yo"
-        >
-          <p
-            className="MuiTypography-root MuiTypography-body2 css-kah6a3-MuiTypography-root"
-            title=""
-          >
-            Lorem ipsum dolor sit amet, consectetuer asipscing elit
-          </p>
-          <hr
-            className="MuiDivider-root MuiDivider-fullWidth css-uok36i-MuiDivider-root"
-          />
-        </div>
       </div>
     </div>
-  </section>,
-]
+  </div>
+</section>
 `;

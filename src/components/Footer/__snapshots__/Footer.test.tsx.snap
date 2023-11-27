@@ -1,0 +1,459 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly standard  1`] = `
+<footer
+  className="MuiBox-root css-7lw3d1"
+>
+  <div
+    className="MuiContainer-root css-77u5hk-MuiContainer-root"
+  >
+    <div
+      className="MuiStack-root css-qva3li-MuiStack-root"
+    >
+      <button
+        aria-label="Link: vai al sito di PagoPA S.p.A."
+        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways MuiLink-button css-11d0tqn-MuiTypography-root-MuiLink-root"
+        href="https://www.pagopa.it/"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        role="link"
+      >
+        <svg
+          aria-labelledby="logo-pagoPA-company-titleID"
+          className="css-zr5gjd"
+          focusable="false"
+          role="img"
+          viewBox="0 0 119 33"
+        >
+          <path
+            clipRule="evenodd"
+            d="M114.338 25.099h3.718V2.324h-3.718v2.97a11.347 11.347 0 0 0-7.669-2.97 11.375 11.375 0 0 0-9.528 5.15 11.334 11.334 0 0 1 1.86 6.237 11.33 11.33 0 0 1-1.86 6.238 11.377 11.377 0 0 0 9.528 5.15c2.954 0 5.645-1.125 7.669-2.97v2.97ZM99 13.71a7.67 7.67 0 1 1 15.338 0 7.67 7.67 0 0 1-15.338 0ZM3.718 5.294v-2.97H0v29.282h3.718v-9.477a11.345 11.345 0 0 0 7.67 2.97c3.985 0 7.493-2.049 9.527-5.15a11.334 11.334 0 0 1-1.859-6.238c0-2.303.684-4.446 1.86-6.237a11.377 11.377 0 0 0-9.529-5.15 11.346 11.346 0 0 0-7.669 2.97Zm0 8.417a7.669 7.669 0 1 1 15.338 0 7.669 7.669 0 0 1-15.338 0Z"
+            fillRule="evenodd"
+            opacity=".4"
+          />
+          <path
+            clipRule="evenodd"
+            d="M41.83 5.304v-2.98h-3.718v2.97a11.346 11.346 0 0 0-7.669-2.97c-6.288 0-11.387 5.098-11.387 11.387 0 6.29 5.099 11.388 11.387 11.388 2.954 0 5.646-1.125 7.67-2.97v2.97h3.718v-2.925a11.39 11.39 0 0 1-3.719-8.435c0-3.342 1.434-6.348 3.719-8.435Zm-19.055 8.407a7.669 7.669 0 1 1 15.338 0 7.669 7.669 0 0 1-15.338 0ZM79.944 5.293V2.324h-3.719v2.97a11.358 11.358 0 0 1 3.719 8.417c0 3.335-1.434 6.335-3.719 8.418v9.477h3.719v-9.477a11.346 11.346 0 0 0 7.669 2.97C93.902 25.099 99 20 99 13.71S93.902 2.324 87.613 2.324a11.346 11.346 0 0 0-7.669 2.97Zm0 8.418a7.669 7.669 0 1 1 15.338 0 7.669 7.669 0 0 1-15.338 0Z"
+            fillRule="evenodd"
+            opacity=".7"
+          />
+          <path
+            clipRule="evenodd"
+            d="M60.887 0v5.293l.157-.14a11.344 11.344 0 0 1 7.513-2.83c6.288 0 11.387 5.1 11.387 11.388 0 6.29-5.099 11.388-11.388 11.388a11.345 11.345 0 0 1-7.668-2.97v3.02c0 2.9-1.16 5.627-3.196 7.7l-.15.151-2.604-2.66c1.383-1.36 2.179-3.123 2.229-5.002l.002-.189v-2.975A11.333 11.333 0 0 1 49.5 25.15c-6.289 0-11.387-5.11-11.387-11.41 0-6.303 5.098-11.411 11.387-11.411 2.954 0 5.645 1.127 7.67 2.975V0h3.717ZM49.5 6.055c-4.235 0-7.669 3.44-7.669 7.684s3.434 7.685 7.67 7.685c4.235 0 7.668-3.44 7.668-7.685 0-4.244-3.433-7.684-7.669-7.684Zm11.388 7.656a7.669 7.669 0 1 1 15.338 0 7.669 7.669 0 0 1-15.338 0Z"
+            fillRule="evenodd"
+          />
+          <title
+            id="logo-pagoPA-company-titleID"
+          >
+            PagoPA
+          </title>
+        </svg>
+      </button>
+      <ul
+        className="MuiStack-root css-1iefmf1-MuiStack-root"
+      >
+        <li>
+          <a
+            aria-label="Vai al link: Chi siamo"
+            className="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineNone css-nuw6va-MuiTypography-root-MuiLink-root"
+            href="#chi-siamo"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            Chi siamo
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Vai al link: PNRR"
+            className="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineNone css-nuw6va-MuiTypography-root-MuiLink-root"
+            href="#pnrr"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            PNRR
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Vai al link: Media"
+            className="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineNone css-nuw6va-MuiTypography-root-MuiLink-root"
+            href="#media"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            Media
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Vai al link: Lavora con noi"
+            className="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineNone css-nuw6va-MuiTypography-root-MuiLink-root"
+            href="#lavora-con-noi"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            Lavora con noi
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="MuiStack-root css-qva3li-MuiStack-root"
+    >
+      <span
+        className="MuiTypography-root MuiTypography-overline css-b3fch5-MuiTypography-root"
+      >
+        PRODOTTI E SERVIZI
+      </span>
+      <ul
+        className="MuiStack-root css-1iefmf1-MuiStack-root"
+      >
+        <li>
+          <a
+            aria-label="Vai al link: App IO"
+            className="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineNone css-nuw6va-MuiTypography-root-MuiLink-root"
+            href="https://www.pagopa.it/it/prodotti-e-servizi/app-io"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            App IO
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Vai al link: Piattaforma pagoPA"
+            className="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineNone css-nuw6va-MuiTypography-root-MuiLink-root"
+            href="https://www.pagopa.it/it/prodotti-e-servizi/piattaforma-pagopa"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            Piattaforma pagoPA
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Vai al link: Centro stella"
+            className="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineNone css-nuw6va-MuiTypography-root-MuiLink-root"
+            href="https://www.pagopa.it/it/prodotti-e-servizi/centro-stella-pagamenti-elettronici"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            Centro stella
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Vai al link: Check IBAN"
+            className="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineNone css-nuw6va-MuiTypography-root-MuiLink-root"
+            href="https://www.pagopa.it/it/prodotti-e-servizi/check-iban"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            Check IBAN
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Vai al link: Piattaforma Notifiche Digitali"
+            className="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineNone css-nuw6va-MuiTypography-root-MuiLink-root"
+            href="https://www.pagopa.it/it/prodotti-e-servizi/piattaforma-notifiche-digitali"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            Piattaforma Notifiche Digitali
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="MuiStack-root css-qva3li-MuiStack-root"
+    >
+      <span
+        className="MuiTypography-root MuiTypography-overline css-b3fch5-MuiTypography-root"
+      >
+        Risorse
+      </span>
+      <ul
+        className="MuiStack-root css-1iefmf1-MuiStack-root"
+      >
+        <li>
+          <a
+            aria-label="Vai al link: Informativa Privacy"
+            className="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineNone css-nuw6va-MuiTypography-root-MuiLink-root"
+            href="#informativa-privacy"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            Informativa Privacy
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Vai al link: Certificazioni"
+            className="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineNone css-nuw6va-MuiTypography-root-MuiLink-root"
+            href="#certificazioni"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            Certificazioni
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Vai al link: Sicurezza delle informazioni"
+            className="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineNone css-nuw6va-MuiTypography-root-MuiLink-root"
+            href="#sicurezza-delle-informazioni"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            Sicurezza delle informazioni
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Vai al link: Diritto alla protezione dei dati personali"
+            className="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineNone css-nuw6va-MuiTypography-root-MuiLink-root"
+            href="javascript:void(0)"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+          >
+            Diritto alla protezione dei dati personali
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Vai al link: Preferenze Cookie"
+            className="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineNone css-nuw6va-MuiTypography-root-MuiLink-root"
+            href="#preferenze-cookie"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+          >
+            Preferenze Cookie
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Vai al link: Termini e Condizioni"
+            className="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineNone css-nuw6va-MuiTypography-root-MuiLink-root"
+            href="#terms-conditions"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            Termini e Condizioni
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Vai al link: Società trasparente"
+            className="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineNone css-nuw6va-MuiTypography-root-MuiLink-root"
+            href="#societa-trasparente"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            Società trasparente
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Vai al link: Responsible Disclosure Policy"
+            className="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineNone css-nuw6va-MuiTypography-root-MuiLink-root"
+            href="#responsible-disclosure-policy"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            Responsible Disclosure Policy
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Vai al link: Modello 321"
+            className="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineNone css-nuw6va-MuiTypography-root-MuiLink-root"
+            href="#modello-321"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            Modello 321
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="MuiBox-root css-7ok1hk"
+    >
+      <div
+        className="MuiStack-root css-qva3li-MuiStack-root"
+      >
+        <span
+          className="MuiTypography-root MuiTypography-overline css-b3fch5-MuiTypography-root"
+        >
+          Seguici su
+        </span>
+        <ul
+          aria-label="i nostri social"
+          className="MuiStack-root css-165qprm-MuiStack-root"
+        >
+          <li>
+            <a
+              className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1bhi0za-MuiTypography-root-MuiLink-root"
+              href="https://www.linkedin.com/company/pagopa/"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <p
+                className="MuiTypography-root MuiTypography-body1 css-1gqyz35-MuiTypography-root"
+              >
+                <svg
+                  aria-hidden={true}
+                  aria-label="Link: vai al sito LinkedIn di PagoPA S.p.A."
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="LinkedInIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"
+                  />
+                </svg>
+              </p>
+            </a>
+          </li>
+          <li>
+            <a
+              className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1bhi0za-MuiTypography-root-MuiLink-root"
+              href="https://twitter.com/pagopa"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <p
+                className="MuiTypography-root MuiTypography-body1 css-1gqyz35-MuiTypography-root"
+              >
+                <svg
+                  aria-hidden={true}
+                  aria-label="Link: vai al sito Twitter di PagoPA S.p.A."
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="TwitterIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"
+                  />
+                </svg>
+              </p>
+            </a>
+          </li>
+          <li>
+            <a
+              className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1bhi0za-MuiTypography-root-MuiLink-root"
+              href="https://www.instagram.com/pagopa/"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <p
+                className="MuiTypography-root MuiTypography-body1 css-1gqyz35-MuiTypography-root"
+              >
+                <svg
+                  aria-hidden={true}
+                  aria-label="Link: vai al sito Instagram di PagoPA S.p.A."
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="InstagramIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"
+                  />
+                </svg>
+              </p>
+            </a>
+          </li>
+        </ul>
+        <ul
+          className="MuiStack-root css-1iefmf1-MuiStack-root"
+        >
+          <li>
+            <a
+              aria-label="Vai al link: Accessibilità"
+              className="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineNone css-nuw6va-MuiTypography-root-MuiLink-root"
+              href="#accessibilità"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              Accessibilità
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        aria-label="cambia la lingua"
+        className="MuiStack-root css-7jwvey-MuiStack-root"
+      >
+        <button
+          aria-expanded={false}
+          aria-haspopup="true"
+          aria-label="lingua"
+          className="MuiButtonBase-root MuiButton-root MuiButton-naked MuiButton-nakedText MuiButton-sizeSmall MuiButton-nakedSizeSmall MuiButton-root MuiButton-naked MuiButton-nakedText MuiButton-sizeSmall MuiButton-nakedSizeSmall css-1ufy5le-MuiButtonBase-root-MuiButton-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <div
+            className="MuiBox-root css-0"
+          >
+            <h6
+              className="MuiTypography-root MuiTypography-subtitle2 css-1daco5j-MuiTypography-root"
+            >
+              Italiano
+            </h6>
+          </div>
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+            data-testid="KeyboardArrowDownRoundedIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M8.12 9.29 12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7a.9959.9959 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiBox-root css-dp2eiv"
+  >
+    <div
+      className="MuiContainer-root MuiContainer-maxWidthLg css-2ipgdc-MuiContainer-root"
+    >
+      <div
+        className="MuiTypography-root MuiTypography-caption css-il8o2f-MuiTypography-root"
+      >
+        <strong>
+          PagoPA S.p.A.
+        </strong>
+         — società per azioni con socio unico - capitale sociale di euro 1,000,000 interamente versato - sede legale in Roma, Piazza Colonna 370,
+        <br />
+        CAP 00187 - n. di iscrizione a Registro Imprese di Roma, CF e P.IVA 15376371009
+      </div>
+    </div>
+  </div>
+</footer>
+`;
