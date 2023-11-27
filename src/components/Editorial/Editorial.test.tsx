@@ -7,9 +7,11 @@ import '@testing-library/jest-dom';
 
 import renderer from 'react-test-renderer';
 
-/* TODO: Dark tests */
+/* 
+TODO: These Dark tests fail, there's a problem with some components in these variations of the banner link, which do not support the "negative" value for the color property
+ */
 
-it('renders correctly standard', () => {
+it('renders correctly standard light', () => {
   const tree = renderer
     .create(
       <Editorial
@@ -38,7 +40,7 @@ it('renders correctly standard', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders correctly center', () => {
+it('renders correctly center light', () => {
   const tree = renderer
     .create(
       <Editorial
@@ -67,7 +69,7 @@ it('renders correctly center', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders correctly wide', () => {
+it('renders correctly wide light', () => {
   const tree = renderer
     .create(
       <Editorial
@@ -96,7 +98,7 @@ it('renders correctly wide', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders correctly standard reversed', () => {
+it('renders correctly standard reversed light', () => {
   const tree = renderer
     .create(
       <Editorial
@@ -126,7 +128,7 @@ it('renders correctly standard reversed', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders correctly reversed wide', () => {
+it('renders correctly reversed wide light', () => {
   const tree = renderer
     .create(
       <Editorial
@@ -156,7 +158,7 @@ it('renders correctly reversed wide', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders correctly no label', () => {
+it('renders correctly no label light', () => {
   const tree = renderer
     .create(
       <Editorial
@@ -185,7 +187,7 @@ it('renders correctly no label', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders correctly dots', () => {
+it('renders correctly dots light', () => {
   const tree = renderer
     .create(
       <Editorial
@@ -215,7 +217,7 @@ it('renders correctly dots', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders correctly solid', () => {
+it('renders correctly solid light', () => {
   const tree = renderer
     .create(
       <Editorial
@@ -245,7 +247,7 @@ it('renders correctly solid', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders correctly bold body element', () => {
+it('renders correctly bold body element light', () => {
   const tree = renderer
     .create(
       <Editorial
@@ -282,7 +284,7 @@ it('renders correctly bold body element', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders correctly label image', () => {
+it('renders correctly label image light', () => {
   const tree = renderer
     .create(
       <Editorial
@@ -317,7 +319,7 @@ it('renders correctly label image', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders correctly rotated image', () => {
+it('renders correctly rotated image light', () => {
   const tree = renderer
     .create(
       <Editorial
@@ -351,7 +353,7 @@ it('renders correctly rotated image', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('renders correctly ctas element', () => {
+it('renders correctly ctas element light', () => {
   const tree = renderer
     .create(
       <Editorial
