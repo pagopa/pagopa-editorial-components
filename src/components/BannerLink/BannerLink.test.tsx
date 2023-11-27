@@ -228,7 +228,7 @@ it('renders correctly with icon dark', () => {
   expect(tree).toMatchSnapshot();
 });
 
-/* TODO: These Dark tests fail. Need to figure out why 
+/* TODO: These Dark tests fail, there's a problem with some components in these variations of the banner link, which do not support the "negative" value for the color property
 
 it('renders correctly two buttons dark', () => {
   const tree = renderer
