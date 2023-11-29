@@ -37,6 +37,7 @@
     "@storybook/react": "^7.0.23",
     "@storybook/react-webpack5": "^7.0.23",
     "@storybook/testing-library": "^0.2.0",
+    "@testing-library/react": "^14.1.2",
     "@types/jest": "^29.5.10",
     "@types/react": "^18.0.28",
     "@types/react-swipeable-views": "^0.13.1",
