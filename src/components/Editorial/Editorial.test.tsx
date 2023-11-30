@@ -6,6 +6,7 @@ import '@testing-library/jest-dom';
  */
 
 import renderer from 'react-test-renderer';
+import { fireEvent, render } from '@testing-library/react';
 
 /* 
 TODO: These Dark tests fail, there's a problem with some components in these variations of the banner link, which do not support the "negative" value for the color property
@@ -377,4 +378,39 @@ it('renders correctly ctas element light', () => {
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
+});
+
+test('both buttons work', async () => {
+  const alertMock = jest.spyOn(window, 'alert').mockImplementation();
+
+  const { getByText } = render(
+    <Editorial
+      body="Con Piattaforma Notifiche, ricevi e gestisci nello stesso spazio tutti gli atti di notifica che ti inviano Enti e Pubbliche Amministrazioni, come multe o certificati elettorali. E, grazie all'integrazione con pagoPA, puoi anche pagare eventuali costi. Così, risparmi tempo e denaro."
+      ctaButtons={[
+        {
+          onClick: () => {
+            alert('test');
+          },
+          text: 'Accedi',
+        },
+        {
+          onClick: () => {
+            alert('test');
+          },
+          text: 'Scopri di più',
+        },
+      ]}
+      eyelet="per i cittadini"
+      image={{
+        alt: 'a landscape photo',
+        src: 'static/media/regular.d1ac9ad6.png',
+      }}
+      theme="light"
+      title="Non perderti più nessuna notifica"
+      width={'standard'}
+    />
+  );
+  fireEvent.click(getByText('Accedi'));
+  fireEvent.click(getByText('Scopri di più'));
+  expect(alertMock).toHaveBeenCalledTimes(2);
 });

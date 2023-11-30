@@ -1,5 +1,6 @@
 import Cards from './index';
 import '@testing-library/jest-dom';
+import { render } from '@testing-library/react';
 /**
  * @jest-environment jsdom
  */
@@ -388,4 +389,33 @@ it('renders correctly with four column layouts and text dark', () => {
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
+});
+
+it('renders the link correctly', async () => {
+  const { getByText } = render(
+    <Cards
+      items={[
+        {
+          cardIcon: {
+            icon: 'Air',
+          },
+          link: {
+            href: 'https://google.com',
+            text: 'leggi',
+            title: 'vai al sito',
+          },
+          text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+          title: 'Title',
+        },
+      ]}
+      text={{
+        title: 'lorem ipsum',
+      }}
+      theme="light"
+    />
+  );
+  expect(getByText('leggi').closest('a')).toHaveAttribute(
+    'href',
+    'https://google.com'
+  );
 });

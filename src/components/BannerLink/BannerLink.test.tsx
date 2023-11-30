@@ -1,5 +1,6 @@
 import { BannerLink } from './BannerLink';
 import '@testing-library/jest-dom';
+import { fireEvent, render } from '@testing-library/react';
 /**
  * @jest-environment jsdom
  */
@@ -353,3 +354,52 @@ it('renders correctly with custom decorator dark', () => {
   expect(tree).toMatchSnapshot();
 });
 */
+
+it('renders text correctly', async () => {
+  const { getByText } = render(
+    <BannerLink
+      body="Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it"
+      ctaButtons={[
+        {
+          text: 'LEGGI LE FAQ',
+          onClick: () => {},
+          color: 'primary',
+        },
+      ]}
+      theme="light"
+      title="Vuoi diventare un Partner tecnologico qualificato?"
+    />
+  );
+  expect(getByText('LEGGI LE FAQ')).toBeInTheDocument();
+  expect(
+    getByText(
+      'Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it'
+    )
+  ).toBeInTheDocument();
+  expect(
+    getByText('Vuoi diventare un Partner tecnologico qualificato?')
+  ).toBeInTheDocument();
+});
+
+test('alert is fired correctly', async () => {
+  const alertMock = jest.spyOn(window, 'alert').mockImplementation();
+
+  const { getByText } = render(
+    <BannerLink
+      body="Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it"
+      ctaButtons={[
+        {
+          text: 'LEGGI LE FAQ',
+          onClick: () => {
+            alert('test');
+          },
+          color: 'primary',
+        },
+      ]}
+      theme="light"
+      title="Vuoi diventare un Partner tecnologico qualificato?"
+    />
+  );
+  fireEvent.click(getByText('LEGGI LE FAQ'));
+  expect(alertMock).toHaveBeenCalledTimes(1);
+});
