@@ -1,11 +1,18 @@
 import { BannerLink } from './BannerLink';
 import '@testing-library/jest-dom';
 import { fireEvent, render } from '@testing-library/react';
+import { createTheme, ThemeProvider } from '@mui/material';
+import { theme } from '../../../.storybook/theme';
+
 /**
  * @jest-environment jsdom
  */
 
 import renderer from 'react-test-renderer';
+
+const mainTheme = createTheme({
+  ...theme,
+});
 
 it('renders correctly standard', () => {
   const tree = renderer
@@ -229,54 +236,55 @@ it('renders correctly with icon dark', () => {
   expect(tree).toMatchSnapshot();
 });
 
-/* TODO: These Dark tests fail, there's a problem with some components in these variations of the banner link, which do not support the "negative" value for the color property
-
 it('renders correctly two buttons dark', () => {
   const tree = renderer
     .create(
-      <BannerLink
-        body="Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it"
-        ctaButtons={[
-          {
-            onClick: () => { },
-            text: 'LEGGI LE FAQ',
-          },
-          {
-            onClick: () => { },
-            text: 'LEGGI LE FAQ',
-          },
-        ]}
-        theme="dark"
-        title="Vuoi diventare un Partner tecnologico qualificato?"
-      />
+      <ThemeProvider theme={mainTheme}>
+        <BannerLink
+          body="Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it"
+          ctaButtons={[
+            {
+              onClick: () => {},
+              text: 'LEGGI LE FAQ',
+            },
+            {
+              onClick: () => {},
+              text: 'LEGGI LE FAQ',
+            },
+          ]}
+          theme="dark"
+          title="Vuoi diventare un Partner tecnologico qualificato?"
+        />
+      </ThemeProvider>
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
 
-
 it('renders correctly with icon and two buttons dark', () => {
   const tree = renderer
     .create(
-      <BannerLink
-        body="Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it"
-        ctaButtons={[
-          {
-            onClick: () => {},
-            text: 'LEGGI LE FAQ',
-          },
-          {
-            onClick: () => {},
-            text: 'LEGGI LE FAQ',
-          },
-        ]}
-        decoration={{
-          alt: 'Login',
-          src: 'static/media/login-white.9e86b706.svg',
-        }}
-        theme="dark"
-        title="Vuoi diventare un Partner tecnologico qualificato?"
-      />
+      <ThemeProvider theme={mainTheme}>
+        <BannerLink
+          body="Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it"
+          ctaButtons={[
+            {
+              onClick: () => {},
+              text: 'LEGGI LE FAQ',
+            },
+            {
+              onClick: () => {},
+              text: 'LEGGI LE FAQ',
+            },
+          ]}
+          decoration={{
+            alt: 'Login',
+            src: 'static/media/login-white.9e86b706.svg',
+          }}
+          theme="dark"
+          title="Vuoi diventare un Partner tecnologico qualificato?"
+        />
+      </ThemeProvider>
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
@@ -285,25 +293,27 @@ it('renders correctly with icon and two buttons dark', () => {
 it('renders correctly with body dark ', () => {
   const tree = renderer
     .create(
-      <BannerLink
-        body="Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it"
-        ctaButtons={[
-          {
-            onClick: () => {},
-            text: 'LEGGI LE FAQ',
-          },
-          {
-            onClick: () => {},
-            text: 'LEGGI LE FAQ',
-          },
-        ]}
-        decoration={{
-          alt: 'Login',
-          src: 'static/media/login-white.9e86b706.svg',
-        }}
-        theme="dark"
-        title="Vuoi diventare un Partner tecnologico qualificato?"
-      />
+      <ThemeProvider theme={mainTheme}>
+        <BannerLink
+          body="Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it"
+          ctaButtons={[
+            {
+              onClick: () => {},
+              text: 'LEGGI LE FAQ',
+            },
+            {
+              onClick: () => {},
+              text: 'LEGGI LE FAQ',
+            },
+          ]}
+          decoration={{
+            alt: 'Login',
+            src: 'static/media/login-white.9e86b706.svg',
+          }}
+          theme="dark"
+          title="Vuoi diventare un Partner tecnologico qualificato?"
+        />
+      </ThemeProvider>
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
@@ -312,48 +322,49 @@ it('renders correctly with body dark ', () => {
 it('renders correctly with custom decorator dark', () => {
   const tree = renderer
     .create(
-      <BannerLink
-        body={
-          <p>
-            Leggi le domande frequenti sull’adesione a <b>pagoPA</b> da parte
-            degli Enti Creditori oppure scrivi a:{' '}
-            <a href="mailto:account@pagopa.it">account@pagopa.it</a>
-          </p>
-        }
-        ctaButtons={[
-          {
-            onClick: () => {},
-            text: 'LEGGI LE FAQ',
-          },
-          {
-            onClick: () => {},
-            text: 'LEGGI LE FAQ',
-          },
-        ]}
-        decoration={
-          <div
-            style={{
-              alignItems: 'center',
-              backgroundColor: 'white',
-              borderRadius: '50%',
-              display: 'flex',
-              fontSize: '32px',
-              height: '100px',
-              justifyContent: 'center',
-              width: '100px',
-            }}
-          >
-            PA
-          </div>
-        }
-        theme="dark"
-        title="Vuoi diventare un Partner tecnologico qualificato?"
-      />
+      <ThemeProvider theme={mainTheme}>
+        <BannerLink
+          body={
+            <p>
+              Leggi le domande frequenti sull’adesione a <b>pagoPA</b> da parte
+              degli Enti Creditori oppure scrivi a:{' '}
+              <a href="mailto:account@pagopa.it">account@pagopa.it</a>
+            </p>
+          }
+          ctaButtons={[
+            {
+              onClick: () => {},
+              text: 'LEGGI LE FAQ',
+            },
+            {
+              onClick: () => {},
+              text: 'LEGGI LE FAQ',
+            },
+          ]}
+          decoration={
+            <div
+              style={{
+                alignItems: 'center',
+                backgroundColor: 'white',
+                borderRadius: '50%',
+                display: 'flex',
+                fontSize: '32px',
+                height: '100px',
+                justifyContent: 'center',
+                width: '100px',
+              }}
+            >
+              PA
+            </div>
+          }
+          theme="dark"
+          title="Vuoi diventare un Partner tecnologico qualificato?"
+        />
+      </ThemeProvider>
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
-*/
 
 it('renders text correctly', async () => {
   const { getByText } = render(

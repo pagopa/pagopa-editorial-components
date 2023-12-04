@@ -251,6 +251,83 @@ exports[`renders correctly two buttons 1`] = `
 </section>
 `;
 
+exports[`renders correctly two buttons dark 1`] = `
+<section
+  className="MuiBox-root css-1ol26kw"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg css-9b4s5p-MuiContainer-root"
+  >
+    <div
+      className="MuiStack-root css-1ex9eoo-MuiStack-root"
+    >
+      <div
+        className="MuiStack-root css-54p0y9-MuiStack-root"
+      >
+        <h6
+          className="MuiTypography-root MuiTypography-h6 css-1h9i571-MuiTypography-root"
+        >
+          Vuoi diventare un Partner tecnologico qualificato?
+        </h6>
+        <p
+          className="MuiTypography-root MuiTypography-body2 css-1memb5p-MuiTypography-root"
+        >
+          Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it
+        </p>
+      </div>
+      <div
+        className="MuiStack-root css-v53bf6-MuiStack-root"
+      >
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedNegative MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedNegative MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-disableElevation css-1xuq3ib-MuiButtonBase-root-MuiButton-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          text="LEGGI LE FAQ"
+          type="button"
+        >
+          LEGGI LE FAQ
+        </button>
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedNegative MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedNegative MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-disableElevation css-xb7vlu-MuiButtonBase-root-MuiButton-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          text="LEGGI LE FAQ"
+          type="button"
+        >
+          LEGGI LE FAQ
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
 exports[`renders correctly with body  1`] = `
 <section
   className="MuiBox-root css-14prgyt"
@@ -331,6 +408,87 @@ exports[`renders correctly with body  1`] = `
           <span
             className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
           />
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly with body dark  1`] = `
+<section
+  className="MuiBox-root css-1ol26kw"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg css-9b4s5p-MuiContainer-root"
+  >
+    <div
+      className="MuiStack-root css-1ex9eoo-MuiStack-root"
+    >
+      <img
+        alt="Login"
+        src="static/media/login-white.9e86b706.svg"
+      />
+      <div
+        className="MuiStack-root css-54p0y9-MuiStack-root"
+      >
+        <h6
+          className="MuiTypography-root MuiTypography-h6 css-1h9i571-MuiTypography-root"
+        >
+          Vuoi diventare un Partner tecnologico qualificato?
+        </h6>
+        <p
+          className="MuiTypography-root MuiTypography-body2 css-1memb5p-MuiTypography-root"
+        >
+          Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it
+        </p>
+      </div>
+      <div
+        className="MuiStack-root css-v53bf6-MuiStack-root"
+      >
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedNegative MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedNegative MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-disableElevation css-1xuq3ib-MuiButtonBase-root-MuiButton-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          text="LEGGI LE FAQ"
+          type="button"
+        >
+          LEGGI LE FAQ
+        </button>
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedNegative MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedNegative MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-disableElevation css-xb7vlu-MuiButtonBase-root-MuiButton-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          text="LEGGI LE FAQ"
+          type="button"
+        >
+          LEGGI LE FAQ
         </button>
       </div>
     </div>
@@ -436,6 +594,117 @@ exports[`renders correctly with custom decorator 1`] = `
           type="button"
         >
           LEGGI LE FAQ
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly with custom decorator dark 1`] = `
+<section
+  className="MuiBox-root css-1ol26kw"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg css-9b4s5p-MuiContainer-root"
+  >
+    <div
+      className="MuiStack-root css-1ex9eoo-MuiStack-root"
+    >
+      <div
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "white",
+            "borderRadius": "50%",
+            "display": "flex",
+            "fontSize": "32px",
+            "height": "100px",
+            "justifyContent": "center",
+            "width": "100px",
+          }
+        }
+      >
+        PA
+      </div>
+      <div
+        className="MuiStack-root css-54p0y9-MuiStack-root"
+      >
+        <h6
+          className="MuiTypography-root MuiTypography-h6 css-1h9i571-MuiTypography-root"
+        >
+          Vuoi diventare un Partner tecnologico qualificato?
+        </h6>
+        <p
+          className="MuiTypography-root MuiTypography-body2 css-1memb5p-MuiTypography-root"
+        >
+          <p>
+            Leggi le domande frequenti sull’adesione a 
+            <b>
+              pagoPA
+            </b>
+             da parte degli Enti Creditori oppure scrivi a:
+             
+            <a
+              href="mailto:account@pagopa.it"
+            >
+              account@pagopa.it
+            </a>
+          </p>
+        </p>
+      </div>
+      <div
+        className="MuiStack-root css-v53bf6-MuiStack-root"
+      >
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedNegative MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedNegative MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-disableElevation css-1xuq3ib-MuiButtonBase-root-MuiButton-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          text="LEGGI LE FAQ"
+          type="button"
+        >
+          LEGGI LE FAQ
+          <span
+            className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedNegative MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedNegative MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-disableElevation css-xb7vlu-MuiButtonBase-root-MuiButton-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          text="LEGGI LE FAQ"
+          type="button"
+        >
+          LEGGI LE FAQ
+          <span
+            className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
         </button>
       </div>
     </div>
@@ -550,6 +819,93 @@ exports[`renders correctly with icon and two buttons 1`] = `
           type="button"
         >
           LEGGI LE FAQ
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly with icon and two buttons dark 1`] = `
+<section
+  className="MuiBox-root css-1ol26kw"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg css-9b4s5p-MuiContainer-root"
+  >
+    <div
+      className="MuiStack-root css-1ex9eoo-MuiStack-root"
+    >
+      <img
+        alt="Login"
+        src="static/media/login-white.9e86b706.svg"
+      />
+      <div
+        className="MuiStack-root css-54p0y9-MuiStack-root"
+      >
+        <h6
+          className="MuiTypography-root MuiTypography-h6 css-1h9i571-MuiTypography-root"
+        >
+          Vuoi diventare un Partner tecnologico qualificato?
+        </h6>
+        <p
+          className="MuiTypography-root MuiTypography-body2 css-1memb5p-MuiTypography-root"
+        >
+          Leggi le domande frequenti sull’adesione a pagoPA da parte degli Enti Creditori oppure scrivi a: account@pagopa.it
+        </p>
+      </div>
+      <div
+        className="MuiStack-root css-v53bf6-MuiStack-root"
+      >
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedNegative MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedNegative MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-disableElevation css-1xuq3ib-MuiButtonBase-root-MuiButton-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          text="LEGGI LE FAQ"
+          type="button"
+        >
+          LEGGI LE FAQ
+          <span
+            className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedNegative MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedNegative MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-disableElevation css-xb7vlu-MuiButtonBase-root-MuiButton-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          text="LEGGI LE FAQ"
+          type="button"
+        >
+          LEGGI LE FAQ
+          <span
+            className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
         </button>
       </div>
     </div>
