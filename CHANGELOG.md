@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [2.2.0](https://github.com/pagopa/pagopa-editorial-components/compare/v2.1.4...v2.2.0) (2024-02-12)
+
+
+### Features
+
+* a small change in the readme file ([4387d95](https://github.com/pagopa/pagopa-editorial-components/commit/4387d95c9d57d4406bdc835a82f147fcb94f1495))
+
 ## [2.1.4](https://github.com/pagopa/pagopa-editorial-components/compare/v2.1.3...v2.1.4) (2024-01-29)
 
 
