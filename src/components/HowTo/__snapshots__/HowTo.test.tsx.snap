@@ -1,0 +1,1045 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly bottom link dark 1`] = `
+<section
+  className="MuiBox-root css-b4v54s"
+>
+  <img
+    className="MuiBox-root css-nmz85s"
+    loading="lazy"
+    role="presentation"
+    src=""
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <h4
+          className="MuiTypography-root MuiTypography-h4 css-161pp7y-MuiTypography-root"
+        >
+          test
+        </h4>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      >
+        <div
+          className="MuiStack-root css-1c6hvfg-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-h6 css-b937i3-MuiTypography-root"
+              >
+                01
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-qlz4m-MuiTypography-root"
+              >
+                Sicuro
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-3rq6cm-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-h6 css-b937i3-MuiTypography-root"
+              >
+                02
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-qlz4m-MuiTypography-root"
+              >
+                Un risparmio di denaro per tutti: cittadini, imprese ed enti 
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-3rq6cm-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-h6 css-b937i3-MuiTypography-root"
+              >
+                03
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-qlz4m-MuiTypography-root"
+              >
+                I tempi di attesa tra l’invio e la ricezione delle notifiche spariscono
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-3rq6cm-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-h6 css-b937i3-MuiTypography-root"
+              >
+                04
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-qlz4m-MuiTypography-root"
+              >
+                La CO2 emessa per erogare il servizio diminuisce sensibilmente
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-3rq6cm-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+        </div>
+        <a
+          className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-b8ml2h-MuiTypography-root-MuiLink-root"
+          href="#"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          See more
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-36vvbd-MuiSvgIcon-root"
+            data-testid="ArrowForwardIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly bottom link light 1`] = `
+<section
+  className="MuiBox-root css-b4v54s"
+>
+  <img
+    className="MuiBox-root css-nmz85s"
+    loading="lazy"
+    role="presentation"
+    src=""
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <h4
+          className="MuiTypography-root MuiTypography-h4 css-1il65t9-MuiTypography-root"
+        >
+          test
+        </h4>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      >
+        <div
+          className="MuiStack-root css-1c6hvfg-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-h6 css-oblp1g-MuiTypography-root"
+              >
+                01
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-1xszx61-MuiTypography-root"
+              >
+                Sicuro
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-1yr8029-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-h6 css-oblp1g-MuiTypography-root"
+              >
+                02
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-1xszx61-MuiTypography-root"
+              >
+                Un risparmio di denaro per tutti: cittadini, imprese ed enti 
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-1yr8029-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-h6 css-oblp1g-MuiTypography-root"
+              >
+                03
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-1xszx61-MuiTypography-root"
+              >
+                I tempi di attesa tra l’invio e la ricezione delle notifiche spariscono
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-1yr8029-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-h6 css-oblp1g-MuiTypography-root"
+              >
+                04
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-1xszx61-MuiTypography-root"
+              >
+                La CO2 emessa per erogare il servizio diminuisce sensibilmente
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-1yr8029-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+        </div>
+        <a
+          className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-oz77qp-MuiTypography-root-MuiLink-root"
+          href="#"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          See more
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-36vvbd-MuiSvgIcon-root"
+            data-testid="ArrowForwardIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly no icons dark  1`] = `
+<section
+  className="MuiBox-root css-b4v54s"
+>
+  <img
+    className="MuiBox-root css-nmz85s"
+    loading="lazy"
+    role="presentation"
+    src=""
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <h4
+          className="MuiTypography-root MuiTypography-h4 css-161pp7y-MuiTypography-root"
+        >
+          test
+        </h4>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      >
+        <div
+          className="MuiStack-root css-1c6hvfg-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-h6 css-b937i3-MuiTypography-root"
+              >
+                01
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-qlz4m-MuiTypography-root"
+              >
+                Sicuro
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-3rq6cm-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-h6 css-b937i3-MuiTypography-root"
+              >
+                02
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-qlz4m-MuiTypography-root"
+              >
+                Un risparmio di denaro per tutti: cittadini, imprese ed enti 
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-3rq6cm-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-h6 css-b937i3-MuiTypography-root"
+              >
+                03
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-qlz4m-MuiTypography-root"
+              >
+                I tempi di attesa tra l’invio e la ricezione delle notifiche spariscono
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-3rq6cm-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-h6 css-b937i3-MuiTypography-root"
+              >
+                04
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-qlz4m-MuiTypography-root"
+              >
+                La CO2 emessa per erogare il servizio diminuisce sensibilmente
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-3rq6cm-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly no icons light  1`] = `
+<section
+  className="MuiBox-root css-b4v54s"
+>
+  <img
+    className="MuiBox-root css-nmz85s"
+    loading="lazy"
+    role="presentation"
+    src=""
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <h4
+          className="MuiTypography-root MuiTypography-h4 css-1il65t9-MuiTypography-root"
+        >
+          test
+        </h4>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      >
+        <div
+          className="MuiStack-root css-1c6hvfg-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-h6 css-oblp1g-MuiTypography-root"
+              >
+                01
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-1xszx61-MuiTypography-root"
+              >
+                Sicuro
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-1yr8029-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-h6 css-oblp1g-MuiTypography-root"
+              >
+                02
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-1xszx61-MuiTypography-root"
+              >
+                Un risparmio di denaro per tutti: cittadini, imprese ed enti 
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-1yr8029-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-h6 css-oblp1g-MuiTypography-root"
+              >
+                03
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-1xszx61-MuiTypography-root"
+              >
+                I tempi di attesa tra l’invio e la ricezione delle notifiche spariscono
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-1yr8029-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <p
+                className="MuiTypography-root MuiTypography-h6 css-oblp1g-MuiTypography-root"
+              >
+                04
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-1xszx61-MuiTypography-root"
+              >
+                La CO2 emessa per erogare il servizio diminuisce sensibilmente
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-1yr8029-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly with icon dark  1`] = `
+<section
+  className="MuiBox-root css-b4v54s"
+>
+  <img
+    className="MuiBox-root css-nmz85s"
+    loading="lazy"
+    role="presentation"
+    src=""
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <h4
+          className="MuiTypography-root MuiTypography-h4 css-161pp7y-MuiTypography-root"
+        >
+          title
+        </h4>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      >
+        <div
+          className="MuiStack-root css-1c6hvfg-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <div
+                className="MuiStack-root css-6s28hl-MuiStack-root"
+              >
+                <span
+                  className="MuiTypography-root MuiTypography-overline css-fbav7s-MuiTypography-root"
+                >
+                  01
+                </span>
+                <div
+                  className="MuiStack-root css-1leu26s-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="DownloadIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"
+                      />
+                    </svg>
+                  </p>
+                  <div
+                    className="MuiBox-root css-1fikuto"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      fill="none"
+                      height="24"
+                      viewBox="0 0 44 24"
+                      width="44"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clipRule="evenodd"
+                        d="m31.5429 1.04289c.3905-.39052 1.0237-.39052 1.4142 0l10.25 10.25001c.1953.1953.2929.4512.2929.7071s-.0976.5118-.2929.7071l-10.25 10.25c-.3905.3905-1.0237.3905-1.4142 0s-.3905-1.0237 0-1.4142l8.5429-8.5429h-38.5858c-.552284 0-1-.4477-1-1s.447716-1 1-1h38.5858l-8.5429-8.5429c-.3905-.39051-.3905-1.02369 0-1.41421z"
+                        fill="white"
+                        fillRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-qlz4m-MuiTypography-root"
+              >
+                Sicuro
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-3rq6cm-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <div
+                className="MuiStack-root css-6s28hl-MuiStack-root"
+              >
+                <span
+                  className="MuiTypography-root MuiTypography-overline css-fbav7s-MuiTypography-root"
+                >
+                  02
+                </span>
+                <div
+                  className="MuiStack-root css-1leu26s-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                  />
+                  <div
+                    className="MuiBox-root css-1fikuto"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      fill="none"
+                      height="24"
+                      viewBox="0 0 44 24"
+                      width="44"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clipRule="evenodd"
+                        d="m31.5429 1.04289c.3905-.39052 1.0237-.39052 1.4142 0l10.25 10.25001c.1953.1953.2929.4512.2929.7071s-.0976.5118-.2929.7071l-10.25 10.25c-.3905.3905-1.0237.3905-1.4142 0s-.3905-1.0237 0-1.4142l8.5429-8.5429h-38.5858c-.552284 0-1-.4477-1-1s.447716-1 1-1h38.5858l-8.5429-8.5429c-.3905-.39051-.3905-1.02369 0-1.41421z"
+                        fill="white"
+                        fillRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-qlz4m-MuiTypography-root"
+              >
+                Un risparmio di denaro per tutti: cittadini, imprese ed enti 
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-3rq6cm-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <div
+                className="MuiStack-root css-6s28hl-MuiStack-root"
+              >
+                <span
+                  className="MuiTypography-root MuiTypography-overline css-fbav7s-MuiTypography-root"
+                >
+                  03
+                </span>
+                <div
+                  className="MuiStack-root css-1leu26s-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                  />
+                  <div
+                    className="MuiBox-root css-1fikuto"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      fill="none"
+                      height="24"
+                      viewBox="0 0 44 24"
+                      width="44"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clipRule="evenodd"
+                        d="m31.5429 1.04289c.3905-.39052 1.0237-.39052 1.4142 0l10.25 10.25001c.1953.1953.2929.4512.2929.7071s-.0976.5118-.2929.7071l-10.25 10.25c-.3905.3905-1.0237.3905-1.4142 0s-.3905-1.0237 0-1.4142l8.5429-8.5429h-38.5858c-.552284 0-1-.4477-1-1s.447716-1 1-1h38.5858l-8.5429-8.5429c-.3905-.39051-.3905-1.02369 0-1.41421z"
+                        fill="white"
+                        fillRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-qlz4m-MuiTypography-root"
+              >
+                I tempi di attesa tra l’invio e la ricezione delle notifiche spariscono
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-3rq6cm-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <div
+                className="MuiStack-root css-6s28hl-MuiStack-root"
+              >
+                <span
+                  className="MuiTypography-root MuiTypography-overline css-fbav7s-MuiTypography-root"
+                >
+                  04
+                </span>
+                <div
+                  className="MuiStack-root css-1leu26s-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                  />
+                </div>
+              </div>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-qlz4m-MuiTypography-root"
+              >
+                La CO2 emessa per erogare il servizio diminuisce sensibilmente
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-3rq6cm-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly with icon light  1`] = `
+<section
+  className="MuiBox-root css-b4v54s"
+>
+  <img
+    className="MuiBox-root css-nmz85s"
+    loading="lazy"
+    role="presentation"
+    src=""
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <h4
+          className="MuiTypography-root MuiTypography-h4 css-1il65t9-MuiTypography-root"
+        >
+          title
+        </h4>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      >
+        <div
+          className="MuiStack-root css-1c6hvfg-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <div
+                className="MuiStack-root css-6s28hl-MuiStack-root"
+              >
+                <span
+                  className="MuiTypography-root MuiTypography-overline css-1173d1d-MuiTypography-root"
+                >
+                  01
+                </span>
+                <div
+                  className="MuiStack-root css-3y1137-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                  >
+                    <svg
+                      aria-hidden={true}
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="DownloadIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"
+                      />
+                    </svg>
+                  </p>
+                  <div
+                    className="MuiBox-root css-1fikuto"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      fill="none"
+                      height="24"
+                      viewBox="0 0 44 24"
+                      width="44"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clipRule="evenodd"
+                        d="m31.5429 1.04289c.3905-.39052 1.0237-.39052 1.4142 0l10.25 10.25001c.1953.1953.2929.4512.2929.7071s-.0976.5118-.2929.7071l-10.25 10.25c-.3905.3905-1.0237.3905-1.4142 0s-.3905-1.0237 0-1.4142l8.5429-8.5429h-38.5858c-.552284 0-1-.4477-1-1s.447716-1 1-1h38.5858l-8.5429-8.5429c-.3905-.39051-.3905-1.02369 0-1.41421z"
+                        fill="#0062c3"
+                        fillRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-1xszx61-MuiTypography-root"
+              >
+                Sicuro
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-1yr8029-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <div
+                className="MuiStack-root css-6s28hl-MuiStack-root"
+              >
+                <span
+                  className="MuiTypography-root MuiTypography-overline css-1173d1d-MuiTypography-root"
+                >
+                  02
+                </span>
+                <div
+                  className="MuiStack-root css-3y1137-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                  />
+                  <div
+                    className="MuiBox-root css-1fikuto"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      fill="none"
+                      height="24"
+                      viewBox="0 0 44 24"
+                      width="44"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clipRule="evenodd"
+                        d="m31.5429 1.04289c.3905-.39052 1.0237-.39052 1.4142 0l10.25 10.25001c.1953.1953.2929.4512.2929.7071s-.0976.5118-.2929.7071l-10.25 10.25c-.3905.3905-1.0237.3905-1.4142 0s-.3905-1.0237 0-1.4142l8.5429-8.5429h-38.5858c-.552284 0-1-.4477-1-1s.447716-1 1-1h38.5858l-8.5429-8.5429c-.3905-.39051-.3905-1.02369 0-1.41421z"
+                        fill="#0062c3"
+                        fillRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-1xszx61-MuiTypography-root"
+              >
+                Un risparmio di denaro per tutti: cittadini, imprese ed enti 
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-1yr8029-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <div
+                className="MuiStack-root css-6s28hl-MuiStack-root"
+              >
+                <span
+                  className="MuiTypography-root MuiTypography-overline css-1173d1d-MuiTypography-root"
+                >
+                  03
+                </span>
+                <div
+                  className="MuiStack-root css-3y1137-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                  />
+                  <div
+                    className="MuiBox-root css-1fikuto"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      fill="none"
+                      height="24"
+                      viewBox="0 0 44 24"
+                      width="44"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clipRule="evenodd"
+                        d="m31.5429 1.04289c.3905-.39052 1.0237-.39052 1.4142 0l10.25 10.25001c.1953.1953.2929.4512.2929.7071s-.0976.5118-.2929.7071l-10.25 10.25c-.3905.3905-1.0237.3905-1.4142 0s-.3905-1.0237 0-1.4142l8.5429-8.5429h-38.5858c-.552284 0-1-.4477-1-1s.447716-1 1-1h38.5858l-8.5429-8.5429c-.3905-.39051-.3905-1.02369 0-1.41421z"
+                        fill="#0062c3"
+                        fillRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-1xszx61-MuiTypography-root"
+              >
+                I tempi di attesa tra l’invio e la ricezione delle notifiche spariscono
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-1yr8029-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+          <div
+            className="MuiBox-root css-17nv2qh"
+          >
+            <article
+              className="MuiStack-root css-1okj3ks-MuiStack-root"
+            >
+              <div
+                className="MuiStack-root css-6s28hl-MuiStack-root"
+              >
+                <span
+                  className="MuiTypography-root MuiTypography-overline css-1173d1d-MuiTypography-root"
+                >
+                  04
+                </span>
+                <div
+                  className="MuiStack-root css-3y1137-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                  />
+                </div>
+              </div>
+              <p
+                className="MuiTypography-root MuiTypography-h5 css-1xszx61-MuiTypography-root"
+              >
+                La CO2 emessa per erogare il servizio diminuisce sensibilmente
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 css-1yr8029-MuiTypography-root"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ullamco laboris nisi ut aliquid ex ea commodi consequat. 
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;

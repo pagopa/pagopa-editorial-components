@@ -1,0 +1,1537 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly big background dark  1`] = `
+<section
+  className="MuiBox-root css-1c1kjjx"
+>
+  <div
+    className="MuiBox-root css-eumzae"
+    role="presentation"
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-6 css-11wanic-MuiGrid-root"
+      >
+        <section
+          className="MuiStack-root css-ut7tjz-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-j2k5a9"
+          >
+            <h1
+              className="MuiTypography-root MuiTypography-h1 css-13fjcou-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur
+            </h1>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-4peds9-MuiTypography-root"
+            >
+              Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div
+            className="MuiStack-root css-xds9r3-MuiStack-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Scopri di più"
+              type="button"
+            >
+              Scopri di più
+            </button>
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Accedi"
+              type="button"
+            >
+              Accedi
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly big background light  1`] = `
+<section
+  className="MuiBox-root css-1c1kjjx"
+>
+  <div
+    className="MuiBox-root css-cjzfui"
+    role="presentation"
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-6 css-11wanic-MuiGrid-root"
+      >
+        <section
+          className="MuiStack-root css-ut7tjz-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-j2k5a9"
+          >
+            <h1
+              className="MuiTypography-root MuiTypography-h1 css-74t8ju-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur
+            </h1>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-1gqyz35-MuiTypography-root"
+            >
+              Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div
+            className="MuiStack-root css-xds9r3-MuiStack-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Scopri di più"
+              type="button"
+            >
+              Scopri di più
+            </button>
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Accedi"
+              type="button"
+            >
+              Accedi
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly big bg element   1`] = `
+<section
+  className="MuiBox-root css-1c1kjjx"
+>
+  <div
+    style={
+      {
+        "backgroundImage": "url(static/media/hero-solid-light.e572933e.jpg)",
+        "backgroundPosition": "center",
+        "backgroundSize": "cover",
+        "height": "100%",
+        "left": 0,
+        "objectFit": "cover",
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+        "zIndex": -1,
+      }
+    }
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-6 css-11wanic-MuiGrid-root"
+      >
+        <section
+          className="MuiStack-root css-ut7tjz-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-j2k5a9"
+          >
+            <h1
+              className="MuiTypography-root MuiTypography-h1 css-74t8ju-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur
+            </h1>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-1gqyz35-MuiTypography-root"
+            >
+              Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div
+            className="MuiStack-root css-xds9r3-MuiStack-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Scopri di più"
+              type="button"
+            >
+              Scopri di più
+              <span
+                className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Accedi"
+              type="button"
+            >
+              Accedi
+              <span
+                className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly big bg element  dark 1`] = `
+<section
+  className="MuiBox-root css-1c1kjjx"
+>
+  <div
+    style={
+      {
+        "backgroundImage": "url(static/media/hero-solid-light.e572933e.jpg)",
+        "backgroundPosition": "center",
+        "backgroundSize": "cover",
+        "height": "100%",
+        "left": 0,
+        "objectFit": "cover",
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+        "zIndex": -1,
+      }
+    }
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-6 css-11wanic-MuiGrid-root"
+      >
+        <section
+          className="MuiStack-root css-ut7tjz-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-j2k5a9"
+          >
+            <h1
+              className="MuiTypography-root MuiTypography-h1 css-13fjcou-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur
+            </h1>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-4peds9-MuiTypography-root"
+            >
+              Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div
+            className="MuiStack-root css-xds9r3-MuiStack-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Scopri di più"
+              type="button"
+            >
+              Scopri di più
+              <span
+                className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Accedi"
+              type="button"
+            >
+              Accedi
+              <span
+                className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly big bg text left   1`] = `
+<section
+  className="MuiBox-root css-1c1kjjx"
+>
+  <div
+    className="MuiBox-root css-1pbwaud"
+    role="presentation"
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row-reverse css-14wtmij-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-6 css-11wanic-MuiGrid-root"
+      >
+        <section
+          className="MuiStack-root css-ut7tjz-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-j2k5a9"
+          >
+            <h1
+              className="MuiTypography-root MuiTypography-h1 css-74t8ju-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur
+            </h1>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-1gqyz35-MuiTypography-root"
+            >
+              Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div
+            className="MuiStack-root css-xds9r3-MuiStack-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Scopri di più"
+              type="button"
+            >
+              Scopri di più
+              <span
+                className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Accedi"
+              type="button"
+            >
+              Accedi
+              <span
+                className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly big bg text left  dark 1`] = `
+<section
+  className="MuiBox-root css-1c1kjjx"
+>
+  <div
+    className="MuiBox-root css-2vnt5l"
+    role="presentation"
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row-reverse css-14wtmij-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-6 css-11wanic-MuiGrid-root"
+      >
+        <section
+          className="MuiStack-root css-ut7tjz-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-j2k5a9"
+          >
+            <h1
+              className="MuiTypography-root MuiTypography-h1 css-13fjcou-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur
+            </h1>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-4peds9-MuiTypography-root"
+            >
+              Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div
+            className="MuiStack-root css-xds9r3-MuiStack-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Scopri di più"
+              type="button"
+            >
+              Scopri di più
+              <span
+                className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Accedi"
+              type="button"
+            >
+              Accedi
+              <span
+                className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly html body  1`] = `
+<section
+  className="MuiBox-root css-1c1kjjx"
+>
+  <div
+    className="MuiBox-root css-cjzfui"
+    role="presentation"
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-6 css-11wanic-MuiGrid-root"
+      >
+        <section
+          className="MuiStack-root css-ut7tjz-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-j2k5a9"
+          >
+            <h1
+              className="MuiTypography-root MuiTypography-h1 css-74t8ju-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur
+            </h1>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+            >
+              Quis aute iure reprehenderit in 
+              <b>
+                voluptate
+              </b>
+               velit esse cillum dolore eu fugiat nulla pariatur. 
+              <b>
+                Excepteur
+              </b>
+               sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div
+            className="MuiStack-root css-xds9r3-MuiStack-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Scopri di più"
+              type="button"
+            >
+              Scopri di più
+              <span
+                className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Accedi"
+              type="button"
+            >
+              Accedi
+              <span
+                className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly html body dark  1`] = `
+<section
+  className="MuiBox-root css-1c1kjjx"
+>
+  <div
+    className="MuiBox-root css-eumzae"
+    role="presentation"
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-6 css-11wanic-MuiGrid-root"
+      >
+        <section
+          className="MuiStack-root css-ut7tjz-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-j2k5a9"
+          >
+            <h1
+              className="MuiTypography-root MuiTypography-h1 css-13fjcou-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur
+            </h1>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+            >
+              Quis aute iure reprehenderit in 
+              <b>
+                voluptate
+              </b>
+               velit esse cillum dolore eu fugiat nulla pariatur. 
+              <b>
+                Excepteur
+              </b>
+               sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div
+            className="MuiStack-root css-xds9r3-MuiStack-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Scopri di più"
+              type="button"
+            >
+              Scopri di più
+              <span
+                className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Accedi"
+              type="button"
+            >
+              Accedi
+              <span
+                className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly small bg text left   1`] = `
+<section
+  className="MuiBox-root css-1c1kjjx"
+>
+  <div
+    className="MuiBox-root css-1pbwaud"
+    role="presentation"
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row-reverse css-14wtmij-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-6 css-xfxsfv-MuiGrid-root"
+      >
+        <section
+          className="MuiStack-root css-ut7tjz-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-j2k5a9"
+          >
+            <h1
+              className="MuiTypography-root MuiTypography-h1 css-74t8ju-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur
+            </h1>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-1gqyz35-MuiTypography-root"
+            >
+              Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div
+            className="MuiStack-root css-xds9r3-MuiStack-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Scopri di più"
+              type="button"
+            >
+              Scopri di più
+            </button>
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Accedi"
+              type="button"
+            >
+              Accedi
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly small bg text left dark  1`] = `
+<section
+  className="MuiBox-root css-1c1kjjx"
+>
+  <div
+    className="MuiBox-root css-2vnt5l"
+    role="presentation"
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row-reverse css-14wtmij-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-6 css-xfxsfv-MuiGrid-root"
+      >
+        <section
+          className="MuiStack-root css-ut7tjz-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-j2k5a9"
+          >
+            <h1
+              className="MuiTypography-root MuiTypography-h1 css-13fjcou-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur
+            </h1>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-4peds9-MuiTypography-root"
+            >
+              Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div
+            className="MuiStack-root css-xds9r3-MuiStack-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Scopri di più"
+              type="button"
+            >
+              Scopri di più
+            </button>
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Accedi"
+              type="button"
+            >
+              Accedi
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly small image   1`] = `
+<section
+  className="MuiBox-root css-1q667r0"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-6 css-xfxsfv-MuiGrid-root"
+      >
+        <section
+          className="MuiStack-root css-ut7tjz-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-j2k5a9"
+          >
+            <h1
+              className="MuiTypography-root MuiTypography-h1 css-74t8ju-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur
+            </h1>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-1gqyz35-MuiTypography-root"
+            >
+              Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div
+            className="MuiStack-root css-xds9r3-MuiStack-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Scopri di più"
+              type="button"
+            >
+              Scopri di più
+              <span
+                className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Accedi"
+              type="button"
+            >
+              Accedi
+              <span
+                className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </section>
+      </div>
+      <figure
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-6 css-1n2xkv1-MuiGrid-root"
+      >
+        <img
+          alt=""
+          src="static/media/hero_image.afd0102b.png"
+          style={
+            {
+              "height": "100%",
+              "maxHeight": "480px",
+              "objectFit": "contain",
+              "objectPosition": "center",
+              "userSelect": "none",
+              "width": "100%",
+            }
+          }
+        />
+      </figure>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly small image dark  1`] = `
+<section
+  className="MuiBox-root css-1rcu9g9"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-6 css-xfxsfv-MuiGrid-root"
+      >
+        <section
+          className="MuiStack-root css-ut7tjz-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-j2k5a9"
+          >
+            <h1
+              className="MuiTypography-root MuiTypography-h1 css-13fjcou-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur
+            </h1>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-4peds9-MuiTypography-root"
+            >
+              Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div
+            className="MuiStack-root css-xds9r3-MuiStack-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Scopri di più"
+              type="button"
+            >
+              Scopri di più
+              <span
+                className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Accedi"
+              type="button"
+            >
+              Accedi
+              <span
+                className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </section>
+      </div>
+      <figure
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-6 css-1n2xkv1-MuiGrid-root"
+      >
+        <img
+          alt=""
+          src="static/media/hero_image.afd0102b.png"
+          style={
+            {
+              "height": "100%",
+              "maxHeight": "480px",
+              "objectFit": "contain",
+              "objectPosition": "center",
+              "userSelect": "none",
+              "width": "100%",
+            }
+          }
+        />
+      </figure>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly small with bg  1`] = `
+<section
+  className="MuiBox-root css-1c1kjjx"
+>
+  <div
+    className="MuiBox-root css-cjzfui"
+    role="presentation"
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-6 css-xfxsfv-MuiGrid-root"
+      >
+        <section
+          className="MuiStack-root css-ut7tjz-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-j2k5a9"
+          >
+            <h1
+              className="MuiTypography-root MuiTypography-h1 css-74t8ju-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur
+            </h1>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-1gqyz35-MuiTypography-root"
+            >
+              Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div
+            className="MuiStack-root css-xds9r3-MuiStack-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Scopri di più"
+              type="button"
+            >
+              Scopri di più
+            </button>
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Accedi"
+              type="button"
+            >
+              Accedi
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly small with bg dark  1`] = `
+<section
+  className="MuiBox-root css-1c1kjjx"
+>
+  <div
+    className="MuiBox-root css-eumzae"
+    role="presentation"
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-6 css-xfxsfv-MuiGrid-root"
+      >
+        <section
+          className="MuiStack-root css-ut7tjz-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-j2k5a9"
+          >
+            <h1
+              className="MuiTypography-root MuiTypography-h1 css-13fjcou-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur
+            </h1>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-4peds9-MuiTypography-root"
+            >
+              Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div
+            className="MuiStack-root css-xds9r3-MuiStack-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Scopri di più"
+              type="button"
+            >
+              Scopri di più
+            </button>
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Accedi"
+              type="button"
+            >
+              Accedi
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly solid   1`] = `
+<section
+  className="MuiBox-root css-1c1kjjx"
+>
+  <div
+    className="MuiBox-root css-bifx5r"
+    role="presentation"
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-6 css-xfxsfv-MuiGrid-root"
+      >
+        <section
+          className="MuiStack-root css-ut7tjz-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-j2k5a9"
+          >
+            <h1
+              className="MuiTypography-root MuiTypography-h1 css-74t8ju-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur
+            </h1>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-1gqyz35-MuiTypography-root"
+            >
+              Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div
+            className="MuiStack-root css-xds9r3-MuiStack-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Scopri di più"
+              type="button"
+            >
+              Scopri di più
+            </button>
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Accedi"
+              type="button"
+            >
+              Accedi
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly solid dark  1`] = `
+<section
+  className="MuiBox-root css-1c1kjjx"
+>
+  <div
+    className="MuiBox-root css-bifx5r"
+    role="presentation"
+  />
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-6 css-xfxsfv-MuiGrid-root"
+      >
+        <section
+          className="MuiStack-root css-ut7tjz-MuiStack-root"
+        >
+          <div
+            className="MuiBox-root css-j2k5a9"
+          >
+            <h1
+              className="MuiTypography-root MuiTypography-h1 css-74t8ju-MuiTypography-root"
+            >
+              dark ipsum dolor sit amet, consectetur
+            </h1>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-1gqyz35-MuiTypography-root"
+            >
+              Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div
+            className="MuiStack-root css-xds9r3-MuiStack-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Scopri di più"
+              type="button"
+            >
+              Scopri di più
+            </button>
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Accedi"
+              type="button"
+            >
+              Accedi
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+`;

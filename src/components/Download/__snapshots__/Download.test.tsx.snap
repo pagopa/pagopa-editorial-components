@@ -1,0 +1,567 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with dark buttons 1`] = `
+<section
+  className="MuiBox-root css-sbcfij"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1vpwcmr-MuiGrid-root"
+    >
+      <h2
+        className="MuiTypography-root MuiTypography-h2 css-ul9fol-MuiTypography-root"
+      >
+        Download Area Lorem Ipsum
+      </h2>
+      <p
+        className="MuiTypography-root MuiTypography-body1 css-1blmszh-MuiTypography-root"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+      </p>
+      <hr
+        className="MuiDivider-root MuiDivider-fullWidth css-110flik-MuiDivider-root"
+      />
+      <div
+        className="MuiStack-root css-1a69w1n-MuiStack-root"
+      >
+        <a
+          className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedNegative MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedNegative MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-disableElevation css-12m3dxp-MuiButtonBase-root-MuiButton-root"
+          download="sample_1.pdf"
+          href="static/media/sample.ac0398d4.pdf"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          <span
+            className="MuiButton-startIcon MuiButton-iconSizeMedium css-gcc2o7-MuiButton-startIcon"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1jxdcj3-MuiSvgIcon-root"
+              data-testid="DownloadIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"
+              />
+            </svg>
+          </span>
+          Download 1 Lorem Ipsum
+        </a>
+        <a
+          className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedNegative MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedNegative MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-disableElevation css-12m3dxp-MuiButtonBase-root-MuiButton-root"
+          download="sample_2.pdf"
+          href="static/media/sample.ac0398d4.pdf"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          <span
+            className="MuiButton-startIcon MuiButton-iconSizeMedium css-gcc2o7-MuiButton-startIcon"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1jxdcj3-MuiSvgIcon-root"
+              data-testid="DownloadIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"
+              />
+            </svg>
+          </span>
+          Download 2 Lorem Ipsum
+        </a>
+        <a
+          className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedNegative MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedNegative MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-disableElevation css-12m3dxp-MuiButtonBase-root-MuiButton-root"
+          download="sample_3.pdf"
+          href="static/media/sample.ac0398d4.pdf"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          <span
+            className="MuiButton-startIcon MuiButton-iconSizeMedium css-gcc2o7-MuiButton-startIcon"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1jxdcj3-MuiSvgIcon-root"
+              data-testid="DownloadIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"
+              />
+            </svg>
+          </span>
+          Download 3 Lorem Ipsum
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly with dark links 1`] = `
+<section
+  className="MuiBox-root css-sbcfij"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1vpwcmr-MuiGrid-root"
+    >
+      <h2
+        className="MuiTypography-root MuiTypography-h2 css-ul9fol-MuiTypography-root"
+      >
+        Download Area Lorem Ipsum
+      </h2>
+      <p
+        className="MuiTypography-root MuiTypography-body1 css-1blmszh-MuiTypography-root"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+      </p>
+      <hr
+        className="MuiDivider-root MuiDivider-fullWidth css-110flik-MuiDivider-root"
+      />
+      <div
+        className="MuiStack-root css-1a69w1n-MuiStack-root"
+      >
+        <a
+          className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textNegative MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textNegative MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-disableElevation css-5c4dz3-MuiButtonBase-root-MuiButton-root"
+          download="sample_1.pdf"
+          href="static/media/sample.ac0398d4.pdf"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          <span
+            className="MuiButton-startIcon MuiButton-iconSizeMedium css-gcc2o7-MuiButton-startIcon"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1jxdcj3-MuiSvgIcon-root"
+              data-testid="DownloadIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"
+              />
+            </svg>
+          </span>
+          Download 1 Lorem Ipsum
+          <span
+            className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </a>
+        <a
+          className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textNegative MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textNegative MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-disableElevation css-5c4dz3-MuiButtonBase-root-MuiButton-root"
+          download="sample_2.pdf"
+          href="static/media/sample.ac0398d4.pdf"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          <span
+            className="MuiButton-startIcon MuiButton-iconSizeMedium css-gcc2o7-MuiButton-startIcon"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1jxdcj3-MuiSvgIcon-root"
+              data-testid="DownloadIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"
+              />
+            </svg>
+          </span>
+          Download 2 Lorem Ipsum
+          <span
+            className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </a>
+        <a
+          className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textNegative MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textNegative MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-disableElevation css-5c4dz3-MuiButtonBase-root-MuiButton-root"
+          download=""
+          href="static/media/sample.ac0398d4.pdf"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          <span
+            className="MuiButton-startIcon MuiButton-iconSizeMedium css-gcc2o7-MuiButton-startIcon"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1jxdcj3-MuiSvgIcon-root"
+              data-testid="DownloadIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"
+              />
+            </svg>
+          </span>
+          Download 3 Lorem Ipsum
+          <span
+            className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly with light buttons 1`] = `
+<section
+  className="MuiBox-root css-a3n8s1"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1vpwcmr-MuiGrid-root"
+    >
+      <h2
+        className="MuiTypography-root MuiTypography-h2 css-1hdauvf-MuiTypography-root"
+      >
+        Download Area Lorem Ipsum
+      </h2>
+      <p
+        className="MuiTypography-root MuiTypography-body1 css-1ow4zxr-MuiTypography-root"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+      </p>
+      <hr
+        className="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+      />
+      <div
+        className="MuiStack-root css-1a69w1n-MuiStack-root"
+      >
+        <a
+          className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-gbk5jz-MuiButtonBase-root-MuiButton-root"
+          download="sample_1.pdf"
+          href="static/media/sample.ac0398d4.pdf"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          <span
+            className="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="DownloadIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"
+              />
+            </svg>
+          </span>
+          Download 1 Lorem Ipsum
+        </a>
+        <a
+          className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-gbk5jz-MuiButtonBase-root-MuiButton-root"
+          download="sample_2.pdf"
+          href="static/media/sample.ac0398d4.pdf"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          <span
+            className="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="DownloadIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"
+              />
+            </svg>
+          </span>
+          Download 2 Lorem Ipsum
+        </a>
+        <a
+          className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-gbk5jz-MuiButtonBase-root-MuiButton-root"
+          download="sample_3.pdf"
+          href="static/media/sample.ac0398d4.pdf"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          <span
+            className="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="DownloadIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"
+              />
+            </svg>
+          </span>
+          Download 3 Lorem Ipsum
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly with light links 1`] = `
+<section
+  className="MuiBox-root css-a3n8s1"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1vpwcmr-MuiGrid-root"
+    >
+      <h2
+        className="MuiTypography-root MuiTypography-h2 css-1hdauvf-MuiTypography-root"
+      >
+        Download Area Lorem Ipsum
+      </h2>
+      <p
+        className="MuiTypography-root MuiTypography-body1 css-1ow4zxr-MuiTypography-root"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+      </p>
+      <hr
+        className="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+      />
+      <div
+        className="MuiStack-root css-1a69w1n-MuiStack-root"
+      >
+        <a
+          className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-zj1dvw-MuiButtonBase-root-MuiButton-root"
+          download="sample_1.pdf"
+          href="static/media/sample.ac0398d4.pdf"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          <span
+            className="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="DownloadIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"
+              />
+            </svg>
+          </span>
+          Download 1 Lorem Ipsum
+          <span
+            className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </a>
+        <a
+          className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-zj1dvw-MuiButtonBase-root-MuiButton-root"
+          download="sample_2.pdf"
+          href="static/media/sample.ac0398d4.pdf"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          <span
+            className="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="DownloadIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"
+              />
+            </svg>
+          </span>
+          Download 2 Lorem Ipsum
+          <span
+            className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </a>
+        <a
+          className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-zj1dvw-MuiButtonBase-root-MuiButton-root"
+          download=""
+          href="static/media/sample.ac0398d4.pdf"
+          onBlur={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          <span
+            className="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="DownloadIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"
+              />
+            </svg>
+          </span>
+          Download 3 Lorem Ipsum
+          <span
+            className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+`;

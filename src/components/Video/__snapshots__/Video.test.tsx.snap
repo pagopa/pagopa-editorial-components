@@ -1,0 +1,216 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly error dark  1`] = `
+<section
+  className="MuiBox-root css-17cshki"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-spacing-md-16 css-g3cke0-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1idn90j-MuiGrid-root"
+      >
+        <video
+          controls={true}
+          controlsList="nodownload"
+          loop={false}
+          muted={true}
+          onContextMenu={[Function]}
+          playsInline={true}
+          style={
+            {
+              "aspectRatio": 1.777,
+              "borderRadius": "25px",
+              "overflow": "hidden",
+              "width": "100%",
+            }
+          }
+        >
+          <source
+            onError={[Function]}
+            type="video/mp4"
+          />
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly full dark  1`] = `
+<section
+  className="MuiBox-root css-17cshki"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-spacing-md-16 css-g3cke0-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1idn90j-MuiGrid-root"
+      >
+        <video
+          controls={true}
+          controlsList="nodownload"
+          loop={true}
+          muted={true}
+          onContextMenu={[Function]}
+          playsInline={true}
+          style={
+            {
+              "aspectRatio": 1.777,
+              "borderRadius": "25px",
+              "overflow": "hidden",
+              "width": "100%",
+            }
+          }
+        >
+          <source
+            onError={[Function]}
+            src="https://assets.mixkit.co/videos/preview/mixkit-person-typing-on-a-computer-in-detail-4907-large.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly reverse dark  1`] = `
+<section
+  className="MuiBox-root css-17cshki"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-spacing-md-16 MuiGrid-direction-xs-row-reverse css-1eju3oe-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1fyyp8j-MuiGrid-root"
+      >
+        <video
+          controls={true}
+          controlsList="nodownload"
+          loop={false}
+          muted={true}
+          onContextMenu={[Function]}
+          playsInline={true}
+          style={
+            {
+              "aspectRatio": 1.777,
+              "borderRadius": "25px",
+              "overflow": "hidden",
+              "width": "100%",
+            }
+          }
+        >
+          <source
+            onError={[Function]}
+            src="https://assets.mixkit.co/videos/preview/mixkit-person-typing-on-a-computer-in-detail-4907-large.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-1k7sk4d-MuiGrid-root"
+      >
+        <h5
+          className="MuiTypography-root MuiTypography-h5 css-13kf1b5-MuiTypography-root"
+        >
+          Nam eget dui. Etiam rhoncus Maecenas tempus
+        </h5>
+        <p
+          className="MuiTypography-root MuiTypography-body1 MuiTypography-paragraph css-1rctpy4-MuiTypography-root"
+        >
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+        </p>
+        <div
+          className="MuiStack-root css-1d9cypr-MuiStack-root"
+        >
+          <button
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways MuiLink-button css-1d8rg46-MuiTypography-root-MuiLink-root"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+          >
+            Guarda il video
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly standard dark 1`] = `
+<section
+  className="MuiBox-root css-17cshki"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-spacing-md-16 css-g3cke0-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1fyyp8j-MuiGrid-root"
+      >
+        <video
+          controls={true}
+          controlsList="nodownload"
+          loop={false}
+          muted={true}
+          onContextMenu={[Function]}
+          playsInline={true}
+          style={
+            {
+              "aspectRatio": 1.777,
+              "borderRadius": "25px",
+              "overflow": "hidden",
+              "width": "100%",
+            }
+          }
+        >
+          <source
+            onError={[Function]}
+            src="https://assets.mixkit.co/videos/preview/mixkit-person-typing-on-a-computer-in-detail-4907-large.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-1k7sk4d-MuiGrid-root"
+      >
+        <h5
+          className="MuiTypography-root MuiTypography-h5 css-13kf1b5-MuiTypography-root"
+        >
+          Nam eget dui. Etiam rhoncus Maecenas tempus
+        </h5>
+        <p
+          className="MuiTypography-root MuiTypography-body1 MuiTypography-paragraph css-1rctpy4-MuiTypography-root"
+        >
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+        </p>
+        <div
+          className="MuiStack-root css-1d9cypr-MuiStack-root"
+        >
+          <button
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways MuiLink-button css-1d8rg46-MuiTypography-root-MuiLink-root"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+          >
+            Guarda il video
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;

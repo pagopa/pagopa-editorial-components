@@ -1,0 +1,1255 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly  custom color background light 1`] = `
+<section
+  className="MuiBox-root css-19cy29y"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <h4
+          className="MuiTypography-root MuiTypography-h4 css-1euinpk-MuiTypography-root"
+        >
+          Lorem Ipsum
+        </h4>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item css-1fq9p4v-MuiGrid-root"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-6 MuiGrid-spacing-md-4 css-1oleqop-MuiGrid-root"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-ot7hnh-MuiGrid-root"
+          >
+            <article
+              className="MuiStack-root css-vo9s4c-MuiStack-root"
+            >
+              <div
+                className="MuiBox-root css-1mlnbak"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AccountBoxIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                    />
+                  </svg>
+                </p>
+              </div>
+              <div
+                className="MuiStack-root css-1b8dyf0-MuiStack-root"
+              >
+                <h6
+                  className="MuiTypography-root MuiTypography-h6 css-ibgdc6-MuiTypography-root"
+                >
+                  Sicuro
+                </h6>
+                <div
+                  className="MuiStack-root css-j86037-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body2 css-1ws0pil-MuiTypography-root"
+                  >
+                    I tuoi dati e le informazioni contenute negli atti sono al sicuro
+                  </p>
+                  <div
+                    className="MuiStack-root css-s6n19h-MuiStack-root"
+                  >
+                    <a
+                      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1ns14qe-MuiTypography-root-MuiLink-root"
+                      href="#"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                    >
+                      Scopri di più
+                    </a>
+                    <svg
+                      aria-hidden={true}
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="ArrowForwardIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-ot7hnh-MuiGrid-root"
+          >
+            <article
+              className="MuiStack-root css-vo9s4c-MuiStack-root"
+            >
+              <div
+                className="MuiBox-root css-1mlnbak"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AccountBoxIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                    />
+                  </svg>
+                </p>
+              </div>
+              <div
+                className="MuiStack-root css-1b8dyf0-MuiStack-root"
+              >
+                <h6
+                  className="MuiTypography-root MuiTypography-h6 css-ibgdc6-MuiTypography-root"
+                >
+                  Conveniente
+                </h6>
+                <div
+                  className="MuiStack-root css-j86037-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body2 css-1ws0pil-MuiTypography-root"
+                  >
+                    Un risparmio di denaro per tutti: cittadini imprese ed enti
+                  </p>
+                  <div
+                    className="MuiStack-root css-s6n19h-MuiStack-root"
+                  >
+                    <a
+                      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1ns14qe-MuiTypography-root-MuiLink-root"
+                      href="#"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                    >
+                      Scopri di più
+                    </a>
+                    <svg
+                      aria-hidden={true}
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="ArrowForwardIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-ot7hnh-MuiGrid-root"
+          >
+            <article
+              className="MuiStack-root css-vo9s4c-MuiStack-root"
+            >
+              <div
+                className="MuiBox-root css-1mlnbak"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AccountBoxIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                    />
+                  </svg>
+                </p>
+              </div>
+              <div
+                className="MuiStack-root css-1b8dyf0-MuiStack-root"
+              >
+                <h6
+                  className="MuiTypography-root MuiTypography-h6 css-ibgdc6-MuiTypography-root"
+                >
+                  Immediato
+                </h6>
+                <div
+                  className="MuiStack-root css-j86037-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body2 css-1ws0pil-MuiTypography-root"
+                  >
+                    I tempi di attesa tra l'invio e la ricezione delle notifiche spariscono
+                  </p>
+                  <div
+                    className="MuiStack-root css-s6n19h-MuiStack-root"
+                  >
+                    <a
+                      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1ns14qe-MuiTypography-root-MuiLink-root"
+                      href="#"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                    >
+                      Scopri di più
+                    </a>
+                    <svg
+                      aria-hidden={true}
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="ArrowForwardIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly  custom color background light 2`] = `
+<section
+  className="MuiBox-root css-19cy29y"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <h4
+          className="MuiTypography-root MuiTypography-h4 css-g1cmk3-MuiTypography-root"
+        >
+          Lorem Ipsum
+        </h4>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item css-1fq9p4v-MuiGrid-root"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-6 MuiGrid-spacing-md-4 css-1oleqop-MuiGrid-root"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-ot7hnh-MuiGrid-root"
+          >
+            <article
+              className="MuiStack-root css-vo9s4c-MuiStack-root"
+            >
+              <div
+                className="MuiBox-root css-128hjsz"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AccountBoxIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                    />
+                  </svg>
+                </p>
+              </div>
+              <div
+                className="MuiStack-root css-1b8dyf0-MuiStack-root"
+              >
+                <h6
+                  className="MuiTypography-root MuiTypography-h6 css-1uaewpj-MuiTypography-root"
+                >
+                  Sicuro
+                </h6>
+                <div
+                  className="MuiStack-root css-j86037-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body2 css-km3i4y-MuiTypography-root"
+                  >
+                    I tuoi dati e le informazioni contenute negli atti sono al sicuro
+                  </p>
+                  <div
+                    className="MuiStack-root css-1gxr7w1-MuiStack-root"
+                  >
+                    <a
+                      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1ns14qe-MuiTypography-root-MuiLink-root"
+                      href="#"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                    >
+                      Scopri di più
+                    </a>
+                    <svg
+                      aria-hidden={true}
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="ArrowForwardIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-ot7hnh-MuiGrid-root"
+          >
+            <article
+              className="MuiStack-root css-vo9s4c-MuiStack-root"
+            >
+              <div
+                className="MuiBox-root css-128hjsz"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AccountBoxIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                    />
+                  </svg>
+                </p>
+              </div>
+              <div
+                className="MuiStack-root css-1b8dyf0-MuiStack-root"
+              >
+                <h6
+                  className="MuiTypography-root MuiTypography-h6 css-1uaewpj-MuiTypography-root"
+                >
+                  Conveniente
+                </h6>
+                <div
+                  className="MuiStack-root css-j86037-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body2 css-km3i4y-MuiTypography-root"
+                  >
+                    Un risparmio di denaro per tutti: cittadini imprese ed enti
+                  </p>
+                  <div
+                    className="MuiStack-root css-1gxr7w1-MuiStack-root"
+                  >
+                    <a
+                      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1ns14qe-MuiTypography-root-MuiLink-root"
+                      href="#"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                    >
+                      Scopri di più
+                    </a>
+                    <svg
+                      aria-hidden={true}
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="ArrowForwardIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-ot7hnh-MuiGrid-root"
+          >
+            <article
+              className="MuiStack-root css-vo9s4c-MuiStack-root"
+            >
+              <div
+                className="MuiBox-root css-128hjsz"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AccountBoxIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                    />
+                  </svg>
+                </p>
+              </div>
+              <div
+                className="MuiStack-root css-1b8dyf0-MuiStack-root"
+              >
+                <h6
+                  className="MuiTypography-root MuiTypography-h6 css-1uaewpj-MuiTypography-root"
+                >
+                  Immediato
+                </h6>
+                <div
+                  className="MuiStack-root css-j86037-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body2 css-km3i4y-MuiTypography-root"
+                  >
+                    I tempi di attesa tra l'invio e la ricezione delle notifiche spariscono
+                  </p>
+                  <div
+                    className="MuiStack-root css-1gxr7w1-MuiStack-root"
+                  >
+                    <a
+                      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1ns14qe-MuiTypography-root-MuiLink-root"
+                      href="#"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                    >
+                      Scopri di più
+                    </a>
+                    <svg
+                      aria-hidden={true}
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="ArrowForwardIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly no link dark 1`] = `
+<section
+  className="MuiBox-root css-fk7gdb"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <h4
+          className="MuiTypography-root MuiTypography-h4 css-1euinpk-MuiTypography-root"
+        >
+          Lorem Ipsum
+        </h4>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item css-1fq9p4v-MuiGrid-root"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-6 MuiGrid-spacing-md-4 css-1oleqop-MuiGrid-root"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-ot7hnh-MuiGrid-root"
+          >
+            <article
+              className="MuiStack-root css-vo9s4c-MuiStack-root"
+            >
+              <div
+                className="MuiBox-root css-1mlnbak"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AccountBoxIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                    />
+                  </svg>
+                </p>
+              </div>
+              <div
+                className="MuiStack-root css-1b8dyf0-MuiStack-root"
+              >
+                <h6
+                  className="MuiTypography-root MuiTypography-h6 css-ibgdc6-MuiTypography-root"
+                >
+                  Sicuro
+                </h6>
+                <p
+                  className="MuiTypography-root MuiTypography-body2 css-1cl5n3e-MuiTypography-root"
+                >
+                  I tuoi dati e le informazioni contenute negli atti sono al sicuro
+                </p>
+              </div>
+            </article>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-ot7hnh-MuiGrid-root"
+          >
+            <article
+              className="MuiStack-root css-vo9s4c-MuiStack-root"
+            >
+              <div
+                className="MuiBox-root css-1mlnbak"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AccountBoxIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                    />
+                  </svg>
+                </p>
+              </div>
+              <div
+                className="MuiStack-root css-1b8dyf0-MuiStack-root"
+              >
+                <h6
+                  className="MuiTypography-root MuiTypography-h6 css-ibgdc6-MuiTypography-root"
+                >
+                  Conveniente
+                </h6>
+                <p
+                  className="MuiTypography-root MuiTypography-body2 css-1cl5n3e-MuiTypography-root"
+                >
+                  Un risparmio di denaro per tutti: cittadini imprese ed enti
+                </p>
+              </div>
+            </article>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-ot7hnh-MuiGrid-root"
+          >
+            <article
+              className="MuiStack-root css-vo9s4c-MuiStack-root"
+            >
+              <div
+                className="MuiBox-root css-1mlnbak"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AccountBoxIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                    />
+                  </svg>
+                </p>
+              </div>
+              <div
+                className="MuiStack-root css-1b8dyf0-MuiStack-root"
+              >
+                <h6
+                  className="MuiTypography-root MuiTypography-h6 css-ibgdc6-MuiTypography-root"
+                >
+                  Immediato
+                </h6>
+                <p
+                  className="MuiTypography-root MuiTypography-body2 css-1cl5n3e-MuiTypography-root"
+                >
+                  I tempi di attesa tra l'invio e la ricezione delle notifiche spariscono
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly no link light 1`] = `
+<section
+  className="MuiBox-root css-1e2sjzf"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <h4
+          className="MuiTypography-root MuiTypography-h4 css-g1cmk3-MuiTypography-root"
+        >
+          Lorem Ipsum
+        </h4>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item css-1fq9p4v-MuiGrid-root"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-6 MuiGrid-spacing-md-4 css-1oleqop-MuiGrid-root"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-ot7hnh-MuiGrid-root"
+          >
+            <article
+              className="MuiStack-root css-vo9s4c-MuiStack-root"
+            >
+              <div
+                className="MuiBox-root css-128hjsz"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AccountBoxIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                    />
+                  </svg>
+                </p>
+              </div>
+              <div
+                className="MuiStack-root css-1b8dyf0-MuiStack-root"
+              >
+                <h6
+                  className="MuiTypography-root MuiTypography-h6 css-1uaewpj-MuiTypography-root"
+                >
+                  Sicuro
+                </h6>
+                <p
+                  className="MuiTypography-root MuiTypography-body2 css-1yr8029-MuiTypography-root"
+                >
+                  I tuoi dati e le informazioni contenute negli atti sono al sicuro
+                </p>
+              </div>
+            </article>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-ot7hnh-MuiGrid-root"
+          >
+            <article
+              className="MuiStack-root css-vo9s4c-MuiStack-root"
+            >
+              <div
+                className="MuiBox-root css-128hjsz"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AccountBoxIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                    />
+                  </svg>
+                </p>
+              </div>
+              <div
+                className="MuiStack-root css-1b8dyf0-MuiStack-root"
+              >
+                <h6
+                  className="MuiTypography-root MuiTypography-h6 css-1uaewpj-MuiTypography-root"
+                >
+                  Conveniente
+                </h6>
+                <p
+                  className="MuiTypography-root MuiTypography-body2 css-1yr8029-MuiTypography-root"
+                >
+                  Un risparmio di denaro per tutti: cittadini imprese ed enti
+                </p>
+              </div>
+            </article>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-ot7hnh-MuiGrid-root"
+          >
+            <article
+              className="MuiStack-root css-vo9s4c-MuiStack-root"
+            >
+              <div
+                className="MuiBox-root css-128hjsz"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AccountBoxIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                    />
+                  </svg>
+                </p>
+              </div>
+              <div
+                className="MuiStack-root css-1b8dyf0-MuiStack-root"
+              >
+                <h6
+                  className="MuiTypography-root MuiTypography-h6 css-1uaewpj-MuiTypography-root"
+                >
+                  Immediato
+                </h6>
+                <p
+                  className="MuiTypography-root MuiTypography-body2 css-1yr8029-MuiTypography-root"
+                >
+                  I tempi di attesa tra l'invio e la ricezione delle notifiche spariscono
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly standard dark 1`] = `
+<section
+  className="MuiBox-root css-fk7gdb"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <h4
+          className="MuiTypography-root MuiTypography-h4 css-1euinpk-MuiTypography-root"
+        >
+          Lorem Ipsum
+        </h4>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item css-1fq9p4v-MuiGrid-root"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-6 MuiGrid-spacing-md-4 css-1oleqop-MuiGrid-root"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-ot7hnh-MuiGrid-root"
+          >
+            <article
+              className="MuiStack-root css-vo9s4c-MuiStack-root"
+            >
+              <div
+                className="MuiBox-root css-1mlnbak"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AccountBoxIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                    />
+                  </svg>
+                </p>
+              </div>
+              <div
+                className="MuiStack-root css-1b8dyf0-MuiStack-root"
+              >
+                <h6
+                  className="MuiTypography-root MuiTypography-h6 css-ibgdc6-MuiTypography-root"
+                >
+                  Sicuro
+                </h6>
+                <div
+                  className="MuiStack-root css-j86037-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body2 css-1ws0pil-MuiTypography-root"
+                  >
+                    I tuoi dati e le informazioni contenute negli atti sono al sicuro
+                  </p>
+                  <div
+                    className="MuiStack-root css-s6n19h-MuiStack-root"
+                  >
+                    <a
+                      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1ns14qe-MuiTypography-root-MuiLink-root"
+                      href="#"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                    >
+                      Scopri di più
+                    </a>
+                    <svg
+                      aria-hidden={true}
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="ArrowForwardIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-ot7hnh-MuiGrid-root"
+          >
+            <article
+              className="MuiStack-root css-vo9s4c-MuiStack-root"
+            >
+              <div
+                className="MuiBox-root css-1mlnbak"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AccountBoxIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                    />
+                  </svg>
+                </p>
+              </div>
+              <div
+                className="MuiStack-root css-1b8dyf0-MuiStack-root"
+              >
+                <h6
+                  className="MuiTypography-root MuiTypography-h6 css-ibgdc6-MuiTypography-root"
+                >
+                  Conveniente
+                </h6>
+                <div
+                  className="MuiStack-root css-j86037-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body2 css-1ws0pil-MuiTypography-root"
+                  >
+                    Un risparmio di denaro per tutti: cittadini imprese ed enti
+                  </p>
+                  <div
+                    className="MuiStack-root css-s6n19h-MuiStack-root"
+                  >
+                    <a
+                      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1ns14qe-MuiTypography-root-MuiLink-root"
+                      href="#"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                    >
+                      Scopri di più
+                    </a>
+                    <svg
+                      aria-hidden={true}
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="ArrowForwardIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-ot7hnh-MuiGrid-root"
+          >
+            <article
+              className="MuiStack-root css-vo9s4c-MuiStack-root"
+            >
+              <div
+                className="MuiBox-root css-1mlnbak"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AccountBoxIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                    />
+                  </svg>
+                </p>
+              </div>
+              <div
+                className="MuiStack-root css-1b8dyf0-MuiStack-root"
+              >
+                <h6
+                  className="MuiTypography-root MuiTypography-h6 css-ibgdc6-MuiTypography-root"
+                >
+                  Immediato
+                </h6>
+                <div
+                  className="MuiStack-root css-j86037-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body2 css-1ws0pil-MuiTypography-root"
+                  >
+                    I tempi di attesa tra l'invio e la ricezione delle notifiche spariscono
+                  </p>
+                  <div
+                    className="MuiStack-root css-s6n19h-MuiStack-root"
+                  >
+                    <a
+                      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1ns14qe-MuiTypography-root-MuiLink-root"
+                      href="#"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                    >
+                      Scopri di più
+                    </a>
+                    <svg
+                      aria-hidden={true}
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="ArrowForwardIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly standard light 1`] = `
+<section
+  className="MuiBox-root css-1e2sjzf"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <h4
+          className="MuiTypography-root MuiTypography-h4 css-g1cmk3-MuiTypography-root"
+        >
+          Lorem Ipsum
+        </h4>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item css-1fq9p4v-MuiGrid-root"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-6 MuiGrid-spacing-md-4 css-1oleqop-MuiGrid-root"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-ot7hnh-MuiGrid-root"
+          >
+            <article
+              className="MuiStack-root css-vo9s4c-MuiStack-root"
+            >
+              <div
+                className="MuiBox-root css-128hjsz"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AccountBoxIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                    />
+                  </svg>
+                </p>
+              </div>
+              <div
+                className="MuiStack-root css-1b8dyf0-MuiStack-root"
+              >
+                <h6
+                  className="MuiTypography-root MuiTypography-h6 css-1uaewpj-MuiTypography-root"
+                >
+                  Sicuro
+                </h6>
+                <div
+                  className="MuiStack-root css-j86037-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body2 css-km3i4y-MuiTypography-root"
+                  >
+                    I tuoi dati e le informazioni contenute negli atti sono al sicuro
+                  </p>
+                  <div
+                    className="MuiStack-root css-1gxr7w1-MuiStack-root"
+                  >
+                    <a
+                      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1ns14qe-MuiTypography-root-MuiLink-root"
+                      href="#"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                    >
+                      Scopri di più
+                    </a>
+                    <svg
+                      aria-hidden={true}
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="ArrowForwardIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-ot7hnh-MuiGrid-root"
+          >
+            <article
+              className="MuiStack-root css-vo9s4c-MuiStack-root"
+            >
+              <div
+                className="MuiBox-root css-128hjsz"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AccountBoxIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                    />
+                  </svg>
+                </p>
+              </div>
+              <div
+                className="MuiStack-root css-1b8dyf0-MuiStack-root"
+              >
+                <h6
+                  className="MuiTypography-root MuiTypography-h6 css-1uaewpj-MuiTypography-root"
+                >
+                  Conveniente
+                </h6>
+                <div
+                  className="MuiStack-root css-j86037-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body2 css-km3i4y-MuiTypography-root"
+                  >
+                    Un risparmio di denaro per tutti: cittadini imprese ed enti
+                  </p>
+                  <div
+                    className="MuiStack-root css-1gxr7w1-MuiStack-root"
+                  >
+                    <a
+                      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1ns14qe-MuiTypography-root-MuiLink-root"
+                      href="#"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                    >
+                      Scopri di più
+                    </a>
+                    <svg
+                      aria-hidden={true}
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="ArrowForwardIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-ot7hnh-MuiGrid-root"
+          >
+            <article
+              className="MuiStack-root css-vo9s4c-MuiStack-root"
+            >
+              <div
+                className="MuiBox-root css-128hjsz"
+              >
+                <p
+                  className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AccountBoxIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                    />
+                  </svg>
+                </p>
+              </div>
+              <div
+                className="MuiStack-root css-1b8dyf0-MuiStack-root"
+              >
+                <h6
+                  className="MuiTypography-root MuiTypography-h6 css-1uaewpj-MuiTypography-root"
+                >
+                  Immediato
+                </h6>
+                <div
+                  className="MuiStack-root css-j86037-MuiStack-root"
+                >
+                  <p
+                    className="MuiTypography-root MuiTypography-body2 css-km3i4y-MuiTypography-root"
+                  >
+                    I tempi di attesa tra l'invio e la ricezione delle notifiche spariscono
+                  </p>
+                  <div
+                    className="MuiStack-root css-1gxr7w1-MuiStack-root"
+                  >
+                    <a
+                      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1ns14qe-MuiTypography-root-MuiLink-root"
+                      href="#"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                    >
+                      Scopri di più
+                    </a>
+                    <svg
+                      aria-hidden={true}
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="ArrowForwardIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;

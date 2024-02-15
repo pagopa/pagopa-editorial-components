@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly standard  1`] = `
+<section
+  className="MuiBox-root css-1epl6ta"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-3 css-ot7hnh-MuiGrid-root"
+      />
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-9 css-neb4x5-MuiGrid-root"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-4 css-1reclri-MuiGrid-root"
+          >
+            <div
+              className="MuiBox-root css-5a0uun"
+            >
+              <img
+                alt="A picture showing some books"
+                src="static/media/newsroom-cover.59549252.png"
+                width="100%"
+              />
+            </div>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-ct4b4t-MuiTypography-root"
+            >
+              23 novembre 2023
+            </p>
+            <h6
+              className="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
+            </h6>
+            <div
+              className="MuiStack-root css-uqhr1i-MuiStack-root"
+            >
+              <a
+                className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1z0f9jx-MuiTypography-root-MuiLink-root"
+                href="https://google.it"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                title="vai al sito"
+              >
+                leggi
+              </a>
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-bnbs7j-MuiSvgIcon-root"
+                data-testid="ArrowRightAltIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-4 css-1reclri-MuiGrid-root"
+          >
+            <div
+              className="MuiBox-root css-5a0uun"
+            >
+              <img
+                alt="A picture showing some books"
+                src="static/media/newsroom-cover.59549252.png"
+                width="100%"
+              />
+            </div>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-ct4b4t-MuiTypography-root"
+            >
+              23 novembre 2023
+            </p>
+            <h6
+              className="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
+            </h6>
+            <div
+              className="MuiStack-root css-uqhr1i-MuiStack-root"
+            >
+              <a
+                className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1z0f9jx-MuiTypography-root-MuiLink-root"
+                href="https://google.it"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                title="vai al sito"
+              >
+                leggi
+              </a>
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-bnbs7j-MuiSvgIcon-root"
+                data-testid="ArrowRightAltIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-4 css-1reclri-MuiGrid-root"
+          >
+            <div
+              className="MuiBox-root css-5a0uun"
+            >
+              <img
+                alt="A picture showing some books"
+                src="static/media/newsroom-cover.59549252.png"
+                width="100%"
+              />
+            </div>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-ct4b4t-MuiTypography-root"
+            >
+              23 novembre 2023
+            </p>
+            <h6
+              className="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
+            </h6>
+            <div
+              className="MuiStack-root css-uqhr1i-MuiStack-root"
+            >
+              <a
+                className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1z0f9jx-MuiTypography-root-MuiLink-root"
+                href="https://google.it"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                title="vai al sito"
+              >
+                leggi
+              </a>
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-bnbs7j-MuiSvgIcon-root"
+                data-testid="ArrowRightAltIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-4 css-1reclri-MuiGrid-root"
+          >
+            <div
+              className="MuiBox-root css-5a0uun"
+            >
+              <img
+                alt="A picture showing some books"
+                src="static/media/newsroom-cover.59549252.png"
+                width="100%"
+              />
+            </div>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-ct4b4t-MuiTypography-root"
+            >
+              23 novembre 2023
+            </p>
+            <h6
+              className="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
+            </h6>
+            <div
+              className="MuiStack-root css-uqhr1i-MuiStack-root"
+            >
+              <a
+                className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1z0f9jx-MuiTypography-root-MuiLink-root"
+                href="https://google.it"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                title="vai al sito"
+              >
+                leggi
+              </a>
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-bnbs7j-MuiSvgIcon-root"
+                data-testid="ArrowRightAltIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-4 css-1reclri-MuiGrid-root"
+          >
+            <div
+              className="MuiBox-root css-5a0uun"
+            >
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              </div>
+            </div>
+            <p
+              className="MuiTypography-root MuiTypography-body1 css-ct4b4t-MuiTypography-root"
+            >
+              23 novembre 2023
+            </p>
+            <h6
+              className="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
+            </h6>
+            <div
+              className="MuiStack-root css-uqhr1i-MuiStack-root"
+            >
+              <a
+                className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1z0f9jx-MuiTypography-root-MuiLink-root"
+                href="https://google.it"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                title="vai al sito"
+              >
+                leggi
+              </a>
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-bnbs7j-MuiSvgIcon-root"
+                data-testid="ArrowRightAltIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;

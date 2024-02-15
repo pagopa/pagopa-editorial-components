@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly standard  1`] = `
+<section
+  className="MuiBox-root css-1epl6ta"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <h3
+        className="MuiTypography-root MuiTypography-h3 css-1cd8ovr-MuiTypography-root"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </h3>
+      <h6
+        className="MuiTypography-root MuiTypography-h6 css-u053ky-MuiTypography-root"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </h6>
+      <p
+        className="MuiTypography-root MuiTypography-body2 css-vwq3qa-MuiTypography-root"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`renders correctly text align center  1`] = `
+<section
+  className="MuiBox-root css-1epl6ta"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <h3
+        className="MuiTypography-root MuiTypography-h3 css-vunvij-MuiTypography-root"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </h3>
+      <h6
+        className="MuiTypography-root MuiTypography-h6 css-a2anxz-MuiTypography-root"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </h6>
+      <p
+        className="MuiTypography-root MuiTypography-body2 css-z1n48v-MuiTypography-root"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+  </div>
+</section>
+`;

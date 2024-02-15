@@ -1,0 +1,937 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly avatar  1`] = `
+<header
+  className="MuiBox-root css-1oc1oax"
+  role="banner"
+>
+  <div
+    className="MuiStack-root css-1wzkz0j-MuiStack-root"
+  >
+    <div
+      className="MuiStack-root css-128a29l-MuiStack-root"
+    >
+      <div
+        className="MuiStack-root css-1qxw92a-MuiStack-root"
+      >
+        <div
+          className="MuiAvatar-root MuiAvatar-circular css-1wlk0hk-MuiAvatar-root"
+        >
+          <img
+            alt="product avatar"
+            className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+            src="static/media/LAVORA-CON-NOI.5dfb4511.png"
+          />
+        </div>
+        <h5
+          className="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-51dafg-MuiTypography-root"
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-ufvcva-MuiTypography-root-MuiLink-root"
+            href="/"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <b>
+              Nome del prodotto
+            </b>
+          </a>
+        </h5>
+      </div>
+      <div
+        className="MuiStack-root css-wewrg4-MuiStack-root"
+      >
+        <div
+          className="MuiBox-root css-n55px8"
+        />
+        <svg
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-hidden={true}
+          aria-label="apri"
+          className="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-ci5apu-MuiSvgIcon-root"
+          cursor="pointer"
+          data-testid="MenuIcon"
+          focusable="false"
+          onClick={[Function]}
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="MuiStack-root css-1m9uxiu-MuiStack-root"
+    >
+      <nav
+        aria-label="main"
+        className="MuiStack-root css-1rp1xzi-MuiStack-root"
+      >
+        <div
+          className="MuiStack-root css-167zj2n-MuiStack-root"
+          onClick={[Function]}
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-9bsid3-MuiTypography-root-MuiLink-root"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <span
+              className="MuiTypography-root MuiTypography-sidenav css-eeo237-MuiTypography-root"
+            >
+              Voce Menu 1
+            </span>
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="m7 10 5 5 5-5z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="MuiStack-root css-qhe8tz-MuiStack-root"
+          onClick={[Function]}
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-9bsid3-MuiTypography-root-MuiLink-root"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <span
+              className="MuiTypography-root MuiTypography-sidenav css-eeo237-MuiTypography-root"
+            >
+              Voce Menu 2
+            </span>
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="m7 10 5 5 5-5z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="MuiStack-root css-167zj2n-MuiStack-root"
+          onClick={[Function]}
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1k8p891-MuiTypography-root-MuiLink-root"
+            href="/#"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <span
+              className="MuiTypography-root MuiTypography-sidenav css-eeo237-MuiTypography-root"
+            >
+              Voce Menu 3
+            </span>
+          </a>
+        </div>
+      </nav>
+      <div
+        className="MuiBox-root css-1b5a289"
+      />
+    </div>
+  </div>
+</header>
+`;
+
+exports[`renders correctly beta  1`] = `
+<header
+  className="MuiBox-root css-1oc1oax"
+  role="banner"
+>
+  <div
+    className="MuiStack-root css-1wzkz0j-MuiStack-root"
+  >
+    <div
+      className="MuiStack-root css-128a29l-MuiStack-root"
+    >
+      <div
+        className="MuiStack-root css-1qxw92a-MuiStack-root"
+      >
+        <h5
+          className="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-51dafg-MuiTypography-root"
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-ufvcva-MuiTypography-root-MuiLink-root"
+            href="/"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <b>
+              Nome del prodotto
+            </b>
+          </a>
+        </h5>
+        <div
+          className="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-filledPrimary css-1tx4bwj-MuiChip-root"
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+        >
+          <span
+            className="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+          >
+            beta
+          </span>
+        </div>
+      </div>
+      <div
+        className="MuiStack-root css-wewrg4-MuiStack-root"
+      >
+        <div
+          className="MuiBox-root css-n55px8"
+        />
+        <svg
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-hidden={true}
+          aria-label="apri"
+          className="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-ci5apu-MuiSvgIcon-root"
+          cursor="pointer"
+          data-testid="MenuIcon"
+          focusable="false"
+          onClick={[Function]}
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="MuiStack-root css-1m9uxiu-MuiStack-root"
+    >
+      <nav
+        aria-label="main"
+        className="MuiStack-root css-1rp1xzi-MuiStack-root"
+      >
+        <div
+          className="MuiStack-root css-167zj2n-MuiStack-root"
+          onClick={[Function]}
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-9bsid3-MuiTypography-root-MuiLink-root"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <span
+              className="MuiTypography-root MuiTypography-sidenav css-eeo237-MuiTypography-root"
+            >
+              Voce Menu 1
+            </span>
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="m7 10 5 5 5-5z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="MuiStack-root css-qhe8tz-MuiStack-root"
+          onClick={[Function]}
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-9bsid3-MuiTypography-root-MuiLink-root"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <span
+              className="MuiTypography-root MuiTypography-sidenav css-eeo237-MuiTypography-root"
+            >
+              Voce Menu 2
+            </span>
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="m7 10 5 5 5-5z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="MuiStack-root css-167zj2n-MuiStack-root"
+          onClick={[Function]}
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1k8p891-MuiTypography-root-MuiLink-root"
+            href="/#"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <span
+              className="MuiTypography-root MuiTypography-sidenav css-eeo237-MuiTypography-root"
+            >
+              Voce Menu 3
+            </span>
+          </a>
+        </div>
+      </nav>
+      <div
+        className="MuiBox-root css-1b5a289"
+      />
+    </div>
+  </div>
+</header>
+`;
+
+exports[`renders correctly buttons  1`] = `
+<header
+  className="MuiBox-root css-1oc1oax"
+  role="banner"
+>
+  <div
+    className="MuiStack-root css-1wzkz0j-MuiStack-root"
+  >
+    <div
+      className="MuiStack-root css-128a29l-MuiStack-root"
+    >
+      <div
+        className="MuiStack-root css-1qxw92a-MuiStack-root"
+      >
+        <h5
+          className="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-51dafg-MuiTypography-root"
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-ufvcva-MuiTypography-root-MuiLink-root"
+            href="/"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <b>
+              Nome del prodotto
+            </b>
+          </a>
+        </h5>
+      </div>
+      <div
+        className="MuiStack-root css-wewrg4-MuiStack-root"
+      >
+        <div
+          className="MuiBox-root css-n55px8"
+        >
+          <div
+            className="MuiStack-root css-v53bf6-MuiStack-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall css-1rdpach-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Primary"
+              type="button"
+            >
+              Primary
+            </button>
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall css-7fsnd4-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Secondary"
+              type="button"
+            >
+              Secondary
+            </button>
+          </div>
+        </div>
+        <svg
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-hidden={true}
+          aria-label="apri"
+          className="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-ci5apu-MuiSvgIcon-root"
+          cursor="pointer"
+          data-testid="MenuIcon"
+          focusable="false"
+          onClick={[Function]}
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="MuiStack-root css-1m9uxiu-MuiStack-root"
+    >
+      <nav
+        aria-label="main"
+        className="MuiStack-root css-1rp1xzi-MuiStack-root"
+      >
+        <div
+          className="MuiStack-root css-167zj2n-MuiStack-root"
+          onClick={[Function]}
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-9bsid3-MuiTypography-root-MuiLink-root"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <span
+              className="MuiTypography-root MuiTypography-sidenav css-eeo237-MuiTypography-root"
+            >
+              Voce Menu 1
+            </span>
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="m7 10 5 5 5-5z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="MuiStack-root css-qhe8tz-MuiStack-root"
+          onClick={[Function]}
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-9bsid3-MuiTypography-root-MuiLink-root"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <span
+              className="MuiTypography-root MuiTypography-sidenav css-eeo237-MuiTypography-root"
+            >
+              Voce Menu 2
+            </span>
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="m7 10 5 5 5-5z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="MuiStack-root css-167zj2n-MuiStack-root"
+          onClick={[Function]}
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1k8p891-MuiTypography-root-MuiLink-root"
+            href="/#"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <span
+              className="MuiTypography-root MuiTypography-sidenav css-eeo237-MuiTypography-root"
+            >
+              Voce Menu 3
+            </span>
+          </a>
+        </div>
+      </nav>
+      <div
+        className="MuiBox-root css-1b5a289"
+      >
+        <div
+          className="MuiStack-root css-v53bf6-MuiStack-root"
+        >
+          <button
+            className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall css-1rdpach-MuiButtonBase-root-MuiButton-root"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            text="Primary"
+            type="button"
+          >
+            Primary
+          </button>
+          <button
+            className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall css-7fsnd4-MuiButtonBase-root-MuiButton-root"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            text="Secondary"
+            type="button"
+          >
+            Secondary
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`renders correctly full  1`] = `
+<header
+  className="MuiBox-root css-1oc1oax"
+  role="banner"
+>
+  <div
+    className="MuiStack-root css-1wzkz0j-MuiStack-root"
+  >
+    <div
+      className="MuiStack-root css-128a29l-MuiStack-root"
+    >
+      <div
+        className="MuiStack-root css-1qxw92a-MuiStack-root"
+      >
+        <div
+          className="MuiAvatar-root MuiAvatar-circular css-1wlk0hk-MuiAvatar-root"
+        >
+          <img
+            alt="product avatar"
+            className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+            src="static/media/LAVORA-CON-NOI.5dfb4511.png"
+          />
+        </div>
+        <h5
+          className="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-51dafg-MuiTypography-root"
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-ufvcva-MuiTypography-root-MuiLink-root"
+            href="/"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <b>
+              Nome del prodotto
+            </b>
+          </a>
+        </h5>
+        <div
+          className="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-filledPrimary css-1tx4bwj-MuiChip-root"
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+        >
+          <span
+            className="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+          >
+            beta
+          </span>
+        </div>
+      </div>
+      <div
+        className="MuiStack-root css-wewrg4-MuiStack-root"
+      >
+        <div
+          className="MuiBox-root css-n55px8"
+        >
+          <div
+            className="MuiStack-root css-v53bf6-MuiStack-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall css-1rdpach-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Primary"
+              type="button"
+            >
+              Primary
+            </button>
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall css-7fsnd4-MuiButtonBase-root-MuiButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              text="Secondary"
+              type="button"
+            >
+              Secondary
+            </button>
+          </div>
+        </div>
+        <svg
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-hidden={true}
+          aria-label="apri"
+          className="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-ci5apu-MuiSvgIcon-root"
+          cursor="pointer"
+          data-testid="MenuIcon"
+          focusable="false"
+          onClick={[Function]}
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="MuiStack-root css-1m9uxiu-MuiStack-root"
+    >
+      <nav
+        aria-label="main"
+        className="MuiStack-root css-1rp1xzi-MuiStack-root"
+      >
+        <div
+          className="MuiStack-root css-167zj2n-MuiStack-root"
+          onClick={[Function]}
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-9bsid3-MuiTypography-root-MuiLink-root"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <span
+              className="MuiTypography-root MuiTypography-sidenav css-eeo237-MuiTypography-root"
+            >
+              Voce Menu 1
+            </span>
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="m7 10 5 5 5-5z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="MuiStack-root css-qhe8tz-MuiStack-root"
+          onClick={[Function]}
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-9bsid3-MuiTypography-root-MuiLink-root"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <span
+              className="MuiTypography-root MuiTypography-sidenav css-eeo237-MuiTypography-root"
+            >
+              Voce Menu 2
+            </span>
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="m7 10 5 5 5-5z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="MuiStack-root css-167zj2n-MuiStack-root"
+          onClick={[Function]}
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1k8p891-MuiTypography-root-MuiLink-root"
+            href="/#"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <span
+              className="MuiTypography-root MuiTypography-sidenav css-eeo237-MuiTypography-root"
+            >
+              Voce Menu 3
+            </span>
+          </a>
+        </div>
+      </nav>
+      <div
+        className="MuiBox-root css-1b5a289"
+      >
+        <div
+          className="MuiStack-root css-v53bf6-MuiStack-root"
+        >
+          <button
+            className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall css-1rdpach-MuiButtonBase-root-MuiButton-root"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            text="Primary"
+            type="button"
+          >
+            Primary
+          </button>
+          <button
+            className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall css-7fsnd4-MuiButtonBase-root-MuiButton-root"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            text="Secondary"
+            type="button"
+          >
+            Secondary
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`renders correctly standard  1`] = `
+<header
+  className="MuiBox-root css-1oc1oax"
+  role="banner"
+>
+  <div
+    className="MuiStack-root css-1wzkz0j-MuiStack-root"
+  >
+    <div
+      className="MuiStack-root css-128a29l-MuiStack-root"
+    >
+      <div
+        className="MuiStack-root css-1qxw92a-MuiStack-root"
+      >
+        <h5
+          className="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-51dafg-MuiTypography-root"
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-ufvcva-MuiTypography-root-MuiLink-root"
+            href="/"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <b>
+              Nome del prodotto
+            </b>
+          </a>
+        </h5>
+      </div>
+      <div
+        className="MuiStack-root css-wewrg4-MuiStack-root"
+      >
+        <div
+          className="MuiBox-root css-n55px8"
+        />
+        <svg
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-hidden={true}
+          aria-label="apri"
+          className="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-ci5apu-MuiSvgIcon-root"
+          cursor="pointer"
+          data-testid="MenuIcon"
+          focusable="false"
+          onClick={[Function]}
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="MuiStack-root css-1m9uxiu-MuiStack-root"
+    >
+      <nav
+        aria-label="main"
+        className="MuiStack-root css-1rp1xzi-MuiStack-root"
+      >
+        <div
+          className="MuiStack-root css-167zj2n-MuiStack-root"
+          onClick={[Function]}
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-9bsid3-MuiTypography-root-MuiLink-root"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <span
+              className="MuiTypography-root MuiTypography-sidenav css-eeo237-MuiTypography-root"
+            >
+              Voce Menu 1
+            </span>
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="m7 10 5 5 5-5z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="MuiStack-root css-qhe8tz-MuiStack-root"
+          onClick={[Function]}
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-9bsid3-MuiTypography-root-MuiLink-root"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <span
+              className="MuiTypography-root MuiTypography-sidenav css-eeo237-MuiTypography-root"
+            >
+              Voce Menu 2
+            </span>
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="m7 10 5 5 5-5z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="MuiStack-root css-167zj2n-MuiStack-root"
+          onClick={[Function]}
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1k8p891-MuiTypography-root-MuiLink-root"
+            href="/#"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <span
+              className="MuiTypography-root MuiTypography-sidenav css-eeo237-MuiTypography-root"
+            >
+              Voce Menu 3
+            </span>
+          </a>
+        </div>
+      </nav>
+      <div
+        className="MuiBox-root css-1b5a289"
+      />
+    </div>
+  </div>
+</header>
+`;
