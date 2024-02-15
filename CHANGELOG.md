@@ -1,5 +1,25 @@
 # Semantic Versioning Changelog
 
+# [2.2.0](https://github.com/pagopa/pagopa-editorial-components/compare/v2.1.4...v2.2.0) (2024-02-12)
+
+
+### Features
+
+* a small change in the readme file ([4387d95](https://github.com/pagopa/pagopa-editorial-components/commit/4387d95c9d57d4406bdc835a82f147fcb94f1495))
+
+## [2.1.4](https://github.com/pagopa/pagopa-editorial-components/compare/v2.1.3...v2.1.4) (2024-01-29)
+
+
+### Bug Fixes
+
+* eicon file to accept also string ([ec0d751](https://github.com/pagopa/pagopa-editorial-components/commit/ec0d751c6081cb51838ec850446fc951166a07b3))
+* import missing components ([8b88450](https://github.com/pagopa/pagopa-editorial-components/commit/8b88450f3c3d4ab7ffd61d4748a11e721c3f5aee))
+
+
+### Reverts
+
+* Revert "fix: eicon file to accept also string" ([550ae6a](https://github.com/pagopa/pagopa-editorial-components/commit/550ae6ac0c781449c95155581b0b8bb8dd16fc64))
+
 ## [2.1.3](https://github.com/pagopa/pagopa-editorial-components/compare/v2.1.2...v2.1.3) (2023-07-07)
 
 
