@@ -1,5 +1,17 @@
 # Semantic Versioning Changelog
 
+# [2.2.0](https://github.com/pagopa/pagopa-editorial-components/compare/v2.1.4...v2.2.0) (2024-02-15)
+
+
+### Bug Fixes
+
+* missing "./" for the three imports ([#138](https://github.com/pagopa/pagopa-editorial-components/issues/138)) ([2ae67b1](https://github.com/pagopa/pagopa-editorial-components/commit/2ae67b153426bdce186021e0016a78cd2e09d4d8))
+
+
+### Features
+
+* a small change in the readme file ([2ce4495](https://github.com/pagopa/pagopa-editorial-components/commit/2ce44954f03433a5aa721fbd00cbca69bc2fc276))
+
 # [2.2.0](https://github.com/pagopa/pagopa-editorial-components/compare/v2.1.4...v2.2.0) (2024-02-12)
 
 
