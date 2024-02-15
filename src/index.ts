@@ -5,6 +5,9 @@ import Listing from './components/Listing';
 import Newsroom from './components/Newsroom';
 import Video from './components/Video';
 import Text from './components/Text';
+import Cards from './components/Cards';
+import StripeLink from './components/StripeLink';
+import Quote from './components/Quote/Quote';
 import { Abstract } from './components/Abstract';
 import { Accordion } from './components/Accordion/Accordion';
 import { BannerLink } from './components/BannerLink';
@@ -15,9 +18,6 @@ import { HowTo } from './components/HowTo';
 import { Kpi } from './components/Kpi';
 import { PreHeader } from './components/PreHeader';
 import { Stats } from './components/Stats';
-import Cards from './components/Cards';
-import StripeLink from './components/StripeLink';
-import Quote from './components/Quote/Quote';
 
 export {
   Abstract,
