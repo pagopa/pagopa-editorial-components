@@ -5,6 +5,7 @@
     "name": "PagoPA"
   },
   "private": false,
+  "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
