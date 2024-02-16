@@ -52,7 +52,7 @@ have two options starting from the design project:
 * If possible, avoid magic numbers.
 * Use the provided visual attributes (color, spacing, etc…), using the corresponding theme file
 * If you have to use some values not provided by the theme object:
-  - Ask to your fellow designer for clarification
+  - Ask your fellow designer for clarification
   - If necessary, extend it.
 * The components must be responsive by default
 
