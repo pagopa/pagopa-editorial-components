@@ -6,6 +6,22 @@
 ### Bug Fixes
 
 * added missing license for usage ([34d0deb](https://github.com/pagopa/pagopa-editorial-components/commit/34d0debf2827b182e41342d3ea8e644050300cd8))
+* change version in package.json ([4897e16](https://github.com/pagopa/pagopa-editorial-components/commit/4897e16ff3d4349774aa4af1fb47e02634e293b6))
+* missing "./" for the three imports ([#138](https://github.com/pagopa/pagopa-editorial-components/issues/138)) ([2ae67b1](https://github.com/pagopa/pagopa-editorial-components/commit/2ae67b153426bdce186021e0016a78cd2e09d4d8))
+* update license field ([624a93b](https://github.com/pagopa/pagopa-editorial-components/commit/624a93b212163b4d49bb60fd09ea234fe5b2a977))
+
+
+### Features
+
+* a small change in the readme file ([2ce4495](https://github.com/pagopa/pagopa-editorial-components/commit/2ce44954f03433a5aa721fbd00cbca69bc2fc276))
+* added How to contribute section to README ([55720d0](https://github.com/pagopa/pagopa-editorial-components/commit/55720d0373edaabc9a8907520aa8a8a2f833d230))
+
+# [2.2.0](https://github.com/pagopa/pagopa-editorial-components/compare/v2.1.4...v2.2.0) (2024-02-16)
+
+
+### Bug Fixes
+
+* added missing license for usage ([34d0deb](https://github.com/pagopa/pagopa-editorial-components/commit/34d0debf2827b182e41342d3ea8e644050300cd8))
 * missing "./" for the three imports ([#138](https://github.com/pagopa/pagopa-editorial-components/issues/138)) ([2ae67b1](https://github.com/pagopa/pagopa-editorial-components/commit/2ae67b153426bdce186021e0016a78cd2e09d4d8))
 * update license field ([624a93b](https://github.com/pagopa/pagopa-editorial-components/commit/624a93b212163b4d49bb60fd09ea234fe5b2a977))
 
