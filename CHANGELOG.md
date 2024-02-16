@@ -1,5 +1,21 @@
 # Semantic Versioning Changelog
 
+# [2.2.0](https://github.com/pagopa/pagopa-editorial-components/compare/v2.1.4...v2.2.0) (2024-02-16)
+
+
+### Bug Fixes
+
+* add missing comma in package.json ([1ce5c1c](https://github.com/pagopa/pagopa-editorial-components/commit/1ce5c1c37990b248ae22ba1ab49326021da45b1d))
+* added missing license for usage ([bcf7b43](https://github.com/pagopa/pagopa-editorial-components/commit/bcf7b43422c4733003d6f1f3159bd08cc658e6eb))
+* license fiels in package.json ([dd3df11](https://github.com/pagopa/pagopa-editorial-components/commit/dd3df117b853b894467cd30e6c5e7e04a73e8cb8))
+* missing "./" for the three imports ([#138](https://github.com/pagopa/pagopa-editorial-components/issues/138)) ([2ae67b1](https://github.com/pagopa/pagopa-editorial-components/commit/2ae67b153426bdce186021e0016a78cd2e09d4d8))
+
+
+### Features
+
+* a small change in the readme file ([2ce4495](https://github.com/pagopa/pagopa-editorial-components/commit/2ce44954f03433a5aa721fbd00cbca69bc2fc276))
+* added How to contribute section to README ([f61808a](https://github.com/pagopa/pagopa-editorial-components/commit/f61808a37d3332bc3b53a924ab3480f481d3130e))
+
 # [2.2.0](https://github.com/pagopa/pagopa-editorial-components/compare/v2.1.4...v2.2.0) (2024-02-15)
 
 
