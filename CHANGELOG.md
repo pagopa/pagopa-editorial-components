@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [2.3.1](https://github.com/pagopa/pagopa-editorial-components/compare/v2.3.0...v2.3.1) (2024-02-21)
+
+
+### Bug Fixes
+
+* build fix ([da52c4d](https://github.com/pagopa/pagopa-editorial-components/commit/da52c4dd82c515fed1128decd2fa2d91641037ea))
+
 # [2.3.0](https://github.com/pagopa/pagopa-editorial-components/compare/v2.2.0...v2.3.0) (2024-02-16)
 
 
