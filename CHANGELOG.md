@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [2.3.2](https://github.com/pagopa/pagopa-editorial-components/compare/v2.3.1...v2.3.2) (2024-02-22)
+
+
+### Bug Fixes
+
+* cards hydration issue and interface changes ([14f7eea](https://github.com/pagopa/pagopa-editorial-components/commit/14f7eea83f3ea610e8bc892fde34f79365911cc6))
+
 ## [2.3.1](https://github.com/pagopa/pagopa-editorial-components/compare/v2.3.0...v2.3.1) (2024-02-21)
 
 
