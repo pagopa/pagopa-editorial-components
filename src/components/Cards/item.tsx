@@ -7,12 +7,12 @@ export interface IItem {
   cardIcon?: EIconProps;
   label?: string;
   title: string;
-  text: string;
-  link?: {
+  text?: string;
+  links?: Array<{
     href: string;
     text: string;
-    title: string;
-  };
+    title?: string;
+  }>;
   masonry?: boolean;
 }
 
@@ -20,7 +20,7 @@ const Item = ({
   title,
   text,
   cardIcon,
-  link,
+  links,
   textAlign,
   label,
   masonry,
@@ -67,28 +67,31 @@ const Item = ({
           >
             {text}
           </Typography>
-          {link && (
-            <Stack
-              mt={2}
-              direction="row"
-              alignItems="center"
-              color="primary.main"
-              justifyContent={textAlign}
-            >
-              <Link
-                color="primary.main"
-                underline="none"
-                textTransform="capitalize"
-                href={link.href}
-                title={link.title}
-                fontSize={14}
-                fontWeight={400}
-              >
-                {link.text}
-              </Link>
-              <ArrowRightAltIcon sx={{ color: 'inerith', fontSize: 18 }} />
-            </Stack>
-          )}
+          {links?.length
+            ? links.map((link, index) => (
+                <Stack
+                  key={index}
+                  mt={2}
+                  direction="row"
+                  alignItems="center"
+                  color="primary.main"
+                  justifyContent={textAlign}
+                >
+                  <Link
+                    color="primary.main"
+                    underline="none"
+                    textTransform="capitalize"
+                    href={link.href}
+                    title={link.title}
+                    fontSize={14}
+                    fontWeight={400}
+                  >
+                    {link.text}
+                  </Link>
+                  <ArrowRightAltIcon sx={{ color: 'inerith', fontSize: 18 }} />
+                </Stack>
+              ))
+            : null}
         </Stack>
       </CardContent>
     </Card>
