@@ -4,7 +4,7 @@ import EContainer from '../EContainer';
 import Item, { type IItem } from './item';
 import { isJSX } from '../../utils';
 import { type ReactNode } from 'react';
-import { type CtaButton } from 'components/Ctas';
+import { type CtaButton } from '../Ctas';
 
 export interface CardsProps extends CommonProps {
   items: IItem[];
