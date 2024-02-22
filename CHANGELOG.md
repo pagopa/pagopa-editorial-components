@@ -6,6 +6,14 @@
 ### Bug Fixes
 
 * build fix ([#153](https://github.com/pagopa/pagopa-editorial-components/issues/153)) ([d54c1e9](https://github.com/pagopa/pagopa-editorial-components/commit/d54c1e9c3d668b49131a136841e97e531e01e85c))
+* cards hydration issue ([a830143](https://github.com/pagopa/pagopa-editorial-components/commit/a830143041193ff0216772141ba1c5db985eb6bb))
+
+## [2.3.1](https://github.com/pagopa/pagopa-editorial-components/compare/v2.3.0...v2.3.1) (2024-02-22)
+
+
+### Bug Fixes
+
+* build fix ([#153](https://github.com/pagopa/pagopa-editorial-components/issues/153)) ([d54c1e9](https://github.com/pagopa/pagopa-editorial-components/commit/d54c1e9c3d668b49131a136841e97e531e01e85c))
 
 ## [2.3.1](https://github.com/pagopa/pagopa-editorial-components/compare/v2.3.0...v2.3.1) (2024-02-21)
 
