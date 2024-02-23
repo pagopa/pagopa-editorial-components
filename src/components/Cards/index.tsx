@@ -63,6 +63,7 @@ const Cards = ({ items, theme, text }: CardsProps) => {
           width: { md: isMasonry ? '30%' : '100%', xs: '100%' },
           textAlign: isMasonry ? 'left' : 'center',
         }}
+        component={'div'}
       >
         <Typography variant="h2" mb={5} color={'inherit'}>
           {text.title}
