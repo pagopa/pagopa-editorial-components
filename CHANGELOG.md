@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [2.3.2](https://github.com/pagopa/pagopa-editorial-components/compare/v2.3.1...v2.3.2) (2024-02-23)
+
+
+### Bug Fixes
+
+* set component to div to avoid rendering errors ([6746048](https://github.com/pagopa/pagopa-editorial-components/commit/67460487ea282e3b885e10f5013ab4f6e97f11a1))
+
 ## [2.3.1](https://github.com/pagopa/pagopa-editorial-components/compare/v2.3.0...v2.3.1) (2024-02-21)
 
 
