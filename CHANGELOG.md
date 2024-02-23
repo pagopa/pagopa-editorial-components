@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [2.3.4](https://github.com/pagopa/pagopa-editorial-components/compare/v2.3.3...v2.3.4) (2024-02-23)
+
+
+### Bug Fixes
+
+* shift other changes than hydration to new branch ([4363ef2](https://github.com/pagopa/pagopa-editorial-components/commit/4363ef22c43b60121a0529c309d56c5464ceeec7))
+
 ## [2.3.3](https://github.com/pagopa/pagopa-editorial-components/compare/v2.3.2...v2.3.3) (2024-02-22)
 
 
