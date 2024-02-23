@@ -1,10 +1,9 @@
-import { Button, Grid, Stack, Typography } from '@mui/material';
+import { Grid, Stack, Typography } from '@mui/material';
 import { type Generic, type CommonProps } from '../../types/components';
 import EContainer from '../EContainer';
 import Item, { type IItem } from './item';
 import { isJSX } from '../../utils';
 import { type ReactNode } from 'react';
-import { type CtaButton } from '../Ctas';
 
 export interface CardsProps extends CommonProps {
   items: IItem[];
@@ -13,7 +12,6 @@ export interface CardsProps extends CommonProps {
     subtitle?: string;
     body?: string | Generic;
   };
-  ctaButtons?: CtaButton[];
 }
 
 const ItemsContainer = ({
@@ -42,7 +40,7 @@ const ItemsContainer = ({
   );
 };
 
-const Cards = ({ items, theme, text, ctaButtons }: CardsProps) => {
+const Cards = ({ items, theme, text }: CardsProps) => {
   const background = theme === 'dark' ? 'primary.dark' : 'background.paper';
   const textColor = theme === 'dark' ? 'primary.contrastText' : 'text.primary';
 
@@ -84,22 +82,6 @@ const Cards = ({ items, theme, text, ctaButtons }: CardsProps) => {
               {text.body}
             </Typography>
           )
-        ) : null}
-        {ctaButtons?.length ? (
-          <Stack
-            direction={{ xs: 'column', md: 'row' }}
-            spacing={2}
-            mb={{ xs: 8, lg: 0 }}
-          >
-            {ctaButtons.map((button, i) => {
-              if (isJSX(button)) return button;
-              return (
-                <Button key={`${button.text}-${i}`} {...button}>
-                  {button.text}
-                </Button>
-              );
-            })}
-          </Stack>
         ) : null}
       </Typography>
       <ItemsContainer masonry={isMasonry}>
