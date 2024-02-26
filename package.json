@@ -40,7 +40,7 @@
     "@storybook/testing-library": "^0.2.0",
     "@testing-library/react": "^14.1.2",
     "@types/jest": "^29.5.10",
-    "@types/react": "^18.0.28",
+    "@types/react": "^18.2.58",
     "@types/react-swipeable-views": "^0.13.1",
     "@types/react-swipeable-views-utils": "^0.13.4",
     "@types/react-test-renderer": "^18.0.7",
