@@ -6,6 +6,7 @@ import {
   Content as BannerLinkContent,
 } from './Content';
 import { isJSX } from '../../utils';
+import sendTheme from '../SendTheme';
 
 type ImgProps = React.DetailedHTMLProps<
   React.ImgHTMLAttributes<HTMLImageElement>,
@@ -24,7 +25,9 @@ export const BannerLink = (props: BannerLinkProps) => {
   const { palette } = useTheme();
 
   const backgroundColor =
-    theme === 'dark' ? palette.primary.dark : alpha(palette.info.main, 0.08);
+    theme === 'dark'
+      ? sendTheme.dark.backgroundColor
+      : alpha(palette.info.main, 0.08);
 
   return (
     <Box bgcolor={backgroundColor} component="section">

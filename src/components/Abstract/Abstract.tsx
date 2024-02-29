@@ -4,6 +4,7 @@ import { Box, Stack, Typography, useTheme } from '@mui/material';
 import EContainer from '../EContainer';
 import type { CommonProps, Generic } from 'types/components';
 import { isJSX } from '../../utils';
+import sendTheme from '../SendTheme';
 
 export interface AbstractProps extends CommonProps {
   overline: string;
@@ -29,7 +30,7 @@ export const Abstract: React.FC<AbstractProps> = ({
       : 'linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), ';
 
   const backgroundColor =
-    theme === 'dark' ? 'primary.dark' : 'background.paper';
+    theme === 'dark' ? sendTheme.dark.backgroundColor : 'background.paper';
   const eyeletColor = theme === 'dark' ? 'background.paper' : 'text.secondary';
 
   const BackgroundImage = isJSX(background) ? (

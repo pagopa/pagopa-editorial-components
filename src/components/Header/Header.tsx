@@ -7,6 +7,7 @@ import { Ctas, type CtaProps } from '../Ctas';
 import { HamburgerMenu } from './components/HamburgerMenu';
 import { type NavigationProps, Navigation } from './components/Navigation';
 import { type TitleProps, Content } from './components/Title';
+import sendTheme from '../SendTheme';
 
 interface BottomHeaderProps extends CtaProps, NavigationProps, TitleProps {}
 
@@ -38,7 +39,9 @@ export const Header = (props: HeaderProps) => {
 
   const { palette } = useTheme();
   const backgroundColor =
-    theme === 'dark' ? palette.primary.dark : palette.background.paper;
+    theme === 'dark'
+      ? sendTheme.dark.backgroundColor
+      : palette.background.paper;
 
   const HeaderCtas = () => <Ctas {...{ theme, ctaButtons }} />;
 

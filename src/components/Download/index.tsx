@@ -2,6 +2,7 @@ import { type CommonProps } from 'types/components';
 import EContainer from '../EContainer';
 import { Button, Typography, Divider, Stack } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
+import sendTheme from '../SendTheme';
 
 interface IDownloadItem {
   label: string;
@@ -32,7 +33,7 @@ const Download = (props: IDownload) => {
     itemsAlignment = 'left',
   } = props;
   const backgroundColor =
-    theme === 'dark' ? 'primary.dark' : 'background.paper';
+    theme === 'dark' ? sendTheme.dark.backgroundColor : 'background.paper';
   const textColor = theme === 'dark' ? 'primary.contrastText' : 'text.primary';
   const isTypeButton = type === 'button';
   return (

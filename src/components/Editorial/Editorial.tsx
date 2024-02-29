@@ -9,6 +9,7 @@ import {
 import { Ctas as EditorialCtas, type EditorialCtaProps } from './Ctas';
 import { Image as EditorialImage, type EditorialImageProps } from './Image';
 import EContainer from '../EContainer';
+import sendTheme from '../SendTheme';
 
 export interface EditorialProps
   extends CommonProps,
@@ -34,7 +35,9 @@ export const Editorial = (props: EditorialProps) => {
   const { palette } = useTheme();
 
   const backgroundColor =
-    theme === 'dark' ? palette.primary.dark : palette.background.paper;
+    theme === 'dark'
+      ? sendTheme.dark.backgroundColor
+      : palette.background.paper;
 
   const columns = {
     wide: 6,

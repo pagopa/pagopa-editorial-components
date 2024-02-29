@@ -9,6 +9,7 @@ import {
 import { type CommonProps, type Generic } from 'types/components';
 import { isJSX } from '../../utils';
 import EContainer from './../EContainer';
+import sendTheme from '../SendTheme';
 
 export interface HeroProps extends CommonProps, HeroTextProps {
   image?: string | Generic;
@@ -94,7 +95,8 @@ const Hero = (props: HeroProps) => {
       ? 'linear-gradient(0deg, rgba(0, 98, 195, 0.65), rgba(0, 98, 195, 0.65)), '
       : 'linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), '
     : '';
-  const backgroundColor = theme === 'dark' ? 'primary.dark' : 'primary.paper';
+  const backgroundColor =
+    theme === 'dark' ? sendTheme.dark.backgroundColor : 'primary.paper';
 
   const BackgroundImage = isJSX(background) ? (
     background

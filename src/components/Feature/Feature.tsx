@@ -3,6 +3,7 @@ import { Grid, MobileStepper, Typography, useTheme } from '@mui/material';
 import SwipeableViews from 'react-swipeable-views';
 import { type FeatureItem, FeatureStackItem } from './FeatureStackItem';
 import EContainer from '../EContainer';
+import sendTheme from '../SendTheme';
 
 export interface FeatureProps {
   title: string;
@@ -22,7 +23,8 @@ const Feature = (props: FeatureProps) => {
   };
 
   const themeStyle = theme === 'light' ? 'text.primary' : 'background.paper';
-  const themeStyleBg = theme === 'light' ? 'background.paper' : 'primary.dark';
+  const themeStyleBg =
+    theme === 'light' ? 'background.paper' : sendTheme.dark.backgroundColor;
 
   return (
     <EContainer

@@ -1,5 +1,6 @@
 import { Box, Container, Grid, Stack, Typography } from '@mui/material';
 import { AccordionItem, type AccordionItemProps } from './AccordionItem';
+import sendTheme from '../SendTheme';
 export interface AccordionProps {
   title: string;
   subtitle?: string;
@@ -20,7 +21,7 @@ export const Accordion = (props: AccordionProps) => {
     layout = 'left',
   } = props;
   const isDarkTheme = theme === 'dark';
-  const bgcolor = isDarkTheme ? 'primary.main' : '#FAFAFA';
+  const bgcolor = isDarkTheme ? sendTheme.dark.backgroundColor : '#FAFAFA';
   const textColor = isDarkTheme ? 'white' : 'text.primary';
 
   const isCenterLayout = layout === 'center';

@@ -4,6 +4,7 @@ import EContainer from '../EContainer';
 import Item, { type IItem } from './item';
 import { isJSX } from '../../utils';
 import { type ReactNode } from 'react';
+import sendTheme from '../SendTheme';
 
 export interface CardsProps extends CommonProps {
   items: IItem[];
@@ -41,7 +42,8 @@ const ItemsContainer = ({
 };
 
 const Cards = ({ items, theme, text }: CardsProps) => {
-  const background = theme === 'dark' ? 'primary.dark' : 'background.paper';
+  const background =
+    theme === 'dark' ? sendTheme.dark.backgroundColor : 'background.paper';
   const textColor = theme === 'dark' ? 'primary.contrastText' : 'text.primary';
 
   const isMasonry = !!text?.body && !!text?.subtitle;
