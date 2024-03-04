@@ -9,7 +9,7 @@ import {
 import { Ctas as EditorialCtas, type EditorialCtaProps } from './Ctas';
 import { Image as EditorialImage, type EditorialImageProps } from './Image';
 import EContainer from '../EContainer';
-import sendTheme from '../SendTheme';
+import { sendTheme } from '../../types/SendTheme';
 
 export interface EditorialProps
   extends CommonProps,

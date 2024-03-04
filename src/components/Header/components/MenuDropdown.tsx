@@ -13,6 +13,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { type Generic, type CommonProps } from '../../../types/components';
 import { DialogBubble } from '../../../components/DialogBubble';
 import { isJSX } from '../../../utils';
+import { sendThemeDropdown } from '../../../types/SendTheme';
 
 const TIMEOUT_LENGTH = 100;
 
@@ -137,17 +138,22 @@ export const MenuDropdown = (props: MenuDropdownProp) => {
 };
 
 const useStyles = (props: MenuDropdownProp, mui: Theme) => {
-  const textColor =
-    props.theme === 'dark'
-      ? mui.palette.primary.contrastText
-      : mui.palette.primary.dark;
-
+  const activeColor = '#0073e6';
+  const defaultTextColor =
+    props.theme === 'light'
+      ? sendThemeDropdown.light.dropdownColor
+      : mui.palette.primary.contrastText;
+  const textColor = props.active ? activeColor : defaultTextColor;
+  const arrowColor = props.active
+    ? activeColor
+    : mui.palette.primary.contrastText;
+  const subItemColor = sendThemeDropdown.light.dropdownColor;
   return {
     menu: {
       paddingY: { md: 2 },
-      borderColor: textColor,
+      borderColor: activeColor,
       borderBottomStyle: 'solid',
-      borderBottomWidth: { md: props.active ? 2 : 0, xs: 0 },
+      borderBottomWidth: { md: props.active ? 3 : 0, xs: 0 },
     },
     item: {
       cursor: {
@@ -157,14 +163,23 @@ const useStyles = (props: MenuDropdownProp, mui: Theme) => {
       flexDirection: 'row',
       color: textColor,
       textDecoration: 'none',
+      display: 'flex',
+      alignItems: 'center',
     },
     link: {
-      color: { xs: textColor, md: mui.palette.primary.contrastText },
+      color: { xs: subItemColor, md: mui.palette.primary.contrastText },
       textIndent: { xs: mui.spacing(2), md: 0 },
+      '&:not(.mainItem)': {
+        color: subItemColor,
+      },
+      mainItem: {
+        color: textColor,
+      },
     },
     arrowAnimate: {
       transition: 'transform 0.2s',
       transform: { xs: 'rotate(-180deg)', md: '' },
+      color: arrowColor,
     },
   };
 };

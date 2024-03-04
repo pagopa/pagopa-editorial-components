@@ -4,7 +4,7 @@ import { Box, Stack, Typography, useTheme } from '@mui/material';
 import EContainer from '../EContainer';
 import type { CommonProps, Generic } from 'types/components';
 import { isJSX } from '../../utils';
-import sendTheme from '../SendTheme';
+import { sendTheme } from '../../types/SendTheme';
 
 export interface AbstractProps extends CommonProps {
   overline: string;

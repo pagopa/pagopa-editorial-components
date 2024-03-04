@@ -6,7 +6,7 @@ import {
   Content as BannerLinkContent,
 } from './Content';
 import { isJSX } from '../../utils';
-import sendTheme from '../SendTheme';
+import { sendTheme } from '../../types/SendTheme';
 
 type ImgProps = React.DetailedHTMLProps<
   React.ImgHTMLAttributes<HTMLImageElement>,

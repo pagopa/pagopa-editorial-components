@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Stack, Typography } from '@mui/material';
 import { AccordionItem, type AccordionItemProps } from './AccordionItem';
-import sendTheme from '../SendTheme';
+import { sendTheme } from '../../types/SendTheme';
 export interface AccordionProps {
   title: string;
   subtitle?: string;

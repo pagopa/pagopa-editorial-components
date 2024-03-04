@@ -9,7 +9,7 @@ import {
 import { type CommonProps, type Generic } from 'types/components';
 import { isJSX } from '../../utils';
 import EContainer from './../EContainer';
-import sendTheme from '../SendTheme';
+import { sendTheme } from '../../types/SendTheme';
 
 export interface HeroProps extends CommonProps, HeroTextProps {
   image?: string | Generic;

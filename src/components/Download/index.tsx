@@ -2,7 +2,7 @@ import { type CommonProps } from 'types/components';
 import EContainer from '../EContainer';
 import { Button, Typography, Divider, Stack } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
-import sendTheme from '../SendTheme';
+import { sendTheme } from '../../types/SendTheme';
 
 interface IDownloadItem {
   label: string;

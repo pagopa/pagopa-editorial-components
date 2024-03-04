@@ -3,7 +3,7 @@ import { Grid, MobileStepper, Typography, useTheme } from '@mui/material';
 import SwipeableViews from 'react-swipeable-views';
 import { type FeatureItem, FeatureStackItem } from './FeatureStackItem';
 import EContainer from '../EContainer';
-import sendTheme from '../SendTheme';
+import { sendTheme } from '../../types/SendTheme';
 
 export interface FeatureProps {
   title: string;

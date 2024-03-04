@@ -7,7 +7,7 @@ import { Ctas, type CtaProps } from '../Ctas';
 import { HamburgerMenu } from './components/HamburgerMenu';
 import { type NavigationProps, Navigation } from './components/Navigation';
 import { type TitleProps, Content } from './components/Title';
-import sendTheme from '../SendTheme';
+import { sendTheme } from '../../types/SendTheme';
 
 interface BottomHeaderProps extends CtaProps, NavigationProps, TitleProps {}
 
@@ -54,7 +54,7 @@ export const Header = (props: HeaderProps) => {
     >
       <Stack
         direction={{ md: 'row' }}
-        paddingY={{ xs: 2, sm: 3, md: 1 }}
+        paddingY={{ xs: 2, sm: 3, md: 0 }}
         gap={4}
       >
         <Stack sx={styles.headerInfo}>
