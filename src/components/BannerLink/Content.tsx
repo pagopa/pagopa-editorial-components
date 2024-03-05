@@ -18,7 +18,7 @@ export const Content = ({ title, body, theme }: BannerLinkContentProps) => {
       <Typography color={textColor} variant="h6">
         {title}
       </Typography>
-      <Typography color={textColor} variant="body2">
+      <Typography color={textColor} variant="body2" component={'div'}>
         {body}
       </Typography>
     </Stack>

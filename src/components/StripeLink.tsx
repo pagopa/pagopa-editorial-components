@@ -32,7 +32,11 @@ const StripeLink = (props: StripeLinkProps) => {
               visibility: { md: 'visible', xs: 'hidden' },
             }}
           />
-          <Typography variant="body2" color={'background.paper'}>
+          <Typography
+            variant="body2"
+            color={'background.paper'}
+            component={'div'}
+          >
             {subtitle}
           </Typography>
           <Button
