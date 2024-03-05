@@ -74,19 +74,20 @@ export const Accordion = (props: AccordionProps) => {
               )}
             </Stack>
           </Grid>
-          <Grid
-            item
-            order={layout === 'right' ? -1 : 1}
-            xs={12}
-            md={isCenterLayout ? 12 : 8}
-          >
-            {/** Accordions */}
-            <Stack spacing={2}>
-              {accordionItems.map((accordionItem, i) => (
-                <AccordionItem key={i} {...accordionItem} />
-              ))}
-            </Stack>
-          </Grid>
+        </Grid>
+        <Grid
+          item
+          order={layout === 'right' ? -1 : 1}
+          xs={12}
+          md={isCenterLayout ? 12 : 8}
+          mt={5}
+        >
+          {/** Accordions */}
+          <Stack spacing={2}>
+            {accordionItems.map((accordionItem, i) => (
+              <AccordionItem key={i} {...accordionItem} />
+            ))}
+          </Stack>
         </Grid>
       </Container>
     </Box>
