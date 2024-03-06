@@ -1,5 +1,15 @@
 # Semantic Versioning Changelog
 
+# [3.0.0](https://github.com/pagopa/pagopa-editorial-components/compare/v2.3.3...v3.0.0) (2024-03-06)
+
+
+* feat!: update card item input ([a6cadc7](https://github.com/pagopa/pagopa-editorial-components/commit/a6cadc7b871fa9e1dbdd82bbd5c36b0e2854ce64))
+
+
+### BREAKING CHANGES
+
+* Card items no longer accept a single link.
+
 ## [2.3.3](https://github.com/pagopa/pagopa-editorial-components/compare/v2.3.2...v2.3.3) (2024-03-05)
 
 
