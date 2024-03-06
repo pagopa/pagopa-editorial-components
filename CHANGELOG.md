@@ -1,5 +1,17 @@
 # Semantic Versioning Changelog
 
+## [2.3.3](https://github.com/pagopa/pagopa-editorial-components/compare/v2.3.2...v2.3.3) (2024-03-05)
+
+
+### Bug Fixes
+
+* accordion layout fix ([7487d7c](https://github.com/pagopa/pagopa-editorial-components/commit/7487d7c4e9910a6053a56b7203384c02d8e31cb6))
+* bannerlink body html rendering bug fix ([4259686](https://github.com/pagopa/pagopa-editorial-components/commit/42596861e91a225701652e399c861604d649540b))
+* editorial mobile column fix ([733103d](https://github.com/pagopa/pagopa-editorial-components/commit/733103df0dbd442557294fd2ec3e8d8d3cedbbdd))
+* header padding fix ([6970d29](https://github.com/pagopa/pagopa-editorial-components/commit/6970d292e9855f9ad9fa70c1a427f326320254fa))
+* menudropdown border bottom fix ([0edd5b9](https://github.com/pagopa/pagopa-editorial-components/commit/0edd5b99b608492e4349024fcd282c2e470f78bf))
+* stripelink html rendering bug fix ([578be2a](https://github.com/pagopa/pagopa-editorial-components/commit/578be2ac591fbd8bb554059ab2a2a0318524ba58))
+
 ## [2.3.2](https://github.com/pagopa/pagopa-editorial-components/compare/v2.3.1...v2.3.2) (2024-02-23)
 
 

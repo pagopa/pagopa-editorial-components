@@ -147,7 +147,7 @@ const useStyles = (props: MenuDropdownProp, mui: Theme) => {
       paddingY: { md: 2 },
       borderColor: textColor,
       borderBottomStyle: 'solid',
-      borderBottomWidth: { md: props.active ? 2 : 0, xs: 0 },
+      borderBottomWidth: { md: props.active ? 3 : 0, xs: 0 },
     },
     item: {
       cursor: {
