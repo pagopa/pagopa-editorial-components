@@ -6,8 +6,10 @@ import {
   type AvatarProps,
   useTheme,
   Link,
+  useMediaQuery,
 } from '@mui/material';
 import { type CommonProps } from '../../../types/components';
+import logoImage from '../../../assets/images/logoSend.svg';
 
 export interface TitleProps extends CommonProps {
   product: {
@@ -29,23 +31,35 @@ export const Content = ({
     theme === 'dark' ? palette.primary.contrastText : palette.text.primary;
   const label = 'beta';
 
+  const isBelow900px = useMediaQuery('(max-width:900px)');
+
+  const productContent = logoImage ? (
+    <img src={logoImage} alt="Logo" style={{ height: '70px' }} />
+  ) : (
+    <Typography
+      color={textColor}
+      fontSize={{ xs: spacing(3), sm: spacing(3.5) }}
+      noWrap
+      variant="h5"
+    >
+      <b>{productName}</b>
+    </Typography>
+  );
+
   return (
     <Stack direction="row" gap={1} alignItems="center">
       {avatar && <Avatar {...avatar} />}
-      <Typography
-        color={textColor}
-        fontSize={{ xs: spacing(3), sm: spacing(3.5) }}
-        noWrap
-        variant="h5"
-      >
-        {productHref ? (
-          <Link href={productHref} underline="none" color="text.primary">
-            <b>{productName}</b>
-          </Link>
-        ) : (
-          <b>{productName}</b>
-        )}
-      </Typography>
+      {productHref && (
+        <Link
+          href={productHref}
+          underline="none"
+          sx={{
+            margin: isBelow900px ? '22px 24px 16px 0' : '22px 24px 16px 24px',
+          }}
+        >
+          {productContent}
+        </Link>
+      )}
       {beta && (
         <Chip
           label={label}
