@@ -80,7 +80,11 @@ export const Header = (props: HeaderProps) => {
           }}
         >
           <Navigation {...{ menu, theme }} />
-          <Box sx={{ display: { sm: 'none', md: 'block' } }}>
+          <Box
+            sx={{
+              display: { sm: 'none', md: 'block' },
+            }}
+          >
             <HeaderCtas />
           </Box>
         </Stack>
