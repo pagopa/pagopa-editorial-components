@@ -1,10 +1,4 @@
-import {
-  // Box,
-  Stack,
-  type StackProps,
-  useTheme,
-  type Theme,
-} from '@mui/material';
+import { Stack, type StackProps, useTheme, type Theme } from '@mui/material';
 import { type ReactNode } from 'react';
 
 interface DialogBubbleProps extends StackProps {
