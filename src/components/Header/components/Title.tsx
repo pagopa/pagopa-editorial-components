@@ -39,7 +39,7 @@ export const Content = ({
     <Stack direction="column" alignItems="center" gap={1}>
       {logo && (
         <Link href={logo.href}>
-          <img src={logo.src} alt={logo.alt} width={48} height={48} />
+          <img src={logo.src} alt={logo.alt} height={48} />
         </Link>
       )}
       {avatar && <Avatar {...avatar} />}
