@@ -1,10 +1,4 @@
-import {
-  Box,
-  Stack,
-  type StackProps,
-  useTheme,
-  type Theme,
-} from '@mui/material';
+import { Stack, type StackProps, useTheme, type Theme } from '@mui/material';
 import { type ReactNode } from 'react';
 
 interface DialogBubbleProps extends StackProps {
@@ -18,8 +12,10 @@ export const DialogBubble = ({
   const mui = useTheme();
   const styles = useStyles(mui);
   return (
-    <Stack sx={styles.bubbleContainer} aria-haspopup="true">
-      <Box sx={styles.bubblePointer} />
+    <Stack
+      sx={{ ...styles.bubbleContainer, bgcolor: mui.palette.common.white }}
+      aria-haspopup="true"
+    >
       <Stack sx={styles.bubble} {...stackProps}>
         {children}
       </Stack>
@@ -31,22 +27,11 @@ const useStyles = (mui: Theme) => ({
   bubbleContainer: {
     transform: 'rotate(180deg)',
     position: 'absolute',
-    backgroundColor: mui.palette.primary.main,
-    marginTop: '30px',
+    marginTop: '42px',
     padding: mui.spacing(2),
     direction: 'rtl',
     textAlign: 'left',
-  },
-  bubblePointer: {
-    display: 'block',
-    position: 'absolute',
-    content: '""',
-    width: 0,
-    height: 0,
-    border: '0.9em solid transparent',
-    borderTopColor: mui.palette.primary.main,
-    bottom: 0,
-    transform: 'translateY(1.2em)',
+    borderRadius: '4px',
   },
   bubble: { transform: 'rotate(180deg)' },
 });

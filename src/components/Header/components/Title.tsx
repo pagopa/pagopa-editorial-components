@@ -16,6 +16,11 @@ export interface TitleProps extends CommonProps {
   };
   avatar?: AvatarProps;
   beta?: boolean;
+  logo?: {
+    src: string;
+    alt: string;
+    href: string;
+  };
 }
 
 export const Content = ({
@@ -23,6 +28,7 @@ export const Content = ({
   beta,
   product: { name: productName, href: productHref },
   theme,
+  logo,
 }: TitleProps) => {
   const { palette, spacing } = useTheme();
   const textColor =
@@ -30,22 +36,29 @@ export const Content = ({
   const label = 'beta';
 
   return (
-    <Stack direction="row" gap={1} alignItems="center">
+    <Stack direction="column" alignItems="center" gap={1}>
+      {logo && (
+        <Link href={logo.href}>
+          <img src={logo.src} alt={logo.alt} height={48} />
+        </Link>
+      )}
       {avatar && <Avatar {...avatar} />}
-      <Typography
-        color={textColor}
-        fontSize={{ xs: spacing(3), sm: spacing(3.5) }}
-        noWrap
-        variant="h5"
-      >
-        {productHref ? (
-          <Link href={productHref} underline="none" color="text.primary">
+      {!logo && (
+        <Typography
+          color={textColor}
+          fontSize={{ xs: spacing(3), sm: spacing(3.5) }}
+          noWrap
+          variant="h5"
+        >
+          {productHref ? (
+            <Link href={productHref} underline="none" color="text.primary">
+              <b>{productName}</b>
+            </Link>
+          ) : (
             <b>{productName}</b>
-          </Link>
-        ) : (
-          <b>{productName}</b>
-        )}
-      </Typography>
+          )}
+        </Typography>
+      )}
       {beta && (
         <Chip
           label={label}

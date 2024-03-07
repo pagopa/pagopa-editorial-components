@@ -1,5 +1,24 @@
 # Semantic Versioning Changelog
 
+# [3.1.0](https://github.com/pagopa/pagopa-editorial-components/compare/v3.0.0...v3.1.0) (2024-03-07)
+
+
+### Bug Fixes
+
+* colour palette ([785b6ea](https://github.com/pagopa/pagopa-editorial-components/commit/785b6ea5efee4e1cfa9db5f368e45e7846d617f9))
+* dropdown bubble fix ([0889f56](https://github.com/pagopa/pagopa-editorial-components/commit/0889f567416024250e0e33c8735d4044085847db))
+* palette fix ([d054a4c](https://github.com/pagopa/pagopa-editorial-components/commit/d054a4c2d804403ed1ce007194c4d4b0270b194d))
+* remove commented line ([7e6c85f](https://github.com/pagopa/pagopa-editorial-components/commit/7e6c85ffe6e311e60ba85c180767bce7a554cdc4))
+* remove logo image example ([2a4f91d](https://github.com/pagopa/pagopa-editorial-components/commit/2a4f91d69945520995add0a6f83e4b7fc25ca7fe))
+* remove shadow to implement them directly inside B2BP ([2736690](https://github.com/pagopa/pagopa-editorial-components/commit/2736690e252b3428d76ea19dc5e6ab37422d0e32))
+* remove width from logo ([4eab572](https://github.com/pagopa/pagopa-editorial-components/commit/4eab5726f1afd70b5236f43c0a0b6d1f2b10a2a2))
+
+
+### Features
+
+* adding logo to header ([f71b441](https://github.com/pagopa/pagopa-editorial-components/commit/f71b441fd09452f162c5e2fa3e5353ac7a7cbe42))
+* logo component integration ([8f442a3](https://github.com/pagopa/pagopa-editorial-components/commit/8f442a36d45ee80f03fcb5eead194155019a68c7))
+
 # [3.0.0](https://github.com/pagopa/pagopa-editorial-components/compare/v2.3.3...v3.0.0) (2024-03-06)
 
 
