@@ -11,10 +11,9 @@ export const DialogBubble = ({
 }: DialogBubbleProps) => {
   const mui = useTheme();
   const styles = useStyles(mui);
-  const white = mui.palette.common.white;
   return (
     <Stack
-      sx={{ ...styles.bubbleContainer, bgcolor: white }}
+      sx={{ ...styles.bubbleContainer, bgcolor: mui.palette.common.white }}
       aria-haspopup="true"
     >
       <Stack sx={styles.bubble} {...stackProps}>
