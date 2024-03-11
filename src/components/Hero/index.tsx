@@ -82,7 +82,7 @@ const Hero = (props: HeroProps) => {
     size,
     inverse = false,
     background,
-    theme = 'dark',
+    theme,
     useHoverlay = true,
     image,
     altText = '',
