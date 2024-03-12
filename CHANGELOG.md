@@ -1,5 +1,17 @@
 # Semantic Versioning Changelog
 
+## [3.1.1](https://github.com/pagopa/pagopa-editorial-components/compare/v3.1.0...v3.1.1) (2024-03-12)
+
+
+### Bug Fixes
+
+* editorial window error fix ([39c71c9](https://github.com/pagopa/pagopa-editorial-components/commit/39c71c90077f190770c56eeb2996d2a5e15830f3))
+
+
+### Reverts
+
+* Revert "fix: theme value hardcoded" ([aad99fb](https://github.com/pagopa/pagopa-editorial-components/commit/aad99fbcf9862ae801ff36a6eda4fb53fac1ab02))
+
 # [3.1.0](https://github.com/pagopa/pagopa-editorial-components/compare/v3.0.0...v3.1.0) (2024-03-07)
 
 
