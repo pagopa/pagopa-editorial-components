@@ -112,3 +112,40 @@ WithBadgeButtons.args = {
     hrefApple: 'https://apple.com',
   },
 };
+
+export const WithOneBadgeButtons = Template.bind({});
+WithOneBadgeButtons.args = {
+  badgeButtons: {
+    hrefGoogle: 'https://play.google.com',
+  },
+};
+
+export const WithCtaButtons = Template.bind({});
+WithCtaButtons.args = {
+  ctaButtons: [
+    {
+      text: 'Accedi',
+      onClick: () => {
+        alert('Accedi');
+      },
+    },
+    {
+      text: 'Scopri di più',
+      onClick: () => {
+        alert('Scopri di più');
+      },
+    },
+  ],
+};
+
+export const WithOneCtaButtons = Template.bind({});
+WithOneCtaButtons.args = {
+  ctaButtons: [
+    {
+      text: 'Accedi',
+      onClick: () => {
+        alert('Accedi');
+      },
+    },
+  ],
+};
