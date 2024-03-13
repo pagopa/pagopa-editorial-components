@@ -9,14 +9,14 @@ interface CtaButtonProps extends Partial<ButtonProps> {
 
 type CtaButton = CtaButtonProps | JSX.Element;
 
-export interface BadgeButtonProps {
+export interface StoreButtonsProps {
   hrefGoogle?: string;
   hrefApple?: string;
 }
 
 export interface EditorialCtaProps extends CommonProps {
   ctaButtons?: CtaButton[];
-  badgeButtons?: BadgeButtonProps;
+  storeButtons?: StoreButtonsProps;
 }
 
 const isButtonProps = (button: CtaButton): button is CtaButtonProps => {
@@ -25,7 +25,7 @@ const isButtonProps = (button: CtaButton): button is CtaButtonProps => {
 
 export const Ctas = ({
   ctaButtons,
-  badgeButtons,
+  storeButtons,
   theme,
 }: EditorialCtaProps) => {
   const buttonsTheme: ButtonProps[] = [
@@ -39,27 +39,27 @@ export const Ctas = ({
     },
   ];
 
-  if (badgeButtons) {
+  if (storeButtons) {
     return (
       <Stack
         direction={{ md: 'row-reverse', xs: 'row' }}
         justifyContent="left"
         spacing={2}
       >
-        {badgeButtons.hrefGoogle && (
+        {storeButtons.hrefGoogle && (
           <Button
             sx={{ width: { md: 'auto', xs: '100%' } }}
             key="google"
-            href={badgeButtons.hrefGoogle}
+            href={storeButtons.hrefGoogle}
           >
             Google Play
           </Button>
         )}
-        {badgeButtons.hrefApple && (
+        {storeButtons.hrefApple && (
           <Button
             sx={{ width: { md: 'auto', xs: '100%' } }}
             key="apple"
-            href={badgeButtons.hrefApple}
+            href={storeButtons.hrefApple}
           >
             App Store
           </Button>

@@ -105,17 +105,17 @@ CtasElementExample.args = {
   ],
 };
 
-export const WithBadgeButtons = Template.bind({});
-WithBadgeButtons.args = {
-  badgeButtons: {
+export const WithstoreButtons = Template.bind({});
+WithstoreButtons.args = {
+  storeButtons: {
     hrefGoogle: 'https://play.google.com',
     hrefApple: 'https://apple.com',
   },
 };
 
-export const WithOneBadgeButtons = Template.bind({});
-WithOneBadgeButtons.args = {
-  badgeButtons: {
+export const WithOnestoreButtons = Template.bind({});
+WithOnestoreButtons.args = {
+  storeButtons: {
     hrefGoogle: 'https://play.google.com',
   },
 };

@@ -9,7 +9,7 @@ import {
 import {
   Ctas as EditorialCtas,
   type EditorialCtaProps,
-  type BadgeButtonProps,
+  type StoreButtonsProps,
 } from './Ctas';
 import { Image as EditorialImage, type EditorialImageProps } from './Image';
 import EContainer from '../EContainer';
@@ -22,7 +22,7 @@ export interface EditorialProps
     EditorialImageProps {
   reversed?: boolean;
   width: 'wide' | 'standard' | 'center';
-  badgeButtons?: BadgeButtonProps;
+  storeButtons?: StoreButtonsProps;
 }
 
 export const Editorial = (props: EditorialProps) => {
@@ -33,7 +33,7 @@ export const Editorial = (props: EditorialProps) => {
     body,
     theme,
     ctaButtons,
-    badgeButtons,
+    storeButtons,
     pattern = 'none',
     width = 'standard',
     reversed = false,
@@ -93,7 +93,7 @@ export const Editorial = (props: EditorialProps) => {
       <Grid item md={columns[width]} sx={gridItemStyles}>
         <Stack gap={4}>
           <EditorialContent {...{ eyelet, body, title, theme }} />
-          <EditorialCtas {...{ ctaButtons, badgeButtons, theme }} />
+          <EditorialCtas {...{ ctaButtons, storeButtons, theme }} />
         </Stack>
       </Grid>
       <Grid item md={columns[width]}>
