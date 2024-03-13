@@ -9,15 +9,25 @@ interface CtaButtonProps extends Partial<ButtonProps> {
 
 type CtaButton = CtaButtonProps | JSX.Element;
 
+export interface BadgeButtonProps {
+  hrefGoogle?: string;
+  hrefApple?: string;
+}
+
 export interface EditorialCtaProps extends CommonProps {
   ctaButtons?: CtaButton[];
+  badgeButtons?: BadgeButtonProps;
 }
 
 const isButtonProps = (button: CtaButton): button is CtaButtonProps => {
   return !isValidElement(button);
 };
 
-export const Ctas = ({ ctaButtons, theme }: EditorialCtaProps) => {
+export const Ctas = ({
+  ctaButtons,
+  badgeButtons,
+  theme,
+}: EditorialCtaProps) => {
   const buttonsTheme: ButtonProps[] = [
     {
       color: theme === 'dark' ? 'negative' : 'primary',
@@ -28,6 +38,35 @@ export const Ctas = ({ ctaButtons, theme }: EditorialCtaProps) => {
       variant: 'outlined',
     },
   ];
+
+  if (badgeButtons) {
+    return (
+      <Stack
+        direction={{ md: 'row-reverse', xs: 'row' }}
+        justifyContent="left"
+        spacing={2}
+      >
+        {badgeButtons.hrefGoogle && (
+          <Button
+            sx={{ width: { md: 'auto', xs: '100%' } }}
+            key="google"
+            href={badgeButtons.hrefGoogle}
+          >
+            Google Play
+          </Button>
+        )}
+        {badgeButtons.hrefApple && (
+          <Button
+            sx={{ width: { md: 'auto', xs: '100%' } }}
+            key="apple"
+            href={badgeButtons.hrefApple}
+          >
+            App Store
+          </Button>
+        )}
+      </Stack>
+    );
+  }
 
   return ctaButtons?.length ? (
     <Stack
