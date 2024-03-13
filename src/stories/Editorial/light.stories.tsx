@@ -104,3 +104,11 @@ CtasElementExample.args = {
     },
   ],
 };
+
+export const WithBadgeButtons = Template.bind({});
+WithBadgeButtons.args = {
+  badgeButtons: {
+    hrefGoogle: 'https://play.google.com',
+    hrefApple: 'https://apple.com',
+  },
+};
