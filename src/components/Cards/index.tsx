@@ -5,6 +5,7 @@ import Item, { type IItem } from './item';
 import { isJSX } from '../../utils';
 import { type ReactNode } from 'react';
 import { type CtaButton } from '../Ctas';
+import './default.css';
 
 export interface CardsProps extends CommonProps {
   items: IItem[];
@@ -28,10 +29,10 @@ const ItemsContainer = ({
       sx={{
         display: 'flex',
         flexFlow: 'column wrap',
-        maxHeight: { sm: '1000px' },
-        maxWidth: '50%',
         gap: '20px',
+        alignItems: 'center',
       }}
+      className="cardsStack"
     >
       {children}
     </Stack>
@@ -46,7 +47,7 @@ const Cards = ({ items, theme, text, ctaButtons }: CardsProps) => {
   const background = theme === 'dark' ? 'primary.dark' : 'background.paper';
   const textColor = theme === 'dark' ? 'primary.contrastText' : 'text.primary';
 
-  const isMasonry = !!text?.body && !!text?.subtitle;
+  const isMasonry = true;
 
   return (
     <EContainer
@@ -56,7 +57,8 @@ const Cards = ({ items, theme, text, ctaButtons }: CardsProps) => {
         display: 'flex',
         flexDirection: { md: 'row' },
         width: '100%',
-        gap: { md: isMasonry ? '145px' : 0 },
+        gap: { md: isMasonry ? '60px' : 0 },
+        justifyContent: 'center',
       }}
     >
       <Typography
@@ -102,16 +104,28 @@ const Cards = ({ items, theme, text, ctaButtons }: CardsProps) => {
           </Stack>
         ) : null}
       </Typography>
-      <ItemsContainer masonry={isMasonry}>
-        {items.map((item, i) => (
-          <Item
-            key={`${item.title}-${i}`}
-            {...item}
-            textAlign={isMasonry ? 'left' : 'center'}
-            masonry={isMasonry}
-          />
-        ))}
-      </ItemsContainer>
+      <div className="cardsContainer">
+        <ItemsContainer masonry={isMasonry}>
+          {items.slice(0, Math.ceil(items.length / 2)).map((item, i) => (
+            <Item
+              key={`${item.title}-${i}`}
+              {...item}
+              textAlign={isMasonry ? 'left' : 'center'}
+              masonry={isMasonry}
+            />
+          ))}
+        </ItemsContainer>
+        <ItemsContainer masonry={isMasonry}>
+          {items.slice(Math.ceil(items.length / 2)).map((item, i) => (
+            <Item
+              key={`${item.title}-${i}`}
+              {...item}
+              textAlign={isMasonry ? 'left' : 'center'}
+              masonry={isMasonry}
+            />
+          ))}
+        </ItemsContainer>
+      </div>
     </EContainer>
   );
 };
