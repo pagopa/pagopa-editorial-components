@@ -1,11 +1,10 @@
-import { Button, Grid, Stack, Typography } from '@mui/material';
+import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import { type Generic, type CommonProps } from '../../types/components';
 import EContainer from '../EContainer';
 import Item, { type IItem } from './item';
 import { isJSX } from '../../utils';
 import { type ReactNode } from 'react';
 import { type CtaButton } from '../Ctas';
-import './default.css';
 
 export interface CardsProps extends CommonProps {
   items: IItem[];
@@ -31,8 +30,8 @@ const ItemsContainer = ({
         flexFlow: 'column wrap',
         gap: '20px',
         alignItems: 'center',
+        width: { xs: '100%', sm: '50%' },
       }}
-      className="cardsStack"
     >
       {children}
     </Stack>
@@ -104,7 +103,16 @@ const Cards = ({ items, theme, text, ctaButtons }: CardsProps) => {
           </Stack>
         ) : null}
       </Typography>
-      <div className="cardsContainer">
+      <Box
+        sx={{
+          display: 'flex',
+          width: { xs: '100%', sm: '100%', md: '60%' },
+          gap: '20px',
+          '@media screen and (max-width: 600px)': {
+            display: 'grid',
+          },
+        }}
+      >
         <ItemsContainer masonry={isMasonry}>
           {items.slice(0, Math.ceil(items.length / 2)).map((item, i) => (
             <Item
@@ -125,7 +133,7 @@ const Cards = ({ items, theme, text, ctaButtons }: CardsProps) => {
             />
           ))}
         </ItemsContainer>
-      </div>
+      </Box>
     </EContainer>
   );
 };
