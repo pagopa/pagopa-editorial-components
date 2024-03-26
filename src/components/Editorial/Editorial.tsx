@@ -6,7 +6,11 @@ import {
   Content as EditorialContent,
   type EditorialContentProps,
 } from './Content';
-import { Ctas as EditorialCtas, type EditorialCtaProps } from './Ctas';
+import {
+  Ctas as EditorialCtas,
+  type EditorialCtaProps,
+  type StoreButtonsProps,
+} from './Ctas';
 import { Image as EditorialImage, type EditorialImageProps } from './Image';
 import EContainer from '../EContainer';
 import { useEffect, useState } from 'react';
@@ -18,6 +22,7 @@ export interface EditorialProps
     EditorialImageProps {
   reversed?: boolean;
   width: 'wide' | 'standard' | 'center';
+  storeButtons?: StoreButtonsProps;
 }
 
 export const Editorial = (props: EditorialProps) => {
@@ -28,6 +33,7 @@ export const Editorial = (props: EditorialProps) => {
     body,
     theme,
     ctaButtons,
+    storeButtons,
     pattern = 'none',
     width = 'standard',
     reversed = false,
@@ -87,7 +93,7 @@ export const Editorial = (props: EditorialProps) => {
       <Grid item md={columns[width]} sx={gridItemStyles}>
         <Stack gap={4}>
           <EditorialContent {...{ eyelet, body, title, theme }} />
-          <EditorialCtas {...{ ctaButtons, theme }} />
+          <EditorialCtas {...{ ctaButtons, storeButtons, theme }} />
         </Stack>
       </Grid>
       <Grid item md={columns[width]}>
