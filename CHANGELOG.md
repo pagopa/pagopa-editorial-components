@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [3.1.2](https://github.com/pagopa/pagopa-editorial-components/compare/v3.1.1...v3.1.2) (2024-03-26)
+
+
+### Bug Fixes
+
+* small ui issues ([66485bc](https://github.com/pagopa/pagopa-editorial-components/commit/66485bc02db24581c05ac080543bc9840683e00f))
+
 ## [3.1.1](https://github.com/pagopa/pagopa-editorial-components/compare/v3.1.0...v3.1.1) (2024-03-12)
 
 
