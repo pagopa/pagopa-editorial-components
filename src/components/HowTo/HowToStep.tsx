@@ -67,7 +67,7 @@ export const HowToStep = ({
       {/** Step title */}
       <Typography
         color={isDarkTheme ? 'white' : 'text.primary'}
-        variant="h5"
+        variant="h6"
         component="p"
       >
         {title}
