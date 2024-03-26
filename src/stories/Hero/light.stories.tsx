@@ -56,10 +56,10 @@ HeroHtmlBody.args = {
   size: 'big',
 };
 
-export const HeroSmallWithBackground = Template.bind({});
-HeroSmallWithBackground.args = {
+export const HeroMediumWithBackground = Template.bind({});
+HeroMediumWithBackground.args = {
   background,
-  size: 'small',
+  size: 'medium',
   ...defaults,
 };
 
@@ -71,27 +71,50 @@ HeroBigWithBackgroundTextLeft.args = {
   ...defaults,
 };
 
-export const HeroSmallWithBackgroundTextLeft = Template.bind({});
-HeroSmallWithBackgroundTextLeft.args = {
+export const HeroMediumWithBackgroundTextLeft = Template.bind({});
+HeroMediumWithBackgroundTextLeft.args = {
   background: backgroundInverse,
-  size: 'small',
+  size: 'medium',
   inverse: true,
   ...defaults,
 };
 
-export const HeroSmallWithImage = Template.bind({});
-HeroSmallWithImage.args = {
+export const HeroMediumWithImage = Template.bind({});
+HeroMediumWithImage.args = {
   image,
-  size: 'small',
+  size: 'medium',
   ...defaults,
 };
 
 export const HeroSolid = Template.bind({});
 HeroSolid.args = {
-  size: 'small',
+  size: 'medium',
   ...defaults,
   background: heroLightSolidBackground,
   useHoverlay: false,
+};
+
+export const HeroSmallSolidNoButtons = Template.bind({});
+HeroSmallSolidNoButtons.args = {
+  background: (
+    <div
+      style={{
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
+        zIndex: -1,
+        left: 0,
+        top: 0,
+        objectFit: 'cover',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundImage: `url(${heroLightSolidBackground})`,
+      }}
+    />
+  ),
+  size: 'small',
+  title: 'FAQ',
+  theme: 'light',
 };
 
 export const HeroBigWithBackgroundElement = Template.bind({});

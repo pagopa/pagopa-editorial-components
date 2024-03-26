@@ -15,7 +15,6 @@ export interface HeroProps extends CommonProps, HeroTextProps {
   altText?: string;
   inverse?: boolean;
   background?: string | Generic;
-  size?: 'small' | 'big';
   useHoverlay?: boolean;
 }
 
@@ -27,6 +26,7 @@ interface HeroTextProps extends CommonProps {
   title: string;
   subtitle?: string | Generic;
   ctaButtons?: Array<CtaButton | Generic>;
+  size?: 'medium' | 'big' | 'small';
 }
 
 const HeroTextContent = ({
@@ -34,18 +34,24 @@ const HeroTextContent = ({
   subtitle,
   ctaButtons,
   theme,
+  size,
 }: HeroTextProps) => {
   const textColor = theme === 'dark' ? 'primary.contrastText' : 'text.primary';
   return (
     <Stack
-      justifyContent={{ md: 'center' }}
+      justifyContent={size === 'small' ? 'center' : { md: 'center' }}
+      alignItems={size === 'small' ? 'center' : 'inherit'}
       sx={{ minHeight: 'inherit' }}
       mt={{ xs: 9, lg: 0 }}
       component="section"
     >
-      <Box mb={{ xs: 6, md: 4 }}>
+      <Box mb={size === 'small' ? 0 : { xs: 6, md: 4 }}>
         <>
-          <Typography variant="h1" color={textColor} mb={2}>
+          <Typography
+            variant="h1"
+            color={textColor}
+            mb={size === 'small' ? 0 : 2}
+          >
             {title}
           </Typography>
           {isJSX(subtitle) ? (
@@ -87,7 +93,8 @@ const Hero = (props: HeroProps) => {
     image,
     altText = '',
   } = props;
-  const minHeight = size === 'big' ? '720px' : '480px';
+  const minHeight =
+    size === 'big' ? '720px' : size === 'medium' ? '480px' : '220px';
 
   const overlay = useHoverlay
     ? theme === 'dark'
@@ -122,10 +129,14 @@ const Hero = (props: HeroProps) => {
       background={!background ? backgroundColor : BackgroundImage}
       direction={inverse ? 'row-reverse' : 'row'}
     >
-      <Grid item lg={6} sx={{ minHeight: { lg: minHeight } }}>
+      <Grid
+        item
+        lg={size === 'small' ? 12 : 6}
+        sx={{ minHeight: { lg: minHeight } }}
+      >
         <HeroTextContent {...props} />
       </Grid>
-      {image ? (
+      {size !== 'small' && image ? (
         <Grid item lg={6} mb={{ xs: 4, lg: 0 }} component="figure">
           {isJSX(image) ? (
             image
