@@ -14,6 +14,7 @@ export interface IItem {
     title?: string;
   }>;
   masonry?: boolean;
+  width: string;
 }
 
 const Item = ({
@@ -31,17 +32,13 @@ const Item = ({
       sx={{
         display: 'flex',
         minHeight: '100px',
-        width: '348px',
+        width: 'auto',
         flex: { md: masonry ? '0 0 auto' : '1 1 0' },
+        borderRadius: '16px',
       }}
     >
       <CardContent>
-        <Stack
-          px={4}
-          sx={{ minHeight: '275px' }}
-          justifyContent="center"
-          alignItems={textAlign}
-        >
+        <Stack px={4} justifyContent="flex-start" alignItems={textAlign}>
           <Box mb={2} color="primary.dark">
             <EIcon icon={cardIcon?.icon} fontSize="large" />
           </Box>
@@ -56,15 +53,10 @@ const Item = ({
               {label}
             </Typography>
           )}
-          <Typography variant="h6" mb={1}>
+          <Typography variant="h5" mb={1}>
             {title}
           </Typography>
-          <Typography
-            variant="body1"
-            mb={1}
-            textAlign={{ textAlign }}
-            fontSize="16px"
-          >
+          <Typography variant="body2" mb={1} textAlign={{ textAlign }}>
             {text}
           </Typography>
           {links?.length
