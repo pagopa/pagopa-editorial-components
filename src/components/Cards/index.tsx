@@ -46,7 +46,7 @@ const Cards = ({ items, theme, text, ctaButtons }: CardsProps) => {
   const background = theme === 'dark' ? 'primary.dark' : 'background.paper';
   const textColor = theme === 'dark' ? 'primary.contrastText' : 'text.primary';
 
-  const isMasonry = true;
+  const isMasonry = !!text?.body && !!text?.subtitle;
 
   return (
     <EContainer
@@ -106,33 +106,48 @@ const Cards = ({ items, theme, text, ctaButtons }: CardsProps) => {
       <Box
         sx={{
           display: 'flex',
-          width: { xs: '100%', sm: '100%', md: '60%' },
+          width: { xs: '100%', sm: '100%', md: isMasonry ? '60%' : '100%' },
           gap: '20px',
           '@media screen and (max-width: 600px)': {
             display: 'grid',
           },
         }}
       >
-        <ItemsContainer masonry={isMasonry}>
-          {items.slice(0, Math.ceil(items.length / 2)).map((item, i) => (
-            <Item
-              key={`${item.title}-${i}`}
-              {...item}
-              textAlign={isMasonry ? 'left' : 'center'}
-              masonry={isMasonry}
-            />
-          ))}
-        </ItemsContainer>
-        <ItemsContainer masonry={isMasonry}>
-          {items.slice(Math.ceil(items.length / 2)).map((item, i) => (
-            <Item
-              key={`${item.title}-${i}`}
-              {...item}
-              textAlign={isMasonry ? 'left' : 'center'}
-              masonry={isMasonry}
-            />
-          ))}
-        </ItemsContainer>
+        {isMasonry ? (
+          <>
+            <ItemsContainer masonry={isMasonry}>
+              {items.slice(0, Math.ceil(items.length / 2)).map((item, i) => (
+                <Item
+                  key={`${item.title}-${i}`}
+                  {...item}
+                  textAlign={isMasonry ? 'left' : 'center'}
+                  masonry={isMasonry}
+                />
+              ))}
+            </ItemsContainer>
+            <ItemsContainer masonry={isMasonry}>
+              {items.slice(Math.ceil(items.length / 2)).map((item, i) => (
+                <Item
+                  key={`${item.title}-${i}`}
+                  {...item}
+                  textAlign={isMasonry ? 'left' : 'center'}
+                  masonry={isMasonry}
+                />
+              ))}
+            </ItemsContainer>
+          </>
+        ) : (
+          <ItemsContainer masonry={isMasonry}>
+            {items.map((item, i) => (
+              <Item
+                key={`${item.title}-${i}`}
+                {...item}
+                textAlign={isMasonry ? 'left' : 'center'}
+                masonry={isMasonry}
+              />
+            ))}
+          </ItemsContainer>
+        )}
       </Box>
     </EContainer>
   );
