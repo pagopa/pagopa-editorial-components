@@ -34,7 +34,6 @@ const Item = ({
         minHeight: '100px',
         width: 'auto',
         flex: { md: masonry ? '0 0 auto' : '1 1 0' },
-        boxShadow: '0 8px 38px 7px #002b551a',
         borderRadius: '16px',
       }}
     >
