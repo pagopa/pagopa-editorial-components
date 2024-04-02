@@ -1,5 +1,24 @@
 # Semantic Versioning Changelog
 
+# [3.2.0](https://github.com/pagopa/pagopa-editorial-components/compare/v3.1.4...v3.2.0) (2024-04-02)
+
+
+### Bug Fixes
+
+* fix package script to copy images folder into dist ([cd40d13](https://github.com/pagopa/pagopa-editorial-components/commit/cd40d13d318ef78269b96556d05a1dc9a6c645e5))
+* remove changes on package.json ([1a157a5](https://github.com/pagopa/pagopa-editorial-components/commit/1a157a57fec36a17670777772106eb4b939aa472))
+* remove custom theme ([1a3abde](https://github.com/pagopa/pagopa-editorial-components/commit/1a3abdefa4d9656b2c1a49e03f85e08987340627))
+* renamed props ([3f761bc](https://github.com/pagopa/pagopa-editorial-components/commit/3f761bc819236944dce4670d3605471d6edb631a))
+* renamed storybook title ([e2e57b2](https://github.com/pagopa/pagopa-editorial-components/commit/e2e57b231c13b2b479ecd84fe7b4fbf37a53cdb2))
+* update editorial storybook ([12869f0](https://github.com/pagopa/pagopa-editorial-components/commit/12869f0717382f981225b5ec9f909d780ca3f63a))
+* update stories with new editorial version ([0ecf1cc](https://github.com/pagopa/pagopa-editorial-components/commit/0ecf1cc10dfb20098e37a10227f2c3cd3883f183))
+* upload assets and update Ctas.tsx file ([f2f07b4](https://github.com/pagopa/pagopa-editorial-components/commit/f2f07b4421eb161c901820f2adf7aef4ca9ed0de))
+
+
+### Features
+
+* editorial badges integration ([c735b92](https://github.com/pagopa/pagopa-editorial-components/commit/c735b92129d0f9767bf383ce060f8b813d1eb7bf))
+
 ## [3.1.4](https://github.com/pagopa/pagopa-editorial-components/compare/v3.1.3...v3.1.4) (2024-04-02)
 
 
