@@ -4,25 +4,12 @@ import { isValidElement } from 'react';
 import { type CommonProps } from 'types/components';
 import appleBadge from '../../assets/images/app-store-badge.png';
 import googleBadge from '../../assets/images/google-play-badge.png';
-import { ThemeProvider, createTheme } from '@mui/material';
 
 interface CtaButtonProps extends Partial<ButtonProps> {
   text: string;
 }
 
 type CtaButton = CtaButtonProps | JSX.Element;
-
-const customTheme = createTheme({
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 420,
-      md: 900,
-      lg: 1200,
-      xl: 1536,
-    },
-  },
-});
 
 export interface StoreButtonsProps {
   hrefGoogle?: string;
@@ -56,48 +43,55 @@ export const Ctas = ({
 
   if (storeButtons) {
     return (
-      <ThemeProvider theme={customTheme}>
-        <Stack
-          direction={{ xs: 'column', sm: 'row-reverse' }}
-          justifyContent="left"
-          spacing={2}
-        >
-          {storeButtons.hrefGoogle && (
-            <Button
-              sx={{
-                padding: '0px',
-                margin: '0px',
-                justifyContent: 'start',
-              }}
-              key="google"
-              href={storeButtons.hrefGoogle}
-            >
-              <img
-                src={googleBadge}
-                alt="Download on the App Store"
-                style={{ height: '3em' }}
-              />
-            </Button>
-          )}
-          {storeButtons.hrefApple && (
-            <Button
-              sx={{
-                padding: '0px',
-                margin: '0px',
-                justifyContent: 'start',
-              }}
-              key="apple"
-              href={storeButtons.hrefApple}
-            >
-              <img
-                src={appleBadge}
-                alt="Download on the App Store"
-                style={{ height: '3em' }}
-              />
-            </Button>
-          )}
-        </Stack>
-      </ThemeProvider>
+      <Stack
+        sx={{
+          flexDirection: 'column',
+          '@media screen and (min-width: 420px)': {
+            flexDirection: 'row-reverse',
+          },
+        }}
+        justifyContent="left"
+        spacing={2}
+        alignItems="baseline"
+      >
+        {storeButtons.hrefGoogle && (
+          <Button
+            sx={{
+              padding: '0px',
+              marginLeft: '0px',
+              '@media screen and (min-width: 420px)': {
+                marginLeft: '16px',
+              },
+              justifyContent: 'start',
+            }}
+            key="google"
+            href={storeButtons.hrefGoogle}
+          >
+            <img
+              src={googleBadge}
+              alt="Download on the App Store"
+              style={{ height: '3em' }}
+            />
+          </Button>
+        )}
+        {storeButtons.hrefApple && (
+          <Button
+            sx={{
+              padding: '0px',
+              margin: '0px',
+              justifyContent: 'start',
+            }}
+            key="apple"
+            href={storeButtons.hrefApple}
+          >
+            <img
+              src={appleBadge}
+              alt="Download on the App Store"
+              style={{ height: '3em' }}
+            />
+          </Button>
+        )}
+      </Stack>
     );
   }
 
