@@ -1,5 +1,22 @@
 # Semantic Versioning Changelog
 
+## [3.1.4](https://github.com/pagopa/pagopa-editorial-components/compare/v3.1.3...v3.1.4) (2024-04-02)
+
+
+### Bug Fixes
+
+* hero small version fix ([b47b587](https://github.com/pagopa/pagopa-editorial-components/commit/b47b587bee71e29e0e120c6316a461a289fb443f))
+
+## [3.1.3](https://github.com/pagopa/pagopa-editorial-components/compare/v3.1.2...v3.1.3) (2024-04-02)
+
+
+### Bug Fixes
+
+* change layout code prospective ([3887a94](https://github.com/pagopa/pagopa-editorial-components/commit/3887a948066e8f20791ce4f389ed2dcf1f502aa3))
+* layout cards fix ([6a49c52](https://github.com/pagopa/pagopa-editorial-components/commit/6a49c52b9fc2e4655d83cd8cdffacee44622677c))
+* layout cards fix ([4965977](https://github.com/pagopa/pagopa-editorial-components/commit/496597709be9ed326cf03fbea1f36ad7f88a2c1a))
+* remove boxShadow ([2031acb](https://github.com/pagopa/pagopa-editorial-components/commit/2031acba760850ab569bdf15d3037ff3178525a0))
+
 ## [3.1.2](https://github.com/pagopa/pagopa-editorial-components/compare/v3.1.1...v3.1.2) (2024-03-26)
 
 
