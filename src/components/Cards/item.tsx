@@ -14,7 +14,6 @@ export interface IItem {
     title?: string;
   }>;
   masonry?: boolean;
-  width: string;
 }
 
 const Item = ({
