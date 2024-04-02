@@ -102,3 +102,48 @@ CtasElementExample.args = {
     },
   ],
 };
+
+export const WithStoreButtons = Template.bind({});
+WithStoreButtons.args = {
+  storeButtons: {
+    hrefGoogle: 'https://play.google.com',
+    hrefApple: 'https://apple.com',
+  },
+};
+
+export const WithOneStoreButtons = Template.bind({});
+WithOneStoreButtons.args = {
+  storeButtons: {
+    hrefGoogle: 'https://play.google.com',
+  },
+};
+
+export const WithCtaButtons = Template.bind({});
+WithCtaButtons.args = {
+  ctaButtons: [
+    {
+      text: 'Accedi',
+      onClick: () => {
+        alert('Accedi');
+      },
+    },
+    {
+      text: 'Scopri di più',
+      onClick: () => {
+        alert('Scopri di più');
+      },
+    },
+  ],
+};
+
+export const WithOneCtaButtons = Template.bind({});
+WithOneCtaButtons.args = {
+  ctaButtons: [
+    {
+      text: 'Accedi',
+      onClick: () => {
+        alert('Accedi');
+      },
+    },
+  ],
+};
