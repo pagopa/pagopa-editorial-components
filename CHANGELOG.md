@@ -1,5 +1,15 @@
 # Semantic Versioning Changelog
 
+# [4.0.0](https://github.com/pagopa/pagopa-editorial-components/compare/v3.2.0...v4.0.0) (2024-04-03)
+
+
+* feat!: remove 'width' from interface IItem ([f6f398f](https://github.com/pagopa/pagopa-editorial-components/commit/f6f398fa910243ec6bd0424a339324fe9e5fbb4a))
+
+
+### BREAKING CHANGES
+
+* remove width property from IItem interface
+
 # [3.2.0](https://github.com/pagopa/pagopa-editorial-components/compare/v3.1.4...v3.2.0) (2024-04-02)
 
 
