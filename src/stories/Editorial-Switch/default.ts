@@ -13,20 +13,6 @@ export const editorialSwitchDefaults = {
         title: 'dopo 7 o 15 giorni',
         body: 'Se hai ricevuto la PEC, si perfeziona 7 giorni dopo la data di consegna. Se l’hai ricevuta dalle 21:00 in poi, conta a partire dal giorno dopo. Se la PEC è satura, non valida o inattiva, si perfeziona 15 giorni dopo la data di emissione dell’avviso di mancato recapito. Lo troverai su SEND, nel dettaglio della notifica. Se visualizzi su SEND o app IO i documenti notificati prima delle tempistiche indicate qui sopra, il perfezionamento avviene al momento della visualizzazione.',
         eyelet: 'LA NOTIFICA SI PERFEZIONA',
-        // ctaButtons: [
-        //   {
-        //     text: 'Button 1',
-        //     onClick: () => {
-        //       console.log('Action 1');
-        //     },
-        //   },
-        //   {
-        //     text: 'Button 2',
-        //     onClick: () => {
-        //       console.log('Action 2');
-        //     },
-        //   },
-        // ],
         pattern: 'none',
         image: { src: regular, alt: 'Immagine di default' },
       },
