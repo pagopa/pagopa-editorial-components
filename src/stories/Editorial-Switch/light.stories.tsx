@@ -3,7 +3,7 @@ import { EditorialSwitch } from '../../components/Editorial-Switch';
 import editorialSwitchDefaults from './default';
 
 export default {
-  title: 'EditorialSwitch/Light',
+  title: 'Editorial-Switch/Light',
   component: EditorialSwitch,
   argTypes: {
     theme: {
