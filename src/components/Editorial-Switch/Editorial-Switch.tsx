@@ -176,17 +176,21 @@ const ButtonSwitchRowBlock = ({
       sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
       role="group"
     >
-      {buttons.map((button, index) => (
-        <Button
-          key={index}
-          onClick={() => {
-            onButtonClick(button);
-          }}
-          {...buttonsTheme}
-        >
-          {button}
-        </Button>
-      ))}
+      {buttons.map((button, index) => {
+        const buttonTheme = buttonsTheme[0];
+
+        return (
+          <Button
+            key={index}
+            onClick={() => {
+              onButtonClick(button);
+            }}
+            color={buttonTheme.color as 'primary' | 'inherit' | 'error'}
+          >
+            {button}
+          </Button>
+        );
+      })}
     </ButtonGroup>
   ) : (
     <SplitButton
