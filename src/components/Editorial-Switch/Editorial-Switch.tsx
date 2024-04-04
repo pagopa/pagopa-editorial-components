@@ -47,6 +47,13 @@ interface ContentItem {
   image: EditorialImageProps['image'];
 }
 
+type ButtonColor = 'primary' | 'inherit' | 'error' | 'negative';
+
+interface ButtonTheme {
+  color: ButtonColor;
+  variant: 'outlined' | 'contained';
+}
+
 const TitleSubtitleBlock = ({
   toptitle,
   topsubtitle,
@@ -157,7 +164,7 @@ const ButtonSwitchRowBlock = ({
   const { palette } = useTheme();
   const color =
     theme === 'dark' ? palette.primary.dark : palette.background.paper;
-  const buttonsTheme = [
+  const buttonsTheme: ButtonTheme[] = [
     {
       color: theme === 'dark' ? 'negative' : 'primary',
       variant: 'contained',
@@ -185,7 +192,7 @@ const ButtonSwitchRowBlock = ({
             onClick={() => {
               onButtonClick(button);
             }}
-            color={buttonTheme.color as 'primary' | 'inherit' | 'error'}
+            color={buttonTheme.color}
           >
             {button}
           </Button>
