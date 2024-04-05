@@ -38,7 +38,7 @@ const EContainer = (props: Props) => {
       bgcolor={!backgroundIsJSX ? background : undefined}
     >
       {backgroundIsJSX && background}
-      <Container maxWidth="lg" disableGutters>
+      <Container maxWidth="xl" disableGutters>
         <Grid
           container
           direction={direction}

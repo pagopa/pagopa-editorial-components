@@ -129,15 +129,27 @@ const Hero = (props: HeroProps) => {
       background={!background ? backgroundColor : BackgroundImage}
       direction={inverse ? 'row-reverse' : 'row'}
     >
+      {(size === 'medium' || size === 'big') && (
+        <Grid item lg={1} sx={{ display: { xs: 'none', lg: 'block' } }} />
+      )}
       <Grid
         item
-        lg={size === 'small' ? 12 : 6}
+        lg={size === 'small' ? 12 : 3}
         sx={{ minHeight: { lg: minHeight } }}
       >
         <HeroTextContent {...props} />
       </Grid>
-      {size !== 'small' && image ? (
-        <Grid item lg={6} mb={{ xs: 4, lg: 0 }} component="figure">
+      {(size === 'medium' || size === 'big') && (
+        <Grid item lg={1} sx={{ display: { xs: 'none', lg: 'block' } }} />
+      )}
+      {(size === 'medium' || size === 'big') && image && (
+        <Grid
+          item
+          lg={6}
+          mb={{ xs: 4, lg: 0 }}
+          component="figure"
+          sx={{ width: '100%' }}
+        >
           {isJSX(image) ? (
             image
           ) : (
@@ -155,7 +167,10 @@ const Hero = (props: HeroProps) => {
             />
           )}
         </Grid>
-      ) : null}
+      )}
+      {(size === 'medium' || size === 'big') && (
+        <Grid item lg={1} sx={{ display: { xs: 'none', lg: 'block' } }} />
+      )}
     </EContainer>
   );
 };
