@@ -55,6 +55,24 @@ interface ButtonTheme {
   variant: 'outlined' | 'contained';
 }
 
+const useButtonTheme = (theme: string) => {
+  const { palette } = useTheme();
+  const color =
+    theme === 'dark' ? palette.primary.dark : palette.background.paper;
+  const buttonsTheme: ButtonTheme[] = [
+    {
+      color: theme === 'dark' ? 'negative' : 'primary',
+      variant: 'contained',
+    },
+    {
+      color: theme === 'dark' ? 'negative' : 'primary',
+      variant: 'outlined',
+    },
+  ];
+
+  return { color, buttonsTheme };
+};
+
 const TitleSubtitleBlock = ({
   toptitle,
   topsubtitle,
@@ -101,11 +119,14 @@ const SplitButton = ({
   buttons,
   selectedButton,
   onButtonClick,
+  theme,
 }: {
   buttons: string[];
   selectedButton: string;
   onButtonClick: (button: string) => void;
+  theme: string;
 }) => {
+  const { color, buttonsTheme } = useButtonTheme(theme);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [open, setOpen] = React.useState(false);
 
@@ -131,12 +152,13 @@ const SplitButton = ({
         variant="outlined"
         ref={anchorRef}
         aria-label="Split button"
-        sx={{ display: 'flex', justifyContent: 'center' }}
+        sx={{ display: 'flex', justifyContent: 'center', color }}
       >
         <Button
           onClick={() => {
             onButtonClick(selectedButton);
           }}
+          color={buttonsTheme[0].color}
         >
           {selectedButton}
         </Button>
@@ -145,6 +167,7 @@ const SplitButton = ({
           aria-expanded={open ? 'true' : undefined}
           aria-haspopup="menu"
           onClick={handleButtonClick}
+          color={buttonsTheme[0].color}
         >
           <ArrowDropDownIcon />
         </Button>
@@ -188,21 +211,9 @@ const ButtonSwitchRowBlock = ({
   theme,
   selectedButton,
 }: ButtonSwitchRowBlockProps & { selectedButton: string }) => {
+  const { color, buttonsTheme } = useButtonTheme(theme);
   const muiTheme = useTheme();
   const isLarge = useMediaQuery(muiTheme.breakpoints.up('lg'));
-  const { palette } = useTheme();
-  const color =
-    theme === 'dark' ? palette.primary.dark : palette.background.paper;
-  const buttonsTheme: ButtonTheme[] = [
-    {
-      color: theme === 'dark' ? 'negative' : 'primary',
-      variant: 'contained',
-    },
-    {
-      color: theme === 'dark' ? 'negative' : 'primary',
-      variant: 'outlined',
-    },
-  ];
 
   return isLarge ? (
     <ButtonGroup
@@ -233,6 +244,7 @@ const ButtonSwitchRowBlock = ({
       buttons={buttons}
       selectedButton={selectedButton}
       onButtonClick={onButtonClick}
+      theme={theme}
     />
   );
 };
