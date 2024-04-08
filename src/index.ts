@@ -18,6 +18,7 @@ import { Stats } from './components/Stats';
 import Cards from './components/Cards';
 import StripeLink from './components/StripeLink';
 import Quote from './components/Quote/Quote';
+import { EditorialSwitch } from './components/Editorial-Switch';
 
 export {
   Abstract,
@@ -40,4 +41,5 @@ export {
   Cards,
   StripeLink,
   Quote,
+  EditorialSwitch,
 };
