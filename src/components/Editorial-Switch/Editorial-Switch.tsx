@@ -25,6 +25,7 @@ import {
 import { type CommonProps } from 'types/components';
 import EContainer from '../../components/EContainer';
 import { useTheme } from '@mui/material/styles';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 interface TitleSubtitleBlockProps {
   toptitle: string;
@@ -106,36 +107,64 @@ const SplitButton = ({
   onButtonClick: (button: string) => void;
 }) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [open, setOpen] = React.useState(false);
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
+    setOpen((prevOpen) => !prevOpen);
   };
 
   const handleMenuItemClick = (button: string) => {
     onButtonClick(button);
-    handleClose();
+    setOpen(false);
   };
 
+  const closeMenu = () => {
+    setOpen(false);
+  };
+
+  const anchorRef = React.useRef<HTMLDivElement>(null);
+
   return (
-    <div>
-      <Button
-        aria-controls="split-button-menu"
-        aria-expanded={anchorEl ? 'true' : undefined}
-        aria-haspopup="menu"
-        onClick={handleClick}
+    <React.Fragment>
+      <ButtonGroup
+        variant="outlined"
+        ref={anchorRef}
+        aria-label="Split button"
+        sx={{ display: 'flex', justifyContent: 'center' }}
       >
-        {selectedButton}
-      </Button>
+        <Button
+          onClick={() => {
+            onButtonClick(selectedButton);
+          }}
+        >
+          {selectedButton}
+        </Button>
+        <Button
+          aria-controls={open ? 'split-button-menu' : undefined}
+          aria-expanded={open ? 'true' : undefined}
+          aria-haspopup="menu"
+          onClick={handleButtonClick}
+        >
+          <ArrowDropDownIcon />
+        </Button>
+      </ButtonGroup>
       <Menu
         id="split-button-menu"
         anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
+        open={open}
+        onClose={closeMenu}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'center',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'center',
+        }}
+        MenuListProps={{
+          'aria-labelledby': 'split-button',
+        }}
       >
         {buttons.map((button) => (
           <MenuItem
@@ -149,7 +178,7 @@ const SplitButton = ({
           </MenuItem>
         ))}
       </Menu>
-    </div>
+    </React.Fragment>
   );
 };
 
