@@ -70,7 +70,7 @@ export const Ctas = ({
             href={storeButtons.hrefGoogle}
           >
             <img
-              src={googleBadge ?? googleBadge}
+              src={storeButtons.googleBadge ?? googleBadge}
               alt="Download on the App Store"
               style={{ height: '3em' }}
             />
@@ -87,7 +87,7 @@ export const Ctas = ({
             href={storeButtons.hrefApple}
           >
             <img
-              src={appleBadge ?? appleBadge}
+              src={storeButtons.appleBadge ?? appleBadge}
               alt="Download on the App Store"
               style={{ height: '3em' }}
             />
