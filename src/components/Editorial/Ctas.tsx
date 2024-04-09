@@ -14,6 +14,8 @@ type CtaButton = CtaButtonProps | JSX.Element;
 export interface StoreButtonsProps {
   hrefGoogle?: string;
   hrefApple?: string;
+  appleBadge?: string;
+  googleBadge?: string;
 }
 
 export interface EditorialCtaProps extends CommonProps {
@@ -68,7 +70,7 @@ export const Ctas = ({
             href={storeButtons.hrefGoogle}
           >
             <img
-              src={googleBadge}
+              src={googleBadge ?? googleBadge}
               alt="Download on the App Store"
               style={{ height: '3em' }}
             />
@@ -85,7 +87,7 @@ export const Ctas = ({
             href={storeButtons.hrefApple}
           >
             <img
-              src={appleBadge}
+              src={appleBadge ?? appleBadge}
               alt="Download on the App Store"
               style={{ height: '3em' }}
             />
