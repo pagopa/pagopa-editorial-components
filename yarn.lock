@@ -12724,9 +12724,7 @@ store2@^2.14.2:
   integrity sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==
 
 storybook@^7.0.23:
-  version "7.0.23"
-  resolved "https://registry.yarnpkg.com/storybook/-/storybook-7.0.23.tgz#1f1f5365a6b0fb6a679d3068e1bb601198b78e48"
-  integrity sha512-eko4DZ6lheJZCsL55RJhYksXX3UWgdO6rkR52pmfhCjlitxf07We+lEuzVou8+HLg8jnSqLi2GIzDKh+hBS4og==
+  version "7.6.21"
   dependencies:
     "@storybook/cli" "7.0.23"
 
